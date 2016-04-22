@@ -1,0 +1,416 @@
+
+/* ---------------------------------------------------------
+   1. Embedded fonts styles
+   2. Eric Mayer CSS Reset
+   3. General reset
+   4. Common site styles
+   5. Custom form styles
+   6. Styles for responsive breakpoints
+   ---------------------------------------------------------*/
+
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 376px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1200px,
+  'tvscreen':1600px
+);
+
+// keywords
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+// ligatured operators ≥ ≤
+
+@import 'vendors/include-media';
+@import 'vendors/normalize';
+@import 'vendors/fonts';
+
+@import 'base/variables';
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/helpers';
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/forms';
+.text-left{ text-align: left !important;}
+.text-right { text-align: right !important;}
+.text-uppercase{ text-transform: uppercase !important;}
+.text-center{ text-align: center !important;}
+ol {
+	margin:0 0 30px;
+	padding:0;
+	line-height:22px;
+	color:$black;
+	width:100%;
+	overflow:hidden;
+	counter-reset:item;
+}
+ol ol{margin:0;}
+ol li {padding:0 0 0 30px;}
+ol li:before,
+ol .num {
+	@include font(12,24);
+	@include squar(25px,25px);
+	float:left;
+	text-align: center;
+	border-radius: 100%;
+	margin:4px 0 0 -30px;
+	color:$black;
+	background: $black;
+	color: $white;
+	content:counters(item, ".") " ";
+	counter-increment:item;
+}
+.container { @include container;}
+.layout{ overflow: hidden;}
+#wrapper {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+#header {
+	width: 100%;
+	display: block;
+	position: relative;
+	background: $defualt-blue;
+	
+	.layout {
+		padding: 10px 0;
+	}
+}
+.logo {
+	float: left;
+	width: 140px;
+	
+	a{ display: block; }
+	
+	img { @include img-res;}
+}
+.add-property {
+	float: right;
+	max-width: 300px;
+	color: $white;
+	text-transform: uppercase;
+	@include font(14,18);
+	text-decoration: none;
+	background: $mix-blue;
+	border-radius: 4px;
+	padding: 10px 20px;
+	margin: 12px 0 0;
+	transition: background 0.4s ease;
+	
+	&:hover{ background: $orange; }
+	&:before {
+		@include align(top);
+		content: "\e900";
+		font-family: 'icomoon';
+		@include font(18,19);
+		font-weight: bold;
+	}
+}
+#main{
+	overflow: hidden;
+}
+.listing-holder {
+	overflow: hidden;
+	background: $light-gray;
+}
+.section-listing {
+	@include align-reset(top, 14, 18);
+	padding: 10px 0;
+	
+	li{
+		width: 20%;
+		padding: 0 30px 10px;
+		
+		&.active{
+			&:before{
+				background: $light-blue;
+			}
+			a{
+				color: $black;
+				&:after{
+					right: 0;
+				}
+			}	
+		}
+		&:hover{
+			&:before{
+				background: $light-blue;
+			}
+			a{
+				color: $black;
+				&:after{
+					right: 0;
+				}
+			}
+		}
+		
+		a{
+			padding: 5px 25px;
+			text-align: center;
+			display: block;
+			text-decoration: none;
+			color: $mix-grays;
+			position: relative;
+			margin: 2px 0 0;
+			z-index: 1;
+			overflow: hidden;
+			border-radius: 6px;
+			
+			&:after {
+				background: #2e2e2e;
+				height: 1px;
+				position: absolute;
+				left: 0;
+				right:100%;
+				bottom:0;
+				z-index: -1;
+				content: '';
+				transition: all 0.4s ease;
+			}
+		}
+	}
+}
+.property-add{
+	padding: 20px 0;
+	overflow: hidden;
+	
+	input[type="text"],
+	input[type="search"],
+	input[type="number"],
+	input[type="email"]{
+		@include font(12,15);
+		@include squar(100%, 30px);
+		max-width: 260px;
+		margin: 0 0 0 10px;
+		padding: 6px 10px;
+		outline: none;
+		
+		&:focus,
+		&:hover{
+			border: 1px solid #005ce6;
+		}
+	}
+	
+	select{
+		@include align(top);
+		height: 30px;
+	}
+	
+	textarea {
+		margin: 0 0 0 9px;
+		@include squar(100%, 50px);
+		max-width: 710px;
+		resize: none;
+	}
+	
+	.title{
+		padding: 2px 0 0;
+		float: left;
+		text-align: right;
+		width: 25%;
+		font-weight: 600;
+		text-transform: capitalize;
+		color: $mix-grays;
+		@include font(14,17);
+	}
+	.input-holder{
+		float: left;
+		width: 75%;
+	}
+	.field-holder{
+		overflow: hidden;
+	}
+	.radio-holder{
+		@extend %listreset;
+		@include align-reset(top,12,15);
+		
+		li{
+			padding: 0 10px 10px;
+			
+			label{
+				@include align(top);
+				cursor: pointer;
+				padding: 2px 0 0;
+				
+				.fake-radio,
+				.fake-label {
+					@include align(middle);
+					
+				}
+				.fake-radio {
+					@include squar(20px, 20px);
+					border: 3px solid $mix-grays;
+					border-radius: 100%;
+					margin: -2px 0 0;
+					transition: all 0.4s ease;
+					position: relative;
+					
+					&:after{
+						position: absolute;
+						top: 2px;
+						left: 2px;
+						right: 2px;
+						bottom: 2px;
+						content: '';
+						background: $orange;
+						opacity: 0;
+						border-radius: 100%;
+					}
+				}
+			}
+			
+			input[type="radio"]{
+				visibility: hidden;
+				opacity: 0;
+				position: fixed;
+				top: -999px;
+				left: -999px;
+				
+				&:checked ~ {
+					.fake-radio{
+						border: 3px solid $orange;
+						&:after{ opacity: 1;}
+					}
+					.fake-label { 
+						color: $orange;
+					}
+				}
+			}
+		}
+	}
+	.layout{
+		padding: 20px 0 5px;
+		
+		&.add{
+			max-width: 897px;
+			margin: 0 auto;
+		}
+		
+		.layout-holder{
+			float: left;
+			width: 50%;
+			margin: 0 auto;
+			
+			&.add{
+				width: 100%;
+			}
+			
+			select{
+				margin: 0 0 0 9px;
+				height: 30px;
+			}
+			
+			.title{
+				max-width: 100px;
+				width: inherit;
+				float: none;
+				@include align(top);
+			}
+		}
+	}
+	.tab-content{
+		max-width: 490px;
+		margin:10px 0 0;
+		padding: 0 0 0 20px;
+	}
+}
+.form-heading{
+	display: block;
+	color: $mix-grays;
+	text-transform: capitalize;
+	@include font(16,19);
+	border-bottom: 1px solid #adadad;
+	padding: 0 0 5px;
+	
+	span{
+		@include align(top);
+		position: relative;
+		
+		&:after {
+			position: absolute;
+			bottom: -6px;
+			left: 0;
+			right: 0;
+			background: $orange;
+			height: 2px;
+			content: '';
+		}
+	}
+}
+.tabset{
+	@extend %listreset;
+	@include align-reset(top,12,15);
+	text-transform: capitalize;
+	
+	li{
+		padding: 0 10px 10px;
+		
+		&.active{
+			a{
+				color: $orange;
+				.round{
+					border-color: $orange;
+					&:after{
+						opacity: 1;
+					}
+				}	
+			}
+		}
+		a{
+			@include align(top);
+			color: $black;
+			position: relative;
+			text-decoration: none;
+			transition: color 0.4s ease;
+			
+			.round{
+				@include align(middle);
+				@include squar(20px, 20px);
+				border: 3px solid $mix-grays;
+				border-radius: 100%;
+				margin: -2px 4px 0 0;
+				transition: all 0.4s ease;
+				content: '';
+				position: relative;
+				transition: border 0.4s ease;
+				
+				&:after{
+					position: absolute;
+					top: 2px;
+					left: 2px;
+					right: 2px;
+					bottom: 2px;
+					content: '';
+					background: $orange;
+					opacity: 0;
+					border-radius: 100%;
+					transition: all 0.4s ease;
+				}
+			}
+		}	
+	}
+}
+.calculatedPrice{
+	color: $dove-black;
+	font-style: italic;
+	position: relative;
+	padding: 0 0 5px;
+}
+.tab-content{
+	overflow: hidden;
+	
+	.fake-radio{
+		@include squar(18px !important ,18px !important);
+	}
+}
