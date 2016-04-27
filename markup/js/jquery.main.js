@@ -43,6 +43,10 @@ function previewFile(file, target) {
 	 }
 });
 
+ $(document).on('click', '.listing-opener', function(){
+	 $('.addPropertyFormContianer').toggleClass('sectionListingActive');
+ });
+ 
 function onScroll(event){
     var scrollPos = $(document).scrollTop();
     $('.scrollAddPropertyNavLink').each(function () {
@@ -61,6 +65,7 @@ function onScroll(event){
 function handleAddPropertyFormScrolling()
 {
 	$('.scrollAddPropertyNavLink').click(function() {
+			$('.addPropertyFormContianer').removeClass('sectionListingActive');
 			$(this).closest('li').siblings().removeClass('activeAddPropertyNavLink');
 			$(this).closest('li').addClass('activeAddPropertyNavLink');
 			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

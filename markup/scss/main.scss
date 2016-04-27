@@ -106,10 +106,20 @@ a{ outline: none;}
 .addPropertyFormContianer{
 	@include container;
 	
+	&.sectionListingActive {
+		.section-listing{
+			height: auto;
+			max-height: 210px;
+			opacity: 1;
+			visibility: visible;
+			z-index: 9;
+		}
+	}
+	
 	&.fixed-position{
 		padding: 85px 10px 0;
 		
-		.section-listing{
+		.listing-holder{
 			position: fixed;
 			top: 0;
 			left: 0;
@@ -117,16 +127,28 @@ a{ outline: none;}
 			z-index: 98;
 			@include container;
 		}
+		.section-listing {
+			@include media('<tablet'){
+				left: 0;
+				right: 0;
+			}
+		}
 		.attactment-block, .basics-block, .feature-block, .contact-information{
 			padding: 30px 0 0;
+			@include media('<tablet'){
+				padding: 25px 0 0;
+			}
 		}
 	}
+	
 	.attactment-block, .basics-block, .feature-block, .contact-information{
 		padding: 10px 0 0;
 	}
 	
-	
 	.select2-container{
+		@include media('<desktop'){
+			min-width: 190px;
+		}
 		@include media('<tablet'){
 			margin: 0;
 			min-width: inherit;
@@ -134,11 +156,15 @@ a{ outline: none;}
 		}
 	}
 	
-	.section-listing {
-		@extend %listreset;
-		@include align-reset(top, 18, 21);
-		overflow: visible;
+	.listing-holder{
+		display: block;
+		width: 100%;
 		position: relative;
+		clear: both;
+		
+		@include media('<tablet'){
+			text-align: center;
+		}
 		
 		&:after{
 			position: absolute;
@@ -151,7 +177,47 @@ a{ outline: none;}
 			content: '';	
 		}
 		
+		.listing-opener{
+			text-decoration: none;
+			color: $black;
+			@include font(40,36);
+			cursor: pointer;
+			z-index: 5;
+			display: block;
+			
+			@include media('>=tablet'){ display: none;}
+			
+			&:hover{
+				color: $mix-grays;
+			}
+		}
+	}
+	
+	.section-listing {
+		@extend %listreset;
+		@include align-reset(top, 18, 21);
+		position: relative;
+		background: $light-gray;
+		
+		@include media('<tablet'){
+			position: absolute;
+			top: 100%;
+			left: -10px;
+			right: -10px;
+			z-index: -1;
+			max-height: 0;
+			opacity: 0;
+			visibility: hidden;
+			height: 0;
+			overflow: auto;
+			transition: z-index 0.5s ease, max-height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
+		}
+		
 		li{
+			@include media('<tablet'){
+				display: block;
+			}
+			
 			&.activeAddPropertyNavLink{
 				&:before{
 					background: $light-blue;
@@ -291,6 +357,10 @@ a{ outline: none;}
 		padding: 20px 0 50px;
 		overflow: hidden;
 		
+		@include media('<tablet'){
+			padding: 0 0 50px;
+		}
+		
 		input[type="text"],
 		input[type="search"],
 		input[type="number"],
@@ -301,6 +371,10 @@ a{ outline: none;}
 			margin: 0 0 0 10px;
 			padding: 6px 10px;
 			outline: none;
+			
+			@include media('<desktop'){
+				max-width: 190px;
+			}
 			
 			@include media('<tablet'){
 				max-width: inherit;
@@ -379,7 +453,7 @@ a{ outline: none;}
 			padding: 10px;
 			
 			@include media('<desktop'){
-				max-width: 635px;
+				max-width: 565px;
 			}
 			@include media('<tablet'){
 				max-width: inherit;
@@ -742,6 +816,7 @@ a{ outline: none;}
 				}
 				
 				&.disableInput{
+					opacity: 0.5;
 					pointer-events: none;
 				}
 				

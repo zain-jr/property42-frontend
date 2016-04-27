@@ -403,8 +403,8 @@ th {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?pv5p5q");
-  src: url("../fonts/icomoon.eot?pv5p5q#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?pv5p5q") format("truetype"), url("../fonts/icomoon.woff?pv5p5q") format("woff"), url("../fonts/icomoon.svg?pv5p5q#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?l3plj3");
+  src: url("../fonts/icomoon.eot?l3plj3#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?l3plj3") format("truetype"), url("../fonts/icomoon.woff?l3plj3") format("woff"), url("../fonts/icomoon.svg?l3plj3#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -423,12 +423,8 @@ th {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-contact_phone:before {
-  content: "\e905";
-}
-
-.icon-cross:before {
-  content: "\e906";
+.icon-menu:before {
+  content: "\e90a";
 }
 
 .icon-clip:before {
@@ -441,6 +437,14 @@ th {
 
 .icon-arrows:before {
   content: "\e904";
+}
+
+.icon-contact_phone:before {
+  content: "\e905";
+}
+
+.icon-cross:before {
+  content: "\e906";
 }
 
 .icon-plus:before {
@@ -823,11 +827,19 @@ a {
   clear: both;
 }
 
+.addPropertyFormContianer.sectionListingActive .section-listing {
+  height: auto;
+  max-height: 210px;
+  opacity: 1;
+  visibility: visible;
+  z-index: 9;
+}
+
 .addPropertyFormContianer.fixed-position {
   padding: 85px 10px 0;
 }
 
-.addPropertyFormContianer.fixed-position .section-listing {
+.addPropertyFormContianer.fixed-position .listing-holder {
   position: fixed;
   top: 0;
   left: 0;
@@ -839,12 +851,31 @@ a {
   clear: both;
 }
 
+@media (max-width: 767px) {
+  .addPropertyFormContianer.fixed-position .section-listing {
+    left: 0;
+    right: 0;
+  }
+}
+
 .addPropertyFormContianer.fixed-position .attactment-block, .addPropertyFormContianer.fixed-position .basics-block, .addPropertyFormContianer.fixed-position .feature-block, .addPropertyFormContianer.fixed-position .contact-information {
   padding: 30px 0 0;
 }
 
+@media (max-width: 767px) {
+  .addPropertyFormContianer.fixed-position .attactment-block, .addPropertyFormContianer.fixed-position .basics-block, .addPropertyFormContianer.fixed-position .feature-block, .addPropertyFormContianer.fixed-position .contact-information {
+    padding: 25px 0 0;
+  }
+}
+
 .addPropertyFormContianer .attactment-block, .addPropertyFormContianer .basics-block, .addPropertyFormContianer .feature-block, .addPropertyFormContianer .contact-information {
   padding: 10px 0 0;
+}
+
+@media (max-width: 1023px) {
+  .addPropertyFormContianer .select2-container {
+    min-width: 190px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -855,12 +886,56 @@ a {
   }
 }
 
+.addPropertyFormContianer .listing-holder {
+  display: block;
+  width: 100%;
+  position: relative;
+  clear: both;
+}
+
+@media (max-width: 767px) {
+  .addPropertyFormContianer .listing-holder {
+    text-align: center;
+  }
+}
+
+.addPropertyFormContianer .listing-holder:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -9999px;
+  right: -9999px;
+  z-index: -1;
+  background: #dde2e8;
+  content: '';
+}
+
+.addPropertyFormContianer .listing-holder .listing-opener {
+  text-decoration: none;
+  color: #000;
+  font-size: 40px;
+  line-height: 36px;
+  cursor: pointer;
+  z-index: 5;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .addPropertyFormContianer .listing-holder .listing-opener {
+    display: none;
+  }
+}
+
+.addPropertyFormContianer .listing-holder .listing-opener:hover {
+  color: #606060;
+}
+
 .addPropertyFormContianer .section-listing {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
-  overflow: visible;
   position: relative;
+  background: #dde2e8;
 }
 
 .addPropertyFormContianer .section-listing > * {
@@ -871,15 +946,26 @@ a {
   letter-spacing: 0;
 }
 
-.addPropertyFormContianer .section-listing:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -9999px;
-  right: -9999px;
-  z-index: -1;
-  background: #dde2e8;
-  content: '';
+@media (max-width: 767px) {
+  .addPropertyFormContianer .section-listing {
+    position: absolute;
+    top: 100%;
+    left: -10px;
+    right: -10px;
+    z-index: -1;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: auto;
+    transition: z-index 0.5s ease, max-height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
+  }
+}
+
+@media (max-width: 767px) {
+  .addPropertyFormContianer .section-listing li {
+    display: block;
+  }
 }
 
 .addPropertyFormContianer .section-listing li.activeAddPropertyNavLink:before {
@@ -1055,6 +1141,12 @@ a {
   overflow: hidden;
 }
 
+@media (max-width: 767px) {
+  .addPropertyFormContianer .property-add {
+    padding: 0 0 50px;
+  }
+}
+
 .addPropertyFormContianer .property-add input[type="text"],
 .addPropertyFormContianer .property-add input[type="search"],
 .addPropertyFormContianer .property-add input[type="number"],
@@ -1067,6 +1159,15 @@ a {
   margin: 0 0 0 10px;
   padding: 6px 10px;
   outline: none;
+}
+
+@media (max-width: 1023px) {
+  .addPropertyFormContianer .property-add input[type="text"],
+  .addPropertyFormContianer .property-add input[type="search"],
+  .addPropertyFormContianer .property-add input[type="number"],
+  .addPropertyFormContianer .property-add input[type="email"] {
+    max-width: 190px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1164,7 +1265,7 @@ a {
 
 @media (max-width: 1023px) {
   .addPropertyFormContianer .property-add textarea {
-    max-width: 635px;
+    max-width: 565px;
   }
 }
 
@@ -1612,6 +1713,7 @@ a {
 }
 
 .addPropertyFormContianer .image-uploading-area li .picture-name.disableInput {
+  opacity: 0.5;
   pointer-events: none;
 }
 
