@@ -403,8 +403,8 @@ th {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?rhh2ex");
-  src: url("../fonts/icomoon.eot?rhh2ex#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?rhh2ex") format("truetype"), url("../fonts/icomoon.woff?rhh2ex") format("woff"), url("../fonts/icomoon.svg?rhh2ex#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?pv5p5q");
+  src: url("../fonts/icomoon.eot?pv5p5q#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?pv5p5q") format("truetype"), url("../fonts/icomoon.woff?pv5p5q") format("woff"), url("../fonts/icomoon.svg?pv5p5q#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -423,8 +423,36 @@ th {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-contact_phone:before {
+  content: "\e905";
+}
+
+.icon-cross:before {
+  content: "\e906";
+}
+
+.icon-clip:before {
+  content: "\e908";
+}
+
+.icon-symbol:before {
+  content: "\e909";
+}
+
+.icon-arrows:before {
+  content: "\e904";
+}
+
 .icon-plus:before {
   content: "\e900";
+}
+
+.icon-info:before {
+  content: "\e907";
+}
+
+.icon-checkmark:before {
+  content: "\e903";
 }
 
 .icon-facebook:before {
@@ -435,7 +463,7 @@ th {
   content: "\e902";
 }
 
-.property-add .radio-holder, .tabset {
+.addPropertyFormContianer .section-listing, .addPropertyFormContianer .tabset, .addPropertyFormContianer .property-add .radio-holder, .addPropertyFormContianer .feature-list, .addPropertyFormContianer .image-uploading-area {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -698,41 +726,6 @@ input[type='submit'] {
   text-align: center !important;
 }
 
-ol {
-  margin: 0 0 30px;
-  padding: 0;
-  line-height: 22px;
-  color: #000;
-  width: 100%;
-  overflow: hidden;
-  counter-reset: item;
-}
-
-ol ol {
-  margin: 0;
-}
-
-ol li {
-  padding: 0 0 0 30px;
-}
-
-ol li:before,
-ol .num {
-  font-size: 12px;
-  line-height: 24px;
-  width: 25px;
-  height: 25px;
-  float: left;
-  text-align: center;
-  border-radius: 100%;
-  margin: 4px 0 0 -30px;
-  color: #000;
-  background: #000;
-  color: #fff;
-  content: counters(item, ".") " ";
-  counter-increment: item;
-}
-
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -754,7 +747,7 @@ ol .num {
   width: 100%;
   display: block;
   position: relative;
-  background: #3b4783;
+  background: #133783;
 }
 
 #header .layout {
@@ -809,89 +802,225 @@ ol .num {
   overflow: hidden;
 }
 
-.listing-holder {
-  overflow: hidden;
-  background: #dde2e8;
+.addPropertyFormContianer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 10px;
+  clear: both;
 }
 
-.section-listing {
+.addPropertyFormContianer.fixed-position {
+  padding: 85px 0 0;
+}
+
+.addPropertyFormContianer.fixed-position .section-listing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 98;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 10px;
+  clear: both;
+}
+
+.addPropertyFormContianer.fixed-position .attactment-block, .addPropertyFormContianer.fixed-position .basics-block, .addPropertyFormContianer.fixed-position .feature-block, .addPropertyFormContianer.fixed-position .contact-information {
+  padding: 55px 0 0;
+}
+
+.addPropertyFormContianer .section-listing {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
-  padding: 10px 0;
+  overflow: visible;
+  position: relative;
 }
 
-.section-listing > * {
+.addPropertyFormContianer .section-listing > * {
   display: inline-block;
   vertical-align: top;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 18px;
+  line-height: 21px;
   letter-spacing: 0;
 }
 
-.section-listing li {
-  width: 20%;
-  padding: 0 30px 10px;
+.addPropertyFormContianer .section-listing:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -9999px;
+  right: -9999px;
+  z-index: -1;
+  background: #dde2e8;
+  content: '';
 }
 
-.section-listing li.active:before {
+.addPropertyFormContianer .section-listing li.activeAddPropertyNavLink:before {
   background: #39f;
 }
 
-.section-listing li.active a {
+.addPropertyFormContianer .section-listing li.activeAddPropertyNavLink a {
   color: #000;
 }
 
-.section-listing li.active a:after {
+.addPropertyFormContianer .section-listing li.activeAddPropertyNavLink a:after {
   right: 0;
 }
 
-.section-listing li:hover:before {
+.addPropertyFormContianer .section-listing li.activeAddPropertyNavLink a [class^="icon-"], .addPropertyFormContianer .section-listing li.activeAddPropertyNavLink a [class*="icon-"] {
+  color: #58a36f;
+}
+
+.addPropertyFormContianer .section-listing li:hover:before {
   background: #39f;
 }
 
-.section-listing li:hover a {
+.addPropertyFormContianer .section-listing li:hover a {
   color: #000;
 }
 
-.section-listing li:hover a:after {
+.addPropertyFormContianer .section-listing li:hover a:after {
   right: 0;
 }
 
-.section-listing li a {
-  padding: 5px 25px;
+.addPropertyFormContianer .section-listing li:hover a [class^="icon-"], .addPropertyFormContianer .section-listing li:hover a [class*="icon-"] {
+  color: #58a36f;
+}
+
+.addPropertyFormContianer .section-listing li a {
+  padding: 15px 95px;
   text-align: center;
   display: block;
   text-decoration: none;
   color: #606060;
   position: relative;
-  margin: 2px 0 0;
   z-index: 1;
   overflow: hidden;
-  border-radius: 6px;
 }
 
-.section-listing li a:after {
-  background: #2e2e2e;
-  height: 1px;
+@media (max-width: 1199px) {
+  .addPropertyFormContianer .section-listing li a {
+    padding: 15px 70px;
+  }
+}
+
+.addPropertyFormContianer .section-listing li a:after {
+  background: #edf1f4;
   position: absolute;
   left: 0;
   right: 100%;
   bottom: 0;
+  top: 0;
   z-index: -1;
   content: '';
   transition: all 0.4s ease;
 }
 
-.property-add {
-  padding: 20px 0;
+.addPropertyFormContianer .section-listing li a [class^="icon-"], .addPropertyFormContianer .section-listing li a [class*="icon-"] {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  margin: -11px 0 0;
+}
+
+.addPropertyFormContianer .section-listing li a [class^="icon-"]:before, .addPropertyFormContianer .section-listing li a [class*="icon-"]:before {
+  font-size: 25px;
+  line-height: 1;
+}
+
+.addPropertyFormContianer .tabset {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  text-transform: capitalize;
+}
+
+.addPropertyFormContianer .tabset > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0;
+}
+
+.addPropertyFormContianer .tabset li {
+  padding: 0 10px 10px;
+}
+
+.addPropertyFormContianer .tabset li.active a {
+  color: #133783;
+}
+
+.addPropertyFormContianer .tabset li.active a .round {
+  background: #133783;
+  border-color: #133783;
+}
+
+.addPropertyFormContianer .tabset li.active a .round:after {
+  display: block;
+}
+
+.addPropertyFormContianer .tabset li a {
+  display: inline-block;
+  vertical-align: top;
+  color: #000;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.addPropertyFormContianer .tabset li a .round {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #606060;
+  margin: -2px 4px 0 0;
+  transition: all 0.4s ease;
+  content: '';
+  position: relative;
+  transition: border 0.4s ease;
+}
+
+.addPropertyFormContianer .tabset li a .round:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -5px 0 0 -5px;
+  color: #fff;
+  content: "\e903";
+  font-family: 'icomoon';
+  font-size: 10px;
+  line-height: 10px;
+  display: none;
+}
+
+.addPropertyFormContianer .calculatedPrice {
+  color: #363636;
+  font-style: italic;
+  position: relative;
+  padding: 0 0 5px;
+}
+
+.addPropertyFormContianer .tab-content {
   overflow: hidden;
 }
 
-.property-add input[type="text"],
-.property-add input[type="search"],
-.property-add input[type="number"],
-.property-add input[type="email"] {
+.addPropertyFormContianer .tab-content .fake-radio {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+.addPropertyFormContianer .property-add {
+  padding: 20px 0 50px;
+  overflow: hidden;
+}
+
+.addPropertyFormContianer .property-add input[type="text"],
+.addPropertyFormContianer .property-add input[type="search"],
+.addPropertyFormContianer .property-add input[type="number"],
+.addPropertyFormContianer .property-add input[type="email"] {
   font-size: 12px;
   line-height: 15px;
   width: 100%;
@@ -902,31 +1031,94 @@ ol .num {
   outline: none;
 }
 
-.property-add input[type="text"]:focus, .property-add input[type="text"]:hover,
-.property-add input[type="search"]:focus,
-.property-add input[type="search"]:hover,
-.property-add input[type="number"]:focus,
-.property-add input[type="number"]:hover,
-.property-add input[type="email"]:focus,
-.property-add input[type="email"]:hover {
-  border: 1px solid #005ce6;
+.addPropertyFormContianer .property-add input[type="text"]:focus, .addPropertyFormContianer .property-add input[type="text"]:hover,
+.addPropertyFormContianer .property-add input[type="search"]:focus,
+.addPropertyFormContianer .property-add input[type="search"]:hover,
+.addPropertyFormContianer .property-add input[type="number"]:focus,
+.addPropertyFormContianer .property-add input[type="number"]:hover,
+.addPropertyFormContianer .property-add input[type="email"]:focus,
+.addPropertyFormContianer .property-add input[type="email"]:hover {
+  border: 1px solid #000;
 }
 
-.property-add select {
+.addPropertyFormContianer .property-add button[type="submit"] {
+  border: 0;
+  padding: 12px 25px;
+  display: block;
+  text-transform: capitalize;
+  width: 250px;
+  margin: 20px auto;
+  font-size: 16px;
+  line-height: 19px;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #58a36f;
+  color: #fff;
+  font-weight: 600;
+  outline: none;
+}
+
+.addPropertyFormContianer .property-add button[type="submit"] [class^="icon"], .addPropertyFormContianer .property-add button[type="submit"] [class*="icon"] {
+  position: absolute;
+  top: 50%;
+  right: -100px;
+  margin: -9px 0 0;
+  transition: right 0.4s ease;
+}
+
+.addPropertyFormContianer .property-add button[type="submit"] [class^="icon"]:before, .addPropertyFormContianer .property-add button[type="submit"] [class*="icon"]:before {
+  font-size: 12px;
+  line-height: 1;
+}
+
+.addPropertyFormContianer .property-add button[type="submit"]:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 100%;
+  background: #489ddd;
+  z-index: -1;
+  content: '';
+  transition: all 0.4s ease;
+}
+
+.addPropertyFormContianer .property-add button[type="submit"]:hover:after {
+  left: 0;
+}
+
+.addPropertyFormContianer .property-add button[type="submit"]:hover [class^="icon"], .addPropertyFormContianer .property-add button[type="submit"]:hover [class*="icon"] {
+  right: 20px;
+}
+
+.addPropertyFormContianer .property-add select {
   display: inline-block;
   vertical-align: top;
   height: 30px;
 }
 
-.property-add textarea {
-  margin: 0 0 0 9px;
-  width: 100%;
-  height: 50px;
-  max-width: 710px;
-  resize: none;
+.addPropertyFormContianer .property-add select:focus, .addPropertyFormContianer .property-add select:hover {
+  border: 1px solid #000;
 }
 
-.property-add .title {
+.addPropertyFormContianer .property-add textarea {
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0 0 0 9px;
+  width: 100%;
+  height: 120px;
+  max-width: 710px;
+  resize: none;
+  padding: 10px;
+}
+
+.addPropertyFormContianer .property-add textarea:hover {
+  border-color: #000;
+}
+
+.addPropertyFormContianer .property-add .title {
   padding: 2px 0 0;
   float: left;
   text-align: right;
@@ -938,22 +1130,29 @@ ol .num {
   line-height: 17px;
 }
 
-.property-add .input-holder {
+.addPropertyFormContianer .property-add .title:after {
+  display: inline-block;
+  vertical-align: top;
+  content: '\2217';
+  color: #e14646;
+}
+
+.addPropertyFormContianer .property-add .input-holder {
   float: left;
   width: 75%;
 }
 
-.property-add .field-holder {
+.addPropertyFormContianer .property-add .field-holder {
   overflow: hidden;
 }
 
-.property-add .radio-holder {
+.addPropertyFormContianer .property-add .radio-holder {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
 }
 
-.property-add .radio-holder > * {
+.addPropertyFormContianer .property-add .radio-holder > * {
   display: inline-block;
   vertical-align: top;
   font-size: 12px;
@@ -961,46 +1160,45 @@ ol .num {
   letter-spacing: 0;
 }
 
-.property-add .radio-holder li {
+.addPropertyFormContianer .property-add .radio-holder li {
   padding: 0 10px 10px;
 }
 
-.property-add .radio-holder li label {
+.addPropertyFormContianer .property-add .radio-holder li label {
   display: inline-block;
   vertical-align: top;
   cursor: pointer;
   padding: 2px 0 0;
 }
 
-.property-add .radio-holder li label .fake-radio,
-.property-add .radio-holder li label .fake-label {
+.addPropertyFormContianer .property-add .radio-holder li label .fake-radio,
+.addPropertyFormContianer .property-add .radio-holder li label .fake-label {
   display: inline-block;
   vertical-align: middle;
 }
 
-.property-add .radio-holder li label .fake-radio {
+.addPropertyFormContianer .property-add .radio-holder li label .fake-radio {
   width: 20px;
   height: 20px;
-  border: 3px solid #606060;
-  border-radius: 100%;
+  border: 2px solid #606060;
   margin: -2px 0 0;
-  transition: all 0.4s ease;
   position: relative;
 }
 
-.property-add .radio-holder li label .fake-radio:after {
+.addPropertyFormContianer .property-add .radio-holder li label .fake-radio:after {
   position: absolute;
-  top: 2px;
-  left: 2px;
-  right: 2px;
-  bottom: 2px;
-  content: '';
-  background: #ef9521;
-  opacity: 0;
-  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  margin: -5px 0 0 -5px;
+  color: #fff;
+  content: "\e903";
+  font-family: 'icomoon';
+  font-size: 10px;
+  line-height: 10px;
+  display: none;
 }
 
-.property-add .radio-holder li input[type="radio"] {
+.addPropertyFormContianer .property-add .radio-holder li input[type="radio"] {
   visibility: hidden;
   opacity: 0;
   position: fixed;
@@ -1008,57 +1206,58 @@ ol .num {
   left: -999px;
 }
 
-.property-add .radio-holder li input[type="radio"]:checked ~ .fake-radio {
-  border: 3px solid #ef9521;
+.addPropertyFormContianer .property-add .radio-holder li input[type="radio"]:checked ~ .fake-radio {
+  border: 2px solid #133783;
+  background: #133783;
 }
 
-.property-add .radio-holder li input[type="radio"]:checked ~ .fake-radio:after {
-  opacity: 1;
+.addPropertyFormContianer .property-add .radio-holder li input[type="radio"]:checked ~ .fake-radio:after {
+  display: block;
 }
 
-.property-add .radio-holder li input[type="radio"]:checked ~ .fake-label {
-  color: #ef9521;
+.addPropertyFormContianer .property-add .radio-holder li input[type="radio"]:checked ~ .fake-label {
+  color: #133783;
 }
 
-.property-add .layout {
+.addPropertyFormContianer .property-add .layout {
   padding: 20px 0 5px;
 }
 
-.property-add .layout.add {
-  max-width: 897px;
+.addPropertyFormContianer .property-add .layout.add {
+  max-width: 885px;
   margin: 0 auto;
 }
 
-.property-add .layout .layout-holder {
+.addPropertyFormContianer .property-add .layout .layout-holder {
   float: left;
   width: 50%;
   margin: 0 auto;
 }
 
-.property-add .layout .layout-holder.add {
+.addPropertyFormContianer .property-add .layout .layout-holder.add {
   width: 100%;
 }
 
-.property-add .layout .layout-holder select {
+.addPropertyFormContianer .property-add .layout .layout-holder select {
   margin: 0 0 0 9px;
   height: 30px;
 }
 
-.property-add .layout .layout-holder .title {
-  max-width: 100px;
+.addPropertyFormContianer .property-add .layout .layout-holder .title {
+  max-width: 95px;
   width: inherit;
   float: none;
   display: inline-block;
   vertical-align: top;
 }
 
-.property-add .tab-content {
+.addPropertyFormContianer .property-add .tab-content {
   max-width: 490px;
   margin: 10px 0 0;
   padding: 0 0 0 20px;
 }
 
-.form-heading {
+.addPropertyFormContianer .form-heading {
   display: block;
   color: #606060;
   text-transform: capitalize;
@@ -1068,13 +1267,13 @@ ol .num {
   padding: 0 0 5px;
 }
 
-.form-heading span {
+.addPropertyFormContianer .form-heading span {
   display: inline-block;
   vertical-align: top;
   position: relative;
 }
 
-.form-heading span:after {
+.addPropertyFormContianer .form-heading span:after {
   position: absolute;
   bottom: -6px;
   left: 0;
@@ -1084,85 +1283,213 @@ ol .num {
   content: '';
 }
 
-.tabset {
+.addPropertyFormContianer .feature-block .holder {
+  overflow: hidden;
+  padding: 10px 0 0;
+}
+
+.addPropertyFormContianer .feature-block .holder .tag {
+  padding: 10px 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.addPropertyFormContianer .tag {
+  display: block;
+  text-transform: capitalize;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+}
+
+.addPropertyFormContianer .feature-list {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
-  text-transform: capitalize;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  position: relative;
+  padding: 0 0 20px;
 }
 
-.tabset > * {
+.addPropertyFormContianer .feature-list > * {
   display: inline-block;
-  vertical-align: top;
-  font-size: 12px;
-  line-height: 15px;
+  vertical-align: middle;
+  font-size: 13px;
+  line-height: 16px;
   letter-spacing: 0;
 }
 
-.tabset li {
-  padding: 0 10px 10px;
+.addPropertyFormContianer .feature-list:after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  content: '';
+  background: #e7e7e7;
 }
 
-.tabset li.active a {
-  color: #ef9521;
+.addPropertyFormContianer .feature-list li {
+  padding: 0 30px 15px;
 }
 
-.tabset li.active a .round {
-  border-color: #ef9521;
+.addPropertyFormContianer .feature-list li label {
+  text-transform: capitalize;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.tabset li.active a .round:after {
-  opacity: 1;
+.addPropertyFormContianer .feature-list li input[type="checkbox"] {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.tabset li a {
+.addPropertyFormContianer .image-uploading-area {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  text-align: center;
+  margin: 30px 0 0;
+}
+
+.addPropertyFormContianer .image-uploading-area > * {
   display: inline-block;
   vertical-align: top;
-  color: #000;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0;
+}
+
+.addPropertyFormContianer .image-uploading-area li {
+  width: 25%;
   position: relative;
-  text-decoration: none;
+  padding: 10px 0;
+}
+
+.addPropertyFormContianer .image-uploading-area li .file-uploader {
+  overflow: hidden;
+  width: 250px;
+  height: 200px;
+  margin: 0 auto;
+  background: #edf2f8;
+  position: relative;
+  z-index: 1;
+}
+
+.addPropertyFormContianer .image-uploading-area li .file-uploader:hover:after {
+  color: #58a36f;
+}
+
+.addPropertyFormContianer .image-uploading-area li .file-uploader.after-none:after {
+  display: none !important;
+}
+
+.addPropertyFormContianer .image-uploading-area li .file-uploader:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "\e900";
+  font-family: 'icomoon';
+  font-size: 86px;
+  line-height: 1;
+  z-index: -1;
+  margin: -40px 0 0 -40px;
+  color: #9da2a8;
   transition: color 0.4s ease;
 }
 
-.tabset li a .round {
-  display: inline-block;
-  vertical-align: middle;
-  width: 20px;
-  height: 20px;
-  border: 3px solid #606060;
-  border-radius: 100%;
-  margin: -2px 4px 0 0;
-  transition: all 0.4s ease;
-  content: '';
-  position: relative;
+.addPropertyFormContianer .image-uploading-area li .file-uploader input[type="file"] {
+  display: block;
+  overflow: hidden;
+  border: 0;
+  outline: none;
+  opacity: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.addPropertyFormContianer .image-uploading-area li .picture-name {
+  display: block;
+  margin: 0 auto;
+  max-width: 250px;
+  border-width: 0 0 2px;
+  border-style: solid;
+  border-color: #999;
+  height: 50px;
+  font-size: 14px;
+  line-height: 18px;
   transition: border 0.4s ease;
 }
 
-.tabset li a .round:after {
+.addPropertyFormContianer .image-uploading-area li .picture-name.disableInput {
+  pointer-events: none;
+}
+
+.addPropertyFormContianer .image-uploading-area li .picture-name:hover, .addPropertyFormContianer .image-uploading-area li .picture-name:focus {
+  border-width: 0 0 3px;
+  border-color: #606060;
+}
+
+.addPropertyFormContianer .image-uploading-area li .image-holder {
   position: absolute;
-  top: 2px;
-  left: 2px;
-  right: 2px;
-  bottom: 2px;
-  content: '';
-  background: #ef9521;
-  opacity: 0;
-  border-radius: 100%;
-  transition: all 0.4s ease;
-}
-
-.calculatedPrice {
-  color: #363636;
-  font-style: italic;
-  position: relative;
-  padding: 0 0 5px;
-}
-
-.tab-content {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  outline: none;
   overflow: hidden;
+  z-index: -1;
+  opacity: 0;
+  transition: z-index 0.9s ease, opacity 0.9s ease;
 }
 
-.tab-content .fake-radio {
-  width: 18px !important;
-  height: 18px !important;
+.addPropertyFormContianer .image-uploading-area li .image-holder:after {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+  content: '';
+  transition: top 0.4s ease;
+}
+
+.addPropertyFormContianer .image-uploading-area li .image-holder .propertyDocumentCloseBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #000;
+  text-decoration: none;
+  z-index: 6;
+  font-size: 30px;
+  line-height: 32px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
+  cursor: pointer;
+}
+
+.addPropertyFormContianer .image-uploading-area li .image-holder .propertyDocumentCloseBtn:hover {
+  color: #e14646;
+}
+
+.addPropertyFormContianer .image-uploading-area li .image-holder img {
+  width: 100%;
+  height: auto;
+  display: block;
+  height: 100%;
+  border: 0;
+}
+
+.addPropertyFormContianer .image-uploading-area li .image-holder:hover:after {
+  top: 0;
+}
+
+.addPropertyFormContianer .image-uploading-area li .image-holder:hover .propertyDocumentCloseBtn {
+  opacity: 1;
+  visibility: visible;
 }

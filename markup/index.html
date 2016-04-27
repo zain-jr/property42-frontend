@@ -12,7 +12,7 @@
 	<!-- google Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body class="">
 	<!-- main container of all the page elements -->
 	<div id="wrapper">
 		<header id="header">
@@ -24,18 +24,15 @@
 			</div>
 		</header>
 		<main id="main" role="main">
-			<section class="listing-holder">
-				<ol class="section-listing container">
-					<li class="active"><a href="#">Basic </a></li>
-					<li><a href="#">Features</a></li>
-					<li><a href="#">Attachments</a></li>
-					<li><a href="#">Contact settings</a></li>
-					<li><a href="# ">Public</a></li>
-				</ol>
-			</section>
-			<section class="container">
+			<div class="addPropertyFormContianer">
+				<ul class="section-listing">
+					<li class="activeAddPropertyNavLink"><a href="#basics-block" class="scrollAddPropertyNavLink"><span class="icon-info"></span> Basic</a></li>
+					<li><a href="#feature-block" class="scrollAddPropertyNavLink"><span class="icon-symbol"></span> Features</a></li>
+					<li><a href="#attactment-block" class="scrollAddPropertyNavLink"><span class="icon-clip"></span> Attachments</a></li>
+					<li><a href="#contact-information" class="scrollAddPropertyNavLink"><span class="icon-contact_phone"></span> Contact Info</a></li>
+				</ul>
 				<form action="#" class="property-add">
-					<section class="basics-block">
+					<section class="basics-block" id="basics-block">
 						<strong class="form-heading"><span>Property Type and Location</span></strong>
 						<div class="layout">
 							<span class="title">purpose:</span>
@@ -43,14 +40,14 @@
 								<ul class="radio-holder">
 									<li>
 										<label for="sale">
-											<input type="radio" name="radio" id="sale">
+											<input type="radio" name="radio" id="sale" required>
 											<span class="fake-radio"></span>
 											<span class="fake-label">For Sale</span>
 										</label>
 									</li>
 									<li>
 										<label for="rent">
-											<input type="radio" name="radio" id="rent">
+											<input type="radio" name="radio" id="rent" required>
 											<span class="fake-radio"></span>
 											<span class="fake-label">Rent</span>
 										</label>
@@ -71,49 +68,49 @@
 										<ul class="radio-holder">
 											<li>
 												<label for="house">
-													<input type="radio" name="radio1" id="house">
+													<input type="radio" name="radio1" id="house" required>
 													<span class="fake-radio"></span>
 													<span class="fake-label">House</span>
 												</label>
 											</li>
 											<li>
 												<label for="flat">
-													<input type="radio" name="radio1" id="flat">
+													<input type="radio" name="radio1" id="flat" required>
 													<span class="fake-radio"></span>
 													<span class="fake-label">Rent</span>
 												</label>
 											</li>
 											<li>
 												<label for="upperP">
-													<input type="radio" name="radio1" id="upperP">
+													<input type="radio" name="radio1" id="upperP" required>
 													<span class="fake-radio"></span>
 													<span class="fake-label">Upper Portion</span>
 												</label>
 											</li>
 											<li>
 												<label for="lowerP">
-													<input type="radio" name="radio1" id="lowerP">
+													<input type="radio" name="radio1" id="lowerP" required>
 													<span class="fake-radio"></span>
 													<span class="fake-label">Lower Portion</span>
 												</label>
 											</li>
 											<li>
 												<label for="farmH">
-													<input type="radio" name="radio1" id="farmH">
+													<input type="radio" name="radio1" id="farmH" required>
 													<span class="fake-radio"></span>
 													<span class="fake-label">Farm House</span>
 												</label>
 											</li>
 											<li>
 												<label for="room">
-													<input type="radio" name="radio1" id="room">
+													<input type="radio" name="radio1" id="room" required>
 													<span class="fake-radio"></span>
 													<span class="fake-label">Room</span>
 												</label>
 											</li>
 											<li>
 												<label for="pentH">
-													<input type="radio" name="radio1" id="pentH">
+													<input type="radio" name="radio1" id="pentH" required>
 													<span class="fake-radio"></span>
 													<span class="fake-label">Penthouse</span>
 												</label>
@@ -124,42 +121,42 @@
 										<ul class="radio-holder">
 											<li>
 												<label for="residentialP">
-													<input type="radio" name="radio2" id="residentialP">
+													<input type="radio" name="radio1" id="residentialP" required>
 													<span class="fake-radio"></span>
 													<span class="fake-label">Residential Plot</span>
 												</label>
 											</li>
 											<li>
 												<label for="commericalP">
-													<input type="radio" name="radio2" id="commericalP">
+													<input type="radio" name="radio1" id="commericalP" required>
 													<span class="fake-radio"></span>
 													<span class="fake-label">Commercial Plot</span>
 												</label>
 											</li>
 											<li>
 												<label for="aggriculture">
-													<input type="radio" name="radio2" id="aggriculture">
+													<input type="radio" name="radio1" id="aggriculture" required>
 													<span class="fake-radio"></span>
 													<span class="fake-label">Aggriculture Land</span>
 												</label>
 											</li>
 											<li>
 												<label for="industry">
-													<input type="radio" name="radio2" id="industry">
+													<input type="radio" name="radio1" id="industry" required>
 													<span class="fake-radio"></span>
 													<span class="fake-label">Industrial Land</span>
 												</label>
 											</li>
 											<li>
 												<label for="pFile">
-													<input type="radio" name="radio2" id="pFile">
+													<input type="radio" name="radio1" id="pFile" required>
 													<span class="fake-radio"></span>
 													<span class="fake-label">Plot File</span>
 												</label>
 											</li>
 											<li>
 												<label for="pForm">
-													<input type="radio" name="radio2" id="pForm">
+													<input type="radio" name="radio1" id="pForm" required>
 													<span class="fake-radio"></span>
 													<span class="fake-label">Plot Form</span>
 												</label>
@@ -170,42 +167,42 @@
 										<ul class="radio-holder">
 											<li>
 												<label for="office">
-													<input type="radio" name="radio3" id="office">
+													<input type="radio" name="radio1" id="office" required>
 													<span class="fake-radio"></span>
 													<span class="fake-label">Office</span>
 												</label>
 											</li>
 											<li>
 												<label for="shop">
-													<input type="radio" name="radio3" id="shop">												
+													<input type="radio" name="radio1" id="shop" required>												
 													<span class="fake-radio"></span>
 													<span class="fake-label">Shop</span>
 												</label>
 											</li>
 											<li>
 												<label for="wareHouse">
-													<input type="radio" name="radio3" id="wareHouse">
+													<input type="radio" name="radio1" id="wareHouse" required>
 													<span class="fake-radio"></span>
 													<span class="fake-label">Warehouse</span>
 												</label>
 											</li>
 											<li>
 												<label for="fectory">
-													<input type="radio" name="radio3" id="fectory">
+													<input type="radio" name="radio1" id="fectory" required>
 													<span class="fake-radio"></span>
 													<span class="fake-label">Fectory</span>
 												</label>
 											</li>
 											<li>
 												<label for="building">
-													<input type="radio" name="radio3" id="building">
+													<input type="radio" name="radio1" id="building" required>
 													<span class="fake-radio"></span>
 													<span class="fake-label">Building</span>
 												</label>
 											</li>
 											<li>
 												<label for="other">
-													<input type="radio" name="radio3" id="other">
+													<input type="radio" name="radio1" id="other" required>
 													<span class="fake-radio"></span>
 													<span class="fake-label">Other</span>
 												</label>
@@ -244,12 +241,12 @@
 							</div>
 						</div>
 						<strong class="form-heading"><span>Property &amp; Area</span></strong>
-						<div class="layout">
-							<span class="title">Price:</span>
-							<div class="input-holder">
-								<input type="number">
-								<span class="calculatedPrice"></span>
+						<div class="layout add">
+							<div class="layout-holder">
+								<span class="title">Price:</span>
+								<input type="number" required>
 							</div>
+							<span class="calculatedPrice"></span>
 						</div>
 						<div class="layout add">
 							<div class="layout-holder">
@@ -276,7 +273,7 @@
 							</div>
 							<div class="layout-holder">
 								<span class="title">Bedrooms:</span>
-								<input type="number">
+								<input type="number" required>
 							</div>
 						</div>
 						<div class="layout add">
@@ -292,12 +289,246 @@
 						<div class="layout add">
 							<div class="layout-holder add">
 								<span class="title">Description:</span>
-								<textarea></textarea>
+								<textarea required></textarea>
 							</div>
 						</div>
 					</section>
+					<section class="feature-block" id="feature-block">
+						<strong class="form-heading"><span>extra features</span></strong>
+						<div class="holder">
+							<span class="tag">Indoor features</span>
+							<ul class="feature-list">
+								<li>
+									<input type="checkbox">
+									<label>Alarm System</label>
+								</li>
+								<li>
+									<input type="checkbox">
+									<label>Intercom</label>
+								</li>
+								<li>
+									<input type="checkbox">
+									<label>Ensuite</label>
+								</li>
+								<li>
+									<input type="checkbox">
+									<label>Dishwasher</label>
+								</li>
+								<li>
+									<input type="checkbox">
+									<label>Built-in wardrobes</label>
+								</li>
+								<li>
+									<input type="checkbox">
+									<label>Ducted vacuum system</label>
+								</li>
+							</ul>
+							<span class="tag">outdoor features</span>
+							<ul class="feature-list">
+								<li>
+									<input type="checkbox">
+									<label>Alarm System</label>
+								</li>
+								<li>
+									<input type="checkbox">
+									<label>Intercom</label>
+								</li>
+								<li>
+									<input type="checkbox">
+									<label>Ensuite</label>
+								</li>
+								<li>
+									<input type="checkbox">
+									<label>Dishwasher</label>
+								</li>
+								<li>
+									<input type="checkbox">
+									<label>Built-in wardrobes</label>
+								</li>
+								<li>
+									<input type="checkbox">
+									<label>Ducted vacuum system</label>
+								</li>
+							</ul>
+							<span class="tag">eco features</span>
+							<ul class="feature-list">
+								<li>
+									<input type="checkbox">
+									<label>Alarm System</label>
+								</li>
+								<li>
+									<input type="checkbox">
+									<label>Intercom</label>
+								</li>
+								<li>
+									<input type="checkbox">
+									<label>Ensuite</label>
+								</li>
+								<li>
+									<input type="checkbox">
+									<label>Dishwasher</label>
+								</li>
+								<li>
+									<input type="checkbox">
+									<label>Built-in wardrobes</label>
+								</li>
+								<li>
+									<input type="checkbox">
+									<label>Ducted vacuum system</label>
+								</li>
+							</ul>
+							<span class="tag">other features</span>
+							<ul class="feature-list">
+								<li>
+									<input type="checkbox">
+									<label>Alarm System</label>
+								</li>
+								<li>
+									<input type="checkbox">
+									<label>Intercom</label>
+								</li>
+								<li>
+									<input type="checkbox">
+									<label>Ensuite</label>
+								</li>
+								<li>
+									<input type="checkbox">
+									<label>Dishwasher</label>
+								</li>
+								<li>
+									<input type="checkbox">
+									<label>Built-in wardrobes</label>
+								</li>
+								<li>
+									<input type="checkbox">
+									<label>Ducted vacuum system</label>
+								</li>
+							</ul>
+						</div>
+					</section>
+					<section class="attactment-block" id="attactment-block">
+						<strong class="form-heading"><span>attactments</span></strong>
+						<ul class="image-uploading-area">
+							<li>
+								<div class="file-uploader">
+									<input type="file" onchange="previewAddPropertyImg(this , '.img-thumb1')" class="upload-img">
+									<div class="image-holder">
+										<img src="#" class="img-thumb1" alt="image Description">
+										<span class="propertyDocumentCloseBtn"><span class="icon-cross"></span></span>
+									</div>
+								</div>
+								<input type="text" class="picture-name disableInput" placeholder="Title">	
+							</li>
+							<li>
+								<div class="file-uploader">
+									<input type="file" onchange="previewAddPropertyImg(this , '.img-thumb2')" class="upload-img">
+									<div class="image-holder">
+										<img src="#" class="img-thumb2" alt="image Description">
+										<span class="propertyDocumentCloseBtn"><span class="icon-cross"></span></span>
+									</div>
+								</div>
+								<input type="text" class="picture-name disableInput" placeholder="Title">
+							</li>
+							<li>
+								<div class="file-uploader">
+									<input type="file" onchange="previewAddPropertyImg(this , '.img-thumb3')" class="upload-img">
+									<div class="image-holder">
+										<img src="#" class="img-thumb3" alt="image Description">
+										<span class="propertyDocumentCloseBtn"><span class="icon-cross"></span></span>
+									</div>
+								</div>
+								<input type="text" class="picture-name disableInput" placeholder="Title">
+							</li>
+							<li>
+								<div class="file-uploader">
+									<input type="file" onchange="previewAddPropertyImg(this , '.img-thumb4')" class="upload-img">
+									<div class="image-holder">
+										<img src="#" class="img-thumb4" alt="image Description">
+										<span class="propertyDocumentCloseBtn"><span class="icon-cross"></span></span>
+									</div>
+								</div>
+								<input type="text" class="picture-name disableInput" placeholder="Title">
+							</li>
+							<li>
+								<div class="file-uploader">
+									<input type="file" onchange="previewAddPropertyImg(this , '.img-thumb5')" class="upload-img">
+									<div class="image-holder">
+										<img src="#" class="img-thumb5" alt="image Description">
+										<span class="propertyDocumentCloseBtn"><span class="icon-cross"></span></span>
+									</div>
+								</div>
+								<input type="text" class="picture-name disableInput" placeholder="Title">
+							</li>
+							<li>
+								<div class="file-uploader">
+									<input type="file" onchange="previewAddPropertyImg(this , '.img-thumb6')" class="upload-img">
+									<div class="image-holder">
+										<img src="#" class="img-thumb6" alt="image Description">
+										<span class="propertyDocumentCloseBtn"><span class="icon-cross"></span></span>
+									</div>
+								</div>
+								<input type="text" class="picture-name disableInput" placeholder="Title">
+							</li>
+							<li>
+								<div class="file-uploader">
+									<input type="file" onchange="previewAddPropertyImg(this , '.img-thumb7')" class="upload-img">
+									<div class="image-holder">
+										<img src="#" class="img-thumb7" alt="image Description">
+										<span class="propertyDocumentCloseBtn"><span class="icon-cross"></span></span>
+									</div>
+								</div>
+								<input type="text" class="picture-name disableInput" placeholder="Title">
+							</li>
+							<li>
+								<div class="file-uploader">
+									<input type="file" onchange="previewAddPropertyImg(this , '.img-thumb8')" class="upload-img">
+									<div class="image-holder">
+										<img src="#" class="img-thumb8" alt="image Description">
+										<span class="propertyDocumentCloseBtn"><span class="icon-cross"></span></span>
+									</div>
+								</div>
+								<input type="text" class="picture-name disableInput" placeholder="Title">
+							</li>
+						</ul>
+					</section>
+					<section class="contact-information" id="contact-information">
+						<strong class="form-heading"><span>Contact info</span></strong>
+						<div class="layout add">
+							<div class="layout-holder">
+								<span class="title">owner:</span>
+								<select class="searchable-select">
+									<option>Select Block</option>
+								</select>
+							</div>
+							<div class="layout-holder">
+								<span class="title">contact person:</span>
+								<input type="text" required>
+							</div>
+						</div>
+						<div class="layout add">
+							<div class="layout-holder">
+								<span class="title">Phone:</span>
+								<input type="text" required>
+							</div>
+							<div class="layout-holder">
+								<span class="title">Cell:</span>
+								<input type="text" required>
+							</div>
+						</div>
+						<div class="layout add">
+							<div class="layout-holder">
+								<span class="title">fax:</span>
+								<input type="text" required>
+							</div>
+							<div class="layout-holder">
+								<span class="title">email:</span>
+								<input type="email" required>
+							</div>
+						</div>
+					</section>
+					<button type="submit"><span class="icon-arrows"></span>Save Property</button>
 				</form>
-			</section>
+			</div>
 		</main>
 	</div>
 	<!-- include jQuery library -->
