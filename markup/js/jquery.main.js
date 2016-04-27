@@ -17,6 +17,7 @@
 	 });
 	 $(this).closest('.file-uploader').removeClass('after-none');
 	 $(this).closest('li').find('.picture-name').addClass('disableInput');
+	 $(this).closest('li').find('.picture-name').val('');
  });
  
 function previewFile(file, target) {

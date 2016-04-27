@@ -47,6 +47,7 @@ $media-expressions: (
 .text-center{ text-align: center !important;}
 .container { @include container;}
 .layout{ overflow: hidden;}
+a{ outline: none;}
 #wrapper {
 	position: relative;
 	width: 100%;
@@ -83,6 +84,13 @@ $media-expressions: (
 	margin: 12px 0 0;
 	transition: background 0.4s ease;
 	
+	@include media('<tablet'){
+		max-width: 130px;
+		@include font(12,18);
+		padding: 6px 5px;
+		margin: 17px 0 0;
+	}
+	
 	&:hover{ background: $orange; }
 	&:before {
 		@include align(top);
@@ -110,7 +118,19 @@ $media-expressions: (
 			@include container;
 		}
 		.attactment-block, .basics-block, .feature-block, .contact-information{
-			padding: 55px 0 0;
+			padding: 30px 0 0;
+		}
+	}
+	.attactment-block, .basics-block, .feature-block, .contact-information{
+		padding: 10px 0 0;
+	}
+	
+	
+	.select2-container{
+		@include media('<tablet'){
+			margin: 0;
+			min-width: inherit;
+			width: 100%;
 		}
 	}
 	
@@ -170,6 +190,9 @@ $media-expressions: (
 				@include media('<widescreen'){
 					padding: 15px 70px;
 				}
+				@include media('<desktop'){
+					padding: 15px 45px;
+				}
 				
 				&:after {
 					background: $index-white;
@@ -187,6 +210,10 @@ $media-expressions: (
 					top: 50%;
 					left:40px;
 					margin: -11px 0 0;
+					
+					@include media('<desktop'){
+						left: 9px;
+					}
 					
 					&:before{
 						font-size: 25px;
@@ -275,6 +302,11 @@ $media-expressions: (
 			padding: 6px 10px;
 			outline: none;
 			
+			@include media('<tablet'){
+				max-width: inherit;
+				margin: 0;
+			}
+			
 			&:focus,
 			&:hover{
 				border: 1px solid $black;
@@ -345,6 +377,15 @@ $media-expressions: (
 			max-width: 710px;
 			resize: none;
 			padding: 10px;
+			
+			@include media('<desktop'){
+				max-width: 635px;
+			}
+			@include media('<tablet'){
+				max-width: inherit;
+				margin: 0;
+			}
+			
 			&:hover{
 				border-color: $black;
 			}
@@ -360,6 +401,14 @@ $media-expressions: (
 			color: $mix-grays;
 			@include font(14,17);
 			
+			@include media('<tablet'){
+				float: none;
+				display: block;
+				width: 100%;
+				text-align: left;
+				padding: 0 0 10px;
+			}
+			
 			&:after{
 				@include align(top);
 				content: '\2217';
@@ -369,6 +418,12 @@ $media-expressions: (
 		.input-holder{
 			float: left;
 			width: 75%;
+			
+			@include media('<tablet'){
+				float: none;
+				width: 100%;
+				display: block;
+			}
 		}
 		.field-holder{
 			overflow: hidden;
@@ -437,12 +492,26 @@ $media-expressions: (
 			&.add{
 				max-width: 885px;
 				margin: 0 auto;
+				
+				@include media('<tablet'){
+					max-width: inherit;
+					width: 100%;
+					margin: 0;
+				}
 			}
 			
 			.layout-holder{
 				float: left;
 				width: 50%;
 				margin: 0 auto;
+				
+				@include media('<tablet'){
+					float: none;
+					display: block;
+					width: 100%;
+					margin: 0;
+					padding: 0 0 20px;
+				}
 				
 				&.add{
 					width: 100%;
@@ -451,6 +520,11 @@ $media-expressions: (
 				select{
 					margin: 0 0 0 9px;
 					height: 30px;
+					
+					@include media('<tablet'){
+						width: 100%;
+						margin: 0;
+					}
 				}
 				
 				.title{
@@ -458,6 +532,10 @@ $media-expressions: (
 					width: inherit;
 					float: none;
 					@include align(top);
+					
+					@include media('<tablet'){
+						max-width: inherit;
+					}
 				}
 			}
 		}
@@ -474,6 +552,7 @@ $media-expressions: (
 		@include font(16,19);
 		border-bottom: 1px solid #adadad;
 		padding: 0 0 5px;
+		margin: 30px 0 0;
 		
 		span{
 			@include align(top);
@@ -547,25 +626,60 @@ $media-expressions: (
 		text-align: center;
 		margin: 30px 0 0;
 		
+		@include media('<tablet'){
+			margin: 30px -5px 0;
+		}
+		
 		li{
 			width: 25%;
 			position: relative;
 			padding: 10px 0;
 			
+			@include media('<tablet'){
+				width: 50%;
+				padding: 10px 5px;
+			}
+			
 			&:first-child{
 				
+				.file-uploader{
+					
+					&:before{
+						position: absolute;
+						top: 19px;
+						left: -39px;
+						content: 'Main Image';
+						text-transform: capitalize;
+						@include font(13,16);
+						padding: 3px;
+						transform: rotate(-39deg);
+						width: 150px;
+						color: $white;
+						z-index: 999;
+						background: rgba($red, 0.8);
+						word-spacing: 1px;
+					}
+				}
 			}
 			
 			.file-uploader{
-					overflow: hidden;
 					@include squar(250px, 200px);
 					margin: 0 auto;
 					background: $dove-gray;
 					position: relative;
 					z-index: 1;
+					overflow: hidden;
 					
-					@include media('widescreen'){
-						
+					@include media('<widescreen'){
+						@include squar(200px, 200px);
+					}
+					
+					@include media('<desktop'){
+						@include squar(150px, 150px);
+					}
+					
+					@include media('<tablet'){
+						@include squar(100%, 150px);
 					}
 					
 					&:hover{
@@ -588,6 +702,11 @@ $media-expressions: (
 						margin: -40px 0 0 -40px;
 						color: #9da2a8;
 						transition: color 0.4s ease;
+						
+						@include media('<desktop'){
+							font-size: 60px;
+							margin: -30px 0 0 -30px;
+						}
 					}
 					
 					input[type="file"]{
@@ -609,6 +728,18 @@ $media-expressions: (
 				height: 50px;
 				@include font(14,18);
 				transition: border 0.4s ease;
+				
+				@include media('<widescreen'){
+					max-width: 200px;
+				}
+				
+				@include media('<desktop'){
+					max-width: 150px;
+				}
+				
+				@include media('<tablet'){
+					max-width: inherit;
+				}
 				
 				&.disableInput{
 					pointer-events: none;
