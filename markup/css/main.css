@@ -473,7 +473,7 @@ th {
   list-style: none;
 }
 
-.clearfix:after {
+.clearfix:after, #header:after {
   content: '';
   display: block;
   clear: both;
@@ -777,6 +777,16 @@ a {
   display: block;
 }
 
+.logo-dash {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  line-height: 22px;
+  float: left;
+  background: #000;
+  padding: 15px 30px;
+}
+
 .add-property {
   float: right;
   max-width: 300px;
@@ -790,6 +800,11 @@ a {
   padding: 10px 20px;
   margin: 12px 0 0;
   transition: background 0.4s ease;
+}
+
+.add-property.less-indent {
+  margin: 9px 10px 0;
+  padding: 8px 17px;
 }
 
 @media (max-width: 767px) {
@@ -835,10 +850,6 @@ a {
   z-index: 9;
 }
 
-.addPropertyFormContianer.fixed-position {
-  padding: 85px 10px 0;
-}
-
 .addPropertyFormContianer.fixed-position .listing-holder {
   position: fixed;
   top: 0;
@@ -858,18 +869,18 @@ a {
   }
 }
 
+.addPropertyFormContianer.fixed-position .property-add {
+  padding: 60px 0 50px;
+}
+
 .addPropertyFormContianer.fixed-position .attactment-block, .addPropertyFormContianer.fixed-position .basics-block, .addPropertyFormContianer.fixed-position .feature-block, .addPropertyFormContianer.fixed-position .contact-information {
-  padding: 30px 0 0;
+  padding: 45px 0 0;
 }
 
 @media (max-width: 767px) {
   .addPropertyFormContianer.fixed-position .attactment-block, .addPropertyFormContianer.fixed-position .basics-block, .addPropertyFormContianer.fixed-position .feature-block, .addPropertyFormContianer.fixed-position .contact-information {
     padding: 25px 0 0;
   }
-}
-
-.addPropertyFormContianer .attactment-block, .addPropertyFormContianer .basics-block, .addPropertyFormContianer .feature-block, .addPropertyFormContianer .contact-information {
-  padding: 10px 0 0;
 }
 
 @media (max-width: 1023px) {
@@ -974,6 +985,7 @@ a {
 
 .addPropertyFormContianer .section-listing li.activeAddPropertyNavLink a {
   color: #000;
+  pointer-events: none;
 }
 
 .addPropertyFormContianer .section-listing li.activeAddPropertyNavLink a:after {
@@ -1137,7 +1149,7 @@ a {
 }
 
 .addPropertyFormContianer .property-add {
-  padding: 20px 0 50px;
+  padding: 0 0 50px;
   overflow: hidden;
 }
 
@@ -1477,6 +1489,10 @@ a {
   border-bottom: 1px solid #adadad;
   padding: 0 0 5px;
   margin: 30px 0 0;
+}
+
+.fixed-position .addPropertyFormContianer .form-heading {
+  margin: 0;
 }
 
 .addPropertyFormContianer .form-heading span {

@@ -58,6 +58,7 @@ a{ outline: none;}
 	display: block;
 	position: relative;
 	background: $defualt-blue;
+	@extend %clearfix;
 	
 	.layout {
 		padding: 10px 0;
@@ -71,6 +72,14 @@ a{ outline: none;}
 	
 	img { @include img-res;}
 }
+.logo-dash{
+	text-decoration: none;
+	color: $white;
+	@include font(20,22);
+	float: left;
+	background: $black;
+	padding: 15px 30px;
+}
 .add-property {
 	float: right;
 	max-width: 300px;
@@ -83,6 +92,11 @@ a{ outline: none;}
 	padding: 10px 20px;
 	margin: 12px 0 0;
 	transition: background 0.4s ease;
+	
+	&.less-indent{
+		margin: 9px 10px 0;
+		padding: 8px 17px;
+	}
 	
 	@include media('<tablet'){
 		max-width: 130px;
@@ -103,7 +117,7 @@ a{ outline: none;}
 #main{
 	overflow: hidden;
 }
-.addPropertyFormContianer{
+.addPropertyFormContianer {
 	@include container;
 	
 	&.sectionListingActive {
@@ -117,7 +131,6 @@ a{ outline: none;}
 	}
 	
 	&.fixed-position{
-		padding: 85px 10px 0;
 		
 		.listing-holder{
 			position: fixed;
@@ -133,17 +146,18 @@ a{ outline: none;}
 				right: 0;
 			}
 		}
+		.property-add {
+			padding: 60px 0 50px;
+		}
 		.attactment-block, .basics-block, .feature-block, .contact-information{
-			padding: 30px 0 0;
+			padding:45px 0 0;
+			
 			@include media('<tablet'){
 				padding: 25px 0 0;
 			}
 		}
 	}
 	
-	.attactment-block, .basics-block, .feature-block, .contact-information{
-		padding: 10px 0 0;
-	}
 	
 	.select2-container{
 		@include media('<desktop'){
@@ -224,6 +238,7 @@ a{ outline: none;}
 				}
 				a{
 					color: $black;
+					pointer-events: none;
 					&:after{
 						right: 0;
 					}
@@ -354,7 +369,7 @@ a{ outline: none;}
 		}
 	}
 	.property-add {
-		padding: 20px 0 50px;
+		padding: 0 0 50px;
 		overflow: hidden;
 		
 		@include media('<tablet'){
@@ -627,6 +642,10 @@ a{ outline: none;}
 		border-bottom: 1px solid #adadad;
 		padding: 0 0 5px;
 		margin: 30px 0 0;
+		
+		.fixed-position & {
+			margin: 0;
+		}
 		
 		span{
 			@include align(top);
