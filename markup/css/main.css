@@ -403,8 +403,8 @@ th {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?l3plj3");
-  src: url("../fonts/icomoon.eot?l3plj3#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?l3plj3") format("truetype"), url("../fonts/icomoon.woff?l3plj3") format("woff"), url("../fonts/icomoon.svg?l3plj3#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?4ik32i");
+  src: url("../fonts/icomoon.eot?4ik32i#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?4ik32i") format("truetype"), url("../fonts/icomoon.woff?4ik32i") format("woff"), url("../fonts/icomoon.svg?4ik32i#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -423,51 +423,51 @@ th {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-menu:before {
-  content: "\e90a";
-}
-
-.icon-clip:before {
-  content: "\e908";
-}
-
-.icon-symbol:before {
-  content: "\e909";
-}
-
-.icon-arrows:before {
-  content: "\e904";
-}
-
-.icon-contact_phone:before {
-  content: "\e905";
-}
-
-.icon-cross:before {
-  content: "\e906";
-}
-
-.icon-plus:before {
+.icon-login:before {
   content: "\e900";
 }
 
-.icon-info:before {
-  content: "\e907";
-}
-
-.icon-checkmark:before {
-  content: "\e903";
-}
-
-.icon-facebook:before {
+.icon-file-zip:before {
   content: "\e901";
 }
 
-.icon-twitter:before {
+.icon-phone:before {
   content: "\e902";
 }
 
-.addPropertyFormContianer .section-listing, .addPropertyFormContianer .tabset, .addPropertyFormContianer .property-add .radio-holder, .addPropertyFormContianer .feature-list, .addPropertyFormContianer .image-uploading-area {
+.icon-directions:before {
+  content: "\e903";
+}
+
+.icon-phone_iphone:before {
+  content: "\e904";
+}
+
+.icon-user:before {
+  content: "\e905";
+}
+
+.icon-notification:before {
+  content: "\e906";
+}
+
+.icon-key:before {
+  content: "\e907";
+}
+
+.icon-fax:before {
+  content: "\e908";
+}
+
+.icon-envelope:before {
+  content: "\e909";
+}
+
+.icon-user2:before {
+  content: "\e90a";
+}
+
+.login-registarHolder .tabset {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -714,22 +714,6 @@ input[type='submit'] {
   cursor: pointer;
 }
 
-.text-left {
-  text-align: left !important;
-}
-
-.text-right {
-  text-align: right !important;
-}
-
-.text-uppercase {
-  text-transform: uppercase !important;
-}
-
-.text-center {
-  text-align: center !important;
-}
-
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -743,6 +727,27 @@ input[type='submit'] {
 
 a {
   outline: none;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #2e2e2e;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #2e2e2e;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #2e2e2e;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #2e2e2e;
 }
 
 #wrapper {
@@ -762,6 +767,25 @@ a {
   padding: 10px 0;
 }
 
+#header .login-register {
+  float: right;
+  text-decoration: none;
+  color: #fff;
+  background: #39f;
+  border-radius: 4px;
+  padding: 10px 30px;
+  transition: background 0.4s ease;
+  margin: 10px 0 0;
+}
+
+#header .login-register:hover {
+  background: #007fff;
+}
+
+#main {
+  overflow: hidden;
+}
+
 .logo {
   float: left;
   width: 140px;
@@ -777,179 +801,23 @@ a {
   display: block;
 }
 
-.logo-dash {
-  text-decoration: none;
-  color: #fff;
-  font-size: 20px;
-  line-height: 22px;
-  float: left;
-  background: #000;
-  padding: 15px 30px;
-}
-
-.add-property {
-  float: right;
-  max-width: 300px;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 14px;
-  line-height: 18px;
-  text-decoration: none;
-  background: #489ddd;
-  border-radius: 4px;
-  padding: 10px 20px;
-  margin: 12px 0 0;
-  transition: background 0.4s ease;
-}
-
-.add-property.less-indent {
-  margin: 9px 10px 0;
-  padding: 8px 17px;
-}
-
-@media (max-width: 767px) {
-  .add-property {
-    max-width: 130px;
-    font-size: 12px;
-    line-height: 18px;
-    padding: 6px 5px;
-    margin: 17px 0 0;
-  }
-}
-
-.add-property:hover {
-  background: #ef9521;
-}
-
-.add-property:before {
-  display: inline-block;
-  vertical-align: top;
-  content: "\e900";
-  font-family: 'icomoon';
-  font-size: 18px;
-  line-height: 19px;
-  font-weight: bold;
-}
-
-#main {
+.login-registarHolder {
   overflow: hidden;
+  max-width: 800px;
+  padding: 0 0 20px;
+  margin: 70px auto 0;
 }
 
-.addPropertyFormContianer {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 10px;
-  clear: both;
-}
-
-.addPropertyFormContianer.sectionListingActive .section-listing {
-  height: auto;
-  max-height: 210px;
-  opacity: 1;
-  visibility: visible;
-  z-index: 9;
-}
-
-.addPropertyFormContianer.fixed-position .listing-holder {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 98;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 10px;
-  clear: both;
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContianer.fixed-position .section-listing {
-    left: 0;
-    right: 0;
-  }
-}
-
-.addPropertyFormContianer.fixed-position .property-add {
-  padding: 60px 0 50px;
-}
-
-.addPropertyFormContianer.fixed-position .attactment-block, .addPropertyFormContianer.fixed-position .basics-block, .addPropertyFormContianer.fixed-position .feature-block, .addPropertyFormContianer.fixed-position .contact-information {
-  padding: 45px 0 0;
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContianer.fixed-position .attactment-block, .addPropertyFormContianer.fixed-position .basics-block, .addPropertyFormContianer.fixed-position .feature-block, .addPropertyFormContianer.fixed-position .contact-information {
-    padding: 25px 0 0;
-  }
-}
-
-@media (max-width: 1023px) {
-  .addPropertyFormContianer .select2-container {
-    min-width: 190px;
-  }
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContianer .select2-container {
-    margin: 0;
-    min-width: inherit;
-    width: 100%;
-  }
-}
-
-.addPropertyFormContianer .listing-holder {
-  display: block;
-  width: 100%;
-  position: relative;
-  clear: both;
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContianer .listing-holder {
-    text-align: center;
-  }
-}
-
-.addPropertyFormContianer .listing-holder:after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -9999px;
-  right: -9999px;
-  z-index: -1;
-  background: #dde2e8;
-  content: '';
-}
-
-.addPropertyFormContianer .listing-holder .listing-opener {
-  text-decoration: none;
-  color: #000;
-  font-size: 40px;
-  line-height: 36px;
-  cursor: pointer;
-  z-index: 5;
-  display: block;
-}
-
-@media (min-width: 768px) {
-  .addPropertyFormContianer .listing-holder .listing-opener {
-    display: none;
-  }
-}
-
-.addPropertyFormContianer .listing-holder .listing-opener:hover {
-  color: #606060;
-}
-
-.addPropertyFormContianer .section-listing {
+.login-registarHolder .tabset {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
-  position: relative;
-  background: #dde2e8;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
 }
 
-.addPropertyFormContianer .section-listing > * {
+.login-registarHolder .tabset > * {
   display: inline-block;
   vertical-align: top;
   font-size: 18px;
@@ -957,844 +825,411 @@ a {
   letter-spacing: 0;
 }
 
-@media (max-width: 767px) {
-  .addPropertyFormContianer .section-listing {
-    position: absolute;
-    top: 100%;
-    left: -10px;
-    right: -10px;
-    z-index: -1;
-    max-height: 0;
-    opacity: 0;
-    visibility: hidden;
-    height: 0;
-    overflow: auto;
-    transition: z-index 0.5s ease, max-height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
-  }
+.login-registarHolder .tabset li {
+  width: 50%;
 }
 
-@media (max-width: 767px) {
-  .addPropertyFormContianer .section-listing li {
-    display: block;
-  }
+.login-registarHolder .tabset li:last-child a {
+  background: #489ddd;
+  color: #fff;
 }
 
-.addPropertyFormContianer .section-listing li.activeAddPropertyNavLink:before {
-  background: #39f;
-}
-
-.addPropertyFormContianer .section-listing li.activeAddPropertyNavLink a {
+.login-registarHolder .tabset li.active a {
+  background: #fff;
   color: #000;
-  pointer-events: none;
+  border-bottom: 5px solid #e14646;
 }
 
-.addPropertyFormContianer .section-listing li.activeAddPropertyNavLink a:after {
-  right: 0;
+.login-registarHolder .tabset li.active a:after {
+  opacity: 1;
+  visibility: visible;
 }
 
-.addPropertyFormContianer .section-listing li.activeAddPropertyNavLink a [class^="icon-"], .addPropertyFormContianer .section-listing li.activeAddPropertyNavLink a [class*="icon-"] {
-  color: #58a36f;
-}
-
-.addPropertyFormContianer .section-listing li:hover:before {
-  background: #39f;
-}
-
-.addPropertyFormContianer .section-listing li:hover a {
-  color: #000;
-}
-
-.addPropertyFormContianer .section-listing li:hover a:after {
-  right: 0;
-}
-
-.addPropertyFormContianer .section-listing li:hover a [class^="icon-"], .addPropertyFormContianer .section-listing li:hover a [class*="icon-"] {
-  color: #58a36f;
-}
-
-.addPropertyFormContianer .section-listing li a {
-  padding: 15px 95px;
-  text-align: center;
+.login-registarHolder .tabset li a {
   display: block;
   text-decoration: none;
-  color: #606060;
+  background: #dde2e8;
+  border-bottom: 5px solid transparent;
+  color: #363636;
+  padding: 10px;
+  transition: all 0.4s ease;
   position: relative;
-  z-index: 1;
-  overflow: hidden;
 }
 
-@media (max-width: 1199px) {
-  .addPropertyFormContianer .section-listing li a {
-    padding: 15px 70px;
-  }
-}
-
-@media (max-width: 1023px) {
-  .addPropertyFormContianer .section-listing li a {
-    padding: 15px 45px;
-  }
-}
-
-.addPropertyFormContianer .section-listing li a:after {
-  background: #edf1f4;
+.login-registarHolder .tabset li a:after {
   position: absolute;
+  bottom: -23px;
+  left: 50%;
+  border: 10px solid transparent;
+  border-top: 10px solid #e14646;
+  content: '';
+  margin: 0 0 0 -5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s  ease, visibility 0.4s ease;
+}
+
+.login-registarHolder .tabset li a:hover {
+  background: #fff;
+  color: #000;
+  border-bottom: 5px solid #e14646;
+}
+
+.login-registarHolder .tab-content {
+  overflow: hidden;
+  padding: 25px 0 0;
+}
+
+.login-registarHolder .registration-form,
+.login-registarHolder .login-form {
+  background: rgba(46, 46, 46, 0.03);
+  border-radius: 5px;
+  padding: 25px;
+}
+
+.login-registarHolder .registration-form .input-holder,
+.login-registarHolder .login-form .input-holder {
+  overflow: hidden;
+  padding: 5px;
+  position: relative;
+  margin: 0 0 20px;
+}
+
+.login-registarHolder .registration-form .input-holder input[type="text"], .login-registarHolder .registration-form .input-holder input[type="tel"], .login-registarHolder .registration-form .input-holder input[type="email"], .login-registarHolder .registration-form .input-holder input[type="password"],
+.login-registarHolder .login-form .input-holder input[type="text"],
+.login-registarHolder .login-form .input-holder input[type="tel"],
+.login-registarHolder .login-form .input-holder input[type="email"],
+.login-registarHolder .login-form .input-holder input[type="password"] {
+  border: 0;
+  padding: 6px 160px 6px 50px;
+  display: block;
+  color: #2e2e2e;
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  line-height: 23px;
+  transition: color 0.4s ease;
+  outline: none;
+  background: transparent;
+}
+
+.login-registarHolder .registration-form .input-holder input[type="text"]::-webkit-input-placeholder, .login-registarHolder .registration-form .input-holder input[type="tel"]::-webkit-input-placeholder, .login-registarHolder .registration-form .input-holder input[type="email"]::-webkit-input-placeholder, .login-registarHolder .registration-form .input-holder input[type="password"]::-webkit-input-placeholder,
+.login-registarHolder .login-form .input-holder input[type="text"]::-webkit-input-placeholder,
+.login-registarHolder .login-form .input-holder input[type="tel"]::-webkit-input-placeholder,
+.login-registarHolder .login-form .input-holder input[type="email"]::-webkit-input-placeholder,
+.login-registarHolder .login-form .input-holder input[type="password"]::-webkit-input-placeholder {
+  color: #616161;
+  transition: color 0.5s ease;
+}
+
+.login-registarHolder .registration-form .input-holder input[type="text"]::-moz-placeholder, .login-registarHolder .registration-form .input-holder input[type="tel"]::-moz-placeholder, .login-registarHolder .registration-form .input-holder input[type="email"]::-moz-placeholder, .login-registarHolder .registration-form .input-holder input[type="password"]::-moz-placeholder,
+.login-registarHolder .login-form .input-holder input[type="text"]::-moz-placeholder,
+.login-registarHolder .login-form .input-holder input[type="tel"]::-moz-placeholder,
+.login-registarHolder .login-form .input-holder input[type="email"]::-moz-placeholder,
+.login-registarHolder .login-form .input-holder input[type="password"]::-moz-placeholder {
+  opacity: 1;
+  color: #616161;
+  transition: color 0.5s ease;
+}
+
+.login-registarHolder .registration-form .input-holder input[type="text"]:-moz-placeholder, .login-registarHolder .registration-form .input-holder input[type="tel"]:-moz-placeholder, .login-registarHolder .registration-form .input-holder input[type="email"]:-moz-placeholder, .login-registarHolder .registration-form .input-holder input[type="password"]:-moz-placeholder,
+.login-registarHolder .login-form .input-holder input[type="text"]:-moz-placeholder,
+.login-registarHolder .login-form .input-holder input[type="tel"]:-moz-placeholder,
+.login-registarHolder .login-form .input-holder input[type="email"]:-moz-placeholder,
+.login-registarHolder .login-form .input-holder input[type="password"]:-moz-placeholder {
+  color: #616161;
+  transition: color 0.5s ease;
+}
+
+.login-registarHolder .registration-form .input-holder input[type="text"]:-ms-input-placeholder, .login-registarHolder .registration-form .input-holder input[type="tel"]:-ms-input-placeholder, .login-registarHolder .registration-form .input-holder input[type="email"]:-ms-input-placeholder, .login-registarHolder .registration-form .input-holder input[type="password"]:-ms-input-placeholder,
+.login-registarHolder .login-form .input-holder input[type="text"]:-ms-input-placeholder,
+.login-registarHolder .login-form .input-holder input[type="tel"]:-ms-input-placeholder,
+.login-registarHolder .login-form .input-holder input[type="email"]:-ms-input-placeholder,
+.login-registarHolder .login-form .input-holder input[type="password"]:-ms-input-placeholder {
+  color: #616161;
+  transition: color 0.5s ease;
+}
+
+.login-registarHolder .registration-form .input-holder input[type="text"].placeholder, .login-registarHolder .registration-form .input-holder input[type="tel"].placeholder, .login-registarHolder .registration-form .input-holder input[type="email"].placeholder, .login-registarHolder .registration-form .input-holder input[type="password"].placeholder,
+.login-registarHolder .login-form .input-holder input[type="text"].placeholder,
+.login-registarHolder .login-form .input-holder input[type="tel"].placeholder,
+.login-registarHolder .login-form .input-holder input[type="email"].placeholder,
+.login-registarHolder .login-form .input-holder input[type="password"].placeholder {
+  color: #616161;
+  transition: color 0.5s ease;
+}
+
+.login-registarHolder .registration-form .input-holder input[type="text"]:focus, .login-registarHolder .registration-form .input-holder input[type="tel"]:focus, .login-registarHolder .registration-form .input-holder input[type="email"]:focus, .login-registarHolder .registration-form .input-holder input[type="password"]:focus,
+.login-registarHolder .login-form .input-holder input[type="text"]:focus,
+.login-registarHolder .login-form .input-holder input[type="tel"]:focus,
+.login-registarHolder .login-form .input-holder input[type="email"]:focus,
+.login-registarHolder .login-form .input-holder input[type="password"]:focus {
+  color: black;
+}
+
+.login-registarHolder .registration-form .input-holder input[type="text"]:focus::-webkit-input-placeholder, .login-registarHolder .registration-form .input-holder input[type="tel"]:focus::-webkit-input-placeholder, .login-registarHolder .registration-form .input-holder input[type="email"]:focus::-webkit-input-placeholder, .login-registarHolder .registration-form .input-holder input[type="password"]:focus::-webkit-input-placeholder,
+.login-registarHolder .login-form .input-holder input[type="text"]:focus::-webkit-input-placeholder,
+.login-registarHolder .login-form .input-holder input[type="tel"]:focus::-webkit-input-placeholder,
+.login-registarHolder .login-form .input-holder input[type="email"]:focus::-webkit-input-placeholder,
+.login-registarHolder .login-form .input-holder input[type="password"]:focus::-webkit-input-placeholder {
+  color: black;
+}
+
+.login-registarHolder .registration-form .input-holder input[type="text"]:focus::-moz-placeholder, .login-registarHolder .registration-form .input-holder input[type="tel"]:focus::-moz-placeholder, .login-registarHolder .registration-form .input-holder input[type="email"]:focus::-moz-placeholder, .login-registarHolder .registration-form .input-holder input[type="password"]:focus::-moz-placeholder,
+.login-registarHolder .login-form .input-holder input[type="text"]:focus::-moz-placeholder,
+.login-registarHolder .login-form .input-holder input[type="tel"]:focus::-moz-placeholder,
+.login-registarHolder .login-form .input-holder input[type="email"]:focus::-moz-placeholder,
+.login-registarHolder .login-form .input-holder input[type="password"]:focus::-moz-placeholder {
+  opacity: 1;
+  color: black;
+}
+
+.login-registarHolder .registration-form .input-holder input[type="text"]:focus:-moz-placeholder, .login-registarHolder .registration-form .input-holder input[type="tel"]:focus:-moz-placeholder, .login-registarHolder .registration-form .input-holder input[type="email"]:focus:-moz-placeholder, .login-registarHolder .registration-form .input-holder input[type="password"]:focus:-moz-placeholder,
+.login-registarHolder .login-form .input-holder input[type="text"]:focus:-moz-placeholder,
+.login-registarHolder .login-form .input-holder input[type="tel"]:focus:-moz-placeholder,
+.login-registarHolder .login-form .input-holder input[type="email"]:focus:-moz-placeholder,
+.login-registarHolder .login-form .input-holder input[type="password"]:focus:-moz-placeholder {
+  color: black;
+}
+
+.login-registarHolder .registration-form .input-holder input[type="text"]:focus:-ms-input-placeholder, .login-registarHolder .registration-form .input-holder input[type="tel"]:focus:-ms-input-placeholder, .login-registarHolder .registration-form .input-holder input[type="email"]:focus:-ms-input-placeholder, .login-registarHolder .registration-form .input-holder input[type="password"]:focus:-ms-input-placeholder,
+.login-registarHolder .login-form .input-holder input[type="text"]:focus:-ms-input-placeholder,
+.login-registarHolder .login-form .input-holder input[type="tel"]:focus:-ms-input-placeholder,
+.login-registarHolder .login-form .input-holder input[type="email"]:focus:-ms-input-placeholder,
+.login-registarHolder .login-form .input-holder input[type="password"]:focus:-ms-input-placeholder {
+  color: black;
+}
+
+.login-registarHolder .registration-form .input-holder input[type="text"]:focus.placeholder, .login-registarHolder .registration-form .input-holder input[type="tel"]:focus.placeholder, .login-registarHolder .registration-form .input-holder input[type="email"]:focus.placeholder, .login-registarHolder .registration-form .input-holder input[type="password"]:focus.placeholder,
+.login-registarHolder .login-form .input-holder input[type="text"]:focus.placeholder,
+.login-registarHolder .login-form .input-holder input[type="tel"]:focus.placeholder,
+.login-registarHolder .login-form .input-holder input[type="email"]:focus.placeholder,
+.login-registarHolder .login-form .input-holder input[type="password"]:focus.placeholder {
+  color: black;
+}
+
+.login-registarHolder .registration-form .input-holder input[type="text"]:focus ~ .border:after, .login-registarHolder .registration-form .input-holder input[type="tel"]:focus ~ .border:after, .login-registarHolder .registration-form .input-holder input[type="email"]:focus ~ .border:after, .login-registarHolder .registration-form .input-holder input[type="password"]:focus ~ .border:after,
+.login-registarHolder .login-form .input-holder input[type="text"]:focus ~ .border:after,
+.login-registarHolder .login-form .input-holder input[type="tel"]:focus ~ .border:after,
+.login-registarHolder .login-form .input-holder input[type="email"]:focus ~ .border:after,
+.login-registarHolder .login-form .input-holder input[type="password"]:focus ~ .border:after {
+  right: 0;
+}
+
+.login-registarHolder .registration-form .input-holder > label[class^="icon-"], .login-registarHolder .registration-form .input-holder > label[class*="icon-"],
+.login-registarHolder .login-form .input-holder > label[class^="icon-"],
+.login-registarHolder .login-form .input-holder > label[class*="icon-"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 2px;
+  content: '';
+  color: #606060;
+  font-size: 20px;
+  line-height: 50px;
+  width: 50px;
+  z-index: 8;
+  text-align: center;
+  cursor: pointer;
+}
+
+.login-registarHolder .registration-form .input-holder .border,
+.login-registarHolder .login-form .input-holder .border {
+  display: block;
+  position: relative;
+}
+
+.login-registarHolder .registration-form .input-holder .border:before,
+.login-registarHolder .login-form .input-holder .border:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  content: '';
+  background: rgba(46, 46, 46, 0.4);
+}
+
+.login-registarHolder .registration-form .input-holder .border:after,
+.login-registarHolder .login-form .input-holder .border:after {
+  position: absolute;
+  top: 0;
   left: 0;
   right: 100%;
   bottom: 0;
-  top: 0;
-  z-index: -1;
   content: '';
-  transition: all 0.4s ease;
+  height: 2px;
+  background: #606060;
+  margin: -1px 0 0;
+  transition: right 0.2s ease;
 }
 
-.addPropertyFormContianer .section-listing li a [class^="icon-"], .addPropertyFormContianer .section-listing li a [class*="icon-"] {
+.login-registarHolder .registration-form .input-holder .forgot-pass,
+.login-registarHolder .login-form .input-holder .forgot-pass {
   position: absolute;
   top: 50%;
-  left: 40px;
-  margin: -11px 0 0;
-}
-
-@media (max-width: 1023px) {
-  .addPropertyFormContianer .section-listing li a [class^="icon-"], .addPropertyFormContianer .section-listing li a [class*="icon-"] {
-    left: 9px;
-  }
-}
-
-.addPropertyFormContianer .section-listing li a [class^="icon-"]:before, .addPropertyFormContianer .section-listing li a [class*="icon-"]:before {
-  font-size: 25px;
-  line-height: 1;
-}
-
-.addPropertyFormContianer .tabset {
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-  text-transform: capitalize;
-}
-
-.addPropertyFormContianer .tabset > * {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 12px;
-  line-height: 15px;
-  letter-spacing: 0;
-}
-
-.addPropertyFormContianer .tabset li {
-  padding: 0 10px 10px;
-}
-
-.addPropertyFormContianer .tabset li.active a {
-  color: #133783;
-}
-
-.addPropertyFormContianer .tabset li.active a .round {
-  background: #133783;
-  border-color: #133783;
-}
-
-.addPropertyFormContianer .tabset li.active a .round:after {
-  display: block;
-}
-
-.addPropertyFormContianer .tabset li a {
-  display: inline-block;
-  vertical-align: top;
-  color: #000;
-  position: relative;
+  right: 0;
   text-decoration: none;
+  display: inline-block;
+  vertical-align: top;
   transition: color 0.4s ease;
+  margin: -11px 5px 0 0;
 }
 
-.addPropertyFormContianer .tabset li a .round {
+.login-registarHolder .registration-form .input-holder .forgot-pass:hover,
+.login-registarHolder .login-form .input-holder .forgot-pass:hover {
+  color: #e14646;
+}
+
+.login-registarHolder .registration-form .input-holder .forgot-pass [class^="icon-"], .login-registarHolder .registration-form .input-holder .forgot-pass [class*="icon-"],
+.login-registarHolder .login-form .input-holder .forgot-pass [class^="icon-"],
+.login-registarHolder .login-form .input-holder .forgot-pass [class*="icon-"] {
   display: inline-block;
   vertical-align: middle;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #606060;
-  margin: -2px 4px 0 0;
-  transition: all 0.4s ease;
-  content: '';
-  position: relative;
-  transition: border 0.4s ease;
+  margin: -2px 0 0;
 }
 
-.addPropertyFormContianer .tabset li a .round:after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -5px 0 0 -5px;
-  color: #fff;
-  content: "\e903";
-  font-family: 'icomoon';
-  font-size: 10px;
-  line-height: 10px;
-  display: none;
-}
-
-.addPropertyFormContianer .calculatedPrice {
-  color: #363636;
-  font-style: italic;
-  position: relative;
-  padding: 0 0 5px;
-}
-
-.addPropertyFormContianer .tab-content {
-  overflow: hidden;
-}
-
-.addPropertyFormContianer .tab-content .fake-radio {
-  width: 18px !important;
-  height: 18px !important;
-}
-
-.addPropertyFormContianer .property-add {
-  padding: 0 0 50px;
-  overflow: hidden;
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContianer .property-add {
-    padding: 0 0 50px;
-  }
-}
-
-.addPropertyFormContianer .property-add input[type="text"],
-.addPropertyFormContianer .property-add input[type="search"],
-.addPropertyFormContianer .property-add input[type="number"],
-.addPropertyFormContianer .property-add input[type="email"] {
-  font-size: 12px;
-  line-height: 15px;
-  width: 100%;
-  height: 30px;
-  max-width: 260px;
-  margin: 0 0 0 10px;
-  padding: 6px 10px;
-  outline: none;
-}
-
-@media (max-width: 1023px) {
-  .addPropertyFormContianer .property-add input[type="text"],
-  .addPropertyFormContianer .property-add input[type="search"],
-  .addPropertyFormContianer .property-add input[type="number"],
-  .addPropertyFormContianer .property-add input[type="email"] {
-    max-width: 190px;
-  }
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContianer .property-add input[type="text"],
-  .addPropertyFormContianer .property-add input[type="search"],
-  .addPropertyFormContianer .property-add input[type="number"],
-  .addPropertyFormContianer .property-add input[type="email"] {
-    max-width: inherit;
-    margin: 0;
-  }
-}
-
-.addPropertyFormContianer .property-add input[type="text"]:focus, .addPropertyFormContianer .property-add input[type="text"]:hover,
-.addPropertyFormContianer .property-add input[type="search"]:focus,
-.addPropertyFormContianer .property-add input[type="search"]:hover,
-.addPropertyFormContianer .property-add input[type="number"]:focus,
-.addPropertyFormContianer .property-add input[type="number"]:hover,
-.addPropertyFormContianer .property-add input[type="email"]:focus,
-.addPropertyFormContianer .property-add input[type="email"]:hover {
-  border: 1px solid #000;
-}
-
-.addPropertyFormContianer .property-add button[type="submit"] {
+.login-registarHolder .registration-form button[type="submit"],
+.login-registarHolder .login-form button[type="submit"] {
   border: 0;
-  padding: 12px 25px;
-  display: block;
-  text-transform: capitalize;
-  width: 250px;
-  margin: 20px auto;
-  font-size: 16px;
-  line-height: 19px;
-  position: relative;
-  z-index: 1;
-  border-radius: 5px;
-  overflow: hidden;
   background: #58a36f;
+  text-align: center;
   color: #fff;
   font-weight: 600;
-  outline: none;
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 2px;
+  font-size: 20px;
+  line-height: 24px;
+  transition: background 0.4s ease;
 }
 
-.addPropertyFormContianer .property-add button[type="submit"] [class^="icon"], .addPropertyFormContianer .property-add button[type="submit"] [class*="icon"] {
-  position: absolute;
-  top: 50%;
-  right: -100px;
-  margin: -9px 0 0;
+.login-registarHolder .registration-form button[type="submit"] [class^="icon-"], .login-registarHolder .registration-form button[type="submit"] [class*="icon-"],
+.login-registarHolder .login-form button[type="submit"] [class^="icon-"],
+.login-registarHolder .login-form button[type="submit"] [class*="icon-"] {
+  display: inline-block;
+  vertical-align: middle;
+  margin: -2px 0 0;
+  position: relative;
+  right: 0;
   transition: right 0.4s ease;
 }
 
-.addPropertyFormContianer .property-add button[type="submit"] [class^="icon"]:before, .addPropertyFormContianer .property-add button[type="submit"] [class*="icon"]:before {
-  font-size: 12px;
-  line-height: 1;
+.login-registarHolder .registration-form button[type="submit"]:hover,
+.login-registarHolder .login-form button[type="submit"]:hover {
+  background: #4f9264;
 }
 
-.addPropertyFormContianer .property-add button[type="submit"]:after {
+.login-registarHolder .registration-form button[type="submit"]:hover [class^="icon-"], .login-registarHolder .registration-form button[type="submit"]:hover [class*="icon-"],
+.login-registarHolder .login-form button[type="submit"]:hover [class^="icon-"],
+.login-registarHolder .login-form button[type="submit"]:hover [class*="icon-"] {
+  right: -10px;
+}
+
+.login-registarHolder .registration-form .agent-check,
+.login-registarHolder .login-form .agent-check {
+  float: left;
+  margin: 25px 50px 0;
+  position: relative;
+  z-index: 60;
+}
+
+.login-registarHolder .registration-form .agent-check:after,
+.login-registarHolder .login-form .agent-check:after {
   position: absolute;
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 100%;
-  background: #489ddd;
-  z-index: -1;
+  z-index: 55;
   content: '';
-  transition: all 0.4s ease;
 }
 
-.addPropertyFormContianer .property-add button[type="submit"]:hover:after {
+.login-registarHolder .registration-form .agent-check .hidden-checkfield,
+.login-registarHolder .login-form .agent-check .hidden-checkfield {
+  visibility: visible;
+  top: 0;
   left: 0;
-}
-
-.addPropertyFormContianer .property-add button[type="submit"]:hover [class^="icon"], .addPropertyFormContianer .property-add button[type="submit"]:hover [class*="icon"] {
-  right: 20px;
-}
-
-.addPropertyFormContianer .property-add select {
-  display: inline-block;
-  vertical-align: top;
-  height: 30px;
-}
-
-.addPropertyFormContianer .property-add select:focus, .addPropertyFormContianer .property-add select:hover {
-  border: 1px solid #000;
-}
-
-.addPropertyFormContianer .property-add textarea {
-  font-size: 12px;
-  line-height: 15px;
-  margin: 0 0 0 9px;
-  width: 100%;
-  height: 120px;
-  max-width: 710px;
-  resize: none;
-  padding: 10px;
-}
-
-@media (max-width: 1023px) {
-  .addPropertyFormContianer .property-add textarea {
-    max-width: 565px;
-  }
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContianer .property-add textarea {
-    max-width: inherit;
-    margin: 0;
-  }
-}
-
-.addPropertyFormContianer .property-add textarea:hover {
-  border-color: #000;
-}
-
-.addPropertyFormContianer .property-add .title {
-  padding: 2px 0 0;
-  float: left;
-  text-align: right;
-  width: 25%;
-  font-weight: 600;
-  text-transform: capitalize;
-  color: #606060;
-  font-size: 14px;
-  line-height: 17px;
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContianer .property-add .title {
-    float: none;
-    display: block;
-    width: 100%;
-    text-align: left;
-    padding: 0 0 10px;
-  }
-}
-
-.addPropertyFormContianer .property-add .title:after {
-  display: inline-block;
-  vertical-align: top;
-  content: '\2217';
-  color: #e14646;
-}
-
-.addPropertyFormContianer .property-add .input-holder {
-  float: left;
-  width: 75%;
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContianer .property-add .input-holder {
-    float: none;
-    width: 100%;
-    display: block;
-  }
-}
-
-.addPropertyFormContianer .property-add .field-holder {
-  overflow: hidden;
-}
-
-.addPropertyFormContianer .property-add .radio-holder {
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-}
-
-.addPropertyFormContianer .property-add .radio-holder > * {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 12px;
-  line-height: 15px;
-  letter-spacing: 0;
-}
-
-.addPropertyFormContianer .property-add .radio-holder li {
-  padding: 0 10px 10px;
-}
-
-.addPropertyFormContianer .property-add .radio-holder li label {
-  display: inline-block;
-  vertical-align: top;
-  cursor: pointer;
-  padding: 2px 0 0;
-}
-
-.addPropertyFormContianer .property-add .radio-holder li label .fake-radio,
-.addPropertyFormContianer .property-add .radio-holder li label .fake-label {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.addPropertyFormContianer .property-add .radio-holder li label .fake-radio {
-  width: 20px;
-  height: 20px;
-  border: 2px solid #606060;
-  margin: -2px 0 0;
-  position: relative;
-}
-
-.addPropertyFormContianer .property-add .radio-holder li label .fake-radio:after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -5px 0 0 -5px;
-  color: #fff;
-  content: "\e903";
-  font-family: 'icomoon';
-  font-size: 10px;
-  line-height: 10px;
-  display: none;
-}
-
-.addPropertyFormContianer .property-add .radio-holder li input[type="radio"] {
-  visibility: hidden;
   opacity: 0;
   position: fixed;
-  top: -999px;
-  left: -999px;
 }
 
-.addPropertyFormContianer .property-add .radio-holder li input[type="radio"]:checked ~ .fake-radio {
-  border: 2px solid #133783;
-  background: #133783;
+.login-registarHolder .registration-form .agent-check .hidden-checkfield:checked ~ .fake-checkbox,
+.login-registarHolder .login-form .agent-check .hidden-checkfield:checked ~ .fake-checkbox {
+  background: #00e359;
+  box-shadow: none;
 }
 
-.addPropertyFormContianer .property-add .radio-holder li input[type="radio"]:checked ~ .fake-radio:after {
-  display: block;
+.login-registarHolder .registration-form .agent-check .hidden-checkfield:checked ~ .fake-checkbox .fake-button,
+.login-registarHolder .login-form .agent-check .hidden-checkfield:checked ~ .fake-checkbox .fake-button {
+  left: 48%;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3), 0 0 0 1px #00a23f;
 }
 
-.addPropertyFormContianer .property-add .radio-holder li input[type="radio"]:checked ~ .fake-label {
-  color: #133783;
+.login-registarHolder .registration-form .agent-check .hidden-checkfield:checked ~ .fake-label,
+.login-registarHolder .login-form .agent-check .hidden-checkfield:checked ~ .fake-label {
+  color: #000;
 }
 
-.addPropertyFormContianer .property-add .layout {
-  padding: 20px 0 5px;
+.login-registarHolder .registration-form .agent-check .fake-checkbox,
+.login-registarHolder .login-form .agent-check .fake-checkbox {
+  width: 40px;
+  height: 20px;
+  border-radius: 20px;
+  float: left;
+  background: #dde2e8;
+  box-shadow: inset 0 0 5px -2px rgba(0, 0, 0, 0.5);
+  position: relative;
+  transition: background 0.4s ease;
+  z-index: -1;
 }
 
-.addPropertyFormContianer .property-add .layout.add {
-  max-width: 885px;
-  margin: 0 auto;
+.login-registarHolder .registration-form .agent-check .fake-checkbox .fake-button,
+.login-registarHolder .login-form .agent-check .fake-checkbox .fake-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 21px;
+  border-radius: 100%;
+  background: #dde2e8;
+  border: 1px solid rgba(46, 46, 46, 0.2);
+  content: '';
+  transition: left 0.4s cubic-bezier(0.54, 1.85, 0.5, 1);
+  cursor: pointer;
 }
 
-@media (max-width: 767px) {
-  .addPropertyFormContianer .property-add .layout.add {
-    max-width: inherit;
-    width: 100%;
-    margin: 0;
-  }
+.login-registarHolder .registration-form .agent-check .fake-label,
+.login-registarHolder .login-form .agent-check .fake-label {
+  float: left;
+  cursor: pointer;
+  max-width: 200px;
+  padding: 0 0 0 10px;
+  position: relative;
+  z-index: -1;
+  color: #363636;
 }
 
-.addPropertyFormContianer .property-add .layout .layout-holder {
+.login-registarHolder .registration-form {
+  overflow: hidden;
+}
+
+.login-registarHolder .registration-form .input-holder {
   float: left;
   width: 50%;
-  margin: 0 auto;
 }
 
-@media (max-width: 767px) {
-  .addPropertyFormContianer .property-add .layout .layout-holder {
-    float: none;
-    display: block;
-    width: 100%;
-    margin: 0;
-    padding: 0 0 20px;
-  }
+.login-registarHolder .registration-form .input-holder input[type="text"], .login-registarHolder .registration-form .input-holder input[type="tel"], .login-registarHolder .registration-form .input-holder input[type="email"], .login-registarHolder .registration-form .input-holder input[type="password"] {
+  padding: 6px 10px 6px 50px;
 }
 
-.addPropertyFormContianer .property-add .layout .layout-holder.add {
+.login-registarHolder .agent-information {
+  display: block;
   width: 100%;
-}
-
-.addPropertyFormContianer .property-add .layout .layout-holder select {
-  margin: 0 0 0 9px;
-  height: 30px;
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContianer .property-add .layout .layout-holder select {
-    width: 100%;
-    margin: 0;
-  }
-}
-
-.addPropertyFormContianer .property-add .layout .layout-holder .title {
-  max-width: 95px;
-  width: inherit;
-  float: none;
-  display: inline-block;
-  vertical-align: top;
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContianer .property-add .layout .layout-holder .title {
-    max-width: inherit;
-  }
-}
-
-.addPropertyFormContianer .property-add .tab-content {
-  max-width: 490px;
-  margin: 10px 0 0;
-  padding: 0 0 0 20px;
-}
-
-.addPropertyFormContianer .form-heading {
-  display: block;
-  color: #606060;
-  text-transform: capitalize;
-  font-size: 16px;
-  line-height: 19px;
-  border-bottom: 1px solid #adadad;
-  padding: 0 0 5px;
-  margin: 30px 0 0;
-}
-
-.fixed-position .addPropertyFormContianer .form-heading {
-  margin: 0;
-}
-
-.addPropertyFormContianer .form-heading span {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-}
-
-.addPropertyFormContianer .form-heading span:after {
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  right: 0;
-  background: #ef9521;
-  height: 2px;
-  content: '';
-}
-
-.addPropertyFormContianer .feature-block .holder {
   overflow: hidden;
-  padding: 10px 0 0;
-}
-
-.addPropertyFormContianer .feature-block .holder .tag {
-  padding: 10px 0;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.addPropertyFormContianer .tag {
-  display: block;
-  text-transform: capitalize;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 600;
-}
-
-.addPropertyFormContianer .feature-list {
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-  max-width: 800px;
-  margin: 0 auto 20px;
-  position: relative;
-  padding: 0 0 20px;
-}
-
-.addPropertyFormContianer .feature-list > * {
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 13px;
-  line-height: 16px;
-  letter-spacing: 0;
-}
-
-.addPropertyFormContianer .feature-list:after {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  content: '';
-  background: #e7e7e7;
-}
-
-.addPropertyFormContianer .feature-list li {
-  padding: 0 30px 15px;
-}
-
-.addPropertyFormContianer .feature-list li label {
-  text-transform: capitalize;
-  cursor: pointer;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.addPropertyFormContianer .feature-list li input[type="checkbox"] {
-  cursor: pointer;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.addPropertyFormContianer .image-uploading-area {
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-  text-align: center;
-  margin: 30px 0 0;
-}
-
-.addPropertyFormContianer .image-uploading-area > * {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0;
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContianer .image-uploading-area {
-    margin: 30px -5px 0;
-  }
-}
-
-.addPropertyFormContianer .image-uploading-area li {
-  width: 25%;
-  position: relative;
-  padding: 10px 0;
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContianer .image-uploading-area li {
-    width: 50%;
-    padding: 10px 5px;
-  }
-}
-
-.addPropertyFormContianer .image-uploading-area li:first-child .file-uploader:before {
-  position: absolute;
-  top: 19px;
-  left: -39px;
-  content: 'Main Image';
-  text-transform: capitalize;
-  font-size: 13px;
-  line-height: 16px;
-  padding: 3px;
-  transform: rotate(-39deg);
-  width: 150px;
-  color: #fff;
-  z-index: 999;
-  background: rgba(225, 70, 70, 0.8);
-  word-spacing: 1px;
-}
-
-.addPropertyFormContianer .image-uploading-area li .file-uploader {
-  width: 250px;
-  height: 200px;
-  margin: 0 auto;
-  background: #edf2f8;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
-
-@media (max-width: 1199px) {
-  .addPropertyFormContianer .image-uploading-area li .file-uploader {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-@media (max-width: 1023px) {
-  .addPropertyFormContianer .image-uploading-area li .file-uploader {
-    width: 150px;
-    height: 150px;
-  }
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContianer .image-uploading-area li .file-uploader {
-    width: 100%;
-    height: 150px;
-  }
-}
-
-.addPropertyFormContianer .image-uploading-area li .file-uploader:hover:after {
-  color: #58a36f;
-}
-
-.addPropertyFormContianer .image-uploading-area li .file-uploader.after-none:after {
-  display: none !important;
-}
-
-.addPropertyFormContianer .image-uploading-area li .file-uploader:after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  content: "\e900";
-  font-family: 'icomoon';
-  font-size: 86px;
-  line-height: 1;
-  z-index: -1;
-  margin: -40px 0 0 -40px;
-  color: #9da2a8;
-  transition: color 0.4s ease;
-}
-
-@media (max-width: 1023px) {
-  .addPropertyFormContianer .image-uploading-area li .file-uploader:after {
-    font-size: 60px;
-    margin: -30px 0 0 -30px;
-  }
-}
-
-.addPropertyFormContianer .image-uploading-area li .file-uploader input[type="file"] {
-  display: block;
-  overflow: hidden;
-  border: 0;
-  outline: none;
-  opacity: 0;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-.addPropertyFormContianer .image-uploading-area li .picture-name {
-  display: block;
-  margin: 0 auto;
-  max-width: 250px;
-  border-width: 0 0 2px;
-  border-style: solid;
-  border-color: #999;
-  height: 50px;
-  font-size: 14px;
-  line-height: 18px;
-  transition: border 0.4s ease;
-}
-
-@media (max-width: 1199px) {
-  .addPropertyFormContianer .image-uploading-area li .picture-name {
-    max-width: 200px;
-  }
-}
-
-@media (max-width: 1023px) {
-  .addPropertyFormContianer .image-uploading-area li .picture-name {
-    max-width: 150px;
-  }
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContianer .image-uploading-area li .picture-name {
-    max-width: inherit;
-  }
-}
-
-.addPropertyFormContianer .image-uploading-area li .picture-name.disableInput {
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-.addPropertyFormContianer .image-uploading-area li .picture-name:hover, .addPropertyFormContianer .image-uploading-area li .picture-name:focus {
-  border-width: 0 0 3px;
-  border-color: #606060;
-}
-
-.addPropertyFormContianer .image-uploading-area li .image-holder {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 0;
-  outline: none;
-  overflow: hidden;
-  z-index: -1;
-  opacity: 0;
-  transition: z-index 0.9s ease, opacity 0.9s ease;
-}
-
-.addPropertyFormContianer .image-uploading-area li .image-holder:after {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.7);
-  content: '';
-  transition: top 0.4s ease;
-}
-
-.addPropertyFormContianer .image-uploading-area li .image-holder .propertyDocumentCloseBtn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: #000;
-  text-decoration: none;
-  z-index: 6;
-  font-size: 30px;
-  line-height: 32px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
-  cursor: pointer;
-}
-
-.addPropertyFormContianer .image-uploading-area li .image-holder .propertyDocumentCloseBtn:hover {
-  color: #e14646;
-}
-
-.addPropertyFormContianer .image-uploading-area li .image-holder img {
-  width: 100%;
-  height: auto;
-  display: block;
-  height: 100%;
-  border: 0;
-}
-
-.addPropertyFormContianer .image-uploading-area li .image-holder:hover:after {
-  top: 0;
-}
-
-.addPropertyFormContianer .image-uploading-area li .image-holder:hover .propertyDocumentCloseBtn {
-  opacity: 1;
-  visibility: visible;
+  background: #000;
+  height: 500px;
+  display: none;
 }
