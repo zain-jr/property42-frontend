@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- set the encoding of your site -->
+	<meta charset="utf-8">
+	<!-- set the viewport width and initial-scale on mobile devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Property42</title>
+	<!-- include the site stylesheet -->
+	<link media="all" rel="stylesheet" href="css/main.css">
+	<link media="all" rel="stylesheet" href="css/select2.css">
+	<!-- google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<!-- main container of all the page elements -->
+	<div id="wrapper">
+		<header id="header">
+			<div class="container">
+				<div class="layout">
+					<div class="logo"><a href="#"><img src="images/logo.png" width="695" height="301" alt="Property42"></a></div>
+					<a href="#" class="login-register">Login / Register</a>
+				</div>
+			</div>
+		</header>
+		<main id="main" role="main">
+			<div class="container">
+				<div class="login-registarHolder">
+					<ul class="tabset">
+						<li class="active"><a href="#tab1">login</a></li>
+						<li><a href="#tab2">become a free member</a></li>
+					</ul>
+					<div class="tab-content">
+						<div id="tab1">
+							<form class="login-form">
+								<div class="input-holder">
+									<label class="icon-envelope" for="email"></label>
+									<input type="email" placeholder="Enter Your Email Address" id="email" required>
+									<span class="border"></span>
+								</div>
+								<div class="input-holder">
+									<label class="icon-key" for="pass"></label>
+									<input type="password" placeholder="Enter Your Password" id="pass" required>
+									<span class="border"></span>
+									<a href="#" class="forgot-pass"><span class="icon-notification"></span> Forgot Password</a>
+								</div>
+								<button type="submit">Login <span class="icon-login"></span></button>
+							</form>
+						</div>
+						<div id="tab2">
+							<form class="registration-form">
+								<div class="input-holder">
+									<label class="icon-envelope" for="email1"></label>
+									<input type="email" placeholder="Enter Your Email Address" id="email1" required>
+									<span class="border"></span>
+								</div>
+								<div class="input-holder">
+									<label class="icon-key" for="pass1"></label>
+									<input type="password" placeholder="Enter Your Password" id="pass1" required>
+									<span class="border"></span>
+								</div>
+								<div class="input-holder">
+									<label class="icon-key" for="cpass"></label>
+									<input type="password"  placeholder="Confirm Password" id="cpass" required>
+									<span class="border"></span>
+								</div>
+								<div class="input-holder">
+									<label class="icon-user" for="name"></label>
+									<input type="text" placeholder="Enter Your Name" id="name" required>
+									<span class="border"></span>
+								</div>
+								<h1>Contact Information</h1>
+								<div class="input-holder">
+									<label class="icon-phone" for="phone"></label>
+									<input type="tel" placeholder="Enter Your Phone Number" id="phone" required>
+									<span class="border"></span>
+								</div>
+								<div class="input-holder">
+									<label class="icon-phone_iphone" for="cell"></label>
+									<input type="tel" placeholder="Enter Your Cell / Mobile Number" id="cell" required>
+									<span class="border"></span>
+								</div>
+								<div class="input-holder">
+									<label class="icon-fax" for="fax"></label>
+									<input type="tel" placeholder="Enter Fax Details" id="fax" required>
+									<span class="border"></span>
+								</div>
+								<div class="input-holder">
+									<label class="icon-directions" for="address"></label>
+									<input type="text" placeholder="Enter Your Address" id="address" required>
+									<span class="border"></span>
+								</div>
+								<div class="input-holder">
+									<label class="icon-file-zip" for="zip"></label>
+									<input type="text" placeholder="Enter Zip Code" id="zip" required>
+									<span class="border"></span>
+								</div>
+								<div class="input-holder">
+									<label for="agent" class="agent-check">
+										<input type="checkbox" class="hidden-checkfield" id="agent">
+										<span class="fake-checkbox">
+											<span class="fake-button"></span>
+										</span>
+										<span class="fake-label">Are you an Agent</span>
+									</label>
+								</div>
+								<div class="agent-information">
+									<h1>Agency Information</h1>
+									<div class="input-holder">
+										<label for="agency-name" class="icon-agency"></label>
+										<input type="text" placeholder="Enter An Agency Name" id="agency-name" required>
+										<span class="border"></span>
+									</div>
+									<div class="input-holder">
+										<div class="company-logo">
+											<input type="file" onchange="previewAddPropertyImg(this , '.company-profileP')">
+											<div class="picture-holder"><img src="" class="company-profileP" alt="Company logo"></div>
+											<a class="delete"><span class="icon-bin"></span></a>
+											<span class="name-tag">Add Company Logo</span>
+										</div>
+									</div>
+									<div class="input-holder full-width">
+										<label for="D-services" class="icon-technical-support"></label>
+										<textarea id="D-services" placeholder="Description of Services"></textarea>
+										<span class="border"></span>
+									</div>
+									<h1> Agency Contact Details</h1>
+									<div class="input-holder">
+										<label for="compny-phone" class="icon-phone"></label>
+										<input type="tel" placeholder="Enter Company Phone Number" id="compny-phone" required>
+										<span class="border"></span>
+									</div>
+									<div class="input-holder">
+										<label for="compny-mobile" class="icon-phone_iphone"></label>
+										<input type="tel" placeholder="Enter Company Mobile Number" id="compny-mobile" required>
+										<span class="border"></span>
+									</div>
+									<div class="input-holder full-width">
+										<label for="compny-address" class="icon-directions"></label>
+										<input type="text" placeholder="Enter Company Address" id="compny-address" required>
+										<span class="border"></span>
+									</div>
+									<div class="input-holder">
+										<label for="compny-email" class="icon-envelope"></label>
+										<input type="email" placeholder="Enter Company Email" id="compny-email" required>
+										<span class="border"></span>
+									</div>
+								</div>
+								<div class="input-holder full-width">
+									<ul class="terms-listing">
+										<li>
+											<input type="checkbox" id="terms-Cond">
+											<label for="terms-Cond">I have read and agree to Property42.pk <a href="#">Terms and Conditions</a></label>
+										</li>
+										<li>
+											<input type="checkbox" id="newslatter">
+											<label for="newslatter">I  want to receive notifications for promotions, newsletters and website updates.</label>
+										</li>
+									</ul>
+								</div>
+								<div class="input-holder full-width">
+									<button type="submit">Sign me up !!</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<!-- include jQuery library -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" defer></script>
+	<script type="text/javascript">window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js" defer><\/script>')</script>
+	<!-- include custom JavaScript -->
+	<script type="text/javascript" src="js/helper.js" defer></script>
+	<script type="text/javascript" src="js/tabset-plugin.js" defer></script>
+	<script type="text/javascript" src="js/placeholder.js" defer></script>
+	<script type="text/javascript" src="js/jquery.main.js" defer></script>
+</body>
+</html>

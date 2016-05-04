@@ -41,13 +41,22 @@ $media-expressions: (
 @import 'base/reset';
 @import 'base/typography';
 @import 'base/forms';
-.text-left{ text-align: left !important;}
-.text-right { text-align: right !important;}
-.text-uppercase{ text-transform: uppercase !important;}
-.text-center{ text-align: center !important;}
 .container { @include container;}
 .layout{ overflow: hidden;}
 a{ outline: none;}
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: $mix-black;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: $mix-black;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:$mix-black;
+  opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: $mix-black;
+}
 #wrapper {
 	position: relative;
 	width: 100%;
@@ -63,7 +72,25 @@ a{ outline: none;}
 	.layout {
 		padding: 10px 0;
 	}
+	
+	.login-register{
+		float: right;
+		text-decoration: none;
+		color: $white;
+    background: $light-blue;
+    border-radius: 4px;
+    padding: 10px 30px;
+    transition: background 0.4s ease;
+    margin: 10px 0 0;
+    
+    &:hover{
+      background: darken($light-blue, 10%);
+    }
+	}
 }
+#main{
+  overflow: hidden;
+ }
 .logo {
 	float: left;
 	width: 140px;
@@ -72,834 +99,422 @@ a{ outline: none;}
 	
 	img { @include img-res;}
 }
-.logo-dash{
-	text-decoration: none;
-	color: $white;
-	@include font(20,22);
-	float: left;
-	background: $black;
-	padding: 15px 30px;
-}
-.add-property {
-	float: right;
-	max-width: 300px;
-	color: $white;
-	text-transform: uppercase;
-	@include font(14,18);
-	text-decoration: none;
-	background: $mix-blue;
-	border-radius: 4px;
-	padding: 10px 20px;
-	margin: 12px 0 0;
-	transition: background 0.4s ease;
-	
-	&.less-indent{
-		margin: 9px 10px 0;
-		padding: 8px 17px;
-	}
-	
-	@include media('<tablet'){
-		max-width: 130px;
-		@include font(12,18);
-		padding: 6px 5px;
-		margin: 17px 0 0;
-	}
-	
-	&:hover{ background: $orange; }
-	&:before {
-		@include align(top);
-		content: "\e900";
-		font-family: 'icomoon';
-		@include font(18,19);
-		font-weight: bold;
-	}
-}
-#main{
-	overflow: hidden;
-}
-.addPropertyFormContianer {
-	@include container;
-	
-	&.sectionListingActive {
-		.section-listing{
-			height: auto;
-			max-height: 210px;
-			opacity: 1;
-			visibility: visible;
-			z-index: 9;
-		}
-	}
-	
-	&.fixed-position{
-		
-		.listing-holder{
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-			z-index: 98;
-			@include container;
-		}
-		.section-listing {
-			@include media('<tablet'){
-				left: 0;
-				right: 0;
-			}
-		}
-		.property-add {
-			padding: 60px 0 50px;
-		}
-		.attactment-block, .basics-block, .feature-block, .contact-information{
-			padding:45px 0 0;
-			
-			@include media('<tablet'){
-				padding: 25px 0 0;
-			}
-		}
-	}
-	
-	
-	.select2-container{
-		@include media('<desktop'){
-			min-width: 190px;
-		}
-		@include media('<tablet'){
-			margin: 0;
-			min-width: inherit;
-			width: 100%;
-		}
-	}
-	
-	.listing-holder{
-		display: block;
-		width: 100%;
-		position: relative;
-		clear: both;
-		
-		@include media('<tablet'){
-			text-align: center;
-		}
-		
-		&:after{
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: -9999px;
-			right: -9999px;
-			z-index: -1;
-			background: $light-gray;
-			content: '';	
-		}
-		
-		.listing-opener{
-			text-decoration: none;
-			color: $black;
-			@include font(40,36);
-			cursor: pointer;
-			z-index: 5;
-			display: block;
-			
-			@include media('>=tablet'){ display: none;}
-			
-			&:hover{
-				color: $mix-grays;
-			}
-		}
-	}
-	
-	.section-listing {
-		@extend %listreset;
-		@include align-reset(top, 18, 21);
-		position: relative;
-		background: $light-gray;
-		
-		@include media('<tablet'){
-			position: absolute;
-			top: 100%;
-			left: -10px;
-			right: -10px;
-			z-index: -1;
-			max-height: 0;
-			opacity: 0;
-			visibility: hidden;
-			height: 0;
-			overflow: auto;
-			transition: z-index 0.5s ease, max-height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease, height 0.5s ease;
-		}
-		
-		li{
-			@include media('<tablet'){
-				display: block;
-			}
-			
-			&.activeAddPropertyNavLink{
-				&:before{
-					background: $light-blue;
-				}
-				a{
-					color: $black;
-					pointer-events: none;
-					&:after{
-						right: 0;
-					}
-					[class^="icon-"], [class*="icon-"] { color: $green;}
-				}	
-			}
-			&:hover{
-				&:before{
-					background: $light-blue;
-				}
-				a{
-					color: $black;
-					&:after{
-						right: 0;
-					}
-				[class^="icon-"], [class*="icon-"] { color: $green;}				
-				}
-			}
-			
-			a{
-				padding:15px 95px;
-				text-align: center;
-				display: block;
-				text-decoration: none;
-				color: $mix-grays;
-				position: relative;
-				z-index: 1;
-				overflow: hidden;
-				
-				@include media('<widescreen'){
-					padding: 15px 70px;
-				}
-				@include media('<desktop'){
-					padding: 15px 45px;
-				}
-				
-				&:after {
-					background: $index-white;
-					position: absolute;
-					left: 0;
-					right:100%;
-					bottom:0;
-					top: 0;
-					z-index: -1;
-					content: '';
-					transition: all 0.4s ease;
-				}
-				[class^="icon-"], [class*="icon-"] {
-					position: absolute;
-					top: 50%;
-					left:40px;
-					margin: -11px 0 0;
-					
-					@include media('<desktop'){
-						left: 9px;
-					}
-					
-					&:before{
-						font-size: 25px;
-						line-height: 1;
-					}
-				}
-			}
-		}
-	}
-	
-	.tabset{
-		@extend %listreset;
-		@include align-reset(top,12,15);
-		text-transform: capitalize;
-		
-		li{
-			padding: 0 10px 10px;
-			
-			&.active{
-				a{
-					color: $defualt-blue;
-					.round{
-						background: $defualt-blue;
-						border-color: $defualt-blue;
-						&:after{ display: block;}
-					}	
-				}
-			}
-			a{
-				@include align(top);
-				color: $black;
-				position: relative;
-				text-decoration: none;
-				transition: color 0.4s ease;
-				
-				.round{
-					@include align(middle);
-					@include squar(20px, 20px);
-					border: 2px solid $mix-grays;
-					margin: -2px 4px 0 0;
-					transition: all 0.4s ease;
-					content: '';
-					position: relative;
-					transition: border 0.4s ease;
-					
-					&:after{
-						position: absolute;
-						top: 50%;
-						left: 50%;
-						margin: -5px 0 0 -5px;
-						color: $white;
-						content: "\e903";
-						font-family: 'icomoon';
-						@include font(10,10);
-						display: none;
-					}
-				}
-			}	
-		}
-	}
-	.calculatedPrice{
-		color: $dove-black;
-		font-style: italic;
-		position: relative;
-		padding: 0 0 5px;
-	}
-	.tab-content{
-		overflow: hidden;
-		
-		.fake-radio{
-			@include squar(18px !important ,18px !important);
-		}
-	}
-	.property-add {
-		padding: 0 0 50px;
-		overflow: hidden;
-		
-		@include media('<tablet'){
-			padding: 0 0 50px;
-		}
-		
-		input[type="text"],
-		input[type="search"],
-		input[type="number"],
-		input[type="email"]{
-			@include font(12,15);
-			@include squar(100%, 30px);
-			max-width: 260px;
-			margin: 0 0 0 10px;
-			padding: 6px 10px;
-			outline: none;
-			
-			@include media('<desktop'){
-				max-width: 190px;
-			}
-			
-			@include media('<tablet'){
-				max-width: inherit;
-				margin: 0;
-			}
-			
-			&:focus,
-			&:hover{
-				border: 1px solid $black;
-			}
-		}
-		button[type="submit"] {
-			border: 0;
-			padding: 12px 25px;
-			display: block;
-			text-transform: capitalize;
-			width: 250px;
-			margin: 20px auto;
-			@include font(16,19);
-			position: relative;
-			z-index: 1;
-			border-radius: 5px;
-			overflow: hidden;
-			background: $green;
-			color: $white;
-			font-weight: 600;
-			outline: none;
-			
-			[class^="icon"],[class*="icon"]{
-				position: absolute;
-				top: 50%;
-				right: -100px;
-				margin: -9px 0 0;
-				transition: right 0.4s ease;
-				
-				&:before{
-					font-size: 12px;
-					line-height: 1;
-				}
-			}
-			&:after{
-				position: absolute;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 100%;
-				background: $mix-blue;
-				z-index: -1;
-				content: '';
-				transition: all 0.4s ease;
-			}
-			&:hover{
-				&:after{ left: 0;}
-				[class^="icon"],[class*="icon"]{
-					right: 20px;
-				}
-			}
-		}
-		
-		select{
-			@include align(top);
-			height: 30px;
-			
-			&:focus,
-			&:hover{
-				border: 1px solid $black;
-			}
-		}
-		
-		textarea {
-			@include font(12,15);
-			margin: 0 0 0 9px;
-			@include squar(100%, 120px);
-			max-width: 710px;
-			resize: none;
-			padding: 10px;
-			
-			@include media('<desktop'){
-				max-width: 565px;
-			}
-			@include media('<tablet'){
-				max-width: inherit;
-				margin: 0;
-			}
-			
-			&:hover{
-				border-color: $black;
-			}
-		}
-		
-		.title{
-			padding: 2px 0 0;
-			float: left;
-			text-align: right;
-			width: 25%;
-			font-weight: 600;
-			text-transform: capitalize;
-			color: $mix-grays;
-			@include font(14,17);
-			
-			@include media('<tablet'){
-				float: none;
-				display: block;
-				width: 100%;
-				text-align: left;
-				padding: 0 0 10px;
-			}
-			
-			&:after{
-				@include align(top);
-				content: '\2217';
-				color: $red;
-			}
-		}
-		.input-holder{
-			float: left;
-			width: 75%;
-			
-			@include media('<tablet'){
-				float: none;
-				width: 100%;
-				display: block;
-			}
-		}
-		.field-holder{
-			overflow: hidden;
-		}
-		.radio-holder{
-			@extend %listreset;
-			@include align-reset(top,12,15);
-			
-			li{
-				padding: 0 10px 10px;
-				
-				label{
-					@include align(top);
-					cursor: pointer;
-					padding: 2px 0 0;
-					
-					.fake-radio,
-					.fake-label {
-						@include align(middle);
-						
-					}
-					.fake-radio {
-						@include squar(20px, 20px);
-						border: 2px solid $mix-grays;
-						margin: -2px 0 0;
-						position: relative;
-						
-						&:after{
-							position: absolute;
-							top: 50%;
-							left: 50%;
-							margin: -5px 0 0 -5px;
-							color: $white;
-							content: "\e903";
-							font-family: 'icomoon';
-							@include font(10,10);
-							display: none;
-						}
-					}
-				}
-				
-				input[type="radio"]{
-					visibility: hidden;
-					opacity: 0;
-					position: fixed;
-					top: -999px;
-					left: -999px;
-					
-					&:checked ~ {
-						.fake-radio{
-							border: 2px solid $defualt-blue;
-							background: $defualt-blue;
-							
-							&:after{ display: block;}
-						}
-						.fake-label { 
-							color: $defualt-blue;
-						}
-					}
-				}
-			}
-		}
-		.layout{
-			padding: 20px 0 5px;
-			
-			&.add{
-				max-width: 885px;
-				margin: 0 auto;
-				
-				@include media('<tablet'){
-					max-width: inherit;
-					width: 100%;
-					margin: 0;
-				}
-			}
-			
-			.layout-holder{
-				float: left;
-				width: 50%;
-				margin: 0 auto;
-				
-				@include media('<tablet'){
-					float: none;
-					display: block;
-					width: 100%;
-					margin: 0;
-					padding: 0 0 20px;
-				}
-				
-				&.add{
-					width: 100%;
-				}
-				
-				select{
-					margin: 0 0 0 9px;
-					height: 30px;
-					
-					@include media('<tablet'){
-						width: 100%;
-						margin: 0;
-					}
-				}
-				
-				.title{
-					max-width: 95px;
-					width: inherit;
-					float: none;
-					@include align(top);
-					
-					@include media('<tablet'){
-						max-width: inherit;
-					}
-				}
-			}
-		}
-		.tab-content{
-			max-width: 490px;
-			margin:10px 0 0;
-			padding: 0 0 0 20px;
-		}
-	}
-	.form-heading{
-		display: block;
-		color: $mix-grays;
-		text-transform: capitalize;
-		@include font(16,19);
-		border-bottom: 1px solid #adadad;
-		padding: 0 0 5px;
-		margin: 30px 0 0;
-		
-		.fixed-position & {
-			margin: 0;
-		}
-		
-		span{
-			@include align(top);
-			position: relative;
-			
-			&:after {
-				position: absolute;
-				bottom: -6px;
-				left: 0;
-				right: 0;
-				background: $orange;
-				height: 2px;
-				content: '';
-			}
-		}
-	}
-	.feature-block{
-		
-		.holder{
-			overflow: hidden;
-			padding: 10px 0 0;
-			
-			.tag{
-				padding: 10px 0;
-				max-width: 800px;
-				margin: 0 auto;
-			}
-		}
-	}
-	.tag{
-		display: block;
-		text-transform: capitalize;
-		@include font(14,18);
-		font-weight:600;
-	}
-	.feature-list{
-		@extend %listreset;
-		@include align-reset(middle,13,16);
-		max-width: 800px;
-		margin: 0 auto 20px;
-		position: relative;
-		padding: 0 0 20px;
-		
-		&:after{
-			position: absolute;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			height: 1px;
-			content:'';
-			background: #e7e7e7; 
-		}
-		
-		li{
-			padding: 0 30px 15px;
-			
-			label{
-				text-transform: capitalize;
-				cursor: pointer;
-				@include align(middle);
-			}
-			input[type="checkbox"]{
-				cursor: pointer;
-				@include align(middle);
-			}
-		}
-	}
-	.image-uploading-area{
-		@extend %listreset;
-		@include align-reset(top,14,17);
-		text-align: center;
-		margin: 30px 0 0;
-		
-		@include media('<tablet'){
-			margin: 30px -5px 0;
-		}
-		
-		li{
-			width: 25%;
-			position: relative;
-			padding: 10px 0;
-			
-			@include media('<tablet'){
-				width: 50%;
-				padding: 10px 5px;
-			}
-			
-			&:first-child{
-				
-				.file-uploader{
-					
-					&:before{
-						position: absolute;
-						top: 19px;
-						left: -39px;
-						content: 'Main Image';
-						text-transform: capitalize;
-						@include font(13,16);
-						padding: 3px;
-						transform: rotate(-39deg);
-						width: 150px;
-						color: $white;
-						z-index: 999;
-						background: rgba($red, 0.8);
-						word-spacing: 1px;
-					}
-				}
-			}
-			
-			.file-uploader{
-					@include squar(250px, 200px);
-					margin: 0 auto;
-					background: $dove-gray;
-					position: relative;
-					z-index: 1;
-					overflow: hidden;
-					
-					@include media('<widescreen'){
-						@include squar(200px, 200px);
-					}
-					
-					@include media('<desktop'){
-						@include squar(150px, 150px);
-					}
-					
-					@include media('<tablet'){
-						@include squar(100%, 150px);
-					}
-					
-					&:hover{
-						&:after{ color: $green;}
-					}
-					
-					&.after-none{
-						&:after{ display: none !important;}
-					}
-					
-					&:after{
-						position: absolute;
-						top: 50%;
-						left: 50%;
-						content: "\e900";
-						font-family: 'icomoon';
-						font-size: 86px;
-						line-height: 1;
-						z-index: -1;
-						margin: -40px 0 0 -40px;
-						color: #9da2a8;
-						transition: color 0.4s ease;
-						
-						@include media('<desktop'){
-							font-size: 60px;
-							margin: -30px 0 0 -30px;
-						}
-					}
-					
-					input[type="file"]{
-						display: block;
-						overflow: hidden;
-						border: 0;
-						outline: none;
-						opacity: 0;
-						@include squar(100% !important, 100% !important);
-				}
-			}
-			.picture-name{
-				display: block;
-				margin: 0 auto;
-				max-width: 250px;
-				border-width:0 0 2px;
-				border-style: solid;
-				border-color: $gray;
-				height: 50px;
-				@include font(14,18);
-				transition: border 0.4s ease;
-				
-				@include media('<widescreen'){
-					max-width: 200px;
-				}
-				
-				@include media('<desktop'){
-					max-width: 150px;
-				}
-				
-				@include media('<tablet'){
-					max-width: inherit;
-				}
-				
-				&.disableInput{
-					opacity: 0.5;
-					pointer-events: none;
-				}
-				
-				&:hover, &:focus{
-					border-width:0 0 3px;
-					border-color: $mix-grays;
-				} 
-			}
-			.image-holder{
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				border: 0;
-				outline: none;
-				overflow: hidden;
-				z-index: -1;
-				opacity: 0;
-				transition: z-index 0.9s ease, opacity 0.9s ease; 
-				
-				&:after{
-					position: absolute;
-					top: 100%;
-					right: 0;
-					left: 0;
-					bottom: 0;
-					background: rgba(255,255,255,0.7);
-					content: '';
-					transition: top 0.4s ease;
-				}
-				
-				.propertyDocumentCloseBtn{
-					position: absolute;
-					top: 10px;
-					right: 10px;
-					color: $black;
-					text-decoration: none;
-					z-index: 6;
-					@include font(30,32);
-					opacity: 0;
-					visibility: hidden;
-					transition: opacity 0.4s ease, visibility 0.4s ease, color 0.4s ease;
-					cursor:pointer;
-					
-					&:hover{
-						color: $red;
-					}
-				}
-				
-				img{
-					@include img-res;
-					height: 100%;
-					border: 0;
-				}
-				
-				&:hover{
-					&:after { top: 0;}
-					.propertyDocumentCloseBtn {
-						opacity: 1;
-						visibility: visible;
-					}
-				}
-			}
-		}
-	}
+.login-registarHolder{
+  overflow: hidden;
+  max-width: 800px;
+  padding: 0 0 20px;
+  margin: 100px auto 200px;
+  
+  .tabset{
+    @extend %listreset;
+    @include align-reset(top,18,21);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    
+    li{
+      width: 50%;
+      
+      &:last-child{
+        
+        a{
+          background: $mix-blue;
+          color: $white;
+        }
+      }
+      
+      &.active {
+        a{
+          background: $white;
+          color: $black;
+          border-bottom: 5px solid $red;
+          
+           &:after{
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+      
+      a{
+        display: block;
+        text-decoration: none;
+        background: $light-gray;
+        border-bottom: 5px solid transparent;
+        color: $dove-black;
+        padding: 10px;
+        transition: all 0.4s ease;
+        position: relative;
+        
+        &:after{
+          position: absolute;
+          bottom: -23px;
+          left: 50%;
+          border: 10px solid transparent;
+          border-top: 10px solid $red;
+          content: '';
+          margin: 0 0 0 -5px;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.4s  ease, visibility 0.4s ease;
+        }
+        
+        &:hover{
+          background: $white;
+          color: $black;
+          border-bottom: 5px solid $red;
+        }
+      }
+    }
+  }
+  .tab-content {
+    overflow: hidden;
+    padding: 25px 0 0;
+  }
+  .registration-form,
+  .login-form{
+    background:rgba($mix-black, 0.03);
+    border-radius: 5px;
+    padding: 25px;
+    
+    .input-holder{
+      overflow: hidden;
+      padding: 5px;
+      position: relative;
+      margin: 0 0 20px;
+      
+      &.full-width{
+        float: none;
+        display: block;
+        width: 100%;
+        clear: both;
+        overflow: hidden;
+      }
+      
+      textarea,  
+      input[type="text"],input[type="tel"], input[type="email"], input[type="password"] {
+        border: 0;
+        padding: 6px 160px 6px 50px;
+        display: block;
+        color: $mix-black;
+        @include squar(100%, 40px);
+        @include font(18,23);
+        transition: color 0.4s ease;
+        outline: none;
+        background: transparent;
+        
+        @include placeholder{
+          color: lighten($mix-black, 20%);
+          transition: color 0.5s ease;
+        }
+        
+        &:focus {
+          color: darken($mix-black, 20%);
+          
+          
+          @include placeholder{ color: darken($mix-black, 20%);}
+          
+          ~ .border {
+            &:after{
+              right: 0;
+            }
+          }
+        }
+      }
+      textarea {
+        resize: none;
+        padding: 9px 5px 6px 50px;
+        overflow: auto;
+        height: 100px;
+      }
+      > label[class^="icon-"], > label[class*="icon-"]{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 2px;
+        content: '';
+        color: $mix-grays;
+        @include font(20,50);
+        width: 50px;
+        z-index: 8;
+        text-align: center;
+        cursor: pointer;
+      }
+      .border {
+        display: block;
+        position: relative;
+        
+        &:before{
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -2px;
+          height: 1px;
+          content: '';
+          background: rgba($mix-black,0.4);
+        }
+        
+        &:after{
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 100%;
+          bottom: 0;
+          content: '';
+          height: 2px;
+          background: $mix-grays;
+          margin: -1px 0 0;
+          transition:right 0.2s ease;
+        }
+      }
+      .forgot-pass{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        text-decoration: none;
+        @include align(top);
+        transition: color 0.4s ease;
+        margin: -11px 5px 0 0;
+        
+        &:hover{
+          color: $red;
+        }
+        
+        [class^="icon-"], [class*="icon-"] {
+          @include align(middle);
+          margin: -2px 0 0;
+        }
+      }
+    }
+    button[type="submit"]{
+      border: 0;
+      background: $green;
+      text-align: center;
+      color: $white;
+      font-weight: 600;
+      display: block;
+      width: 100%;
+      padding: 15px 20px;
+      border-radius: 2px;
+      @include font(20,24);
+      transition: background 0.4s ease;
+      
+      [class^="icon-"], [class*="icon-"] {
+        @include align(middle);
+        margin: -2px 0 0;
+        position: relative;
+        right: 0;
+        transition: right 0.4s ease;
+      }
+      
+      &:hover{
+        background: darken( $green, 5%);
+        
+        [class^="icon-"], [class*="icon-"] {
+           right: -10px;
+        }
+      }
+    }
+    .agent-check {
+      float: left;
+      margin: 25px 50px 0;
+      position: relative;
+      z-index: 60;
+      
+      &:after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 55;
+        content: '';
+      }
+      
+      .hidden-checkfield{
+        visibility: visible;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        position: fixed;
+        
+        &:checked ~ {
+          
+          .fake-checkbox{
+            background: #00e359;
+            box-shadow: none;
+            
+            .fake-button {
+              left: 48%;
+              background: $white;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 162, 63, 1);
+            }
+          }
+          .fake-label{
+            color: $black;
+          }
+        }
+      }
+      .fake-checkbox{
+        @include squar(40px, 20px);
+        border-radius: 20px;
+        float: left;
+        background: $light-gray;
+        box-shadow: inset 0 0 5px -2px rgba(0,0,0,0.5);
+        position: relative;
+        transition: background 0.4s ease;
+        z-index: -1;
+        
+        .fake-button {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: 21px;
+          border-radius: 100%;
+          background: $light-gray;
+          border: 1px solid rgba($mix-black, 0.2);
+          content: '';
+          transition: left 0.4s cubic-bezier(0.54, 1.85, 0.5, 1);
+          cursor: pointer;
+        }
+      }
+      .fake-label {
+        float: left;
+        cursor: pointer;
+        max-width: 200px;
+        padding: 0 0 0 10px;
+        position: relative;
+        z-index: -1;
+        color: $dove-black;
+      }
+    }
+    h1 {
+      display: block;
+      margin: 10px 0;
+      clear: both;
+      padding: 8px 0;
+      text-align: center;
+      @include font(18,21);
+      color: $black;
+      background: lighten($light-gray,5%);
+      font-weight: 600;
+    }
+    .terms-listing{
+      @extend %listreset;
+      @include font(13,16);
+      color: $dove-black;
+      padding: 5px;
+      
+      li{
+        display: block;
+        padding: 0 0 10px;
+        overflow: hidden;
+        
+        a{
+          color: $dove-black;
+          @include align(top);
+        }
+        input[type="checkbox"]{
+          float: left;
+          margin: 4px 0 0 ;
+        }
+        label{
+          float: left;
+          padding: 0 0 0 10px;
+        }
+      }
+    }
+    .company-logo{
+      @include squar(70px,70px);
+      overflow: hidden;
+      border-radius: 100%;
+      margin: 0  auto;
+      position: relative;
+      background: $light-gray;
+      z-index: 6;
+      
+      &.hover{
+        &:hover{
+          .delete{ display: block;}
+        }
+      }
+      
+      .picture-holder{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        @include squar(100%,100%);
+        display: none;
+        border-radius: 100%;
+       
+        img{
+          @include img-res;
+          height: 100%;
+        }
+      }
+      
+      .delete{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255,255,255,0.5);
+        @include font(40,40);
+        padding:14px 16px;
+        color: $red;
+        cursor: pointer;
+        display: none;
+        
+         span{ display: block;}
+      }
+      
+      .name-tag {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: -1;
+        @include font(12,15);
+        color: $mix-black;
+      }
+      
+      input[type="file"]{
+        @include squar(100%, 100%);
+        opacity: 0;
+      }
+    }
+  }
+  .registration-form{
+    overflow: hidden;
+    
+    &.agent-info{
+      .agent-information {
+        min-height: 545px;
+        opacity: 1;
+        height: auto;
+      }
+    }
+    
+    .input-holder{
+      float: left;
+      width: 50%;
+      
+      input[type="text"],input[type="tel"], input[type="email"], input[type="password"] {  padding:6px 10px 6px 50px;}
+    }
+  }
+  .agent-information {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    clear: left;
+    min-height: 0;
+    opacity: 0;
+    height: 0;
+    transition: min-height 0.5s cubic-bezier(0.05, 1.6, 0.1, 1), opacity 0.5s ease;
+  }
 }

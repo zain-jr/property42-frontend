@@ -1,5 +1,7 @@
 function previewFile(file, target) {
   var preview = document.querySelector(target);
+  console.log(target);
+  console.log(preview);
   var file    = file.files[0];
   var reader  = new FileReader();
 
