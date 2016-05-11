@@ -60,6 +60,10 @@ a{ outline: none;}
 	background: $defualt-blue;
 	@extend %clearfix;
 	
+	&.home-header{
+		background: rgba($defualt-blue, 0.5);
+	}
+	
 	.layout {
 		padding: 10px 0;
 	}
@@ -72,7 +76,7 @@ a{ outline: none;}
 	
 	img { @include img-res;}
 }
-.add-property {
+.btn-header {
 	float: right;
 	max-width: 300px;
 	color: $white;
@@ -82,13 +86,8 @@ a{ outline: none;}
 	background: $mix-blue;
 	border-radius: 4px;
 	padding: 10px 20px;
-	margin: 12px 0 0;
+	margin: 12px 5px 0;
 	transition: background 0.4s ease;
-	
-	&.less-indent{
-		margin: 9px 10px 0;
-		padding: 8px 17px;
-	}
 	
 	@include media('<tablet'){
 		max-width: 130px;
