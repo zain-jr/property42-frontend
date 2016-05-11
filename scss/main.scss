@@ -1,4 +1,3 @@
-
 /* ---------------------------------------------------------
    1. Embedded fonts styles
    2. Eric Mayer CSS Reset
@@ -41,13 +40,22 @@ $media-expressions: (
 @import 'base/reset';
 @import 'base/typography';
 @import 'base/forms';
-.text-left{ text-align: left !important;}
-.text-right { text-align: right !important;}
-.text-uppercase{ text-transform: uppercase !important;}
-.text-center{ text-align: center !important;}
 .container { @include container;}
 .layout{ overflow: hidden;}
 a{ outline: none;}
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: $mix-black;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: $mix-black;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:$mix-black;
+  opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: $mix-black;
+}
 #wrapper {
 	position: relative;
 	width: 100%;
@@ -67,7 +75,25 @@ a{ outline: none;}
 	.layout {
 		padding: 10px 0;
 	}
+	
+	.login-register{
+		float: right;
+		text-decoration: none;
+		color: $white;
+    background: $light-blue;
+    border-radius: 4px;
+    padding: 10px 30px;
+    transition: background 0.4s ease;
+    margin: 10px 0 0;
+    
+    &:hover{
+      background: darken($light-blue, 10%);
+    }
+	}
 }
+#main{
+  overflow: hidden;
+ }
 .logo {
 	float: left;
 	width: 140px;
@@ -76,6 +102,7 @@ a{ outline: none;}
 	
 	img { @include img-res;}
 }
+
 .btn-header {
 	float: right;
 	max-width: 300px;
@@ -108,47 +135,24 @@ a{ outline: none;}
 #main{
 	overflow: hidden;
 }
-.addPropertyFormContianer {
+/*Add a property full form*/
+.addPropertyFormContainer {
 	@include container;
-	
-	&.sectionListingActive {
-		.section-listing{
-			height: auto;
-			max-height: 210px;
-			opacity: 1;
-			visibility: visible;
-			z-index: 9;
-		}
-	}
+	transition: padding 0.5s ease;
 	
 	&.fixed-position{
-		
 		.listing-holder{
 			position: fixed;
-			top: 0;
+			z-index: 9;
 			left: 0;
 			right: 0;
-			z-index: 98;
-			@include container;
-		}
-		.section-listing {
-			@include media('<tablet'){
-				left: 0;
-				right: 0;
-			}
-		}
-		.property-add {
-			padding: 60px 0 50px;
-		}
-		.attactment-block, .basics-block, .feature-block, .contact-information{
-			padding:45px 0 0;
-			
-			@include media('<tablet'){
-				padding: 25px 0 0;
-			}
+			top: 0;
 		}
 	}
 	
+	.attactment-block, .basics-block, .feature-block, .contact-information{
+		padding: 75px 0 0;
+	}
 	
 	.select2-container{
 		@include media('<desktop'){
@@ -162,14 +166,10 @@ a{ outline: none;}
 	}
 	
 	.listing-holder{
-		display: block;
 		width: 100%;
 		position: relative;
+		z-index: 99;
 		clear: both;
-		
-		@include media('<tablet'){
-			text-align: center;
-		}
 		
 		&:after{
 			position: absolute;
@@ -199,6 +199,7 @@ a{ outline: none;}
 	}
 	
 	.section-listing {
+		@include container;
 		@extend %listreset;
 		@include align-reset(top, 18, 21);
 		position: relative;
@@ -259,8 +260,8 @@ a{ outline: none;}
 				z-index: 1;
 				overflow: hidden;
 				
-				@include media('<widescreen'){
-					padding: 15px 70px;
+				@include media('<tvscreen'){
+					padding: 15px 66px;
 				}
 				@include media('<desktop'){
 					padding: 15px 45px;
@@ -634,10 +635,6 @@ a{ outline: none;}
 		padding: 0 0 5px;
 		margin: 30px 0 0;
 		
-		.fixed-position & {
-			margin: 0;
-		}
-		
 		span{
 			@include align(top);
 			position: relative;
@@ -885,6 +882,7 @@ a{ outline: none;}
 				
 				&:hover{
 					&:after { top: 0;}
+					
 					.propertyDocumentCloseBtn {
 						opacity: 1;
 						visibility: visible;

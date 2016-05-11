@@ -587,7 +587,7 @@ th {
   content: "\e911";
 }
 
-.addPropertyFormContianer .section-listing, .addPropertyFormContianer .tabset, .addPropertyFormContianer .property-add .radio-holder, .addPropertyFormContianer .feature-list, .addPropertyFormContianer .image-uploading-area {
+.addPropertyFormContainer .section-listing, .addPropertyFormContainer .tabset, .addPropertyFormContainer .property-add .radio-holder, .addPropertyFormContainer .feature-list, .addPropertyFormContainer .image-uploading-area {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -834,22 +834,6 @@ input[type='submit'] {
   cursor: pointer;
 }
 
-.text-left {
-  text-align: left !important;
-}
-
-.text-right {
-  text-align: right !important;
-}
-
-.text-uppercase {
-  text-transform: uppercase !important;
-}
-
-.text-center {
-  text-align: center !important;
-}
-
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -863,6 +847,27 @@ input[type='submit'] {
 
 a {
   outline: none;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #2e2e2e;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #2e2e2e;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #2e2e2e;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #2e2e2e;
 }
 
 #wrapper {
@@ -884,6 +889,25 @@ a {
 
 #header .layout {
   padding: 10px 0;
+}
+
+#header .login-register {
+  float: right;
+  text-decoration: none;
+  color: #fff;
+  background: #39f;
+  border-radius: 4px;
+  padding: 10px 30px;
+  transition: background 0.4s ease;
+  margin: 10px 0 0;
+}
+
+#header .login-register:hover {
+  background: #007fff;
+}
+
+#main {
+  overflow: hidden;
 }
 
 .logo {
@@ -944,82 +968,49 @@ a {
   overflow: hidden;
 }
 
-.addPropertyFormContianer {
+/*Add a property full form*/
+.addPropertyFormContainer {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 10px;
   clear: both;
+  transition: padding 0.5s ease;
 }
 
-.addPropertyFormContianer.sectionListingActive .section-listing {
-  height: auto;
-  max-height: 210px;
-  opacity: 1;
-  visibility: visible;
-  z-index: 9;
-}
-
-.addPropertyFormContianer.fixed-position .listing-holder {
+.addPropertyFormContainer.fixed-position .listing-holder {
   position: fixed;
-  top: 0;
+  z-index: 9;
   left: 0;
   right: 0;
-  z-index: 98;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 10px;
-  clear: both;
+  top: 0;
 }
 
-@media (max-width: 767px) {
-  .addPropertyFormContianer.fixed-position .section-listing {
-    left: 0;
-    right: 0;
-  }
-}
-
-.addPropertyFormContianer.fixed-position .property-add {
-  padding: 60px 0 50px;
-}
-
-.addPropertyFormContianer.fixed-position .attactment-block, .addPropertyFormContianer.fixed-position .basics-block, .addPropertyFormContianer.fixed-position .feature-block, .addPropertyFormContianer.fixed-position .contact-information {
-  padding: 45px 0 0;
-}
-
-@media (max-width: 767px) {
-  .addPropertyFormContianer.fixed-position .attactment-block, .addPropertyFormContianer.fixed-position .basics-block, .addPropertyFormContianer.fixed-position .feature-block, .addPropertyFormContianer.fixed-position .contact-information {
-    padding: 25px 0 0;
-  }
+.addPropertyFormContainer .attactment-block, .addPropertyFormContainer .basics-block, .addPropertyFormContainer .feature-block, .addPropertyFormContainer .contact-information {
+  padding: 75px 0 0;
 }
 
 @media (max-width: 1023px) {
-  .addPropertyFormContianer .select2-container {
+  .addPropertyFormContainer .select2-container {
     min-width: 190px;
   }
 }
 
 @media (max-width: 767px) {
-  .addPropertyFormContianer .select2-container {
+  .addPropertyFormContainer .select2-container {
     margin: 0;
     min-width: inherit;
     width: 100%;
   }
 }
 
-.addPropertyFormContianer .listing-holder {
-  display: block;
+.addPropertyFormContainer .listing-holder {
   width: 100%;
   position: relative;
+  z-index: 99;
   clear: both;
 }
 
-@media (max-width: 767px) {
-  .addPropertyFormContianer .listing-holder {
-    text-align: center;
-  }
-}
-
-.addPropertyFormContianer .listing-holder:after {
+.addPropertyFormContainer .listing-holder:after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1030,7 +1021,7 @@ a {
   content: '';
 }
 
-.addPropertyFormContianer .listing-holder .listing-opener {
+.addPropertyFormContainer .listing-holder .listing-opener {
   text-decoration: none;
   color: #000;
   font-size: 40px;
@@ -1041,16 +1032,20 @@ a {
 }
 
 @media (min-width: 768px) {
-  .addPropertyFormContianer .listing-holder .listing-opener {
+  .addPropertyFormContainer .listing-holder .listing-opener {
     display: none;
   }
 }
 
-.addPropertyFormContianer .listing-holder .listing-opener:hover {
+.addPropertyFormContainer .listing-holder .listing-opener:hover {
   color: #606060;
 }
 
-.addPropertyFormContianer .section-listing {
+.addPropertyFormContainer .section-listing {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 10px;
+  clear: both;
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
@@ -1058,7 +1053,7 @@ a {
   background: #dde2e8;
 }
 
-.addPropertyFormContianer .section-listing > * {
+.addPropertyFormContainer .section-listing > * {
   display: inline-block;
   vertical-align: top;
   font-size: 18px;
@@ -1067,7 +1062,7 @@ a {
 }
 
 @media (max-width: 767px) {
-  .addPropertyFormContianer .section-listing {
+  .addPropertyFormContainer .section-listing {
     position: absolute;
     top: 100%;
     left: -10px;
@@ -1083,45 +1078,45 @@ a {
 }
 
 @media (max-width: 767px) {
-  .addPropertyFormContianer .section-listing li {
+  .addPropertyFormContainer .section-listing li {
     display: block;
   }
 }
 
-.addPropertyFormContianer .section-listing li.activeAddPropertyNavLink:before {
+.addPropertyFormContainer .section-listing li.activeAddPropertyNavLink:before {
   background: #39f;
 }
 
-.addPropertyFormContianer .section-listing li.activeAddPropertyNavLink a {
+.addPropertyFormContainer .section-listing li.activeAddPropertyNavLink a {
   color: #000;
   pointer-events: none;
 }
 
-.addPropertyFormContianer .section-listing li.activeAddPropertyNavLink a:after {
+.addPropertyFormContainer .section-listing li.activeAddPropertyNavLink a:after {
   right: 0;
 }
 
-.addPropertyFormContianer .section-listing li.activeAddPropertyNavLink a [class^="icon-"], .addPropertyFormContianer .section-listing li.activeAddPropertyNavLink a [class*="icon-"] {
+.addPropertyFormContainer .section-listing li.activeAddPropertyNavLink a [class^="icon-"], .addPropertyFormContainer .section-listing li.activeAddPropertyNavLink a [class*="icon-"] {
   color: #58a36f;
 }
 
-.addPropertyFormContianer .section-listing li:hover:before {
+.addPropertyFormContainer .section-listing li:hover:before {
   background: #39f;
 }
 
-.addPropertyFormContianer .section-listing li:hover a {
+.addPropertyFormContainer .section-listing li:hover a {
   color: #000;
 }
 
-.addPropertyFormContianer .section-listing li:hover a:after {
+.addPropertyFormContainer .section-listing li:hover a:after {
   right: 0;
 }
 
-.addPropertyFormContianer .section-listing li:hover a [class^="icon-"], .addPropertyFormContianer .section-listing li:hover a [class*="icon-"] {
+.addPropertyFormContainer .section-listing li:hover a [class^="icon-"], .addPropertyFormContainer .section-listing li:hover a [class*="icon-"] {
   color: #58a36f;
 }
 
-.addPropertyFormContianer .section-listing li a {
+.addPropertyFormContainer .section-listing li a {
   padding: 15px 95px;
   text-align: center;
   display: block;
@@ -1132,19 +1127,19 @@ a {
   overflow: hidden;
 }
 
-@media (max-width: 1199px) {
-  .addPropertyFormContianer .section-listing li a {
-    padding: 15px 70px;
+@media (max-width: 1599px) {
+  .addPropertyFormContainer .section-listing li a {
+    padding: 15px 66px;
   }
 }
 
 @media (max-width: 1023px) {
-  .addPropertyFormContianer .section-listing li a {
+  .addPropertyFormContainer .section-listing li a {
     padding: 15px 45px;
   }
 }
 
-.addPropertyFormContianer .section-listing li a:after {
+.addPropertyFormContainer .section-listing li a:after {
   background: #edf1f4;
   position: absolute;
   left: 0;
@@ -1156,7 +1151,7 @@ a {
   transition: all 0.4s ease;
 }
 
-.addPropertyFormContianer .section-listing li a [class^="icon-"], .addPropertyFormContianer .section-listing li a [class*="icon-"] {
+.addPropertyFormContainer .section-listing li a [class^="icon-"], .addPropertyFormContainer .section-listing li a [class*="icon-"] {
   position: absolute;
   top: 50%;
   left: 40px;
@@ -1164,24 +1159,24 @@ a {
 }
 
 @media (max-width: 1023px) {
-  .addPropertyFormContianer .section-listing li a [class^="icon-"], .addPropertyFormContianer .section-listing li a [class*="icon-"] {
+  .addPropertyFormContainer .section-listing li a [class^="icon-"], .addPropertyFormContainer .section-listing li a [class*="icon-"] {
     left: 9px;
   }
 }
 
-.addPropertyFormContianer .section-listing li a [class^="icon-"]:before, .addPropertyFormContianer .section-listing li a [class*="icon-"]:before {
+.addPropertyFormContainer .section-listing li a [class^="icon-"]:before, .addPropertyFormContainer .section-listing li a [class*="icon-"]:before {
   font-size: 25px;
   line-height: 1;
 }
 
-.addPropertyFormContianer .tabset {
+.addPropertyFormContainer .tabset {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
   text-transform: capitalize;
 }
 
-.addPropertyFormContianer .tabset > * {
+.addPropertyFormContainer .tabset > * {
   display: inline-block;
   vertical-align: top;
   font-size: 12px;
@@ -1189,24 +1184,24 @@ a {
   letter-spacing: 0;
 }
 
-.addPropertyFormContianer .tabset li {
+.addPropertyFormContainer .tabset li {
   padding: 0 10px 10px;
 }
 
-.addPropertyFormContianer .tabset li.active a {
+.addPropertyFormContainer .tabset li.active a {
   color: #133783;
 }
 
-.addPropertyFormContianer .tabset li.active a .round {
+.addPropertyFormContainer .tabset li.active a .round {
   background: #133783;
   border-color: #133783;
 }
 
-.addPropertyFormContianer .tabset li.active a .round:after {
+.addPropertyFormContainer .tabset li.active a .round:after {
   display: block;
 }
 
-.addPropertyFormContianer .tabset li a {
+.addPropertyFormContainer .tabset li a {
   display: inline-block;
   vertical-align: top;
   color: #000;
@@ -1215,7 +1210,7 @@ a {
   transition: color 0.4s ease;
 }
 
-.addPropertyFormContianer .tabset li a .round {
+.addPropertyFormContainer .tabset li a .round {
   display: inline-block;
   vertical-align: middle;
   width: 20px;
@@ -1228,7 +1223,7 @@ a {
   transition: border 0.4s ease;
 }
 
-.addPropertyFormContianer .tabset li a .round:after {
+.addPropertyFormContainer .tabset li a .round:after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1241,37 +1236,37 @@ a {
   display: none;
 }
 
-.addPropertyFormContianer .calculatedPrice {
+.addPropertyFormContainer .calculatedPrice {
   color: #363636;
   font-style: italic;
   position: relative;
   padding: 0 0 5px;
 }
 
-.addPropertyFormContianer .tab-content {
+.addPropertyFormContainer .tab-content {
   overflow: hidden;
 }
 
-.addPropertyFormContianer .tab-content .fake-radio {
+.addPropertyFormContainer .tab-content .fake-radio {
   width: 18px !important;
   height: 18px !important;
 }
 
-.addPropertyFormContianer .property-add {
+.addPropertyFormContainer .property-add {
   padding: 0 0 50px;
   overflow: hidden;
 }
 
 @media (max-width: 767px) {
-  .addPropertyFormContianer .property-add {
+  .addPropertyFormContainer .property-add {
     padding: 0 0 50px;
   }
 }
 
-.addPropertyFormContianer .property-add input[type="text"],
-.addPropertyFormContianer .property-add input[type="search"],
-.addPropertyFormContianer .property-add input[type="number"],
-.addPropertyFormContianer .property-add input[type="email"] {
+.addPropertyFormContainer .property-add input[type="text"],
+.addPropertyFormContainer .property-add input[type="search"],
+.addPropertyFormContainer .property-add input[type="number"],
+.addPropertyFormContainer .property-add input[type="email"] {
   font-size: 12px;
   line-height: 15px;
   width: 100%;
@@ -1283,35 +1278,35 @@ a {
 }
 
 @media (max-width: 1023px) {
-  .addPropertyFormContianer .property-add input[type="text"],
-  .addPropertyFormContianer .property-add input[type="search"],
-  .addPropertyFormContianer .property-add input[type="number"],
-  .addPropertyFormContianer .property-add input[type="email"] {
+  .addPropertyFormContainer .property-add input[type="text"],
+  .addPropertyFormContainer .property-add input[type="search"],
+  .addPropertyFormContainer .property-add input[type="number"],
+  .addPropertyFormContainer .property-add input[type="email"] {
     max-width: 190px;
   }
 }
 
 @media (max-width: 767px) {
-  .addPropertyFormContianer .property-add input[type="text"],
-  .addPropertyFormContianer .property-add input[type="search"],
-  .addPropertyFormContianer .property-add input[type="number"],
-  .addPropertyFormContianer .property-add input[type="email"] {
+  .addPropertyFormContainer .property-add input[type="text"],
+  .addPropertyFormContainer .property-add input[type="search"],
+  .addPropertyFormContainer .property-add input[type="number"],
+  .addPropertyFormContainer .property-add input[type="email"] {
     max-width: inherit;
     margin: 0;
   }
 }
 
-.addPropertyFormContianer .property-add input[type="text"]:focus, .addPropertyFormContianer .property-add input[type="text"]:hover,
-.addPropertyFormContianer .property-add input[type="search"]:focus,
-.addPropertyFormContianer .property-add input[type="search"]:hover,
-.addPropertyFormContianer .property-add input[type="number"]:focus,
-.addPropertyFormContianer .property-add input[type="number"]:hover,
-.addPropertyFormContianer .property-add input[type="email"]:focus,
-.addPropertyFormContianer .property-add input[type="email"]:hover {
+.addPropertyFormContainer .property-add input[type="text"]:focus, .addPropertyFormContainer .property-add input[type="text"]:hover,
+.addPropertyFormContainer .property-add input[type="search"]:focus,
+.addPropertyFormContainer .property-add input[type="search"]:hover,
+.addPropertyFormContainer .property-add input[type="number"]:focus,
+.addPropertyFormContainer .property-add input[type="number"]:hover,
+.addPropertyFormContainer .property-add input[type="email"]:focus,
+.addPropertyFormContainer .property-add input[type="email"]:hover {
   border: 1px solid #000;
 }
 
-.addPropertyFormContianer .property-add button[type="submit"] {
+.addPropertyFormContainer .property-add button[type="submit"] {
   border: 0;
   padding: 12px 25px;
   display: block;
@@ -1330,7 +1325,7 @@ a {
   outline: none;
 }
 
-.addPropertyFormContianer .property-add button[type="submit"] [class^="icon"], .addPropertyFormContianer .property-add button[type="submit"] [class*="icon"] {
+.addPropertyFormContainer .property-add button[type="submit"] [class^="icon"], .addPropertyFormContainer .property-add button[type="submit"] [class*="icon"] {
   position: absolute;
   top: 50%;
   right: -100px;
@@ -1338,12 +1333,12 @@ a {
   transition: right 0.4s ease;
 }
 
-.addPropertyFormContianer .property-add button[type="submit"] [class^="icon"]:before, .addPropertyFormContianer .property-add button[type="submit"] [class*="icon"]:before {
+.addPropertyFormContainer .property-add button[type="submit"] [class^="icon"]:before, .addPropertyFormContainer .property-add button[type="submit"] [class*="icon"]:before {
   font-size: 12px;
   line-height: 1;
 }
 
-.addPropertyFormContianer .property-add button[type="submit"]:after {
+.addPropertyFormContainer .property-add button[type="submit"]:after {
   position: absolute;
   top: 0;
   right: 0;
@@ -1355,25 +1350,25 @@ a {
   transition: all 0.4s ease;
 }
 
-.addPropertyFormContianer .property-add button[type="submit"]:hover:after {
+.addPropertyFormContainer .property-add button[type="submit"]:hover:after {
   left: 0;
 }
 
-.addPropertyFormContianer .property-add button[type="submit"]:hover [class^="icon"], .addPropertyFormContianer .property-add button[type="submit"]:hover [class*="icon"] {
+.addPropertyFormContainer .property-add button[type="submit"]:hover [class^="icon"], .addPropertyFormContainer .property-add button[type="submit"]:hover [class*="icon"] {
   right: 20px;
 }
 
-.addPropertyFormContianer .property-add select {
+.addPropertyFormContainer .property-add select {
   display: inline-block;
   vertical-align: top;
   height: 30px;
 }
 
-.addPropertyFormContianer .property-add select:focus, .addPropertyFormContianer .property-add select:hover {
+.addPropertyFormContainer .property-add select:focus, .addPropertyFormContainer .property-add select:hover {
   border: 1px solid #000;
 }
 
-.addPropertyFormContianer .property-add textarea {
+.addPropertyFormContainer .property-add textarea {
   font-size: 12px;
   line-height: 15px;
   margin: 0 0 0 9px;
@@ -1385,23 +1380,23 @@ a {
 }
 
 @media (max-width: 1023px) {
-  .addPropertyFormContianer .property-add textarea {
+  .addPropertyFormContainer .property-add textarea {
     max-width: 565px;
   }
 }
 
 @media (max-width: 767px) {
-  .addPropertyFormContianer .property-add textarea {
+  .addPropertyFormContainer .property-add textarea {
     max-width: inherit;
     margin: 0;
   }
 }
 
-.addPropertyFormContianer .property-add textarea:hover {
+.addPropertyFormContainer .property-add textarea:hover {
   border-color: #000;
 }
 
-.addPropertyFormContianer .property-add .title {
+.addPropertyFormContainer .property-add .title {
   padding: 2px 0 0;
   float: left;
   text-align: right;
@@ -1414,7 +1409,7 @@ a {
 }
 
 @media (max-width: 767px) {
-  .addPropertyFormContianer .property-add .title {
+  .addPropertyFormContainer .property-add .title {
     float: none;
     display: block;
     width: 100%;
@@ -1423,37 +1418,37 @@ a {
   }
 }
 
-.addPropertyFormContianer .property-add .title:after {
+.addPropertyFormContainer .property-add .title:after {
   display: inline-block;
   vertical-align: top;
   content: '\2217';
   color: #e14646;
 }
 
-.addPropertyFormContianer .property-add .input-holder {
+.addPropertyFormContainer .property-add .input-holder {
   float: left;
   width: 75%;
 }
 
 @media (max-width: 767px) {
-  .addPropertyFormContianer .property-add .input-holder {
+  .addPropertyFormContainer .property-add .input-holder {
     float: none;
     width: 100%;
     display: block;
   }
 }
 
-.addPropertyFormContianer .property-add .field-holder {
+.addPropertyFormContainer .property-add .field-holder {
   overflow: hidden;
 }
 
-.addPropertyFormContianer .property-add .radio-holder {
+.addPropertyFormContainer .property-add .radio-holder {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
 }
 
-.addPropertyFormContianer .property-add .radio-holder > * {
+.addPropertyFormContainer .property-add .radio-holder > * {
   display: inline-block;
   vertical-align: top;
   font-size: 12px;
@@ -1461,24 +1456,24 @@ a {
   letter-spacing: 0;
 }
 
-.addPropertyFormContianer .property-add .radio-holder li {
+.addPropertyFormContainer .property-add .radio-holder li {
   padding: 0 10px 10px;
 }
 
-.addPropertyFormContianer .property-add .radio-holder li label {
+.addPropertyFormContainer .property-add .radio-holder li label {
   display: inline-block;
   vertical-align: top;
   cursor: pointer;
   padding: 2px 0 0;
 }
 
-.addPropertyFormContianer .property-add .radio-holder li label .fake-radio,
-.addPropertyFormContianer .property-add .radio-holder li label .fake-label {
+.addPropertyFormContainer .property-add .radio-holder li label .fake-radio,
+.addPropertyFormContainer .property-add .radio-holder li label .fake-label {
   display: inline-block;
   vertical-align: middle;
 }
 
-.addPropertyFormContianer .property-add .radio-holder li label .fake-radio {
+.addPropertyFormContainer .property-add .radio-holder li label .fake-radio {
   width: 20px;
   height: 20px;
   border: 2px solid #606060;
@@ -1486,7 +1481,7 @@ a {
   position: relative;
 }
 
-.addPropertyFormContianer .property-add .radio-holder li label .fake-radio:after {
+.addPropertyFormContainer .property-add .radio-holder li label .fake-radio:after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1499,7 +1494,7 @@ a {
   display: none;
 }
 
-.addPropertyFormContianer .property-add .radio-holder li input[type="radio"] {
+.addPropertyFormContainer .property-add .radio-holder li input[type="radio"] {
   visibility: hidden;
   opacity: 0;
   position: fixed;
@@ -1507,44 +1502,44 @@ a {
   left: -999px;
 }
 
-.addPropertyFormContianer .property-add .radio-holder li input[type="radio"]:checked ~ .fake-radio {
+.addPropertyFormContainer .property-add .radio-holder li input[type="radio"]:checked ~ .fake-radio {
   border: 2px solid #133783;
   background: #133783;
 }
 
-.addPropertyFormContianer .property-add .radio-holder li input[type="radio"]:checked ~ .fake-radio:after {
+.addPropertyFormContainer .property-add .radio-holder li input[type="radio"]:checked ~ .fake-radio:after {
   display: block;
 }
 
-.addPropertyFormContianer .property-add .radio-holder li input[type="radio"]:checked ~ .fake-label {
+.addPropertyFormContainer .property-add .radio-holder li input[type="radio"]:checked ~ .fake-label {
   color: #133783;
 }
 
-.addPropertyFormContianer .property-add .layout {
+.addPropertyFormContainer .property-add .layout {
   padding: 20px 0 5px;
 }
 
-.addPropertyFormContianer .property-add .layout.add {
+.addPropertyFormContainer .property-add .layout.add {
   max-width: 885px;
   margin: 0 auto;
 }
 
 @media (max-width: 767px) {
-  .addPropertyFormContianer .property-add .layout.add {
+  .addPropertyFormContainer .property-add .layout.add {
     max-width: inherit;
     width: 100%;
     margin: 0;
   }
 }
 
-.addPropertyFormContianer .property-add .layout .layout-holder {
+.addPropertyFormContainer .property-add .layout .layout-holder {
   float: left;
   width: 50%;
   margin: 0 auto;
 }
 
 @media (max-width: 767px) {
-  .addPropertyFormContianer .property-add .layout .layout-holder {
+  .addPropertyFormContainer .property-add .layout .layout-holder {
     float: none;
     display: block;
     width: 100%;
@@ -1553,23 +1548,23 @@ a {
   }
 }
 
-.addPropertyFormContianer .property-add .layout .layout-holder.add {
+.addPropertyFormContainer .property-add .layout .layout-holder.add {
   width: 100%;
 }
 
-.addPropertyFormContianer .property-add .layout .layout-holder select {
+.addPropertyFormContainer .property-add .layout .layout-holder select {
   margin: 0 0 0 9px;
   height: 30px;
 }
 
 @media (max-width: 767px) {
-  .addPropertyFormContianer .property-add .layout .layout-holder select {
+  .addPropertyFormContainer .property-add .layout .layout-holder select {
     width: 100%;
     margin: 0;
   }
 }
 
-.addPropertyFormContianer .property-add .layout .layout-holder .title {
+.addPropertyFormContainer .property-add .layout .layout-holder .title {
   max-width: 95px;
   width: inherit;
   float: none;
@@ -1578,18 +1573,18 @@ a {
 }
 
 @media (max-width: 767px) {
-  .addPropertyFormContianer .property-add .layout .layout-holder .title {
+  .addPropertyFormContainer .property-add .layout .layout-holder .title {
     max-width: inherit;
   }
 }
 
-.addPropertyFormContianer .property-add .tab-content {
+.addPropertyFormContainer .property-add .tab-content {
   max-width: 490px;
   margin: 10px 0 0;
   padding: 0 0 0 20px;
 }
 
-.addPropertyFormContianer .form-heading {
+.addPropertyFormContainer .form-heading {
   display: block;
   color: #606060;
   text-transform: capitalize;
@@ -1600,17 +1595,13 @@ a {
   margin: 30px 0 0;
 }
 
-.fixed-position .addPropertyFormContianer .form-heading {
-  margin: 0;
-}
-
-.addPropertyFormContianer .form-heading span {
+.addPropertyFormContainer .form-heading span {
   display: inline-block;
   vertical-align: top;
   position: relative;
 }
 
-.addPropertyFormContianer .form-heading span:after {
+.addPropertyFormContainer .form-heading span:after {
   position: absolute;
   bottom: -6px;
   left: 0;
@@ -1620,18 +1611,18 @@ a {
   content: '';
 }
 
-.addPropertyFormContianer .feature-block .holder {
+.addPropertyFormContainer .feature-block .holder {
   overflow: hidden;
   padding: 10px 0 0;
 }
 
-.addPropertyFormContianer .feature-block .holder .tag {
+.addPropertyFormContainer .feature-block .holder .tag {
   padding: 10px 0;
   max-width: 800px;
   margin: 0 auto;
 }
 
-.addPropertyFormContianer .tag {
+.addPropertyFormContainer .tag {
   display: block;
   text-transform: capitalize;
   font-size: 14px;
@@ -1639,7 +1630,7 @@ a {
   font-weight: 600;
 }
 
-.addPropertyFormContianer .feature-list {
+.addPropertyFormContainer .feature-list {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
@@ -1649,7 +1640,7 @@ a {
   padding: 0 0 20px;
 }
 
-.addPropertyFormContianer .feature-list > * {
+.addPropertyFormContainer .feature-list > * {
   display: inline-block;
   vertical-align: middle;
   font-size: 13px;
@@ -1657,7 +1648,7 @@ a {
   letter-spacing: 0;
 }
 
-.addPropertyFormContianer .feature-list:after {
+.addPropertyFormContainer .feature-list:after {
   position: absolute;
   left: 0;
   right: 0;
@@ -1667,24 +1658,24 @@ a {
   background: #e7e7e7;
 }
 
-.addPropertyFormContianer .feature-list li {
+.addPropertyFormContainer .feature-list li {
   padding: 0 30px 15px;
 }
 
-.addPropertyFormContianer .feature-list li label {
+.addPropertyFormContainer .feature-list li label {
   text-transform: capitalize;
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
 }
 
-.addPropertyFormContianer .feature-list li input[type="checkbox"] {
+.addPropertyFormContainer .feature-list li input[type="checkbox"] {
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
 }
 
-.addPropertyFormContianer .image-uploading-area {
+.addPropertyFormContainer .image-uploading-area {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
@@ -1692,7 +1683,7 @@ a {
   margin: 30px 0 0;
 }
 
-.addPropertyFormContianer .image-uploading-area > * {
+.addPropertyFormContainer .image-uploading-area > * {
   display: inline-block;
   vertical-align: top;
   font-size: 14px;
@@ -1701,25 +1692,25 @@ a {
 }
 
 @media (max-width: 767px) {
-  .addPropertyFormContianer .image-uploading-area {
+  .addPropertyFormContainer .image-uploading-area {
     margin: 30px -5px 0;
   }
 }
 
-.addPropertyFormContianer .image-uploading-area li {
+.addPropertyFormContainer .image-uploading-area li {
   width: 25%;
   position: relative;
   padding: 10px 0;
 }
 
 @media (max-width: 767px) {
-  .addPropertyFormContianer .image-uploading-area li {
+  .addPropertyFormContainer .image-uploading-area li {
     width: 50%;
     padding: 10px 5px;
   }
 }
 
-.addPropertyFormContianer .image-uploading-area li:first-child .file-uploader:before {
+.addPropertyFormContainer .image-uploading-area li:first-child .file-uploader:before {
   position: absolute;
   top: 19px;
   left: -39px;
@@ -1736,7 +1727,7 @@ a {
   word-spacing: 1px;
 }
 
-.addPropertyFormContianer .image-uploading-area li .file-uploader {
+.addPropertyFormContainer .image-uploading-area li .file-uploader {
   width: 250px;
   height: 200px;
   margin: 0 auto;
@@ -1747,35 +1738,35 @@ a {
 }
 
 @media (max-width: 1199px) {
-  .addPropertyFormContianer .image-uploading-area li .file-uploader {
+  .addPropertyFormContainer .image-uploading-area li .file-uploader {
     width: 200px;
     height: 200px;
   }
 }
 
 @media (max-width: 1023px) {
-  .addPropertyFormContianer .image-uploading-area li .file-uploader {
+  .addPropertyFormContainer .image-uploading-area li .file-uploader {
     width: 150px;
     height: 150px;
   }
 }
 
 @media (max-width: 767px) {
-  .addPropertyFormContianer .image-uploading-area li .file-uploader {
+  .addPropertyFormContainer .image-uploading-area li .file-uploader {
     width: 100%;
     height: 150px;
   }
 }
 
-.addPropertyFormContianer .image-uploading-area li .file-uploader:hover:after {
+.addPropertyFormContainer .image-uploading-area li .file-uploader:hover:after {
   color: #58a36f;
 }
 
-.addPropertyFormContianer .image-uploading-area li .file-uploader.after-none:after {
+.addPropertyFormContainer .image-uploading-area li .file-uploader.after-none:after {
   display: none !important;
 }
 
-.addPropertyFormContianer .image-uploading-area li .file-uploader:after {
+.addPropertyFormContainer .image-uploading-area li .file-uploader:after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1790,13 +1781,13 @@ a {
 }
 
 @media (max-width: 1023px) {
-  .addPropertyFormContianer .image-uploading-area li .file-uploader:after {
+  .addPropertyFormContainer .image-uploading-area li .file-uploader:after {
     font-size: 60px;
     margin: -30px 0 0 -30px;
   }
 }
 
-.addPropertyFormContianer .image-uploading-area li .file-uploader input[type="file"] {
+.addPropertyFormContainer .image-uploading-area li .file-uploader input[type="file"] {
   display: block;
   overflow: hidden;
   border: 0;
@@ -1806,7 +1797,7 @@ a {
   height: 100% !important;
 }
 
-.addPropertyFormContianer .image-uploading-area li .picture-name {
+.addPropertyFormContainer .image-uploading-area li .picture-name {
   display: block;
   margin: 0 auto;
   max-width: 250px;
@@ -1820,34 +1811,34 @@ a {
 }
 
 @media (max-width: 1199px) {
-  .addPropertyFormContianer .image-uploading-area li .picture-name {
+  .addPropertyFormContainer .image-uploading-area li .picture-name {
     max-width: 200px;
   }
 }
 
 @media (max-width: 1023px) {
-  .addPropertyFormContianer .image-uploading-area li .picture-name {
+  .addPropertyFormContainer .image-uploading-area li .picture-name {
     max-width: 150px;
   }
 }
 
 @media (max-width: 767px) {
-  .addPropertyFormContianer .image-uploading-area li .picture-name {
+  .addPropertyFormContainer .image-uploading-area li .picture-name {
     max-width: inherit;
   }
 }
 
-.addPropertyFormContianer .image-uploading-area li .picture-name.disableInput {
+.addPropertyFormContainer .image-uploading-area li .picture-name.disableInput {
   opacity: 0.5;
   pointer-events: none;
 }
 
-.addPropertyFormContianer .image-uploading-area li .picture-name:hover, .addPropertyFormContianer .image-uploading-area li .picture-name:focus {
+.addPropertyFormContainer .image-uploading-area li .picture-name:hover, .addPropertyFormContainer .image-uploading-area li .picture-name:focus {
   border-width: 0 0 3px;
   border-color: #606060;
 }
 
-.addPropertyFormContianer .image-uploading-area li .image-holder {
+.addPropertyFormContainer .image-uploading-area li .image-holder {
   position: absolute;
   top: 0;
   left: 0;
@@ -1861,7 +1852,7 @@ a {
   transition: z-index 0.9s ease, opacity 0.9s ease;
 }
 
-.addPropertyFormContianer .image-uploading-area li .image-holder:after {
+.addPropertyFormContainer .image-uploading-area li .image-holder:after {
   position: absolute;
   top: 100%;
   right: 0;
@@ -1872,7 +1863,7 @@ a {
   transition: top 0.4s ease;
 }
 
-.addPropertyFormContianer .image-uploading-area li .image-holder .propertyDocumentCloseBtn {
+.addPropertyFormContainer .image-uploading-area li .image-holder .propertyDocumentCloseBtn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -1887,11 +1878,11 @@ a {
   cursor: pointer;
 }
 
-.addPropertyFormContianer .image-uploading-area li .image-holder .propertyDocumentCloseBtn:hover {
+.addPropertyFormContainer .image-uploading-area li .image-holder .propertyDocumentCloseBtn:hover {
   color: #e14646;
 }
 
-.addPropertyFormContianer .image-uploading-area li .image-holder img {
+.addPropertyFormContainer .image-uploading-area li .image-holder img {
   width: 100%;
   height: auto;
   display: block;
@@ -1899,11 +1890,11 @@ a {
   border: 0;
 }
 
-.addPropertyFormContianer .image-uploading-area li .image-holder:hover:after {
+.addPropertyFormContainer .image-uploading-area li .image-holder:hover:after {
   top: 0;
 }
 
-.addPropertyFormContianer .image-uploading-area li .image-holder:hover .propertyDocumentCloseBtn {
+.addPropertyFormContainer .image-uploading-area li .image-holder:hover .propertyDocumentCloseBtn {
   opacity: 1;
   visibility: visible;
 }

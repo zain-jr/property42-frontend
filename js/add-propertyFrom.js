@@ -1,4 +1,4 @@
- function previewAddPropertyImg(file, target)
+function previewAddPropertyImg(file, target)
  {
 	previewFile(file, target);
 	$(file).closest('li').find('.picture-name').removeClass('disableInput');
@@ -29,7 +29,7 @@ function onScroll(event){
     $('.scrollAddPropertyNavLink').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos+100 && refElement.position().top + refElement.height() > scrollPos) {
+        if (refElement.position().top <= scrollPos+50 && refElement.position().top + refElement.height() > scrollPos) {
 			$(currLink).closest('li').siblings().removeClass('activeAddPropertyNavLink');
 			$(currLink).closest('li').addClass('activeAddPropertyNavLink');
         }
