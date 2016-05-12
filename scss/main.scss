@@ -70,6 +70,11 @@ a{ outline: none;}
 	
 	&.home-header{
 		background: rgba($defualt-blue, 0.5);
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 99;
 	}
 	
 	.layout {
@@ -124,16 +129,15 @@ a{ outline: none;}
 	}
 	
 	&:hover{ background: $orange; }
-	&:before {
+	span[class^="icon-"], span[class*="icon-"] {
 		@include align(top);
-		content: "\e900";
-		font-family: 'icomoon';
 		@include font(18,19);
 		font-weight: bold;
 	}
 }
 #main{
 	overflow: hidden;
+	position: relative;
 }
 /*Add a property full form*/
 .addPropertyFormContainer {
@@ -886,6 +890,185 @@ a{ outline: none;}
 					.propertyDocumentCloseBtn {
 						opacity: 1;
 						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+}
+.main-visual{
+	position: relative;
+	overflow: hidden;
+	min-height: 100vh;
+	white-space: nowrap;
+	background: url("../images/bg8.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	
+	&:before{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		content: '';
+		pointer-events: none;
+	}
+	
+	&:after{
+		height: 100vh;
+		overflow: hidden;
+		margin: 0 0 0 -5px;
+		@include align(middle);
+		content: '';
+		width: 1px;
+	}
+	
+	.property-search-holder{
+		@include align(middle);
+		white-space: normal;
+		width: 100%;
+		
+		.tabset {
+			@include container;
+			max-width: 800px;
+			@extend %listreset;
+			@include align-reset(top,30,33);
+			text-transform: capitalize;
+			text-align: center;
+			
+			li{
+				margin: 0 0 20px;
+				width: 33.33%;
+				padding: 0 5px;
+				
+				&.active {
+					a{
+						background: $green;
+						color: $white;
+						
+						&:after{
+							display: block;
+						}
+					}
+				}
+				
+				a{
+					text-decoration: none;
+					color: $black;
+					background: rgba($white, 0.7);
+					display: block;
+					padding: 15px;
+					position: relative;
+					transition: background 0.4s ease;
+					
+					&:after{
+						position: absolute;
+						bottom: -20px;
+						left: 50%;
+						border: 10px solid transparent;
+						border-top: 10px solid $green;
+						content: '';
+						margin: 0 0 0 -13px;
+						display: none;
+					}
+					
+					&:hover{
+						background: $green;
+						color: $white;
+						
+						&:after{
+							display: block;
+						}
+					}
+				}
+				
+				input[type="radio"]{
+					opacity: 0;
+					position: fixed;
+					left: -999px;
+					top: -999px;
+				}
+			}
+		}
+		.tab-content{
+			overflow: hidden;
+			background: rgba($white, 0.9);
+			@include container;
+			padding: 20px 10px;
+			max-width: 1040px;
+			
+			form{
+				overflow: hidden;
+				@include align-reset(top,16,19);
+				
+				ul{
+					text-transform: capitalize;
+					@extend %listreset;
+					width: 50%;
+					color: $black;
+					padding:10px 20px;
+					
+					&.inline {
+						@include align-reset(top,16,19);
+						
+						li{
+							width: 50%;
+							padding: 0 10px 15px;
+							
+							&.full{
+								width: 100%;
+								display: block;
+								font-weight: 600;
+								text-align: center;
+								@include font(20,22);
+							}
+							label , span {
+								width: 50px;
+							}
+						}
+					}
+					
+					li{
+						display: block;
+						overflow: hidden;
+						padding: 0 0 15px;
+						
+						label , span {
+							display: block;
+							width: 180px;
+							float: left;
+						}
+						
+						.input-holder{
+							overflow: hidden;
+						}
+						.fake-select{
+							width: 100%;
+							float: none;
+							overflow: hidden;
+							border-right: 1px solid $black;
+							position: relative;
+							
+							&:after{
+								position: absolute;
+								top: 50%;
+								right: 10px;
+								border: 8px solid transparent;
+								border-top: 8px solid $black;
+								content: '';
+								margin: -4px 0 0;
+							}
+						}
+						input[type="text"], input[type="number"],
+						select{
+							display: block;
+							width: 110%;
+							border: 1px solid $black;
+							height: 35px;
+							background: transparent;
+						}
+						input[type="text"], input[type="number"]{ width: 100%;}
 					}
 				}
 			}
