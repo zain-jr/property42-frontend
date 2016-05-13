@@ -19,8 +19,8 @@
 			<div class="container">
 				<div class="layout">
 					<div class="logo"><a href="#"><img src="images/logo.png" width="695" height="301" alt="Property42"></a></div>
-					<a href="#" class="btn-header">login/register</a>
 					<a href="#" class="btn-header"><span class="icon-plus"></span>Add a property</a>
+					<a href="#" class="btn-header loginRegister">login / register</a>
 				</div>
 			</div>
 			
@@ -28,115 +28,294 @@
 		<main id="main" role="main">
 			<div class="main-visual">
 				<div class="property-search-holder">
-					<ul class="tabset">
-						<li class="active">
-							<a href="#tab1">buy</a>
-							<input type="radio" name="propertyPurpose" value="1">
-						</li>
-						<li>
-							<a href="#tab2">rent</a>
-							<input type="radio" name="propertyPurpose" value="2">
-						</li>
-					</ul>
-					<div class="tab-content">
-						<div id="tab1">
-							<form>
-								<ul>
-									<li>
-										<label>Select Society</label>
-										<div class="input-holder">
-											<span class="fake-select">
-												<select>
-													<option disabled selected value>Select Society</option>
-													<option>S1</option>
-													<option>s2</option>
-													<option>s3</option>
-													<option>s4</option>
-													<option>s5</option>
-													<option>s6</option>
-												</select>
-											</span>
-										</div>
-									</li>
-									<li>
-										<label>Select Block</label>
-										<div class="input-holder">
-											<span class="fake-select">
-												<select>
-													<option disabled selected value>Select Block</option>
-													<option>b1</option>
-													<option>b2</option>
-													<option>b3</option>
-													<option>b4</option>
-													<option>b5</option>
-													<option>b6</option>
-												</select>
-											</span>
-										</div>
-									</li>
-								</ul>
-								<ul>
-									<li>
-										<label>Select Property Type</label>
-										<div class="input-holder">
-											<span class="fake-select">
-												<select>
-													<option disabled selected value>Select Property Type</option>
-													<option>p</option>
-													<option>p</option>
-													<option>p</option>
-													<option>p</option>
-													<option>p</option>
-													<option>p</option>
-												</select>
-											</span>
-										</div>
-									</li>
-									<li>
-										<label>Select Bedrooms</label>
-										<div class="input-holder">
-											<span class="fake-select">
-												<select>
-													<option disabled selected value>Bedrooms</option>
-													<option>Studio</option>
-													<option>1</option>
-													<option>2</option>
-													<option>3p</option>
-													<option>4</option>
-													<option>5</option>
-													<option>6+</option>
-												</select>
-											</span>
-										</div>
-									</li>
-								</ul>
-								<ul class="inline">
-									<li class="full">Price Range (Rs)</li>
-									<li>
-										<span>From</span>
-										<div class="input-holder"><input type="number"></div>
-									</li>
-									<li>
-										<span>to</span>
-										<div class="input-holder"><input type="number"></div>
-									</li>
-								</ul>
-								<ul class="inline">
-									<li class="full">Land Area</li>
-									<li>
-										<span>From</span>
-										<div class="input-holder"><input type="number"></div>
-									</li>
-									<li>
-										<span>top</span>
-										<div class="input-holder"><input type="number"></div>
-									</li>
-								</ul>
-							</form>
+					<div class="tabs-holder">
+						<ul class="tabset">
+							<li class="active">
+								<a href="#tab1">buy</a>
+								<input type="radio" name="propertyPurpose" value="1">
+							</li>
+							<li>
+								<a href="#tab2">rent</a>
+								<input type="radio" name="propertyPurpose" value="2">
+							</li>
+						</ul>
+						<div class="tab-content">
+							<div id="tab1">
+								<form>
+									<ul class="propertyType-buttons">
+										<li>
+											<label for="anyPro">
+												<input type="radio" id="anyPro" name="radio" checked>
+												<span class="fake-label">All Types</span>
+											</label>
+										</li>
+										<li>
+											<label for="home">
+												<input type="radio" id="home" name="radio">
+												<span class="fake-label">Homes</span>
+											</label>
+										</li>
+										<li>
+											<label for="plots">
+												<input type="radio" id="plots" name="radio">
+												<span class="fake-label">Plots</span>
+											</label>
+										</li>
+										<li>
+											<label for="commerical">
+												<input type="radio" id="commerical" name="radio">
+												<span class="fake-label">Commercial</span>
+											</label>
+										</li>
+									</ul>
+									<ul>
+										<li>
+											<label>Select Society</label>
+											<div class="input-holder">
+												<span class="fake-select">
+													<select>
+														<option disabled selected value>Select Society</option>
+														<option>S1</option>
+														<option>s2</option>
+														<option>s3</option>
+														<option>s4</option>
+														<option>s5</option>
+														<option>s6</option>
+													</select>
+												</span>
+											</div>
+										</li>
+										<li>
+											<label>Select Block</label>
+											<div class="input-holder">
+												<span class="fake-select">
+													<select>
+														<option disabled selected value>Select Block</option>
+														<option>b1</option>
+														<option>b2</option>
+														<option>b3</option>
+														<option>b4</option>
+														<option>b5</option>
+														<option>b6</option>
+													</select>
+												</span>
+											</div>
+										</li>
+									</ul>
+									<ul>
+										<li>
+											<label>Select Property Type</label>
+											<div class="input-holder">
+												<span class="fake-select">
+													<select>
+														<option disabled selected value>Select Property Type</option>
+														<option>p</option>
+														<option>p</option>
+														<option>p</option>
+														<option>p</option>
+														<option>p</option>
+														<option>p</option>
+													</select>
+												</span>
+											</div>
+										</li>
+										<li>
+											<label>Select Bedrooms</label>
+											<div class="input-holder">
+												<span class="fake-select">
+													<select>
+														<option disabled selected value>Bedrooms</option>
+														<option>Studio</option>
+														<option>1</option>
+														<option>2</option>
+														<option>3p</option>
+														<option>4</option>
+														<option>5</option>
+														<option>6+</option>
+													</select>
+												</span>
+											</div>
+										</li>
+									</ul>
+									<ul class="inline">
+										<li class="full">Price Range (Rs)</li>
+										<li>
+											<span>From</span>
+											<div class="input-holder"><input type="number"></div>
+										</li>
+										<li>
+											<span>to</span>
+											<div class="input-holder"><input type="number"></div>
+										</li>
+									</ul>
+									<ul class="inline">
+										<li class="full">Land Area</li>
+										<li>
+											<span>From</span>
+											<div class="input-holder"><input type="number"></div>
+										</li>
+										<li>
+											<span>to</span>
+											<div class="input-holder"><input type="number"></div>
+										</li>
+									</ul>
+									<div class="btn-holder">
+										<button type="submit">Find Property<span class="icon-search"></span></button>
+									</div>
+								</form>
+							</div>
+							<div id="tab2">
+								<form>
+									<ul class="propertyType-buttons">
+										<li>
+											<label for="anyPro1">
+												<input type="radio" id="anyPro1" name="radio" checked>
+												<span class="fake-label">All Types</span>
+											</label>
+										</li>
+										<li>
+											<label for="home1">
+												<input type="radio" id="home1" name="radio">
+												<span class="fake-label">Homes</span>
+											</label>
+										</li>
+										<li>
+											<label for="plots1">
+												<input type="radio" id="plots1" name="radio">
+												<span class="fake-label">Plots</span>
+											</label>
+										</li>
+										<li>
+											<label for="commerical1">
+												<input type="radio" id="commerical1" name="radio">
+												<span class="fake-label">Commercial</span>
+											</label>
+										</li>
+									</ul>
+									<ul>
+										<li>
+											<label>Select Society</label>
+											<div class="input-holder">
+												<span class="fake-select">
+													<select>
+														<option disabled selected value>Select Society</option>
+														<option>S1</option>
+														<option>s2</option>
+														<option>s3</option>
+														<option>s4</option>
+														<option>s5</option>
+														<option>s6</option>
+													</select>
+												</span>
+											</div>
+										</li>
+										<li>
+											<label>Select Block</label>
+											<div class="input-holder">
+												<span class="fake-select">
+													<select>
+														<option disabled selected value>Select Block</option>
+														<option>b1</option>
+														<option>b2</option>
+														<option>b3</option>
+														<option>b4</option>
+														<option>b5</option>
+														<option>b6</option>
+													</select>
+												</span>
+											</div>
+										</li>
+									</ul>
+									<ul>
+										<li>
+											<label>Select Property Type</label>
+											<div class="input-holder">
+												<span class="fake-select">
+													<select>
+														<option disabled selected value>Select Property Type</option>
+														<option>p</option>
+														<option>p</option>
+														<option>p</option>
+														<option>p</option>
+														<option>p</option>
+														<option>p</option>
+													</select>
+												</span>
+											</div>
+										</li>
+										<li>
+											<label>Select Bedrooms</label>
+											<div class="input-holder">
+												<span class="fake-select">
+													<select>
+														<option disabled selected value>Bedrooms</option>
+														<option>Studio</option>
+														<option>1</option>
+														<option>2</option>
+														<option>3p</option>
+														<option>4</option>
+														<option>5</option>
+														<option>6+</option>
+													</select>
+												</span>
+											</div>
+										</li>
+									</ul>
+									<ul class="inline">
+										<li class="full">Price Range (Rs)</li>
+										<li>
+											<span>From</span>
+											<div class="input-holder"><input type="number"></div>
+										</li>
+										<li>
+											<span>to</span>
+											<div class="input-holder"><input type="number"></div>
+										</li>
+									</ul>
+									<ul class="inline">
+										<li class="full">Land Area</li>
+										<li>
+											<span>From</span>
+											<div class="input-holder"><input type="number"></div>
+										</li>
+										<li>
+											<span>to</span>
+											<div class="input-holder"><input type="number"></div>
+										</li>
+									</ul>
+									<div class="btn-holder">
+										<button type="submit">Find Property<span class="icon-search"></span></button>
+									</div>
+								</form>
+							</div>
 						</div>
-						<div id="tab2"></div>
 					</div>
 				</div>
+				<a href="#content" class="smooth-scroll down-scroll"><span class="icon-angle-down"></span></a>
+			</div>
+			<div id="content">
+				<div class="left-content">
+					<ul class="company-logo">
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+					</ul>
+				</div>
+				<div class="center-content">
+					
+				</div>
+				<div class="right-content"></div>
 			</div>
 		</main>
 	</div>
@@ -147,7 +326,7 @@
 	<!-- include custom JavaScript -->
 	<script type="text/javascript" src="js/tabset-plugin.js" defer></script>
 	<script type="text/javascript" src="js/helper.js" defer></script>
-	<script type="text/javascript" src="js/add-property-from.js" defer></script>
+	<script type="text/javascript" src="js/smooth-scroll-plugin.js" defer></script>
 	<script type="text/javascript" src="js/jquery.main.js" defer></script>
 </body>
 </html>
