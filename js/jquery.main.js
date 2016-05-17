@@ -2,6 +2,7 @@
 jQuery(function(){
 	initTabs();
 	initAnchors();
+	initCarousel();
 });
 
 // content tabs init
@@ -36,5 +37,22 @@ function initAnchors() {
 		anchorLinks: '.inner-links a',
 		container: '.inner-container',
 		activeClasses: 'parent'
+	});
+}
+
+// scroll gallery init
+function initCarousel() {
+	jQuery('.step-slider').scrollGallery({
+		mask: '.mask',
+		slider: '.slideset',
+		slides: '.slide',
+		btnPrev: '.btn-prev',
+		btnNext: '.btn-next',
+		pagerLinks: '.pagination li',
+		autoRotation: true,
+		switchTime: 3000,
+		animSpeed: 500,
+		swipeGap: true,
+		step: 1
 	});
 }
