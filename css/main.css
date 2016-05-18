@@ -623,7 +623,7 @@ th {
   content: "\e911";
 }
 
-.addPropertyFormContainer .section-listing, .addPropertyFormContainer .tabset, .addPropertyFormContainer .property-add .radio-holder, .addPropertyFormContainer .feature-list, .addPropertyFormContainer .image-uploading-area, .main-visual .property-search-holder .tabset, .main-visual .property-search-holder .tab-content form ul, #content .left-content .company-logo {
+.addPropertyFormContainer .section-listing, .addPropertyFormContainer .tabset, .addPropertyFormContainer .property-add .radio-holder, .addPropertyFormContainer .feature-list, .addPropertyFormContainer .image-uploading-area, .main-visual .property-search-holder .tabset, .main-visual .property-search-holder .tab-content form ul, #content .left-content .company-logo, #content .right-content .posters {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -950,6 +950,7 @@ h1 {
   color: #363636;
   border-bottom: 1px solid #000;
   padding: 0 0 5px;
+  margin: 0 0 20px;
   font-weight: 600;
 }
 
@@ -1049,6 +1050,7 @@ h1 {
 #main {
   overflow: hidden;
   position: relative;
+  padding: 0 0 50px;
 }
 
 /*Add a property full form*/
@@ -2159,6 +2161,8 @@ h1 {
 .main-visual .property-search-holder .tab-content form ul.propertyType-buttons li {
   width: 25%;
   border-left: 1px solid #fff;
+  padding: 0;
+  margin: 0 0 10px;
 }
 
 .main-visual .property-search-holder .tab-content form ul.propertyType-buttons li:first-child {
@@ -2344,24 +2348,38 @@ h1 {
   float: left;
 }
 
-#content .left-content .company-logo {
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
+#content .left-content .company-logos-sliders {
+  position: relative;
 }
 
-#content .left-content .company-logo > * {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 12px;
-  line-height: 15px;
-  letter-spacing: 0;
+#content .left-content .company-logos-sliders .mask {
+  position: relative;
+  overflow: hidden;
+  width: 150px;
+  margin: 0 auto;
+}
+
+#content .left-content .company-logos-sliders .slideset {
+  width: 99999px;
+  float: left;
+  overflow: hidden;
+}
+
+#content .left-content .company-logos-sliders .slide {
+  width: 150px;
+  float: left;
+}
+
+#content .left-content .company-logo {
+  overflow: hidden;
+  width: 100%;
 }
 
 #content .left-content .company-logo li {
   width: 50%;
-  padding: 0 5px;
+  float: left;
   margin: 0 0 10px;
+  padding: 0 5px;
 }
 
 #content .left-content .company-logo li a {
@@ -2372,9 +2390,9 @@ h1 {
 }
 
 #content .center-content {
-  width: 60%;
+  width: 70%;
   float: left;
-  padding: 0 15px;
+  padding: 0 50px;
 }
 
 #content .center-content .step-slider {
@@ -2414,6 +2432,7 @@ h1 {
 #content .center-content .step-slider .slide .image-holder {
   overflow: hidden;
   max-height: 180px;
+  min-height: 180px;
   border-bottom: 1px solid #000;
 }
 
@@ -2422,6 +2441,8 @@ h1 {
   height: auto;
   display: block;
   height: 100%;
+  max-height: 180px;
+  min-height: 180px;
 }
 
 #content .center-content .step-slider .slide .description {
@@ -2517,6 +2538,51 @@ h1 {
 }
 
 #content .right-content {
-  width: 30%;
+  width: 20%;
+  float: left;
+}
+
+#content .right-content .posters {
+  overflow: hidden;
+}
+
+#content .right-content .posters li {
+  width: 50%;
+  padding: 0 5px 10px;
+  float: left;
+}
+
+#content .right-content .posters li a {
+  display: block;
+  border: 1px solid #000;
+}
+
+#content .right-content .posters li a:hover {
+  opacity: 0.8;
+}
+
+#content .right-content .posters li img {
+  width: 100%;
+  height: auto;
+  display: block;
+  height: 100%;
+  min-height: 180px;
+  max-height: 180px;
+}
+
+#footer {
+  overflow: hidden;
+  position: relative;
+  background: #133783;
+  border-top: 5px solid #489ddd;
+  color: #fff;
+}
+
+#footer .cols-holder {
+  overflow: hidden;
+}
+
+#footer .cols-holder .col {
+  width: 33.33%;
   float: left;
 }

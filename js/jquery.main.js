@@ -55,4 +55,17 @@ function initCarousel() {
 		swipeGap: true,
 		step: 1
 	});
+	
+	jQuery('.company-logos-sliders').scrollGallery({
+		mask: '.mask',
+		slider: '.slideset',
+		slides: '.slide',
+		btnPrev: '.btn-prev',
+		btnNext: '.btn-next',
+		pagerLinks: '.pagination li',
+		autoRotation: true,
+		switchTime: 3000,
+		animSpeed: 500,
+		swipeGap: false
+	});
 }
