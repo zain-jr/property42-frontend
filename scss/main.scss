@@ -921,7 +921,7 @@ h1 {
 	position: relative;
 	overflow: hidden;
 	height: 100vh;
-	background: url("../images/bg-main1.jpeg");
+	background: url("../images/bg-main2.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 	
@@ -1069,7 +1069,7 @@ h1 {
 							.fake-label{
 								padding: 10px 3px;
 								color: $black;
-								background: lighten($defualt-blue, 45%);
+								background: $light-gray;
 								transition: color 0.4s ease, background 0.4s ease;
 								-webkit-transition: color 0.4s ease, background 0.4s ease;
 								-ms-transition: color 0.4s ease, background 0.4s ease;
@@ -1209,7 +1209,7 @@ h1 {
 		bottom: 0;
 		left: 50%;
 		text-decoration: none;
-		@include font(50,50);
+		@include font(80,80);
 		animation: bounce 1.5s infinite;
 	}
 }
@@ -1218,7 +1218,7 @@ h1 {
 	padding: 50px 10px 0;
 	
 	.left-content{
-		width: 10%;
+		width: 8%;
 		float: left;
 		
 		.company-logos-sliders{
@@ -1227,7 +1227,7 @@ h1 {
 			.mask {
 				position: relative;
 				overflow: hidden;
-				width: 150px;
+				width: 120px;
 				margin: 0 auto;
 			}
 			.slideset {
@@ -1236,19 +1236,17 @@ h1 {
 				overflow: hidden;
 			}
 			.slide {
-				width: 150px;
+				width: 120px;
 				float: left;
 			}
 		}
 		
 		.company-logo{
 			@extend %listreset;
-			overflow: hidden;
 			width: 100%;
 			
 			li{
-				width: 50%;
-				float: left;
+				display: bloc;
 				margin: 0 0 10px;
 				padding: 0 5px;
 				
@@ -1256,13 +1254,13 @@ h1 {
 					outline: none;
 					border: 1px solid rgba($black, 0.5);
 					display: block;
-					height: 70px;
+					height: 100px;
 				}
 			}
 		}
 	}
 	.center-content{
-		width: 70%;
+		width: 77%;
 		float: left;
 		padding: 0 50px;
 		
@@ -1397,8 +1395,8 @@ h1 {
 		}
 	}
 	.right-content{
-		width: 20%;
-		float: left;
+		width: 15%;
+		float: right;
 		
 		.posters{
 			@extend %listreset;
@@ -1434,10 +1432,69 @@ h1 {
 	
 	.cols-holder{
 		overflow: hidden;
+		padding: 25px 0;
 		
 		.col {
 			width: 33.33%;
 			float: left;
+			
+			ul {
+				@extend %listreset;
+				@include font(16,18);
+				text-transform: capitalize;
+				
+				li{
+					margin: 0 0 10px;
+					
+					a{
+						@include align(top);
+						color: $white;
+						text-decoration: none;
+						
+						&:hover{
+							opacity: 0.8;
+						}
+					}
+				}
+			}
+		}
+		.heading {
+			display: block;
+			padding: 0 0 20px;
 		}
 	}
+}
+.social-networks{
+	@include align-reset(middle,20,20);
+	
+	li{
+		padding: 0 10px;
+		
+		
+		a{
+			border-radius: 100%;
+			border: 2px solid $white;
+			padding: 10px;
+			transition: background 0.4s ease, border 0.4s ease;
+			-webkit-transition: background 0.4s ease, border 0.4s ease;
+			-moz-transition: background 0.4s ease, border 0.4s ease;
+			-ms-transition: background 0.4s ease, border 0.4s ease;
+			
+			&:hover{
+				opacity: 1 !important;
+					
+				&.facebook {
+					background: #3B5998;
+					border-color: #3B5998;
+				}
+				&.twitter {
+					background: #00a9f1;
+					border-color: #00a9f1;
+				}
+			}
+		}
+	}
+}
+.resize-active * {
+	transition: none !important;
 }
