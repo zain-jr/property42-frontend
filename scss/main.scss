@@ -1565,115 +1565,260 @@ h1 {
 		}
 	}
 }
-.propertyImage-slider {
-	max-width: 700px;
-	margin: 0 auto;
-	position: relative;
+.propertyDetails-page {
+	overflow: hidden;
 	
-	.propertyImage-mask,
-	.mask {
+	.propertyImage-slider {
+		max-width: 800px;
+		float: left;
 		position: relative;
-		overflow: hidden;
-		width: 100% !important;
-	}
-	.propertyImage-slideset,
-	.slideset {
-		width: 100% !important;
-		font-size: 0;
-		line-height: 0;
-		letter-spacing: -4px;
-		white-space: nowrap;
-	}
-	.propertyImage-slide,
-	.slide {
-		width: 100% !important;
-		display: inline-block;
-		vertical-align: top;
-		font-size: 12px;
-		line-height: 15px;
-		letter-spacing: 0;
-		white-space: normal;
-		padding: 0 5px;
+		margin: 0 0 10px;
 		
-		a{
-			display: block;
-			img{
-				@include img-res;
-			}
+		.propertyImage-mask,
+		.mask {
+			position: relative;
+			overflow: hidden;
+			width: 100% !important;
 		}
-	}
-	
-	.paginationCurrent-num-1, #propertyImageCurrentSlide { display: none;}
-	
-	.propertyImage-pagination {
-		position: relative;
-		overflow: hidden;
-		
-		.propertyImage-mask {
-			max-width: 650px;
-			margin: 0 auto;
+		.propertyImage-slideset,
+		.slideset {
+			width: 100% !important;
+			font-size: 0;
+			line-height: 0;
+			letter-spacing: -4px;
+			white-space: nowrap;
 		}
-		
-		.propertyImage-slide {
-			width: 16.60% !important;
-			padding: 10px 4px;
-			
-			&.active{
-				a {&:after{ display: none;}}
-			}
+		.propertyImage-slide,
+		.slide {
+			width: 100% !important;
+			display: inline-block;
+			vertical-align: top;
+			font-size: 12px;
+			line-height: 15px;
+			letter-spacing: 0;
+			white-space: normal;
+			padding: 0 5px;
 			
 			a{
-				background: $light-gray;
-				padding: 3px;
-				border: 1px solid $gray;
-				border-radius: 4px;
-				position: relative;
+				display: block;
+				img{
+					@include img-res;
+				}
+			}
+		}
+		
+		.paginationCurrent-num-1, #propertyImageCurrentSlide { display: none;}
+		
+		.propertyImage-pagination {
+			position: relative;
+			overflow: hidden;
+			
+			.propertyImage-mask {
+				max-width: 650px;
+				margin: 0 auto;
+			}
+			
+			.propertyImage-slide {
+				width: 16.65% !important;
+				padding: 10px 4px;
 				
-				&:after{
+				&.active{
+					a {&:after{ display: none;}}
+				}
+				
+				a{
+					background: $light-gray;
+					padding: 3px;
+					border: 1px solid $gray;
+					border-radius: 4px;
+					position: relative;
+					
+					&:after{
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						background: rgba($white, 0.6);
+						content: '';
+					}
+					
+					&:hover{
+						&:after{ display: none;}
+					}
+				}
+			}
+		}
+		.propertyImage-slider-btn-prev,
+		.propertyImage-slider-btn-next,
+		.propertyImage-pagination-btn-prev-1,
+		.propertyImage-pagination-btn-next-1 {
+			position: absolute;
+			top: 50%;
+			left: 10px;
+			text-decoration: none;
+			@include font(30,30);
+			margin: -15px 0 0;
+			color: $white;
+			
+			&.disabled {
+				color: $gray;
+			}
+		}
+		.propertyImage-slider-btn-next,
+		.propertyImage-pagination-btn-next-1 {
+			left: auto;
+			right: 10px;
+		}
+		.propertyImage-pagination-btn-prev-1,
+		.propertyImage-pagination-btn-next-1{
+			left: 0;
+			color:$dove-black;
+		}
+		.propertyImage-pagination-btn-next-1{
+			left: auto;
+			right: 0;
+		}
+	}
+	.propertyOwnerInfo {
+		overflow: hidden;
+		border-radius: 4px;
+		
+		header {
+			background: $defualt-blue;
+			color: $white;
+			@include font(18,21);
+			position: relative;
+			padding: 10px;
+			
+			span[class^="icon-"], span[class*="icon-"] {
+				position: absolute;
+				top: 50%;
+				left: 5px;
+				padding: 0;
+				margin: -8px 0 0;
+			}
+			span {
+				display: block;
+				padding: 0 0 0 20px;
+			}
+		}
+		
+		.description {
+			background: $index-white;
+			padding: 10px;
+			
+			.holder{
+				overflow: hidden;
+			}
+			
+			.agency-name,
+			.agency-profile,
+			.name {
+				position: relative;
+				display: block;
+				@include font(14,18);
+				padding: 0 0 5px;
+			}
+			
+			.name {
+				@include font(16,19);
+				padding: 0 0 10px 20px;
+				
+				&:before {
 					position: absolute;
 					top: 0;
 					left: 0;
-					right: 0;
-					bottom: 0;
-					background: rgba($white, 0.6);
-					content: '';
+					content: "\e911";
+					font-family: 'icomoon';
 				}
+			}
+			
+			.agency-profile {
+				width: 150px;
+				text-decoration: none;
+				text-align: center;
+				color: $white;
+				background: $green;
+				padding:5px 10px;
+				border: 1px solid darken($green, 10%);
+				transition: background 0.4s ease;
+				-webkit-transition: background 0.4s ease;
+				-moz-transition: background 0.4s ease;
+				-ms-transition: background 0.4s ease;
 				
-				&:hover{
-					&:after{ display: none;}
+				&:hover { background: darken($green, 10%);}
+			}
+			
+			img {
+				float: right;
+				@include img-res;
+				max-width: 80px;
+			}
+			
+			.contact-links {
+				@extend %listreset;
+				@include align-reset(top,16,20);
+				text-align: center;
+				padding: 10px 0 0;
+				margin: 0 -5px;
+				
+				li {
+					width: 50%;
+					padding: 0 5px;
+					margin: 0 0 10px;
+					
+					a{
+						color: $white;
+						border-radius: 3px;
+						background: $orange;
+						border-bottom: 4px solid darken($orange, 15%);
+						text-decoration: none;
+						display: block;
+						padding: 7px;
+						position: relative;
+						transition: background 0.4s ease,  border 0.4s ease;
+						-webkit-transition: background 0.4s ease,  border 0.4s ease;
+						-moz-transition: background 0.4s ease,  border 0.4s ease;
+						-ms-transition: background 0.4s ease,  border 0.4s ease;
+						
+						span[class^="icon-"],span[class*="icon-"] {
+							position: absolute;
+							top: 50%;
+							left: 10px;
+							margin: -6px 0 0;
+						}
+						
+						&:hover {
+							background:  $green;
+							border-color: $green;
+						}
+					}
+				}
+			}
+			.summary {
+				display: block;
+			}
+			dl {
+				margin: 0;
+				display: block;
+				overflow: hidden;
+				@include font(13,16);
+				padding: 10px 0 0;
+				
+				dt {
+					float: left;
+					width: 25%;
+					font-weight: 600;
+				}
+				dd{
+					overflow: hidden;
+					margin: 0;
+					width: 75%;
+					padding: 0 0 3px;
 				}
 			}
 		}
-	}
-	.propertyImage-slider-btn-prev,
-	.propertyImage-slider-btn-next,
-	.propertyImage-pagination-btn-prev-1,
-	.propertyImage-pagination-btn-next-1 {
-		position: absolute;
-		top: 50%;
-		left: 10px;
-		text-decoration: none;
-		@include font(30,30);
-		margin: -15px 0 0;
-		color: $white;
-		
-		&.disabled {
-			color: $gray;
-		}
-	}
-	.propertyImage-slider-btn-next,
-	.propertyImage-pagination-btn-next-1 {
-		left: auto;
-		right: 10px;
-	}
-	.propertyImage-pagination-btn-prev-1,
-	.propertyImage-pagination-btn-next-1{
-		left: 0;
-		color:$dove-black;
-	}
-	.propertyImage-pagination-btn-next-1{
-		left: auto;
-		right: 0;
 	}
 }
 #footer{
