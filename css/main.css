@@ -403,8 +403,8 @@ th {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?1iq2lu");
-  src: url("../fonts/icomoon.eot?1iq2lu#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?1iq2lu") format("truetype"), url("../fonts/icomoon.woff?1iq2lu") format("woff"), url("../fonts/icomoon.svg?1iq2lu#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?xfjomq");
+  src: url("../fonts/icomoon.eot?xfjomq#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?xfjomq") format("truetype"), url("../fonts/icomoon.woff?xfjomq") format("woff"), url("../fonts/icomoon.svg?xfjomq#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -423,80 +423,8 @@ th {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-chevron-thin-right:before {
-  content: "\e92d";
-}
-
-.icon-chevron-thin-left:before {
-  content: "\e92e";
-}
-
-.icon-plus:before {
-  content: "\e900";
-}
-
-.icon-login:before {
-  content: "\e918";
-}
-
-.icon-circle-up:before {
-  content: "\ea41";
-}
-
-.icon-circle-right:before {
-  content: "\ea42";
-}
-
-.icon-circle-down:before {
-  content: "\ea43";
-}
-
-.icon-circle-left:before {
-  content: "\ea44";
-}
-
-.icon-home:before {
-  content: "\e928";
-}
-
-.icon-society:before {
-  content: "\e929";
-}
-
-.icon-search:before {
-  content: "\f02e";
-}
-
-.icon-pencil:before {
-  content: "\e921";
-}
-
-.icon-info:before {
-  content: "\e917";
-}
-
-.icon-checkmark:before {
-  content: "\e903";
-}
-
-.icon-facebook:before {
-  content: "\e901";
-}
-
-.icon-twitter:before {
-  content: "\e902";
-}
-
-.icon-bin:before {
-  content: "\e90f";
-}
-
-.icon-notification:before {
-  content: "\e90c";
-}
-
-.icon-key:before {
-  content: "\e907";
+.icon-logout:before {
+  content: "\e92f";
 }
 
 .icon-home-button:before {
@@ -567,6 +495,90 @@ th {
   content: "\e91a";
 }
 
+.icon-chevron-thin-right:before {
+  content: "\e92d";
+}
+
+.icon-chevron-thin-left:before {
+  content: "\e92e";
+}
+
+.icon-plus:before {
+  content: "\e900";
+}
+
+.icon-login:before {
+  content: "\e918";
+}
+
+.icon-printer:before {
+  content: "\e954";
+}
+
+.icon-user-plus:before {
+  content: "\e973";
+}
+
+.icon-circle-up:before {
+  content: "\ea41";
+}
+
+.icon-circle-right:before {
+  content: "\ea42";
+}
+
+.icon-circle-down:before {
+  content: "\ea43";
+}
+
+.icon-circle-left:before {
+  content: "\ea44";
+}
+
+.icon-home:before {
+  content: "\e928";
+}
+
+.icon-society:before {
+  content: "\e929";
+}
+
+.icon-search:before {
+  content: "\f02e";
+}
+
+.icon-pencil:before {
+  content: "\e921";
+}
+
+.icon-info:before {
+  content: "\e917";
+}
+
+.icon-checkmark:before {
+  content: "\e903";
+}
+
+.icon-facebook:before {
+  content: "\e901";
+}
+
+.icon-twitter:before {
+  content: "\e902";
+}
+
+.icon-bin:before {
+  content: "\e90f";
+}
+
+.icon-notification:before {
+  content: "\e90c";
+}
+
+.icon-key:before {
+  content: "\e907";
+}
+
 .icon-trash:before {
   content: "\e910";
 }
@@ -631,14 +643,14 @@ th {
   content: "\e911";
 }
 
-.addPropertyFormContainer .section-listing, .addPropertyFormContainer .tabset, .addPropertyFormContainer .property-add .radio-holder, .addPropertyFormContainer .feature-list, .addPropertyFormContainer .image-uploading-area, .main-visual .property-search-holder .tabset, .main-visual .property-search-holder .tab-content form ul, #content .left-content .company-logo, #content .right-content .posters, .public-propertyListing .holder .sortBy, .public-propertyListing .property-posts .post .caption .quick-links,
-.public-propertyListing .property-posts .post .caption .property-details, .propertyDetails-page .propertyOwnerInfo .description .contact-links, #footer .cols-holder .col ul {
+#nav .main-navigation, #nav .main-navigation li .dropDown, .addPropertyFormContainer .section-listing, .addPropertyFormContainer .tabset, .addPropertyFormContainer .property-add .radio-holder, .addPropertyFormContainer .feature-list, .addPropertyFormContainer .image-uploading-area, .main-visual .property-search-holder .tabset, .main-visual .property-search-holder .tab-content form ul, #content .left-content .company-logo, #content .right-content .posters, .public-propertyListing .holder .sortBy, .public-propertyListing .property-posts .post .caption .quick-links,
+.public-propertyListing .property-posts .post .caption .property-details, .propertyDetails-page .propertyOwnerInfo .description .contact-links, .propertyDetails-page .property-qucikLinks, #footer .cols-holder .col ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.clearfix:after, #header:after, #content .center-content .page-holder:after, .public-propertyListing .property-posts .post:after {
+.clearfix:after, #header:after, #header .layout:after, #content .center-content .page-holder:after, .public-propertyListing .property-posts .post:after {
   content: '';
   display: block;
   clear: both;
@@ -988,7 +1000,8 @@ h1 {
 }
 
 #header .layout {
-  padding: 10px 0;
+  padding: 10px 10px 0;
+  overflow: visible;
 }
 
 #header .btn-header {
@@ -1037,6 +1050,127 @@ h1 {
   font-size: 18px;
   line-height: 19px;
   font-weight: bold;
+}
+
+#nav {
+  float: left;
+  max-width: 1024px;
+  padding: 0 0 0 20px;
+}
+
+#nav .main-navigation {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  text-transform: capitalize;
+}
+
+#nav .main-navigation > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+#nav .main-navigation li {
+  padding: 0 10px 10px;
+  margin: 0;
+  position: relative;
+}
+
+#nav .main-navigation li:hover .dropDown {
+  opacity: 1;
+  top: 100%;
+}
+
+#nav .main-navigation li:hover a:after {
+  opacity: 1;
+  top: 0;
+}
+
+#nav .main-navigation li:last-child:before, #nav .main-navigation li:last-child:after {
+  position: absolute;
+  top: -10px;
+  bottom: 0;
+  left: 0;
+  background: #06122a;
+  width: 1px;
+  content: '';
+}
+
+#nav .main-navigation li:last-child:before {
+  left: 1px;
+  background: #1d53c6;
+}
+
+#nav .main-navigation li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  padding: 18px 0;
+}
+
+#nav .main-navigation li a:after {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  left: 0;
+  border-top: 5px solid #ef9521;
+  content: '';
+  opacity: 0;
+  transition: opacity 0.4s ease, border 0.4s ease, top 0.4s ease;
+  -webkit-transition: opacity 0.4s ease, border 0.4s ease, top 0.4s ease;
+  -moz-transition: opacity 0.4s ease, border 0.4s ease, top 0.4s ease;
+  -ms-transition: opacity 0.4s ease, border 0.4s ease, top 0.4s ease;
+}
+
+#nav .main-navigation li a:hover:after {
+  opacity: 1;
+  top: 0;
+}
+
+#nav .main-navigation li .dropDown {
+  font-size: 16px;
+  line-height: 20px;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 200px;
+  z-index: 9;
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 4px solid #58a36f;
+  opacity: 0;
+  transition: top 0.4s ease, opacity 0.4s ease, left 0.4s ease;
+}
+
+#nav .main-navigation li .dropDown li {
+  display: block;
+  padding: 0;
+  border-top: 1px solid #489ddd;
+}
+
+#nav .main-navigation li .dropDown li:first-child {
+  border: 0;
+}
+
+#nav .main-navigation li .dropDown li:last-child:after, #nav .main-navigation li .dropDown li:last-child:before {
+  display: none;
+}
+
+#nav .main-navigation li .dropDown li a {
+  color: #133783;
+  padding: 7px 10px;
+}
+
+#nav .main-navigation li .dropDown li a:after {
+  display: none;
+}
+
+#nav .main-navigation li .dropDown li a:hover {
+  color: #fff;
+  background: #489ddd;
 }
 
 .logo {
@@ -2260,16 +2394,18 @@ h1 {
   overflow: hidden;
   border-right: 1px solid rgba(0, 0, 0, 0.6);
   position: relative;
+  cursor: pointer;
 }
 
 .main-visual .property-search-holder .tab-content form ul li .fake-select:after {
   position: absolute;
   top: 50%;
   right: 10px;
-  border: 8px solid transparent;
-  border-top: 8px solid rgba(0, 0, 0, 0.6);
-  content: '';
-  margin: -4px 0 0;
+  content: "\e92c";
+  font-family: 'icomoon';
+  font-size: 22px;
+  line-height: 22px;
+  margin: -12px 0 0;
 }
 
 .main-visual .property-search-holder .tab-content form ul li .fake-select:active, .main-visual .property-search-holder .tab-content form ul li .fake-select:focus, .main-visual .property-search-holder .tab-content form ul li .fake-select:hover {
@@ -3049,6 +3185,87 @@ h1 {
   margin: 0;
   width: 75%;
   padding: 0 0 3px;
+}
+
+.propertyDetails-page .overviewText-holder {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  word-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.propertyDetails-page .overviewText-holder.height {
+  height: 243px;
+}
+
+.propertyDetails-page .overviewText-holder p {
+  margin: 0 0 20px;
+}
+
+.propertyDetails-page .overviewText-holder .overviewText {
+  overflow: hidden;
+  padding: 0 150px 0 0;
+}
+
+.propertyDetails-page .overviewText-holder .btn-showMore {
+  display: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  border: 1px solid #133783;
+  color: #133783;
+  text-align: center;
+  padding: 5px;
+  width: 150px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  transition: color 0.4s linear, background 0.4s linear;
+  -webkit-transition: color 0.4s linear, background 0.4s linear;
+  -moz-transition: color 0.4s linear, background 0.4s linear;
+  -ms-transition: color 0.4s linear, background 0.4s linear;
+}
+
+.propertyDetails-page .overviewText-holder .btn-showMore:hover {
+  color: #fff;
+  background: #133783;
+}
+
+.propertyDetails-page .property-qucikLinks {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  margin: 0 -5px;
+}
+
+.propertyDetails-page .property-qucikLinks > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+.propertyDetails-page .property-qucikLinks li {
+  padding: 5px;
+}
+
+.propertyDetails-page .property-qucikLinks li a {
+  text-decoration: none;
+  color: #ef9521;
+  display: block;
+}
+
+.propertyDetails-page .property-qucikLinks li a span {
+  padding: 0 5px 0 0;
+}
+
+.propertyDetails-page .property-qucikLinks li a:hover {
+  color: #b66c0d;
 }
 
 #footer {

@@ -30,6 +30,28 @@ $(document).on('click', '.propertyImage-slider-btn-next, .propertyImage-slider-b
 	 }
 });
 
+$(document).ready(function(){
+	var paraentHeight = $('.overviewText-holder').height();
+	var childHeight = $('.overviewText').height();
+	
+	if(childHeight > paraentHeight){
+		$('.btn-showMore').css({
+			'display':'block'
+		});
+	}
+});
+$(document).on('click', '.btn-showMore', function(){
+	$('.overviewText-holder').toggleClass('height');
+	
+	if($('.overviewText-holder').hasClass('height')){
+		$('.btn-showMore').text('Show More');
+	}
+	else {
+		$('.btn-showMore').text('Less More');
+	}
+	
+});
+
 // content tabs init
 function initTabs() {
 	jQuery('.tabset').contentTabs({
