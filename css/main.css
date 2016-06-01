@@ -643,14 +643,14 @@ th {
   content: "\e911";
 }
 
-#nav .main-navigation, #nav .main-navigation li .dropDown, .addPropertyFormContainer .section-listing, .addPropertyFormContainer .tabset, .addPropertyFormContainer .property-add .radio-holder, .addPropertyFormContainer .feature-list, .addPropertyFormContainer .image-uploading-area, .main-visual .property-search-holder .tabset, .main-visual .property-search-holder .tab-content form ul, #content .left-content .company-logo, #content .right-content .posters, .public-propertyListing .holder .sortBy, .public-propertyListing .property-posts .post .caption .quick-links,
-.public-propertyListing .property-posts .post .caption .property-details, .propertyDetails-page .propertyOwnerInfo .description .contact-links, .propertyDetails-page .property-qucikLinks, #footer .cols-holder .col ul {
+.public-propertyListing .holder .sortBy, .public-propertyListing .property-posts .post .caption .quick-links,
+.public-propertyListing .property-posts .post .caption .property-details, .propertyDetails-page .propertyOwnerInfo .description .contact-links, .propertyDetails-page .property-qucikLinks, #nav .main-navigation, #nav .main-navigation li .dropDown, .addPropertyFormContainer .section-listing, .addPropertyFormContainer .tabset, .addPropertyFormContainer .property-add .radio-holder, .addPropertyFormContainer .feature-list, .addPropertyFormContainer .image-uploading-area, .main-visual .property-search-holder .tabset, .main-visual .property-search-holder .tab-content form ul, #content .left-content .company-logo, #content .right-content .posters, #footer .cols-holder .col ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.clearfix:after, #header:after, #header .layout:after, #content .center-content .page-holder:after, .public-propertyListing .property-posts .post:after {
+.clearfix:after, .public-propertyListing .property-posts .post:after, #header:after, #header .layout:after, #content .center-content .page-holder:after {
   content: '';
   display: block;
   clear: both;
@@ -889,6 +889,984 @@ input[type='submit'] {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   cursor: pointer;
+}
+
+.index-page {
+  overflow: hidden;
+}
+
+.index-page .step-slider {
+  position: relative;
+  margin: 0 0 50px;
+}
+
+.index-page .step-slider .mask {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.index-page .step-slider .slideset {
+  width: 100% !important;
+  float: left;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  white-space: nowrap;
+}
+
+.index-page .step-slider .slide {
+  width: 33.33% !important;
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0;
+  white-space: normal;
+  padding: 0 25px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.index-page .step-slider .slide .image-holder {
+  overflow: hidden;
+  max-height: 180px;
+  min-height: 180px;
+  border-bottom: 1px solid #000;
+}
+
+.index-page .step-slider .slide .image-holder img {
+  width: 100%;
+  height: auto;
+  display: block;
+  height: 100%;
+  max-height: 180px;
+  min-height: 180px;
+}
+
+.index-page .step-slider .slide .description {
+  overflow: hidden;
+  border-bottom: 2px solid #489ddd;
+  text-transform: capitalize;
+  padding: 10px 5px 20px;
+  background: ligten(#999, 10%);
+}
+
+.index-page .step-slider .slide .description .heading {
+  display: block;
+  color: #133783;
+  padding: 0 0 10px;
+}
+
+.index-page .step-slider .slide .description .price {
+  display: block;
+  font-size: 20px;
+  line-height: 23px;
+  color: #58a36f;
+  font-weight: 600;
+  padding: 0 0 10px;
+}
+
+.index-page .step-slider .slide .description p {
+  margin: 0 0 10px;
+}
+
+.index-page .step-slider .slide .description .btn {
+  display: block;
+  border: 1px solid #606060;
+  color: #606060;
+  text-decoration: none;
+  width: 120px;
+  margin: 0 auto;
+  padding: 7px;
+  transition: color 0.4s ease, background 0.4s ease, border 0.4s ease;
+  -webkit-transition: color 0.4s ease, background 0.4s ease, border 0.4s ease;
+  -moz-transition: color 0.4s ease, background 0.4s ease, border 0.4s ease;
+  -ms-transition: color 0.4s ease, background 0.4s ease, border 0.4s ease;
+}
+
+.index-page .step-slider .slide .description .btn:hover {
+  color: #fff;
+  background: #ef9521;
+  border-color: #ef9521;
+}
+
+.index-page .step-slider .btn-prev, .index-page .step-slider .btn-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  min-height: 100%;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #999;
+  padding: 0 10px;
+  left: 10px;
+  font-size: 30px;
+  line-height: 1;
+  transition: color 0.4s ease;
+  -webkit-transition: color 0.4s ease;
+  -moz-transition: color 0.4s ease;
+  -ms-transition: color 0.4s ease;
+  z-index: 1;
+}
+
+.index-page .step-slider .btn-prev:after, .index-page .step-slider .btn-next:after {
+  width: 1px;
+  margin: 0 0 0 -5px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  content: '';
+  height: 100%;
+}
+
+.index-page .step-slider .btn-prev span, .index-page .step-slider .btn-next span {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+}
+
+.index-page .step-slider .btn-prev:hover, .index-page .step-slider .btn-next:hover {
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.index-page .step-slider .btn-next {
+  left: auto;
+  right: 10px;
+}
+
+/*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
+.fancybox-wrap,
+.fancybox-skin,
+.fancybox-outer,
+.fancybox-inner,
+.fancybox-image,
+.fancybox-wrap iframe,
+.fancybox-wrap object,
+.fancybox-nav,
+.fancybox-nav span,
+.fancybox-tmp {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  vertical-align: top;
+}
+
+.fancybox-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8020;
+}
+
+.fancybox-skin {
+  position: relative;
+  background: #f9f9f9;
+  color: #444;
+  text-shadow: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.fancybox-opened {
+  z-index: 8030;
+}
+
+.fancybox-opened .fancybox-skin {
+  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.fancybox-outer, .fancybox-inner {
+  position: relative;
+}
+
+.fancybox-inner {
+  overflow: hidden;
+}
+
+.fancybox-type-iframe .fancybox-inner {
+  -webkit-overflow-scrolling: touch;
+}
+
+.fancybox-error {
+  color: #444;
+  font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 0;
+  padding: 15px;
+  white-space: nowrap;
+}
+
+.fancybox-image, .fancybox-iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.fancybox-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+  background-image: url("../images/fancybox/fancybox_sprite.png");
+}
+
+#fancybox-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -22px;
+  margin-left: -22px;
+  background-position: 0 -108px;
+  opacity: 0.8;
+  cursor: pointer;
+  z-index: 8060;
+}
+
+#fancybox-loading div {
+  width: 44px;
+  height: 44px;
+  background: url("../images/fancybox/fancybox_loading.gif") center center no-repeat;
+}
+
+.fancybox-close {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 8040;
+}
+
+.fancybox-nav {
+  position: absolute;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  background: transparent url("../images/fancybox/blank.gif");
+  /* helps IE */
+  -webkit-tap-highlight-color: transparent;
+  z-index: 8040;
+}
+
+.fancybox-prev {
+  left: 0;
+}
+
+.fancybox-next {
+  right: 0;
+}
+
+.fancybox-nav span {
+  position: absolute;
+  top: 50%;
+  width: 36px;
+  height: 34px;
+  margin-top: -18px;
+  cursor: pointer;
+  z-index: 8040;
+  visibility: hidden;
+}
+
+.fancybox-prev span {
+  left: 10px;
+  background-position: 0 -36px;
+}
+
+.fancybox-next span {
+  right: 10px;
+  background-position: 0 -72px;
+}
+
+.fancybox-nav:hover span {
+  visibility: visible;
+}
+
+.fancybox-tmp {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+  visibility: hidden;
+  max-width: 99999px;
+  max-height: 99999px;
+  overflow: visible !important;
+}
+
+/* Overlay helper */
+.fancybox-lock {
+  overflow: hidden !important;
+  width: auto;
+}
+
+.fancybox-lock body {
+  overflow: hidden !important;
+}
+
+.fancybox-lock-test {
+  overflow-y: hidden !important;
+}
+
+.fancybox-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: none;
+  z-index: 8010;
+  background: url("../images/fancybox/fancybox_overlay.png");
+}
+
+.fancybox-overlay-fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.fancybox-lock .fancybox-overlay {
+  overflow: auto;
+  overflow-y: scroll;
+}
+
+/* Title helper */
+.fancybox-title {
+  visibility: hidden;
+  font: normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+  position: relative;
+  text-shadow: none;
+  z-index: 8050;
+}
+
+.fancybox-opened .fancybox-title {
+  visibility: visible;
+}
+
+.fancybox-title-float-wrap {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  margin-bottom: -35px;
+  z-index: 8050;
+  text-align: center;
+}
+
+.fancybox-title-float-wrap .child {
+  display: inline-block;
+  margin-right: -100%;
+  padding: 2px 20px;
+  background: transparent;
+  /* Fallback for web browsers that doesn't support RGBa */
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  text-shadow: 0 1px 2px #222;
+  color: #FFF;
+  font-weight: bold;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.fancybox-title-outside-wrap {
+  position: relative;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.fancybox-title-inside-wrap {
+  padding-top: 10px;
+}
+
+.fancybox-title-over-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  padding: 10px;
+  background: #000;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/*Retina graphics!*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-image: url("../images/fancybox/fancybox_sprite@2x.png");
+    background-size: 44px 152px;
+    /*The size of the normal image, half the size of the hi-res image*/
+  }
+  #fancybox-loading div {
+    background-image: url("../images/fancybox/fancybox_loading@2x.gif");
+    background-size: 24px 24px;
+    /*The size of the normal image, half the size of the hi-res image*/
+  }
+}
+
+.public-propertyListing {
+  overflow: hidden;
+}
+
+.public-propertyListing .holder {
+  overflow: hidden;
+  padding: 0 0 10px;
+}
+
+.public-propertyListing .holder .searchResult-counter {
+  float: left;
+  max-width: 500px;
+}
+
+.public-propertyListing .holder .sortBy {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  float: right;
+}
+
+.public-propertyListing .holder .sortBy > * {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0;
+}
+
+.public-propertyListing .holder .sortBy li {
+  padding: 0 10px;
+  margin: 0 0 10px;
+}
+
+.public-propertyListing .property-posts {
+  overflow: hidden;
+}
+
+.public-propertyListing .property-posts .post {
+  background: #edf1f4;
+  border-bottom: 2px solid #ef9521;
+  padding: 15px;
+  margin: 0 0 30px;
+  position: relative;
+}
+
+.public-propertyListing .property-posts .post:before {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  border-radius: 100%;
+  height: 50px;
+  box-shadow: 0 10px 12px -9px rgba(0, 0, 0, 0.8);
+  content: '';
+  z-index: -1;
+}
+
+.public-propertyListing .property-posts .post .img-holder {
+  float: left;
+  width: 250px;
+}
+
+.public-propertyListing .property-posts .post .img-holder a {
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.public-propertyListing .property-posts .post .img-holder img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 190px;
+  min-height: 190px;
+}
+
+.public-propertyListing .property-posts .post .caption {
+  overflow: hidden;
+  padding: 0 0 0 20px;
+}
+
+.public-propertyListing .property-posts .post .caption .post-heading {
+  font-size: 20px;
+  line-height: 22px;
+  color: #133783;
+  display: block;
+  padding: 0 0 10px;
+}
+
+.public-propertyListing .property-posts .post .caption .post-heading a {
+  display: inline-block;
+  vertical-align: top;
+  color: #133783;
+  text-decoration: none;
+}
+
+.public-propertyListing .property-posts .post .caption .post-heading a:hover {
+  color: #58a36f;
+}
+
+.public-propertyListing .property-posts .post .caption address {
+  position: relative;
+  font-style: normal;
+  margin: 0;
+  padding: 0 0 15px;
+  display: block;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.public-propertyListing .property-posts .post .caption .holder {
+  overflow: hidden;
+}
+
+.public-propertyListing .property-posts .post .caption .quick-links,
+.public-propertyListing .property-posts .post .caption .property-details {
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: capitalize;
+  margin: 0 0 20px;
+}
+
+.public-propertyListing .property-posts .post .caption .quick-links li,
+.public-propertyListing .property-posts .post .caption .property-details li {
+  margin: 0 0 10px;
+}
+
+.public-propertyListing .property-posts .post .caption .quick-links {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  margin: 0 -10px;
+  float: left;
+}
+
+.public-propertyListing .property-posts .post .caption .quick-links > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+.public-propertyListing .property-posts .post .caption .quick-links li {
+  padding: 0 10px;
+}
+
+.public-propertyListing .property-posts .post .caption .quick-links li a {
+  display: block;
+  text-decoration: none;
+  color: #2e2e2e;
+  border: 1px solid #2e2e2e;
+  padding: 10px 20px;
+  transition: color 0.4s ease, border 0.4s ease, background 0.4s ease;
+  -webkit-transition: color 0.4s ease, border 0.4s ease, background 0.4s ease;
+  -moz-transition: color 0.4s ease, border 0.4s ease, background 0.4s ease;
+  -ms-transition: color 0.4s ease, border 0.4s ease, background 0.4s ease;
+}
+
+.public-propertyListing .property-posts .post .caption .quick-links li a:hover {
+  color: #fff;
+  border-color: #fff;
+  background: #58a36f;
+}
+
+.public-propertyListing .property-posts .post .caption .state-logo {
+  float: right;
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+}
+
+.public-propertyListing .property-posts .post .caption .state-logo a {
+  display: block;
+}
+
+.public-propertyListing .property-posts .post .caption .state-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.propertyDetails-page {
+  overflow: hidden;
+}
+
+.propertyDetails-page .propertyImage-slider {
+  max-width: 800px;
+  float: left;
+  position: relative;
+  margin: 0 0 10px;
+}
+
+.propertyDetails-page .propertyImage-slider .propertyImage-mask,
+.propertyDetails-page .propertyImage-slider .mask {
+  position: relative;
+  overflow: hidden;
+  width: 100% !important;
+}
+
+.propertyDetails-page .propertyImage-slider .propertyImage-slideset,
+.propertyDetails-page .propertyImage-slider .slideset {
+  width: 100% !important;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  white-space: nowrap;
+}
+
+.propertyDetails-page .propertyImage-slider .propertyImage-slide,
+.propertyDetails-page .propertyImage-slider .slide {
+  width: 100% !important;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0;
+  white-space: normal;
+  padding: 0 5px;
+}
+
+.propertyDetails-page .propertyImage-slider .propertyImage-slide a,
+.propertyDetails-page .propertyImage-slider .slide a {
+  display: block;
+}
+
+.propertyDetails-page .propertyImage-slider .propertyImage-slide a img,
+.propertyDetails-page .propertyImage-slider .slide a img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.propertyDetails-page .propertyImage-slider .paginationCurrent-num-1, .propertyDetails-page .propertyImage-slider #propertyImageCurrentSlide {
+  display: none;
+}
+
+.propertyDetails-page .propertyImage-slider .propertyImage-pagination {
+  position: relative;
+  overflow: hidden;
+}
+
+.propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-mask {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-slide {
+  width: 16.65% !important;
+  padding: 10px 4px;
+}
+
+.propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-slide.active a:after {
+  display: none;
+}
+
+.propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-slide a {
+  background: #dde2e8;
+  padding: 3px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  position: relative;
+}
+
+.propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-slide a:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.6);
+  content: '';
+}
+
+.propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-slide a:hover:after {
+  display: none;
+}
+
+.propertyDetails-page .propertyImage-slider .propertyImage-slider-btn-prev,
+.propertyDetails-page .propertyImage-slider .propertyImage-slider-btn-next,
+.propertyDetails-page .propertyImage-slider .propertyImage-pagination-btn-prev-1,
+.propertyDetails-page .propertyImage-slider .propertyImage-pagination-btn-next-1 {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  text-decoration: none;
+  font-size: 30px;
+  line-height: 30px;
+  margin: -15px 0 0;
+  color: #fff;
+}
+
+.propertyDetails-page .propertyImage-slider .propertyImage-slider-btn-prev.disabled,
+.propertyDetails-page .propertyImage-slider .propertyImage-slider-btn-next.disabled,
+.propertyDetails-page .propertyImage-slider .propertyImage-pagination-btn-prev-1.disabled,
+.propertyDetails-page .propertyImage-slider .propertyImage-pagination-btn-next-1.disabled {
+  color: #999;
+}
+
+.propertyDetails-page .propertyImage-slider .propertyImage-slider-btn-next,
+.propertyDetails-page .propertyImage-slider .propertyImage-pagination-btn-next-1 {
+  left: auto;
+  right: 10px;
+}
+
+.propertyDetails-page .propertyImage-slider .propertyImage-pagination-btn-prev-1,
+.propertyDetails-page .propertyImage-slider .propertyImage-pagination-btn-next-1 {
+  left: 0;
+  color: #363636;
+}
+
+.propertyDetails-page .propertyImage-slider .propertyImage-pagination-btn-next-1 {
+  left: auto;
+  right: 0;
+}
+
+.propertyDetails-page .propertyOwnerInfo {
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.propertyDetails-page .propertyOwnerInfo header {
+  background: #133783;
+  color: #fff;
+  font-size: 18px;
+  line-height: 21px;
+  position: relative;
+  padding: 10px;
+}
+
+.propertyDetails-page .propertyOwnerInfo header span[class^="icon-"], .propertyDetails-page .propertyOwnerInfo header span[class*="icon-"] {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  padding: 0;
+  margin: -8px 0 0;
+}
+
+.propertyDetails-page .propertyOwnerInfo header span {
+  display: block;
+  padding: 0 0 0 20px;
+}
+
+.propertyDetails-page .propertyOwnerInfo .description {
+  background: #edf1f4;
+  padding: 10px;
+}
+
+.propertyDetails-page .propertyOwnerInfo .description .holder {
+  overflow: hidden;
+}
+
+.propertyDetails-page .propertyOwnerInfo .description .agency-name,
+.propertyDetails-page .propertyOwnerInfo .description .agency-profile,
+.propertyDetails-page .propertyOwnerInfo .description .name {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 0 0 5px;
+}
+
+.propertyDetails-page .propertyOwnerInfo .description .name {
+  font-size: 16px;
+  line-height: 19px;
+  padding: 0 0 10px 20px;
+}
+
+.propertyDetails-page .propertyOwnerInfo .description .name:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "\e911";
+  font-family: 'icomoon';
+}
+
+.propertyDetails-page .propertyOwnerInfo .description .agency-profile {
+  width: 150px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  background: #58a36f;
+  padding: 5px 10px;
+  border: 1px solid #468258;
+  transition: background 0.4s ease;
+  -webkit-transition: background 0.4s ease;
+  -moz-transition: background 0.4s ease;
+  -ms-transition: background 0.4s ease;
+}
+
+.propertyDetails-page .propertyOwnerInfo .description .agency-profile:hover {
+  background: #468258;
+}
+
+.propertyDetails-page .propertyOwnerInfo .description img {
+  float: right;
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 80px;
+}
+
+.propertyDetails-page .propertyOwnerInfo .description .contact-links {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  text-align: center;
+  padding: 10px 0 0;
+  margin: 0 -5px;
+}
+
+.propertyDetails-page .propertyOwnerInfo .description .contact-links > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+.propertyDetails-page .propertyOwnerInfo .description .contact-links li {
+  width: 50%;
+  padding: 0 5px;
+  margin: 0 0 10px;
+}
+
+.propertyDetails-page .propertyOwnerInfo .description .contact-links li a {
+  color: #fff;
+  border-radius: 3px;
+  background: #ef9521;
+  border-bottom: 4px solid #b66c0d;
+  text-decoration: none;
+  display: block;
+  padding: 7px;
+  position: relative;
+  transition: background 0.4s ease,  border 0.4s ease;
+  -webkit-transition: background 0.4s ease,  border 0.4s ease;
+  -moz-transition: background 0.4s ease,  border 0.4s ease;
+  -ms-transition: background 0.4s ease,  border 0.4s ease;
+}
+
+.propertyDetails-page .propertyOwnerInfo .description .contact-links li a span[class^="icon-"], .propertyDetails-page .propertyOwnerInfo .description .contact-links li a span[class*="icon-"] {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  margin: -6px 0 0;
+}
+
+.propertyDetails-page .propertyOwnerInfo .description .contact-links li a:hover {
+  background: #58a36f;
+  border-color: #58a36f;
+}
+
+.propertyDetails-page .propertyOwnerInfo .description .summary {
+  display: block;
+}
+
+.propertyDetails-page .propertyOwnerInfo .description dl {
+  margin: 0;
+  display: block;
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 16px;
+  padding: 10px 0 0;
+}
+
+.propertyDetails-page .propertyOwnerInfo .description dl dt {
+  float: left;
+  width: 25%;
+  font-weight: 600;
+}
+
+.propertyDetails-page .propertyOwnerInfo .description dl dd {
+  overflow: hidden;
+  margin: 0;
+  width: 75%;
+  padding: 0 0 3px;
+}
+
+.propertyDetails-page .overviewText-holder {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  word-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.propertyDetails-page .overviewText-holder.height {
+  height: 243px;
+}
+
+.propertyDetails-page .overviewText-holder p {
+  margin: 0 0 20px;
+}
+
+.propertyDetails-page .overviewText-holder .overviewText {
+  overflow: hidden;
+  padding: 0 150px 0 0;
+}
+
+.propertyDetails-page .overviewText-holder .btn-showMore {
+  display: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  border: 1px solid #133783;
+  color: #133783;
+  text-align: center;
+  padding: 5px;
+  width: 150px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  transition: color 0.4s linear, background 0.4s linear;
+  -webkit-transition: color 0.4s linear, background 0.4s linear;
+  -moz-transition: color 0.4s linear, background 0.4s linear;
+  -ms-transition: color 0.4s linear, background 0.4s linear;
+}
+
+.propertyDetails-page .overviewText-holder .btn-showMore:hover {
+  color: #fff;
+  background: #133783;
+}
+
+.propertyDetails-page .property-qucikLinks {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  margin: 0 -5px;
+}
+
+.propertyDetails-page .property-qucikLinks > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+.propertyDetails-page .property-qucikLinks li {
+  padding: 5px;
+}
+
+.propertyDetails-page .property-qucikLinks li a {
+  text-decoration: none;
+  color: #ef9521;
+  display: block;
+  cursor: pointer;
+}
+
+.propertyDetails-page .property-qucikLinks li a span {
+  padding: 0 5px 0 0;
+}
+
+.propertyDetails-page .property-qucikLinks li a:hover {
+  color: #b66c0d;
 }
 
 .container {
@@ -2561,711 +3539,6 @@ h1 {
   height: 100%;
   min-height: 250px;
   max-height: 250px;
-}
-
-.index-page {
-  overflow: hidden;
-}
-
-.index-page .step-slider {
-  position: relative;
-  margin: 0 0 50px;
-}
-
-.index-page .step-slider .mask {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.index-page .step-slider .slideset {
-  width: 100% !important;
-  float: left;
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-  white-space: nowrap;
-}
-
-.index-page .step-slider .slide {
-  width: 33.33% !important;
-  text-align: center;
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0;
-  white-space: normal;
-  padding: 0 25px;
-  display: inline-block;
-  vertical-align: top;
-}
-
-.index-page .step-slider .slide .image-holder {
-  overflow: hidden;
-  max-height: 180px;
-  min-height: 180px;
-  border-bottom: 1px solid #000;
-}
-
-.index-page .step-slider .slide .image-holder img {
-  width: 100%;
-  height: auto;
-  display: block;
-  height: 100%;
-  max-height: 180px;
-  min-height: 180px;
-}
-
-.index-page .step-slider .slide .description {
-  overflow: hidden;
-  border-bottom: 2px solid #489ddd;
-  text-transform: capitalize;
-  padding: 10px 5px 20px;
-  background: ligten(#999, 10%);
-}
-
-.index-page .step-slider .slide .description .heading {
-  display: block;
-  color: #133783;
-  padding: 0 0 10px;
-}
-
-.index-page .step-slider .slide .description .price {
-  display: block;
-  font-size: 20px;
-  line-height: 23px;
-  color: #58a36f;
-  font-weight: 600;
-  padding: 0 0 10px;
-}
-
-.index-page .step-slider .slide .description p {
-  margin: 0 0 10px;
-}
-
-.index-page .step-slider .slide .description .btn {
-  display: block;
-  border: 1px solid #606060;
-  color: #606060;
-  text-decoration: none;
-  width: 120px;
-  margin: 0 auto;
-  padding: 7px;
-  transition: color 0.4s ease, background 0.4s ease, border 0.4s ease;
-  -webkit-transition: color 0.4s ease, background 0.4s ease, border 0.4s ease;
-  -moz-transition: color 0.4s ease, background 0.4s ease, border 0.4s ease;
-  -ms-transition: color 0.4s ease, background 0.4s ease, border 0.4s ease;
-}
-
-.index-page .step-slider .slide .description .btn:hover {
-  color: #fff;
-  background: #ef9521;
-  border-color: #ef9521;
-}
-
-.index-page .step-slider .btn-prev, .index-page .step-slider .btn-next {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  min-height: 100%;
-  white-space: nowrap;
-  text-decoration: none;
-  color: #999;
-  padding: 0 10px;
-  left: 10px;
-  font-size: 30px;
-  line-height: 1;
-  transition: color 0.4s ease;
-  -webkit-transition: color 0.4s ease;
-  -moz-transition: color 0.4s ease;
-  -ms-transition: color 0.4s ease;
-  z-index: 1;
-}
-
-.index-page .step-slider .btn-prev:after, .index-page .step-slider .btn-next:after {
-  width: 1px;
-  margin: 0 0 0 -5px;
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: middle;
-  content: '';
-  height: 100%;
-}
-
-.index-page .step-slider .btn-prev span, .index-page .step-slider .btn-next span {
-  display: inline-block;
-  vertical-align: middle;
-  white-space: normal;
-}
-
-.index-page .step-slider .btn-prev:hover, .index-page .step-slider .btn-next:hover {
-  background: rgba(0, 0, 0, 0.2);
-  color: #fff;
-}
-
-.index-page .step-slider .btn-next {
-  left: auto;
-  right: 10px;
-}
-
-.public-propertyListing {
-  overflow: hidden;
-}
-
-.public-propertyListing .holder {
-  overflow: hidden;
-  padding: 0 0 10px;
-}
-
-.public-propertyListing .holder .searchResult-counter {
-  float: left;
-  max-width: 500px;
-}
-
-.public-propertyListing .holder .sortBy {
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-  float: right;
-}
-
-.public-propertyListing .holder .sortBy > * {
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0;
-}
-
-.public-propertyListing .holder .sortBy li {
-  padding: 0 10px;
-  margin: 0 0 10px;
-}
-
-.public-propertyListing .property-posts {
-  overflow: hidden;
-}
-
-.public-propertyListing .property-posts .post {
-  background: #edf1f4;
-  border-bottom: 2px solid #ef9521;
-  padding: 15px;
-  margin: 0 0 30px;
-  position: relative;
-}
-
-.public-propertyListing .property-posts .post:before {
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  right: 0;
-  border-radius: 100%;
-  height: 50px;
-  box-shadow: 0 10px 12px -9px rgba(0, 0, 0, 0.8);
-  content: '';
-  z-index: -1;
-}
-
-.public-propertyListing .property-posts .post .img-holder {
-  float: left;
-  width: 250px;
-}
-
-.public-propertyListing .property-posts .post .img-holder a {
-  display: block;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-}
-
-.public-propertyListing .property-posts .post .img-holder img {
-  width: 100%;
-  height: auto;
-  display: block;
-  max-height: 190px;
-  min-height: 190px;
-}
-
-.public-propertyListing .property-posts .post .caption {
-  overflow: hidden;
-  padding: 0 0 0 20px;
-}
-
-.public-propertyListing .property-posts .post .caption .post-heading {
-  font-size: 20px;
-  line-height: 22px;
-  color: #133783;
-  display: block;
-  padding: 0 0 10px;
-}
-
-.public-propertyListing .property-posts .post .caption .post-heading a {
-  display: inline-block;
-  vertical-align: top;
-  color: #133783;
-  text-decoration: none;
-}
-
-.public-propertyListing .property-posts .post .caption .post-heading a:hover {
-  color: #58a36f;
-}
-
-.public-propertyListing .property-posts .post .caption address {
-  position: relative;
-  font-style: normal;
-  margin: 0;
-  padding: 0 0 15px;
-  display: block;
-  font-size: 14px;
-  line-height: 17px;
-}
-
-.public-propertyListing .property-posts .post .caption .holder {
-  overflow: hidden;
-}
-
-.public-propertyListing .property-posts .post .caption .quick-links,
-.public-propertyListing .property-posts .post .caption .property-details {
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: capitalize;
-  margin: 0 0 20px;
-}
-
-.public-propertyListing .property-posts .post .caption .quick-links li,
-.public-propertyListing .property-posts .post .caption .property-details li {
-  margin: 0 0 10px;
-}
-
-.public-propertyListing .property-posts .post .caption .quick-links {
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-  margin: 0 -10px;
-  float: left;
-}
-
-.public-propertyListing .property-posts .post .caption .quick-links > * {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0;
-}
-
-.public-propertyListing .property-posts .post .caption .quick-links li {
-  padding: 0 10px;
-}
-
-.public-propertyListing .property-posts .post .caption .quick-links li a {
-  display: block;
-  text-decoration: none;
-  color: #2e2e2e;
-  border: 1px solid #2e2e2e;
-  padding: 10px 20px;
-  transition: color 0.4s ease, border 0.4s ease, background 0.4s ease;
-  -webkit-transition: color 0.4s ease, border 0.4s ease, background 0.4s ease;
-  -moz-transition: color 0.4s ease, border 0.4s ease, background 0.4s ease;
-  -ms-transition: color 0.4s ease, border 0.4s ease, background 0.4s ease;
-}
-
-.public-propertyListing .property-posts .post .caption .quick-links li a:hover {
-  color: #fff;
-  border-color: #fff;
-  background: #58a36f;
-}
-
-.public-propertyListing .property-posts .post .caption .state-logo {
-  float: right;
-  overflow: hidden;
-  width: 80px;
-  height: 80px;
-}
-
-.public-propertyListing .property-posts .post .caption .state-logo a {
-  display: block;
-}
-
-.public-propertyListing .property-posts .post .caption .state-logo img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.propertyDetails-page {
-  overflow: hidden;
-}
-
-.propertyDetails-page .propertyImage-slider {
-  max-width: 800px;
-  float: left;
-  position: relative;
-  margin: 0 0 10px;
-}
-
-.propertyDetails-page .propertyImage-slider .propertyImage-mask,
-.propertyDetails-page .propertyImage-slider .mask {
-  position: relative;
-  overflow: hidden;
-  width: 100% !important;
-}
-
-.propertyDetails-page .propertyImage-slider .propertyImage-slideset,
-.propertyDetails-page .propertyImage-slider .slideset {
-  width: 100% !important;
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-  white-space: nowrap;
-}
-
-.propertyDetails-page .propertyImage-slider .propertyImage-slide,
-.propertyDetails-page .propertyImage-slider .slide {
-  width: 100% !important;
-  display: inline-block;
-  vertical-align: top;
-  font-size: 12px;
-  line-height: 15px;
-  letter-spacing: 0;
-  white-space: normal;
-  padding: 0 5px;
-}
-
-.propertyDetails-page .propertyImage-slider .propertyImage-slide a,
-.propertyDetails-page .propertyImage-slider .slide a {
-  display: block;
-}
-
-.propertyDetails-page .propertyImage-slider .propertyImage-slide a img,
-.propertyDetails-page .propertyImage-slider .slide a img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.propertyDetails-page .propertyImage-slider .paginationCurrent-num-1, .propertyDetails-page .propertyImage-slider #propertyImageCurrentSlide {
-  display: none;
-}
-
-.propertyDetails-page .propertyImage-slider .propertyImage-pagination {
-  position: relative;
-  overflow: hidden;
-}
-
-.propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-mask {
-  max-width: 650px;
-  margin: 0 auto;
-}
-
-.propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-slide {
-  width: 16.65% !important;
-  padding: 10px 4px;
-}
-
-.propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-slide.active a:after {
-  display: none;
-}
-
-.propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-slide a {
-  background: #dde2e8;
-  padding: 3px;
-  border: 1px solid #999;
-  border-radius: 4px;
-  position: relative;
-}
-
-.propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-slide a:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.6);
-  content: '';
-}
-
-.propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-slide a:hover:after {
-  display: none;
-}
-
-.propertyDetails-page .propertyImage-slider .propertyImage-slider-btn-prev,
-.propertyDetails-page .propertyImage-slider .propertyImage-slider-btn-next,
-.propertyDetails-page .propertyImage-slider .propertyImage-pagination-btn-prev-1,
-.propertyDetails-page .propertyImage-slider .propertyImage-pagination-btn-next-1 {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  text-decoration: none;
-  font-size: 30px;
-  line-height: 30px;
-  margin: -15px 0 0;
-  color: #fff;
-}
-
-.propertyDetails-page .propertyImage-slider .propertyImage-slider-btn-prev.disabled,
-.propertyDetails-page .propertyImage-slider .propertyImage-slider-btn-next.disabled,
-.propertyDetails-page .propertyImage-slider .propertyImage-pagination-btn-prev-1.disabled,
-.propertyDetails-page .propertyImage-slider .propertyImage-pagination-btn-next-1.disabled {
-  color: #999;
-}
-
-.propertyDetails-page .propertyImage-slider .propertyImage-slider-btn-next,
-.propertyDetails-page .propertyImage-slider .propertyImage-pagination-btn-next-1 {
-  left: auto;
-  right: 10px;
-}
-
-.propertyDetails-page .propertyImage-slider .propertyImage-pagination-btn-prev-1,
-.propertyDetails-page .propertyImage-slider .propertyImage-pagination-btn-next-1 {
-  left: 0;
-  color: #363636;
-}
-
-.propertyDetails-page .propertyImage-slider .propertyImage-pagination-btn-next-1 {
-  left: auto;
-  right: 0;
-}
-
-.propertyDetails-page .propertyOwnerInfo {
-  overflow: hidden;
-  border-radius: 4px;
-}
-
-.propertyDetails-page .propertyOwnerInfo header {
-  background: #133783;
-  color: #fff;
-  font-size: 18px;
-  line-height: 21px;
-  position: relative;
-  padding: 10px;
-}
-
-.propertyDetails-page .propertyOwnerInfo header span[class^="icon-"], .propertyDetails-page .propertyOwnerInfo header span[class*="icon-"] {
-  position: absolute;
-  top: 50%;
-  left: 5px;
-  padding: 0;
-  margin: -8px 0 0;
-}
-
-.propertyDetails-page .propertyOwnerInfo header span {
-  display: block;
-  padding: 0 0 0 20px;
-}
-
-.propertyDetails-page .propertyOwnerInfo .description {
-  background: #edf1f4;
-  padding: 10px;
-}
-
-.propertyDetails-page .propertyOwnerInfo .description .holder {
-  overflow: hidden;
-}
-
-.propertyDetails-page .propertyOwnerInfo .description .agency-name,
-.propertyDetails-page .propertyOwnerInfo .description .agency-profile,
-.propertyDetails-page .propertyOwnerInfo .description .name {
-  position: relative;
-  display: block;
-  font-size: 14px;
-  line-height: 18px;
-  padding: 0 0 5px;
-}
-
-.propertyDetails-page .propertyOwnerInfo .description .name {
-  font-size: 16px;
-  line-height: 19px;
-  padding: 0 0 10px 20px;
-}
-
-.propertyDetails-page .propertyOwnerInfo .description .name:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "\e911";
-  font-family: 'icomoon';
-}
-
-.propertyDetails-page .propertyOwnerInfo .description .agency-profile {
-  width: 150px;
-  text-decoration: none;
-  text-align: center;
-  color: #fff;
-  background: #58a36f;
-  padding: 5px 10px;
-  border: 1px solid #468258;
-  transition: background 0.4s ease;
-  -webkit-transition: background 0.4s ease;
-  -moz-transition: background 0.4s ease;
-  -ms-transition: background 0.4s ease;
-}
-
-.propertyDetails-page .propertyOwnerInfo .description .agency-profile:hover {
-  background: #468258;
-}
-
-.propertyDetails-page .propertyOwnerInfo .description img {
-  float: right;
-  width: 100%;
-  height: auto;
-  display: block;
-  max-width: 80px;
-}
-
-.propertyDetails-page .propertyOwnerInfo .description .contact-links {
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-  text-align: center;
-  padding: 10px 0 0;
-  margin: 0 -5px;
-}
-
-.propertyDetails-page .propertyOwnerInfo .description .contact-links > * {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0;
-}
-
-.propertyDetails-page .propertyOwnerInfo .description .contact-links li {
-  width: 50%;
-  padding: 0 5px;
-  margin: 0 0 10px;
-}
-
-.propertyDetails-page .propertyOwnerInfo .description .contact-links li a {
-  color: #fff;
-  border-radius: 3px;
-  background: #ef9521;
-  border-bottom: 4px solid #b66c0d;
-  text-decoration: none;
-  display: block;
-  padding: 7px;
-  position: relative;
-  transition: background 0.4s ease,  border 0.4s ease;
-  -webkit-transition: background 0.4s ease,  border 0.4s ease;
-  -moz-transition: background 0.4s ease,  border 0.4s ease;
-  -ms-transition: background 0.4s ease,  border 0.4s ease;
-}
-
-.propertyDetails-page .propertyOwnerInfo .description .contact-links li a span[class^="icon-"], .propertyDetails-page .propertyOwnerInfo .description .contact-links li a span[class*="icon-"] {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  margin: -6px 0 0;
-}
-
-.propertyDetails-page .propertyOwnerInfo .description .contact-links li a:hover {
-  background: #58a36f;
-  border-color: #58a36f;
-}
-
-.propertyDetails-page .propertyOwnerInfo .description .summary {
-  display: block;
-}
-
-.propertyDetails-page .propertyOwnerInfo .description dl {
-  margin: 0;
-  display: block;
-  overflow: hidden;
-  font-size: 13px;
-  line-height: 16px;
-  padding: 10px 0 0;
-}
-
-.propertyDetails-page .propertyOwnerInfo .description dl dt {
-  float: left;
-  width: 25%;
-  font-weight: 600;
-}
-
-.propertyDetails-page .propertyOwnerInfo .description dl dd {
-  overflow: hidden;
-  margin: 0;
-  width: 75%;
-  padding: 0 0 3px;
-}
-
-.propertyDetails-page .overviewText-holder {
-  display: block;
-  width: 100%;
-  font-size: 14px;
-  line-height: 20px;
-  word-spacing: 1px;
-  position: relative;
-  overflow: hidden;
-}
-
-.propertyDetails-page .overviewText-holder.height {
-  height: 243px;
-}
-
-.propertyDetails-page .overviewText-holder p {
-  margin: 0 0 20px;
-}
-
-.propertyDetails-page .overviewText-holder .overviewText {
-  overflow: hidden;
-  padding: 0 150px 0 0;
-}
-
-.propertyDetails-page .overviewText-holder .btn-showMore {
-  display: none;
-  text-decoration: none;
-  text-transform: capitalize;
-  border: 1px solid #133783;
-  color: #133783;
-  text-align: center;
-  padding: 5px;
-  width: 150px;
-  margin: 0 auto;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  cursor: pointer;
-  transition: color 0.4s linear, background 0.4s linear;
-  -webkit-transition: color 0.4s linear, background 0.4s linear;
-  -moz-transition: color 0.4s linear, background 0.4s linear;
-  -ms-transition: color 0.4s linear, background 0.4s linear;
-}
-
-.propertyDetails-page .overviewText-holder .btn-showMore:hover {
-  color: #fff;
-  background: #133783;
-}
-
-.propertyDetails-page .property-qucikLinks {
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-  margin: 0 -5px;
-}
-
-.propertyDetails-page .property-qucikLinks > * {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 15px;
-  line-height: 18px;
-  letter-spacing: 0;
-}
-
-.propertyDetails-page .property-qucikLinks li {
-  padding: 5px;
-}
-
-.propertyDetails-page .property-qucikLinks li a {
-  text-decoration: none;
-  color: #ef9521;
-  display: block;
-}
-
-.propertyDetails-page .property-qucikLinks li a span {
-  padding: 0 5px 0 0;
-}
-
-.propertyDetails-page .property-qucikLinks li a:hover {
-  color: #b66c0d;
 }
 
 #footer {

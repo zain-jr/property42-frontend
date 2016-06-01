@@ -1,0 +1,133 @@
+.index-page {
+	overflow: hidden;
+	
+	.step-slider {
+		position: relative;
+		margin: 0 0 50px;
+		
+		.mask {
+			position: relative;
+			overflow: hidden;
+			width: 100%;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+		.slideset {
+			width: 100% !important;
+			float: left;
+			font-size: 0;
+			line-height: 0;
+			letter-spacing: -4px;
+			white-space: nowrap;
+		}
+		.slide {
+			width: 33.33% !important;
+			text-align: center;
+			font-size: 14px;
+			line-height: 17px;
+			letter-spacing: 0;
+			white-space: normal;
+			padding: 0 25px;
+			@include align(top);
+			
+			.image-holder{
+				overflow: hidden;
+				max-height: 180px;
+				min-height: 180px;
+				border-bottom: 1px solid $black;
+				
+				img{
+					@include img-res;
+					height: 100%;
+					max-height: 180px;
+					min-height: 180px;
+				}
+			}
+			.description{
+				overflow: hidden;
+				border-bottom: 2px solid $mix-blue;
+				text-transform: capitalize;
+				padding:10px 5px 20px;
+				background: ligten($gray, 10%);
+				
+				.heading {
+					display: block;
+					color: $defualt-blue;
+					padding: 0 0 10px;
+				}
+				
+				.price {
+					display: block;
+					@include font(20,23);
+					color: $green;
+					font-weight: 600;
+					padding: 0 0 10px;
+				}
+				
+				p{ margin: 0 0 10px;}
+				
+				.btn{
+					display: block;
+					border: 1px solid $mix-grays;
+					color: $mix-grays;
+					text-decoration: none;
+					width: 120px;
+					margin: 0 auto;
+					padding: 7px;
+					transition: color 0.4s ease, background 0.4s ease, border 0.4s ease;
+					-webkit-transition: color 0.4s ease, background 0.4s ease, border 0.4s ease;
+					-moz-transition: color 0.4s ease, background 0.4s ease, border 0.4s ease;
+					-ms-transition: color 0.4s ease, background 0.4s ease, border 0.4s ease;
+					
+					&:hover{
+						color: $white;
+						background: $orange;
+						border-color: $orange;
+					}
+				}
+			}
+		}
+		.btn-prev , .btn-next {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			min-height: 100%;
+			white-space: nowrap;
+			text-decoration: none;
+			color: $gray;
+			padding: 0 10px;
+			left: 10px;
+			font-size: 30px;
+			line-height: 1;
+			transition: color 0.4s ease;
+			-webkit-transition: color 0.4s ease;
+			-moz-transition: color 0.4s ease;
+			-ms-transition: color 0.4s ease;
+			z-index: 1;
+			
+			&:after{
+				width: 1px;
+				margin: 0 0 0 -5px;
+				overflow: hidden;
+				@include align(middle);
+				content: '';
+				height: 100%;
+			}
+			
+			span{
+				@include align(middle);
+				white-space: normal;
+			}
+			
+			&:hover{
+				background: rgba($black, 0.2);
+				color: $white;
+			}
+			
+		}
+		.btn-next{
+			left: auto;
+			right: 10px;
+		}
+	}
+}
