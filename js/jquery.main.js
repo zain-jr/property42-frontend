@@ -47,7 +47,7 @@ $(document).on('click', '.btn-showMore', function(){
 		$('.btn-showMore').text('Show More');
 	}
 	else {
-		$('.btn-showMore').text('Less More');
+		$('.btn-showMore').text('Show Less');
 	}
 	
 });

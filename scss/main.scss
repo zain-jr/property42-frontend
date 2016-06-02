@@ -44,7 +44,10 @@ $media-expressions: (
 @import 'fancybox';
 @import 'public-property-listing';
 @import 'property-details';
-
+html, body {
+	width: 100%;
+	height: 100%;
+}
 .container { @include container;}
 .layout{ overflow: hidden;}
 a{ outline: none;}
@@ -93,6 +96,10 @@ h1 {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
+	height: 100%;
+	display: table;
+	border-collapse: collapse;
+	table-layout: fixed;
 	
 }
 #header {
@@ -1377,6 +1384,23 @@ h1 {
 					border: 1px solid rgba($black, 0.5);
 					display: block;
 					height: 120px;
+					white-space: nowrap;
+					text-align: center;
+					
+					&:after{
+						width: 1px;
+						margin: 0 0 0 -5px;
+						overflow: hidden;
+						@include align(middle);
+						content: '';
+						height: 120px;
+					}
+					img{
+						@include align(middle);
+						white-space: normal;
+						width: 100%;
+						max-width: 90px;
+					}
 				}
 			}
 		}
@@ -1417,12 +1441,74 @@ h1 {
 	}
 }
 
+.pager {
+	@extend %listreset;
+	text-align: center;
+	@include align-reset(top,15,18);
+	padding: 30px 0 0;
+	
+	@include media('<tablet'){
+		padding: 30px 0;
+		@include align-reset(top,12,15);
+	}
+	
+	li {
+		padding: 0 3px;
+		margin: 0 0 5px;
+		
+		&.active {
+			a{
+				color: $white;
+				background: $defualt-blue;
+				border-color: $defualt-blue;
+			}
+		}
+		
+		a{
+			display: block;
+			text-decoration: none;
+			color: $black;
+			border: 1px solid rgba($black, 0.4);
+			padding: 5px 10px;
+			transition: color 0.4s ease, background 0.4s ease;
+			-webkit-transition: color 0.4s ease, background 0.4s ease;
+			-moz-transition: color 0.4s ease, background 0.4s ease;
+			-ms-transition: color 0.4s ease, background 0.4s ease;
+			
+			@include media('<tablet'){
+				padding: 5px;
+			}
+			
+			&.previous, &.next {
+				border: 0;
+				padding: 6px 0;
+				vertical-align: middle;
+				
+				&:hover{
+					background: transparent;
+					color: $black;
+					opacity: 0.8;
+				}
+			}
+			
+			&:hover{
+				color: $white;
+				background: $defualt-blue;
+				border-color: $defualt-blue;
+			}
+		}
+	}
+}
+
 #footer{
 	overflow: hidden;
 	position: relative;
 	background: $defualt-blue;
 	border-top: 5px solid $mix-blue;
 	color: $white;
+	width: 100%;
+	height: 1%;
+	display: table-footer-group;
 	
 	.cols-holder{
 		overflow: hidden;
@@ -1489,6 +1575,167 @@ h1 {
 		}
 	}
 }
+@media print {
+	* {
+		background: none !important;
+		color: $black !important;
+		float: none !important;
+		transition: none !important;
+		-webkit-transition: none !important;
+		-moz-transition: none !important;
+	}
+	body {
+		margin: 0 !important;
+		color: $black !important;
+		min-width: inherit !important;
+	}
+	img { border-style: none !important; }
+	a { text-decoration: none !important; }
+	/* set default settings  */
+	body, #wrapper, #header, #main {
+		width: 100% !important;
+		display: block !important;
+		overflow: visible !important;
+		min-width: inherit !important;
+		clear: both !important;
+		position: static !important;
+	}
+	*:after, *:before {
+		background: none !important;
+		transition: none !important;
+		-webkit-transition: none !important;
+		-moz-transition: none !important;
+		color: $black !important;
+	}
+	#header .layout{
+		padding: 0 !important;
+	}
+	.logo {
+		float: none !important;
+		margin: 0 auto !important;
+		width: 100 !important;
+	}
+	.propertyDetails-page .propertyOwnerInfo header, .propertyDetails-page .propertyOwnerInfo .description .name:before,
+	.main-visual, #content .left-content, .propertyDetails-page .propertyOwnerInfo .description .agency-profile, .propertyDetails-page .propertyOwnerInfo .description .contact-links li:first-child,
+	btn-header loginRegister, #content .right-content, .propertyDetails-page .propertyImage-slider,
+	#header .btn-header, .main-visual .property-search-holder, .main-visual .down-scroll, #footer, .propertyDetails-page .property-qucikLinks, .propertyDetails-page .overviewText-holder .btn-showMore,
+	#nav { display: none !important;}
+	.layout {
+		 overflow: visible !important;
+		 clear: both !important;
+		 width: 100% !important;
+		 display: block !important;
+	}
+	#content .center-content {
+		padding: 0 !important;
+		width: 100% !important;
+		float: none !important;
+		clear: both !important;
+	}
+	.propertyDetails-page .propertyOwnerInfo{
+		float: none !important;
+		width: 100% !important;
+		overflow: visible !important;
+		clear: both !important;
+	}
+	[class*="icon-"], [class^="icon-"]{
+		display: none !important;
+	}
+	h1 {
+		text-shadow: none !important;
+		border: 0 !important;
+		margin: 0 0 10px !important;
+		display: block !important;
+		clear: both !important;
+		padding: 0 !important;
+		font-size: 16px !important;
+		line-height: 18px !important;
+	}
+	.propertyDetails-page .propertyOwnerInfo .description dl,
+	.propertyDetails-page .propertyOwnerInfo .description .contact-links,
+	.propertyDetails-page .propertyOwnerInfo .description .summary {
+		display: block !important;
+		clear: both !important;
+		width:  100% !important;
+		text-align: left !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		overflow: visible !important;
+	}
+	.propertyDetails-page .propertyOwnerInfo .description dl {
+		margin: 0 0 10px !important;
+	}
+	.propertyDetails-page .propertyOwnerInfo .description .summary {
+		padding: 0 0 10px !important;
+	}
+	.propertyDetails-page .propertyOwnerInfo .description dl dt,
+	.propertyDetails-page .propertyOwnerInfo .description dl dd{
+		overflow: visible !important;
+		float: left !important;
+		width: 50% !important;
+		padding: 0 0 5px !important;
+	}
+	.propertyDetails-page .propertyOwnerInfo .description .contact-links li {
+		width: 100% !important;;
+		display: block !important;
+		padding: 0 !important;
+	}
+	.propertyDetails-page .propertyOwnerInfo .description .contact-links li a {
+		border: 0 !important;
+		padding: 0 !important;
+	}
+	.propertyDetails-page .propertyOwnerInfo .description .contact-links > *{
+		font-size: 12px !important;
+		line-height: 15px !important;
+		display: block !important;
+		width: 100% !important;
+		clear: both !important;
+		padding: 0 0 0 0 50px !important;
+	}
+	.propertyDetails-page .propertyOwnerInfo .description{
+		padding: 0 !important;
+	}
+	#content{
+		padding: 5px !important;
+		overflow: visible !important;
+		clear: both !important;
+		width: 100% !important;
+	}
+	.propertyDetails-page .overviewText-holder,
+	.propertyDetails-page .overviewText-holder .overviewText {
+		padding: 0 !important;
+		overflow: visible !important;
+		width: 100% !important;
+		clear: both !important;
+	}
+	.propertyDetails-page .overviewText-holder.height{
+		height: 100% !important;
+		width: 100% !important;
+		clear: both !important;
+	}
+	.propertyDetails-page .propertyOwnerInfo .description img{
+		float: left !important;
+		max-width: inherit;
+		width: 50px !important;
+	}
+	.propertyDetails-page .propertyOwnerInfo .description .holder{
+		overflow: visible !important;
+		float: left !important;
+		padding: 0 0 0 20px !important;
+	}
+	.propertyDetails-page .propertyOwnerInfo .description .name{
+		padding: 0 0 5px !important;
+	}
+	.propertyDetails-page .overviewText-holder p {
+		margin: 0 0 10px !important;
+		font-size: 12px !important;
+		line-height: 15px !important;
+	}
+}
+
 .resize-active * {
 	transition: none !important;
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-ms-transition: none !important;
 }
