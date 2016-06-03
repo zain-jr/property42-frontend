@@ -1,12 +1,32 @@
 .propertyDetails-page {
 	overflow: hidden;
 	
+	@include media('<tablet') {
+		padding: 0 0 20px;
+	}
+	
 	.propertyImage-slider {
-		max-width: 800px;
+		max-width: 760px;
 		float: left;
 		position: relative;
 		margin: 0 0 10px;
 		
+		@include media('<tvscreen') {
+			max-width: 500px;
+		}
+		
+		@include media('<widescreen') {
+			max-width: 400px;
+		}
+		
+		@include media('<desktop') {
+			max-width: inherit;
+			float: none;
+			width: 100%;
+			overflow: hidden;
+			display: block;
+		}
+				
 		.propertyImage-mask,
 		.mask {
 			position: relative;
@@ -50,11 +70,32 @@
 			.propertyImage-mask {
 				max-width: 650px;
 				margin: 0 auto;
+				
+				@include media('<tvscreen'){
+					max-width: 450px;
+				}
+				
+				@include media('<widescreen'){
+					max-width: 350px;
+				}
+				
+				@include media('<desktop') {
+					max-width: 450px;
+				}
+				
+				@include media('<tablet') {
+					max-width: 250px;
+				}
 			}
 			
 			.propertyImage-slide {
 				width: 16.65% !important;
 				padding: 10px 4px;
+				
+				@include media('<widescreen'){
+					padding: 10px 2px;
+					width: 16.60% !important;
+				}
 				
 				&.active{
 					a {&:after{ display: none;}}
@@ -66,6 +107,10 @@
 					border: 1px solid $gray;
 					border-radius: 4px;
 					position: relative;
+					
+					@include media('<widescreen'){
+						padding: 2px;
+					}
 					
 					&:after{
 						position: absolute;
@@ -118,12 +163,20 @@
 		overflow: hidden;
 		border-radius: 4px;
 		
+		@include media('<desktop') {
+			margin: 0 0 20px;
+		}
+		
 		header {
 			background: $defualt-blue;
 			color: $white;
 			@include font(18,21);
 			position: relative;
 			padding: 10px;
+			
+			@include media('<widescreen'){
+				@include font(14,18);
+			}
 			
 			span[class^="icon-"], span[class*="icon-"] {
 				position: absolute;
@@ -188,6 +241,10 @@
 				float: right;
 				@include img-res;
 				max-width: 80px;
+				
+				@include media('<widescreen'){
+					max-width: 60px;
+				}
 			}
 			
 			.contact-links {
@@ -196,6 +253,11 @@
 				text-align: center;
 				padding: 10px 0 0;
 				margin: 0 -5px;
+				
+				@include media('<widescreen'){
+					@include align-reset(top,14,18);
+				}
+				
 				
 				li {
 					width: 50%;
@@ -221,6 +283,10 @@
 							top: 50%;
 							left: 10px;
 							margin: -6px 0 0;
+							
+							@include media('<widescreen'){
+								margin: -6px -5px 0;
+							}
 						}
 						
 						&:hover {
@@ -244,12 +310,20 @@
 					float: left;
 					width: 25%;
 					font-weight: 600;
+					
+					@include media('<widescreen'){
+						width: 35%;
+					}
 				}
 				dd{
 					overflow: hidden;
 					margin: 0;
 					width: 75%;
 					padding: 0 0 3px;
+					
+					@include media('<widescreen'){
+						width: 65%;
+					}
 				}
 			}
 		}
@@ -293,6 +367,10 @@
 			-webkit-transition: color 0.4s linear, background 0.4s linear;
 			-moz-transition: color 0.4s linear, background 0.4s linear;
 			-ms-transition: color 0.4s linear, background 0.4s linear;
+			
+			@include media('<desktop'){
+				width: 100px;	
+			}
 			
 			&:hover{
 				color: $white;

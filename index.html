@@ -34,10 +34,12 @@
 								<li><a href="#">commerical</a></li>
 							</ul>
 						</li>
-						<li><a href="#">agents</a></li>
+						<li class="agent-link"><a href="#">agents</a></li>
+						<li class="hidden-desktop"><a href="#">Add a property</a></li>
 					</ul>
 				</nav>
-				<a href="#" class="btn-header"><span class="icon-plus"></span>Add a property</a>
+				<a class="nav-opener"><span></span></a>
+				<a href="#" class="btn-header hidden-xs"><span class="icon-plus"></span>Add a property</a>
 				<a href="#" class="btn-header loginRegister">login / register</a>
 			</div>
 		</header>
@@ -86,7 +88,7 @@
 									</ul>
 									<ul>
 										<li>
-											<label>Select Society</label>
+											<label>Select Society:</label>
 											<div class="input-holder">
 												<span class="fake-select">
 													<select>
@@ -102,7 +104,7 @@
 											</div>
 										</li>
 										<li>
-											<label>Select Block</label>
+											<label>Select Block:</label>
 											<div class="input-holder">
 												<span class="fake-select">
 													<select>
@@ -120,7 +122,7 @@
 									</ul>
 									<ul>
 										<li>
-											<label>Select Property Type</label>
+											<label>Select Property Type:</label>
 											<div class="input-holder">
 												<span class="fake-select">
 													<select>
@@ -136,7 +138,7 @@
 											</div>
 										</li>
 										<li>
-											<label>Select Bedrooms</label>
+											<label>Select Bedrooms:</label>
 											<div class="input-holder">
 												<span class="fake-select">
 													<select>
@@ -156,22 +158,22 @@
 									<ul class="inline">
 										<li class="full">Price Range (Rs)</li>
 										<li>
-											<span>From</span>
+											<span>From:</span>
 											<div class="input-holder"><input type="number"></div>
 										</li>
 										<li>
-											<span>to</span>
+											<span>to:</span>
 											<div class="input-holder"><input type="number"></div>
 										</li>
 									</ul>
 									<ul class="inline">
 										<li class="full">Land Area</li>
 										<li>
-											<span>From</span>
+											<span>From:</span>
 											<div class="input-holder"><input type="number"></div>
 										</li>
 										<li>
-											<span>to</span>
+											<span>to:</span>
 											<div class="input-holder"><input type="number"></div>
 										</li>
 									</ul>
@@ -210,7 +212,7 @@
 									</ul>
 									<ul>
 										<li>
-											<label>Select Society</label>
+											<label>Select Society:</label>
 											<div class="input-holder">
 												<span class="fake-select">
 													<select>
@@ -226,7 +228,7 @@
 											</div>
 										</li>
 										<li>
-											<label>Select Block</label>
+											<label>Select Block:</label>
 											<div class="input-holder">
 												<span class="fake-select">
 													<select>
@@ -244,7 +246,7 @@
 									</ul>
 									<ul>
 										<li>
-											<label>Select Property Type</label>
+											<label>Select Property Type:</label>
 											<div class="input-holder">
 												<span class="fake-select">
 													<select>
@@ -260,7 +262,7 @@
 											</div>
 										</li>
 										<li>
-											<label>Select Bedrooms</label>
+											<label>Select Bedrooms:</label>
 											<div class="input-holder">
 												<span class="fake-select">
 													<select>
@@ -280,22 +282,22 @@
 									<ul class="inline">
 										<li class="full">Price Range (Rs)</li>
 										<li>
-											<span>From</span>
+											<span>From:</span>
 											<div class="input-holder"><input type="number"></div>
 										</li>
 										<li>
-											<span>to</span>
+											<span>to:</span>
 											<div class="input-holder"><input type="number"></div>
 										</li>
 									</ul>
 									<ul class="inline">
 										<li class="full">Land Area</li>
 										<li>
-											<span>From</span>
+											<span>From:</span>
 											<div class="input-holder"><input type="number"></div>
 										</li>
 										<li>
-											<span>to</span>
+											<span>to:</span>
 											<div class="input-holder"><input type="number"></div>
 										</li>
 									</ul>
@@ -338,147 +340,7 @@
 				</div>
 				<div class="center-content">
 					<div class="page-holder">
-						<div class="public-propertyListing">
-							<div class="holder">
-								<span class="searchResult-counter">Showing <b>1</b> to <b>20</b> of <b>24,303</b> properties</span>
-								<ul class="sortBy">
-									<li>Sorty By</li>
-									<li>
-										<select>
-											<option>Default Order</option>
-											<option>Price low to high</option>
-											<option>Price high to low</option>
-											<option>Beds low to high</option>
-											<option>Bed high to low</option>
-											<option>Area low to high</option>
-											<option>Area high to low</option>
-											<option>Date new to old</option>
-											<option>Date old to new</option>
-											<option>Verified only</option>
-											<option>Hot only</option>
-											<option>With videos</option>
-											<option>With photos</option>
-										</select>
-									</li>
-								</ul>
-							</div>
-							<section class="property-posts">
-								<article class="post">
-									<div class="img-holder"><a href="#"><img src="images/img01.jpg" width="600" height="450" alt="image description"></a></div>
-									<div class="caption">
-										<strong class="post-heading"><a href="#">1400 Sq Ft Apartment, Platinum Capital Square, Block B, Sector B-17 Islamabad For Sale</a></strong>
-										<address>1400 Sq Ft apartment is available for sale. It is located in Platinum Capital Square, Block B, Sector B-17 Islamabad. </address>
-										<ul class="property-details">
-											<li>4 Bedrooms</li>
-											<li>4 Baths</li>
-											<li>4 Rooms (total)</li>
-										</ul>
-										<div class="holder">
-											<ul class="quick-links">
-												<li><a href="#">More Details</a></li>
-												<li><a href="#"><span class="icon-phone_iphone"></span></a></li>
-												<li><a href="#"><span class="icon-envelope"></span></a></li>
-											</ul>
-											<div class="state-logo"><a href="#"><img src="images/state-logo.jpg" width="300" height="300" alt="zameen state"></a></div>
-										</div>
-									</div>
-								</article>
-								<article class="post">
-									<div class="img-holder"><a href="#"><img src="images/img01.jpg" width="600" height="450" alt="image description"></a></div>
-									<div class="caption">
-										<strong class="post-heading"><a href="#">1400 Sq Ft Apartment, Platinum Capital Square, Block B, Sector B-17 Islamabad For Sale</a></strong>
-										<address>1400 Sq Ft apartment is available for sale. It is located in Platinum Capital Square, Block B, Sector B-17 Islamabad. </address>
-										<ul class="property-details">
-											<li>4 Bedrooms</li>
-											<li>4 Baths</li>
-											<li>4 Rooms (total)</li>
-										</ul>
-										<div class="holder">
-											<ul class="quick-links">
-												<li><a href="#">More Details</a></li>
-												<li><a href="#"><span class="icon-phone_iphone"></span></a></li>
-												<li><a href="#"><span class="icon-envelope"></span></a></li>
-											</ul>
-											<div class="state-logo"><a href="#"><img src="images/state-logo.jpg" width="300" height="300" alt="zameen state"></a></div>
-										</div>
-									</div>
-								</article>
-								<article class="post">
-									<div class="img-holder"><a href="#"><img src="images/img01.jpg" width="600" height="450" alt="image description"></a></div>
-									<div class="caption">
-										<strong class="post-heading"><a href="#">1400 Sq Ft Apartment, Platinum Capital Square, Block B, Sector B-17 Islamabad For Sale</a></strong>
-										<address>1400 Sq Ft apartment is available for sale. It is located in Platinum Capital Square, Block B, Sector B-17 Islamabad. </address>
-										<ul class="property-details">
-											<li>4 Bedrooms</li>
-											<li>4 Baths</li>
-											<li>4 Rooms (total)</li>
-										</ul>
-										<div class="holder">
-											<ul class="quick-links">
-												<li><a href="#">More Details</a></li>
-												<li><a href="#"><span class="icon-phone_iphone"></span></a></li>
-												<li><a href="#"><span class="icon-envelope"></span></a></li>
-											</ul>
-											<div class="state-logo"><a href="#"><img src="images/state-logo.jpg" width="300" height="300" alt="zameen state"></a></div>
-										</div>
-									</div>
-								</article>
-								<article class="post">
-									<div class="img-holder"><a href="#"><img src="images/img01.jpg" width="600" height="450" alt="image description"></a></div>
-									<div class="caption">
-										<strong class="post-heading"><a href="#">1400 Sq Ft Apartment, Platinum Capital Square, Block B, Sector B-17 Islamabad For Sale</a></strong>
-										<address>1400 Sq Ft apartment is available for sale. It is located in Platinum Capital Square, Block B, Sector B-17 Islamabad. </address>
-										<ul class="property-details">
-											<li>4 Bedrooms</li>
-											<li>4 Baths</li>
-											<li>4 Rooms (total)</li>
-										</ul>
-										<div class="holder">
-											<ul class="quick-links">
-												<li><a href="#">More Details</a></li>
-												<li><a href="#"><span class="icon-phone_iphone"></span></a></li>
-												<li><a href="#"><span class="icon-envelope"></span></a></li>
-											</ul>
-											<div class="state-logo"><a href="#"><img src="images/state-logo.jpg" width="300" height="300" alt="zameen state"></a></div>
-										</div>
-									</div>
-								</article>
-								<article class="post">
-									<div class="img-holder"><a href="#"><img src="images/img01.jpg" width="600" height="450" alt="image description"></a></div>
-									<div class="caption">
-										<strong class="post-heading"><a href="#">1400 Sq Ft Apartment, Platinum Capital Square, Block B, Sector B-17 Islamabad For Sale</a></strong>
-										<address>1400 Sq Ft apartment is available for sale. It is located in Platinum Capital Square, Block B, Sector B-17 Islamabad. </address>
-										<ul class="property-details">
-											<li>4 Bedrooms</li>
-											<li>4 Baths</li>
-											<li>4 Rooms (total)</li>
-										</ul>
-										<div class="holder">
-											<ul class="quick-links">
-												<li><a href="#">More Details</a></li>
-												<li><a href="#"><span class="icon-phone_iphone"></span></a></li>
-												<li><a href="#"><span class="icon-envelope"></span></a></li>
-											</ul>
-											<div class="state-logo"><a href="#"><img src="images/state-logo.jpg" width="300" height="300" alt="zameen state"></a></div>
-										</div>
-									</div>
-								</article>
-							</section>
-							<ul class="pager">
-								<li><a href="#" class="previous"><span class="icon-chevron-thin-left"></span></a></li>
-								<li class="active"><a href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#">5</a></li>
-								<li><a href="#">6</a></li>
-								<li><a href="#">7</a></li>
-								<li><a href="#">8</a></li>
-								<li><a href="#">9</a></li>
-								<li><a href="#">10</a></li>
-								<li><a href="#" class="next"><span class="icon-chevron-thin-right"></span></a></li>
-							</ul>
-						</div>
+						
 					</div>
 				</div>
 				<div class="right-content">
@@ -496,7 +358,7 @@
 				<div class="cols-holder">
 					<div class="col">
 						<strong class="heading">Address</strong>
-						<address>64Q Defence Phase 8 Ax-air Avenue, Lahore</address>
+						<address>4105 Garfield Road Bartonville, IL 61607, UAE</address>
 					</div>
 					<div class="col">
 						<strong class="heading">Social media</strong>
@@ -509,14 +371,19 @@
 						<strong class="heading">Organization</strong>
 						<ul>
 							<li><a href="#">About Us</a></li>
-							<li><a href="#">contact us</a></li>
-							<li><a href="#">work with us</a></li>
-							<li><a href="#">help &amp; support</a></li>
 							<li><a href="#">Advertise on Property42</a></li>
 							<li><a href="#">privcy policy</a></li>
 							<li><a href="#">terms of use</a></li>
-							<li><a href="#">email us</a></li>
+							<li><a href="mailto:&#105;&#110;&#102;&#111;&#064;&#112;&#114;&#111;&#112;&#101;&#114;&#116;&#121;&#052;&#050;&#046;&#112;&#107;">email us</a></li>
 						</ul>
+					</div>
+					<div class="col">
+						<strong class="heading">Contact us</strong>
+						<form class="contact">
+							<div class="input-holder"><input type="email" placeholder="Enter Your Email Address" required></div>
+							<div class="input-holder"><textarea placeholder="Enter Your Message" required></textarea></div>
+							<input type="submit" value="Send">
+						</form>
 					</div>
 				</div>
 			</div>
