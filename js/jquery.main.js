@@ -40,6 +40,15 @@ $(document).ready(function(){
 		});
 	}
 });
+
+$(document).on('click', '.nav-opener', function(){
+	$('body').toggleClass('nav-active');
+});
+
+$(document).on('tap, click', '#main', function(){
+	$('body').removeClass('nav-active');
+});
+
 $(document).on('click', '.btn-showMore', function(){
 	$('.overviewText-holder').toggleClass('height');
 	
@@ -51,6 +60,7 @@ $(document).on('click', '.btn-showMore', function(){
 	}
 	
 });
+
 
 // content tabs init
 function initTabs() {
@@ -113,7 +123,8 @@ function initCarousel() {
 		autoRotation: true,
 		switchTime: 3000,
 		animSpeed: 500,
-		swipeGap: false
+		swipeGap: false,
+		step: 1
 	});
 
 	jQuery('.propertyImage-slider').scrollGallery({
