@@ -326,6 +326,9 @@ h1 {
 				border-bottom: 4px solid $green;
 				opacity: 0;
 				transition: top 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+				-webkkit-transition: top 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+				-moz-transition: top 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+				-ms-transition: top 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
 				
 				@include media('<tablet'){
 					width: 100%;

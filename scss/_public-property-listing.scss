@@ -151,6 +151,22 @@
 						@include font(13,16);
 					}
 					
+					@include media('<tvscreen'){
+						@include font(18,22);
+					}
+					
+					@include media('<widescreen'){
+						@include font(16,20);
+					}
+					
+					@include media('<widescreen'){
+						@include font(14,18);
+					}
+					
+					@include media('<tablet'){
+						@include font(13,16);
+					}
+					
 					a{
 						@include align(top);
 						color: $defualt-blue;
@@ -248,7 +264,6 @@
 					}
 					
 					@include media('<desktop'){
-						@include align-reset(top,13,16);
 						text-align: center;
 					}
 					
@@ -281,6 +296,7 @@
 							-ms-transition: color 0.4s ease, border 0.4s ease, background 0.4s ease;
 							
 							@include media('<widescreen'){
+
 								padding: 10px 10px 10px 25px;
 							
 							}
@@ -289,6 +305,7 @@
 								@include media('>=tablet'){
 									display: none;
 								}
+
 							}
 							
 							&:hover{

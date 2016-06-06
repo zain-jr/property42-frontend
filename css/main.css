@@ -1574,6 +1574,34 @@ input[type='submit'] {
   }
 }
 
+@media (max-width: 1599px) {
+  .public-propertyListing .property-posts .post .caption .post-heading {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .public-propertyListing .property-posts .post .caption .post-heading {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .public-propertyListing .property-posts .post .caption .post-heading {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .public-propertyListing .property-posts .post .caption .post-heading {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
 .public-propertyListing .property-posts .post .caption .post-heading a {
   display: inline-block;
   vertical-align: top;
@@ -1722,17 +1750,7 @@ input[type='submit'] {
 
 @media (max-width: 1023px) {
   .public-propertyListing .property-posts .post .caption .quick-links {
-    font-size: 0;
-    line-height: 0;
-    letter-spacing: -4px;
     text-align: center;
-  }
-  .public-propertyListing .property-posts .post .caption .quick-links > * {
-    display: inline-block;
-    vertical-align: top;
-    font-size: 13px;
-    line-height: 16px;
-    letter-spacing: 0;
   }
 }
 
@@ -3121,6 +3139,9 @@ h1 {
   border-bottom: 4px solid #58a36f;
   opacity: 0;
   transition: top 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+  -webkkit-transition: top 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+  -moz-transition: top 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+  -ms-transition: top 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
 }
 
 @media (max-width: 767px) {
