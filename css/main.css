@@ -1793,6 +1793,7 @@ input[type='submit'] {
   border: 1px solid #2e2e2e;
   padding: 10px 20px 10px 30px;
   position: relative;
+  text-transform: none;
   transition: color 0.4s ease, border 0.4s ease, background 0.4s ease;
   -webkit-transition: color 0.4s ease, border 0.4s ease, background 0.4s ease;
   -moz-transition: color 0.4s ease, border 0.4s ease, background 0.4s ease;
@@ -2367,8 +2368,73 @@ input[type='submit'] {
   padding: 0 0 10px;
 }
 
-.agentListing-page .holder .searchResult-counter {
+.agentListing-page .holder .search-agent {
   float: left;
+  width: 450px;
+  position: relative;
+  padding: 0 111px 0 0;
+}
+
+@media (max-width: 1199px) {
+  .agentListing-page .holder .search-agent {
+    width: 380px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .agentListing-page .holder .search-agent {
+    width: 270px;
+    padding: 0 81px 0 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .agentListing-page .holder .search-agent {
+    margin: 0 auto 10px;
+    float: none;
+    display: block;
+  }
+}
+
+.agentListing-page .holder .search-agent input[type="text"], .agentListing-page .holder .search-agent input[type="search"] {
+  width: 100%;
+  display: block;
+  height: 35px;
+  padding: 7px;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@media (max-width: 1023px) {
+  .agentListing-page .holder .search-agent input[type="text"], .agentListing-page .holder .search-agent input[type="search"] {
+    font-size: 12px;
+    line-height: 17px;
+  }
+}
+
+.agentListing-page .holder .search-agent input[type="submit"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  color: #fff;
+  background: #58a36f;
+}
+
+@media (max-width: 1023px) {
+  .agentListing-page .holder .search-agent input[type="submit"] {
+    font-size: 12px;
+    line-height: 17px;
+  }
+}
+
+.agentListing-page .holder .search-agent input[type="submit"]:hover {
+  background: #468258;
+}
+
+.agentListing-page .holder .searchResult-counter {
+  float: right;
   max-width: 500px;
 }
 
@@ -2387,6 +2453,7 @@ input[type='submit'] {
     width: 100%;
     text-align: center;
     padding: 0 0 10px;
+    max-width: inherit;
   }
 }
 
@@ -2754,6 +2821,141 @@ input[type='submit'] {
   top: 50%;
   left: 7px;
   margin: -7px 0 0;
+}
+
+.agentProfile-page {
+  overflow: hidden;
+}
+
+.agentProfile-page .main-infoHolder {
+  float: left;
+}
+
+.agentProfile-page .main-infoHolder .img-holder {
+  float: left;
+  border: 1px solid #000;
+  width: 180px;
+  height: 200px;
+  white-space: nowrap;
+}
+
+.agentProfile-page .main-infoHolder .img-holder:after {
+  content: '';
+  width: 1px;
+  margin: 0 0 0 -5px;
+  display: inline-block;
+  vertical-align: middle;
+  height: 200px;
+}
+
+.agentProfile-page .main-infoHolder .img-holder img {
+  white-space: normal;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.agentProfile-page .main-infoHolder .cap-name {
+  float: left;
+  padding: 0 0 0 20px;
+  max-width: 550px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.agentProfile-page .main-infoHolder .cap-name .name {
+  display: block;
+  font-size: 25px;
+  line-height: 28px;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color: #133783;
+  padding: 0 0 10px;
+}
+
+.agentProfile-page .contact-links {
+  float: right;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  margin: 0 -5px;
+}
+
+.agentProfile-page .contact-links > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+.agentProfile-page .contact-links li {
+  padding: 0 5px;
+}
+
+.agentProfile-page .contact-links li a {
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  color: #133783;
+  border: 1px solid #133783;
+  padding: 10px 25px;
+  transition: background 0.4s ease;
+  -webkit-transition: background 0.4s ease;
+  -moz-transition: background 0.4s ease;
+}
+
+@media (min-width: 768px) {
+  .agentProfile-page .contact-links li a .show-xs {
+    display: none;
+  }
+}
+
+.agentProfile-page .contact-links li a:hover {
+  color: #fff;
+  background: #133783;
+}
+
+.agentProfile-page .contact-links li a [class^="icon-"], .agentProfile-page .contact-links li a [class*=" icon-"] {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 5px;
+}
+
+.agentProfile-page .cols-holder {
+  width: 100%;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  text-align: center;
+  padding: 20px 0 0;
+  margin: 0 -10px;
+}
+
+.agentProfile-page .cols-holder > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+.agentProfile-page .cols-holder .col {
+  text-align: left;
+  width: 33.33%;
+  padding: 0 10px;
+  margin: 0 0 10px;
+}
+
+.agentProfile-page .cols-holder .col header {
+  overflow: hidden;
+  color: #fff;
+  background: #133783;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 5px;
+  border-radius: 2px;
 }
 
 html, body {
@@ -4198,7 +4400,11 @@ h1 {
 #footer .cols-holder .col .contact .input-holder {
   display: block;
   width: 100%;
-  margin: 0 0 20px;
+  margin: 0 0 10px;
+}
+
+#footer .cols-holder .col .contact .input-holder.error .error-text {
+  display: block;
 }
 
 #footer .cols-holder .col .contact textarea,
@@ -4285,6 +4491,14 @@ h1 {
   height: 100px;
   resize: none;
   overflow: auto;
+}
+
+#footer .cols-holder .col .contact .error-text {
+  color: #e14646;
+  font-size: 13px;
+  line-height: 17px;
+  padding: 5px 0 0;
+  display: none;
 }
 
 #footer .cols-holder .col .contact input[type="submit"] {

@@ -45,6 +45,7 @@ $media-expressions: (
 @import 'public-property-listing';
 @import 'property-details';
 @import 'agent-listing-page';
+@import 'agent-profile';
 
 html, body {
 	width: 100%;
@@ -1107,7 +1108,11 @@ h1 {
 				.input-holder{
 					display: block;
 					width: 100%;
-					margin: 0 0 20px;
+					margin: 0 0 10px;
+
+					&.error {
+						.error-text{ display: block;}
+					}
 				}
 				textarea,
 				input[type="text"],input[type="email"]{
@@ -1143,7 +1148,12 @@ h1 {
 					resize: none;
 					overflow: auto;
 				}
-				
+				.error-text {
+					color: $red;
+					@include font(13,17);
+					padding: 5px 0 0;
+					display: none;
+				}
 				input[type="submit"]{
 					display: block;
 					width: 100%;

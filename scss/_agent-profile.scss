@@ -1,0 +1,102 @@
+.agentProfile-page {
+    overflow: hidden;
+
+    .main-infoHolder {
+        float: left;
+
+        .img-holder {
+            float: left;
+            border: 1px solid $black;
+            @include squar(180px, 200px);
+            white-space: nowrap;
+
+            &:after {
+                content: '';
+                width: 1px;
+                margin: 0 0 0 -5px;
+                @include align(middle);
+                height: 200px;
+            }
+            img {
+                white-space: normal;
+                @include align(middle);
+                width: 100%;
+            }
+        }
+        .cap-name {
+            float: left;
+            padding: 0 0 0 20px;
+            max-width: 550px;
+            @include font(14,20);
+
+            .name {
+                display: block;
+                @include font(25,28);
+                font-style: italic;
+                letter-spacing: 1px;
+                text-transform: capitalize;
+                color: $defualt-blue;
+                padding: 0 0 10px;
+            }
+        }
+    }
+    .contact-links {
+        float: right;
+        @include align-reset(top,16,20);
+        margin: 0 -5px;
+
+        li {
+            padding: 0 5px;
+
+            a {
+                text-decoration: none;
+                @include align(middle);
+                color: $defualt-blue;
+                border: 1px solid $defualt-blue;
+                padding: 10px 25px;
+                transition: background 0.4s ease;
+                -webkit-transition: background 0.4s ease;
+                -moz-transition: background 0.4s ease;
+
+                .show-xs {
+                    @include media('>=tablet'){
+                        display: none;
+                    }
+                }
+
+                &:hover {
+                    color: $white;
+                    background: $defualt-blue;
+                }
+
+                [class^="icon-"], [class*=" icon-"] {
+                    @include align(top);
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+    .cols-holder {
+        width: 100%;
+        @include align-reset(top,14,20);
+        text-align: center;
+        padding: 20px 0 0;
+        margin: 0 -10px;
+
+        .col {
+            text-align: left;
+            width: 33.33%;
+            padding: 0 10px;
+            margin: 0 0 10px;
+
+            header {
+                overflow: hidden;
+                color: $white;
+                background: $defualt-blue;
+                @include font(18,22);
+                padding: 5px;
+                border-radius: 2px;
+            }
+        }
+    }
+}
