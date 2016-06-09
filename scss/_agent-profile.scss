@@ -164,7 +164,7 @@
                 color: $white;
                 background: $defualt-blue;
                 @include font(18,22);
-                padding: 5px;
+                padding: 5px 20px;
                 border-radius: 2px;
                 position: relative;
 
@@ -242,7 +242,7 @@
                     li {
                         display: block;
                         @include align-reset(top,14,20);
-                        padding: 0 0 10px;
+                        padding: 0 0 7px;
 
                         @include media('<tvscreen'){
                             @include align-reset(top,13,18);
@@ -269,6 +269,26 @@
                             width: calc(100% - 120px);
                             padding: 3px;
                             position: relative;
+                            
+                            &.error {
+                                .error-text { display: block;}
+
+                                textarea,
+                                input[type="text"],input[type="email"],input[type="tel"] {
+                                    border-color: $red;
+                                    @include placeholder{
+                                        color: $red;
+                                    }
+                                }
+                            }
+
+                            .error-text {
+                                color: $red;
+                                @include font(12,15);
+                                font-weight: 600;
+                                padding: 3px;
+                                display: none;
+                            }
 
                             @include media('<tvscreen'){
                                 width: calc(100% - 70px);

@@ -3069,7 +3069,7 @@ input[type='submit'] {
   background: #133783;
   font-size: 18px;
   line-height: 22px;
-  padding: 5px;
+  padding: 5px 20px;
   border-radius: 2px;
   position: relative;
 }
@@ -3168,7 +3168,7 @@ input[type='submit'] {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
-  padding: 0 0 10px;
+  padding: 0 0 7px;
 }
 
 .agentProfile-page .cols-holder .col .enquiry-form ul li > * {
@@ -3219,6 +3219,50 @@ input[type='submit'] {
   width: calc(100% - 120px);
   padding: 3px;
   position: relative;
+}
+
+.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error .error-text {
+  display: block;
+}
+
+.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error textarea,
+.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="text"], .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="email"], .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="tel"] {
+  border-color: #e14646;
+}
+
+.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error textarea::-webkit-input-placeholder,
+.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="text"]::-webkit-input-placeholder, .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="email"]::-webkit-input-placeholder, .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="tel"]::-webkit-input-placeholder {
+  color: #e14646;
+}
+
+.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error textarea::-moz-placeholder,
+.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="text"]::-moz-placeholder, .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="email"]::-moz-placeholder, .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="tel"]::-moz-placeholder {
+  opacity: 1;
+  color: #e14646;
+}
+
+.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error textarea:-moz-placeholder,
+.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="text"]:-moz-placeholder, .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="email"]:-moz-placeholder, .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="tel"]:-moz-placeholder {
+  color: #e14646;
+}
+
+.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error textarea:-ms-input-placeholder,
+.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="text"]:-ms-input-placeholder, .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="email"]:-ms-input-placeholder, .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="tel"]:-ms-input-placeholder {
+  color: #e14646;
+}
+
+.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error textarea.placeholder,
+.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="text"].placeholder, .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="email"].placeholder, .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="tel"].placeholder {
+  color: #e14646;
+}
+
+.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder .error-text {
+  color: #e14646;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 600;
+  padding: 3px;
+  display: none;
 }
 
 @media (max-width: 1599px) {
