@@ -4,11 +4,27 @@
     .main-infoHolder {
         float: left;
 
+        @include media('<desktop'){
+            float: none;
+            overflow: hidden;
+        }
+
         .img-holder {
             float: left;
             border: 1px solid $black;
             @include squar(180px, 200px);
             white-space: nowrap;
+
+            @include media('<widescreen'){
+                @include squar(150px, 170px);
+            }
+
+            @include media('<tablet'){
+                margin: 0 auto 10px;
+                float: none;
+                overflow: hidden;
+                @include squar(130px, 150px);
+            }
 
             &:after {
                 content: '';
@@ -16,6 +32,13 @@
                 margin: 0 0 0 -5px;
                 @include align(middle);
                 height: 200px;
+
+                @include media('<widescreen'){
+                    height: 170px;
+                }
+                @include media('<tablet'){
+                    height: 150px;
+                }
             }
             img {
                 white-space: normal;
@@ -28,6 +51,14 @@
             padding: 0 0 0 20px;
             max-width: 550px;
             @include font(14,20);
+            
+            @include media('<tvscreen'){
+                max-width: 340px;
+            }
+            
+            @include media('<widescreen'){
+                padding: 0 0 0 10px;
+            }
 
             .name {
                 display: block;
@@ -41,12 +72,34 @@
         }
     }
     .contact-links {
+        @extend %listreset;
         float: right;
         @include align-reset(top,16,20);
         margin: 0 -5px;
 
+        @include media('<tvscreen'){
+            @include align-reset(top,13,18);
+        }
+        
+        @include media('<widescreen'){
+            margin: 0;
+        }
+        
+        @include media('<desktop'){
+            float: none;
+            overflow: hidden;
+            text-align: center;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
         li {
             padding: 0 5px;
+
+            @include media('<widescreen'){
+                display: block;
+                padding: 5px;
+            }
 
             a {
                 text-decoration: none;
@@ -54,9 +107,12 @@
                 color: $defualt-blue;
                 border: 1px solid $defualt-blue;
                 padding: 10px 25px;
+                position: relative;
                 transition: background 0.4s ease;
                 -webkit-transition: background 0.4s ease;
                 -moz-transition: background 0.4s ease;
+
+                @include media('<widescreen'){ display: block;}
 
                 .show-xs {
                     @include media('>=tablet'){
@@ -72,6 +128,14 @@
                 [class^="icon-"], [class*=" icon-"] {
                     @include align(top);
                     padding: 0 5px;
+
+                    @include media('<desktop'){
+                        position: absolute;
+                        top: 50%;
+                        left: 8px;
+                        padding: 0;
+                        margin: -8px 0 0;
+                    }
                 }
             }
         }
@@ -89,6 +153,12 @@
             padding: 0 10px;
             margin: 0 0 10px;
 
+            @include media('<widescreen'){ width: 50%;}
+
+            @include media('<desktop'){
+                width: 100%;
+            }
+
             header {
                 overflow: hidden;
                 color: $white;
@@ -96,6 +166,184 @@
                 @include font(18,22);
                 padding: 5px;
                 border-radius: 2px;
+                position: relative;
+
+                &:after{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    border: 25px solid transparent;
+                    border-top: 25px solid $red;
+                    content: '';
+                    border-right: 0;
+                }
+            }
+            .caption {
+                padding: 15px 0 0;
+                overflow: hidden;
+                @include font(13,20);
+
+                .profile-pic {
+                    @include squar(150px,150px);
+                    margin: 0 auto 10px;
+                    overflow: hidden;
+                    background: $index-white;
+                    padding: 5px;
+                    border: 1px solid darken($index-white, 10%);
+
+                    img {
+                        @include img-res;
+                        max-height: 138px;
+                        min-height: 138px;
+                    }
+                }
+                
+                address, span, strong {
+                    display: block;
+                }
+                .name {
+                    @include font(16,20);
+                    color: $defualt-blue;
+                    padding: 0 0 5px;
+                }
+                a[href^="tel"],a[href*="tel"]{
+                    @include align(top);
+                }
+                .agency-name,
+                .post {
+                    font-weight: 600;
+                    @include font(15,18);
+                    padding: 0 0 5px;
+                }
+                .contact-num {
+                    padding: 0 0 5px;
+                    
+                    a {
+                        text-decoration: none;
+                        &:hover { color: $defualt-blue;}
+                    }
+
+                    span[class^="icon-"], span[class*="icon-"] {
+                        @include align(middle);
+                        padding: 0 10px 0 0;
+                    }
+                }
+                address {
+                    font-weight: 600;
+                }
+                p { margin: 0;}
+            }
+            .enquiry-form {
+                overflow: hidden;
+
+                ul {
+                    @extend %listreset;
+
+                    li {
+                        display: block;
+                        @include align-reset(top,14,20);
+                        padding: 0 0 10px;
+
+                        @include media('<tvscreen'){
+                            @include align-reset(top,13,18);
+                        }
+
+                        label {
+                             width: 120px;
+                             position: relative;
+                             padding: 10px 3px 3px;
+
+                              @include media('<tvscreen'){
+                                  width: 70px;
+                              }
+
+                             &:after{
+                                 @include align(top);
+                                 content: '\2217';
+                                 color: $red;
+                                 padding: 0 2px;
+                             }
+                        }
+                        .input-holder {
+                            overflow: hidden;
+                            width: calc(100% - 120px);
+                            padding: 3px;
+                            position: relative;
+
+                            @include media('<tvscreen'){
+                                width: calc(100% - 70px);
+                            }
+
+                            &.add {
+                                padding: 3px 140px 3px 3px;
+
+                                @include media('<tvscreen'){
+                                    padding: 3px 105px 3px 3px;
+                                }
+                            }
+                            .captcha {
+                                @include squar(130px, 40px);
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                display: block;
+                                border: 1px solid $black;;
+
+                                @include media('<tvscreen'){
+                                    @include squar(100px, 35px);
+                                    top: 3px;
+                                }
+                            }
+                        }
+                    }
+                }
+                textarea,
+                input[type="text"],input[type="email"],input[type="tel"] {
+                    @include squar(100%, 35px);
+                    display: block;
+                    padding: 7px;
+                    @include font(14,18);
+
+                    &:focus{
+                        border-color: $defualt-blue;
+
+                        @include placeholder{ color: $defualt-blue;}
+                    }
+                    @include placeholder{
+                        opacity: 1;
+                        
+                        @include media('<tvscreen'){
+                            @include font(12,18);
+                        }
+                    }
+                }
+                textarea {
+                    resize: none;
+                    height: 100px;
+                    overflow: auto;
+                }
+                button[type="submit"]{
+                    display: block;
+                    width: 100%;
+                    border: 0;
+                    padding: 10px 35px 10px 36px;
+                    border-radius: 2px;
+                    @include font(18,22);
+                    position: relative;
+                    color: $white;
+                    background: $green;
+
+                    span[class^="icon-"],span[class*="icon-"]{
+                        position: absolute;
+                        top: 50%;
+                        left: 10px;
+                        margin: -10px 0 0;
+                    }
+
+                    &:hover {
+                        background: $mix-blue;
+                    }
+                }
             }
         }
     }
