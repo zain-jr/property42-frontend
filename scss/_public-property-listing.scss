@@ -217,6 +217,26 @@
 							padding: 5px;
 						}
 					}
+					.subTitle {
+						display: block;
+						width: 100%;
+						clear: both;
+						@include font(14,18);
+						padding: 10px 0 0;
+						color: $mix-blue;
+						max-width: 500px;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+						overflow: hidden;
+						font-weight: 600;
+
+						@include media('<widescreen'){
+							max-width: 320px;
+						}
+						@include media('<desktop'){
+							max-width: 200px;
+						}
+					}
 				}
 				address {
 					position: relative;

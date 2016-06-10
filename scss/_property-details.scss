@@ -6,17 +6,25 @@
 	}
 	
 	.propertyImage-slider {
-		max-width: 760px;
+		min-width: 880px;
+		max-width: 880px;
 		float: left;
 		position: relative;
 		margin: 0 0 10px;
 		
+		@include media('<1855px') {
+			min-width: 680px;
+			max-width: 680px;
+		}
+
 		@include media('<tvscreen') {
 			max-width: 500px;
+			min-width: 500px;
 		}
 		
 		@include media('<widescreen') {
 			max-width: 400px;
+			min-width: inherit;
 		}
 		
 		@include media('<desktop') {
@@ -57,10 +65,40 @@
 				
 				img{
 					@include img-res;
+					max-height: 590px;
+					min-height: 590px;
+
+					@include media('<1855px') {	
+						max-height: 490px;
+						min-height: 490px;
+					}
+					@include media('<tvscreen') {
+						max-height: 400px;
+						min-height: 400px;
+					}
+					@include media('<tvscreen') {
+						max-height: 327px;
+						min-height: 327px;
+					}
+					@include media('<widescreen') {
+						max-height: 350px;
+						min-height: 350px;
+					}
+					@include media('<tablet') {
+						max-height: 270px;
+						min-height: 270px;
+					}
 				}
 			}
 		}
-		
+		.propertyImage-slide {
+			a{
+				img {
+					max-height: inherit;
+					min-height: inherit;
+				}
+			}
+		}
 		.paginationCurrent-num-1, #propertyImageCurrentSlide { display: none;}
 		
 		.propertyImage-pagination {
@@ -68,9 +106,13 @@
 			overflow: hidden;
 			
 			.propertyImage-mask {
-				max-width: 650px;
+				max-width: 800px;
 				margin: 0 auto;
 				
+				@include media('<1855px') {
+					max-width: 600px;
+				}	
+
 				@include media('<tvscreen'){
 					max-width: 450px;
 				}
@@ -162,9 +204,23 @@
 	.propertyOwnerInfo {
 		overflow: hidden;
 		border-radius: 4px;
+		max-width: 405px;
+		min-width: 405px;
+		float: right;
 		
+		@include media('<tvscreen') {
+			max-width: 325px;
+			min-width: 325px;
+		}
+		
+		@include media('<widescreen') {
+			min-width: inherit;
+		}
+
 		@include media('<desktop') {
 			margin: 0 0 20px;
+			max-width: inherit;
+			float: none;
 		}
 		
 		header {
@@ -174,7 +230,7 @@
 			position: relative;
 			padding: 10px;
 			
-			@include media('<widescreen'){
+			@include media('<tvscreen'){
 				@include font(14,18);
 			}
 			
@@ -197,6 +253,10 @@
 			
 			.holder{
 				overflow: hidden;
+
+				@include media('<widescreen') {
+					padding: 0 10px 0 0;
+				}
 			}
 			
 			.agency-name,

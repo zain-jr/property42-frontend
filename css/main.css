@@ -1665,6 +1665,33 @@ input[type='submit'] {
   }
 }
 
+.public-propertyListing .property-posts .post .caption .post-heading .subTitle {
+  display: block;
+  width: 100%;
+  clear: both;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 10px 0 0;
+  color: #489ddd;
+  max-width: 500px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: 600;
+}
+
+@media (max-width: 1199px) {
+  .public-propertyListing .property-posts .post .caption .post-heading .subTitle {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .public-propertyListing .property-posts .post .caption .post-heading .subTitle {
+    max-width: 200px;
+  }
+}
+
 .public-propertyListing .property-posts .post .caption address {
   position: relative;
   font-style: normal;
@@ -1863,21 +1890,31 @@ input[type='submit'] {
 }
 
 .propertyDetails-page .propertyImage-slider {
-  max-width: 760px;
+  min-width: 880px;
+  max-width: 880px;
   float: left;
   position: relative;
   margin: 0 0 10px;
 }
 
+@media (max-width: 1854px) {
+  .propertyDetails-page .propertyImage-slider {
+    min-width: 680px;
+    max-width: 680px;
+  }
+}
+
 @media (max-width: 1599px) {
   .propertyDetails-page .propertyImage-slider {
     max-width: 500px;
+    min-width: 500px;
   }
 }
 
 @media (max-width: 1199px) {
   .propertyDetails-page .propertyImage-slider {
     max-width: 400px;
+    min-width: inherit;
   }
 }
 
@@ -1929,6 +1966,53 @@ input[type='submit'] {
   width: 100%;
   height: auto;
   display: block;
+  max-height: 590px;
+  min-height: 590px;
+}
+
+@media (max-width: 1854px) {
+  .propertyDetails-page .propertyImage-slider .propertyImage-slide a img,
+  .propertyDetails-page .propertyImage-slider .slide a img {
+    max-height: 490px;
+    min-height: 490px;
+  }
+}
+
+@media (max-width: 1599px) {
+  .propertyDetails-page .propertyImage-slider .propertyImage-slide a img,
+  .propertyDetails-page .propertyImage-slider .slide a img {
+    max-height: 400px;
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 1599px) {
+  .propertyDetails-page .propertyImage-slider .propertyImage-slide a img,
+  .propertyDetails-page .propertyImage-slider .slide a img {
+    max-height: 327px;
+    min-height: 327px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .propertyDetails-page .propertyImage-slider .propertyImage-slide a img,
+  .propertyDetails-page .propertyImage-slider .slide a img {
+    max-height: 350px;
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 767px) {
+  .propertyDetails-page .propertyImage-slider .propertyImage-slide a img,
+  .propertyDetails-page .propertyImage-slider .slide a img {
+    max-height: 270px;
+    min-height: 270px;
+  }
+}
+
+.propertyDetails-page .propertyImage-slider .propertyImage-slide a img {
+  max-height: inherit;
+  min-height: inherit;
 }
 
 .propertyDetails-page .propertyImage-slider .paginationCurrent-num-1, .propertyDetails-page .propertyImage-slider #propertyImageCurrentSlide {
@@ -1941,8 +2025,14 @@ input[type='submit'] {
 }
 
 .propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-mask {
-  max-width: 650px;
+  max-width: 800px;
   margin: 0 auto;
+}
+
+@media (max-width: 1854px) {
+  .propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-mask {
+    max-width: 600px;
+  }
 }
 
 @media (max-width: 1599px) {
@@ -2054,11 +2144,29 @@ input[type='submit'] {
 .propertyDetails-page .propertyOwnerInfo {
   overflow: hidden;
   border-radius: 4px;
+  max-width: 405px;
+  min-width: 405px;
+  float: right;
+}
+
+@media (max-width: 1599px) {
+  .propertyDetails-page .propertyOwnerInfo {
+    max-width: 325px;
+    min-width: 325px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .propertyDetails-page .propertyOwnerInfo {
+    min-width: inherit;
+  }
 }
 
 @media (max-width: 1023px) {
   .propertyDetails-page .propertyOwnerInfo {
     margin: 0 0 20px;
+    max-width: inherit;
+    float: none;
   }
 }
 
@@ -2071,7 +2179,7 @@ input[type='submit'] {
   padding: 10px;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1599px) {
   .propertyDetails-page .propertyOwnerInfo header {
     font-size: 14px;
     line-height: 18px;
@@ -2098,6 +2206,12 @@ input[type='submit'] {
 
 .propertyDetails-page .propertyOwnerInfo .description .holder {
   overflow: hidden;
+}
+
+@media (max-width: 1199px) {
+  .propertyDetails-page .propertyOwnerInfo .description .holder {
+    padding: 0 10px 0 0;
+  }
 }
 
 .propertyDetails-page .propertyOwnerInfo .description .agency-name,
