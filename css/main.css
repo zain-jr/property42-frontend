@@ -1608,14 +1608,11 @@ input[type='submit'] {
   vertical-align: top;
   color: #133783;
   text-decoration: none;
-  max-width: 500px;
-  white-space: nowrap;
-  overflow: hidden;
+  max-width: 700px;
   float: left;
-  text-overflow: ellipsis;
 }
 
-@media (max-width: 1299px) {
+@media (max-width: 1599px) {
   .public-propertyListing .property-posts .post .caption .post-heading a {
     max-width: 400px;
   }
@@ -1810,7 +1807,8 @@ input[type='submit'] {
   }
 }
 
-.public-propertyListing .property-posts .post .caption .quick-links li a {
+.public-propertyListing .property-posts .post .caption .quick-links li > a {
+  cursor: pointer;
   display: block;
   text-decoration: none;
   color: #2e2e2e;
@@ -1825,24 +1823,24 @@ input[type='submit'] {
 }
 
 @media (max-width: 1199px) {
-  .public-propertyListing .property-posts .post .caption .quick-links li a {
+  .public-propertyListing .property-posts .post .caption .quick-links li > a {
     padding: 10px 10px 10px 25px;
   }
 }
 
 @media (min-width: 768px) {
-  .public-propertyListing .property-posts .post .caption .quick-links li a .show-xs {
+  .public-propertyListing .property-posts .post .caption .quick-links li > a .show-xs {
     display: none;
   }
 }
 
-.public-propertyListing .property-posts .post .caption .quick-links li a:hover {
+.public-propertyListing .property-posts .post .caption .quick-links li > a:hover {
   color: #fff;
   border-color: #fff;
   background: #58a36f;
 }
 
-.public-propertyListing .property-posts .post .caption .quick-links li [class^="icon-"], .public-propertyListing .property-posts .post .caption .quick-links li [class*=" icon-"] {
+.public-propertyListing .property-posts .post .caption .quick-links li > a [class^="icon-"], .public-propertyListing .property-posts .post .caption .quick-links li > a [class*=" icon-"] {
   position: absolute;
   top: 50%;
   left: 7px;
@@ -2054,6 +2052,10 @@ input[type='submit'] {
   .propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-mask {
     max-width: 250px;
   }
+}
+
+.propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-slideset.no-indent {
+  margin: 0 !important;
 }
 
 .propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-slide {
@@ -2425,6 +2427,12 @@ input[type='submit'] {
 .propertyDetails-page .overviewText-holder .overviewText {
   overflow: hidden;
   padding: 0 150px 0 0;
+}
+
+@media (max-width: 1023px) {
+  .propertyDetails-page .overviewText-holder .overviewText {
+    padding: 0 110px 0 0;
+  }
 }
 
 .propertyDetails-page .overviewText-holder .btn-showMore {

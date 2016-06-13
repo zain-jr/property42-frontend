@@ -171,13 +171,12 @@
 						@include align(top);
 						color: $defualt-blue;
 						text-decoration: none;
-						max-width: 500px;
-						white-space: nowrap;
-						overflow: hidden;
+						max-width: 700px;
 						float: left;
-						text-overflow: ellipsis;
 						
-						@include media('<1300px'){
+
+
+						@include media('<tvscreen'){
 							max-width: 400px;
 						}
 						
@@ -299,7 +298,8 @@
 							padding: 0 3px;
 						}
 						
-						a{
+						> a{
+							cursor: pointer;
 							display: block;
 							text-decoration: none;
 							color: $mix-black;
@@ -330,12 +330,12 @@
 								border-color: $white;
 								background: $green;
 							}
-						}
-						[class^="icon-"], [class*=" icon-"] {
-							position: absolute;
-							top: 50%;
-							left: 7px;
-							margin: -7px 0 0;
+							[class^="icon-"], [class*=" icon-"] {
+								position: absolute;
+								top: 50%;
+								left: 7px;
+								margin: -7px 0 0;
+							}
 						}
 					}
 				}

@@ -130,6 +130,10 @@
 				}
 			}
 			
+			.propertyImage-slideset{
+				&.no-indent{ margin: 0 !important;}
+			}
+
 			.propertyImage-slide {
 				width: 16.65% !important;
 				padding: 10px 4px;
@@ -417,6 +421,10 @@
 		.overviewText {
 			overflow: hidden;
 			padding: 0 150px 0 0;
+
+			@include media('<desktop'){
+				padding: 0 110px 0 0;
+			}
 		}
 		
 		.btn-showMore {
