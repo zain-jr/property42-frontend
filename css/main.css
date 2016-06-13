@@ -644,7 +644,7 @@ th {
 }
 
 .public-propertyListing .holder .sortBy, .public-propertyListing .property-posts .post .caption .quick-links,
-.public-propertyListing .property-posts .post .caption .property-details, .propertyDetails-page .propertyOwnerInfo .description .contact-links, .propertyDetails-page .property-qucikLinks, .agentListing-page .property-posts .post-holder .caption .quick-links,
+.public-propertyListing .property-posts .post .caption .property-details, .propertyDetails-page .propertyOwnerInfo .description .contact-links, .propertyDetails-page .property-qucikLinks, .propertyDetails-page .feature-list, .agentListing-page .property-posts .post-holder .caption .quick-links,
 .agentListing-page .property-posts .post-holder .caption .property-details, .agentProfile-page .contact-links, .agentProfile-page .cols-holder .col .enquiry-form ul, #nav .main-navigation, #nav .main-navigation li .dropDown, .main-visual .property-search-holder .tabset, .main-visual .property-search-holder .tab-content form ul, #content .left-content .company-logo, #content .right-content .posters, .pager, #footer .cols-holder .col ul {
   margin: 0;
   padding: 0;
@@ -2322,7 +2322,8 @@ input[type='submit'] {
   margin: 0 0 10px;
 }
 
-.propertyDetails-page .propertyOwnerInfo .description .contact-links li a {
+.propertyDetails-page .propertyOwnerInfo .description .contact-links li > a {
+  cursor: pointer;
   color: #fff;
   border-radius: 3px;
   background: #ef9521;
@@ -2337,7 +2338,7 @@ input[type='submit'] {
   -ms-transition: background 0.4s ease,  border 0.4s ease;
 }
 
-.propertyDetails-page .propertyOwnerInfo .description .contact-links li a span[class^="icon-"], .propertyDetails-page .propertyOwnerInfo .description .contact-links li a span[class*="icon-"] {
+.propertyDetails-page .propertyOwnerInfo .description .contact-links li > a span[class^="icon-"], .propertyDetails-page .propertyOwnerInfo .description .contact-links li > a span[class*="icon-"] {
   position: absolute;
   top: 50%;
   left: 10px;
@@ -2345,12 +2346,12 @@ input[type='submit'] {
 }
 
 @media (max-width: 1199px) {
-  .propertyDetails-page .propertyOwnerInfo .description .contact-links li a span[class^="icon-"], .propertyDetails-page .propertyOwnerInfo .description .contact-links li a span[class*="icon-"] {
+  .propertyDetails-page .propertyOwnerInfo .description .contact-links li > a span[class^="icon-"], .propertyDetails-page .propertyOwnerInfo .description .contact-links li > a span[class*="icon-"] {
     margin: -6px -5px 0;
   }
 }
 
-.propertyDetails-page .propertyOwnerInfo .description .contact-links li a:hover {
+.propertyDetails-page .propertyOwnerInfo .description .contact-links li > a:hover {
   background: #58a36f;
   border-color: #58a36f;
 }
@@ -2363,11 +2364,19 @@ input[type='submit'] {
   margin: 0;
   display: block;
   overflow: hidden;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
   padding: 10px 0 0;
   width: 100%;
-  overflow: hidden;
+}
+
+.propertyDetails-page .propertyOwnerInfo .description dl > * {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
 }
 
 @media (max-width: 1599px) {
@@ -2378,13 +2387,12 @@ input[type='submit'] {
 }
 
 .propertyDetails-page .propertyOwnerInfo .description dl dt {
-  float: left;
   width: 50%;
   font-weight: 600;
+  padding: 0 0 8px;
 }
 
 .propertyDetails-page .propertyOwnerInfo .description dl dd {
-  overflow: hidden;
   margin: 0;
   width: 50%;
   padding: 0 0 8px;
@@ -2469,11 +2477,25 @@ input[type='submit'] {
   padding: 5px;
 }
 
+@media (max-width: 767px) {
+  .propertyDetails-page .property-qucikLinks li {
+    width: 100%;
+    display: block;
+  }
+}
+
 .propertyDetails-page .property-qucikLinks li a {
   text-decoration: none;
   color: #ef9521;
   display: block;
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .propertyDetails-page .property-qucikLinks li a {
+    display: inline-block;
+    vertical-align: top;
+  }
 }
 
 .propertyDetails-page .property-qucikLinks li a span {
@@ -2488,8 +2510,126 @@ input[type='submit'] {
   display: block;
   font-size: 17px;
   line-height: 19px;
-  margin: 0;
+  margin: 0 0 10px;
   padding: 0 20px;
+}
+
+@media (max-width: 1599px) {
+  .propertyDetails-page h2 {
+    padding: 0;
+  }
+}
+
+.propertyDetails-page .feature-list {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  padding: 0 10px;
+}
+
+.propertyDetails-page .feature-list > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+@media (max-width: 1599px) {
+  .propertyDetails-page .feature-list {
+    padding: 0;
+  }
+}
+
+.propertyDetails-page .feature-list li {
+  width: 25%;
+  border-radius: 4px;
+  padding: 0 10px;
+  margin: 0 0 10px;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.propertyDetails-page .feature-list li > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+@media (max-width: 1199px) {
+  .propertyDetails-page .feature-list li {
+    width: 33.33%;
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: -4px;
+  }
+  .propertyDetails-page .feature-list li > * {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0;
+  }
+}
+
+@media (max-width: 1023px) {
+  .propertyDetails-page .feature-list li {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .propertyDetails-page .feature-list li {
+    width: 100%;
+  }
+}
+
+.propertyDetails-page .feature-list li:after {
+  position: absolute;
+  right: 10px;
+  left: 10px;
+  bottom: -99999px;
+  top: -9999px;
+  z-index: -1;
+  pointer-events: none;
+  background: #dde2e8;
+  content: '';
+}
+
+.propertyDetails-page .feature-list li span {
+  background: #dde2e8;
+  width: 75%;
+  padding: 10px;
+}
+
+@media (max-width: 1599px) {
+  .propertyDetails-page .feature-list li span {
+    padding: 5px;
+  }
+}
+
+.propertyDetails-page .feature-list li span.last-child {
+  width: 25%;
+  text-align: center;
+  color: #58a36f;
+  font-weight: 600;
+  position: relative;
+}
+
+.propertyDetails-page .feature-list li span.last-child:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -99999px;
+  background: #bfc8d3;
+  width: 1px;
+  content: '';
 }
 
 .agentListing-page {
@@ -5296,6 +5436,142 @@ h1 {
   margin: -2px 0 0;
 }
 
+.email-popup {
+  overflow: hidden;
+  background: #fff;
+}
+
+.email-popup .form-heading {
+  display: block;
+  width: 100%;
+  margin: 0 0 10px;
+  background: #133783;
+  color: #fff;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 300;
+  padding: 5px 10px;
+}
+
+.email-popup .input-field {
+  overflow: hidden;
+  padding: 10px 20px;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+}
+
+.email-popup .input-field > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0;
+}
+
+@media (max-width: 767px) {
+  .email-popup .input-field {
+    padding: 10px;
+  }
+}
+
+.email-popup label {
+  width: 20%;
+}
+
+@media (max-width: 767px) {
+  .email-popup label {
+    width: 25%;
+  }
+}
+
+.email-popup .input-holder {
+  width: 80%;
+}
+
+@media (max-width: 767px) {
+  .email-popup .input-holder {
+    width: 75%;
+  }
+}
+
+.email-popup textarea,
+.email-popup input[type="text"] {
+  width: 100%;
+  height: 40px;
+  padding: 9px 10px;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0;
+  display: block;
+}
+
+.email-popup textarea {
+  height: 150px;
+  resize: none;
+  overflow: auto;
+}
+
+.email-popup input[type="submit"] {
+  width: 100%;
+  display: block;
+  padding: 5px 10px;
+  background: #489ddd;
+  color: #fff;
+  border: 0;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.email-popup input[type="submit"]:hover {
+  background: #2685cc;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -170px 0 0 -250px;
+  z-index: 9999;
+  width: 500px;
+  text-align: left;
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .popup {
+    width: 300px;
+    margin: -140px 0 0 -150px;
+  }
+}
+
+.popup-holder.active .popup {
+  display: block;
+}
+
+.popup .popup-close {
+  cursor: pointer;
+  color: #fff !important;
+  position: absolute;
+  top: -30px;
+  right: -15px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.popup .popup-close:after {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  content: '';
+  z-index: -1;
+}
+
 @media print {
   * {
     background: none !important;
@@ -5365,6 +5641,7 @@ h1 {
     overflow: visible !important;
     clear: both !important;
   }
+  .popup,
   [class*="icon-"], [class^="icon-"] {
     display: none !important;
   }

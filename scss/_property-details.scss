@@ -333,7 +333,8 @@
 					padding: 0 5px;
 					margin: 0 0 10px;
 					
-					a{
+					> a{
+						cursor: pointer;
 						color: $white;
 						border-radius: 3px;
 						background: $orange;
@@ -372,22 +373,20 @@
 				margin: 0;
 				display: block;
 				overflow: hidden;
-				@include font(16,20);
+				@include align-reset(middle,16,20);
 				padding: 10px 0 0;
 				width: 100%;
-				overflow: hidden;
 
 				@include media('<tvscreen') {
 					@include font(14,18);
 				}
 				
 				dt {
-					float: left;
 					width: 50%;
 					font-weight: 600;
+					padding: 0 0 8px;
 				}
 				dd{
-					overflow: hidden;
 					margin: 0;
 					width: 50%;
 					padding: 0 0 8px;
@@ -457,12 +456,21 @@
 		li {
 			padding: 5px;
 			
+			@include media('<tablet'){
+				width: 100%;
+				display: block;
+			}
+
 			a{
 				text-decoration: none;
 				color: $orange;
 				display: block;
 				cursor: pointer;
 				
+				@include media('<tablet'){
+					@include align(top);
+				}
+
 				span {
 					padding: 0 5px 0 0;
 				}
@@ -476,7 +484,84 @@
 	h2 {
 		display: block;
 		@include font(17,19);
-		margin: 0;
+		margin: 0 0 10px;
 		padding: 0 20px;
+
+		@include media('<tvscreen'){
+			padding: 0;
+		}
+	}
+	.feature-list {
+		@extend %listreset;
+		@include align-reset(top, 15, 18);
+		padding: 0 10px;
+
+		@include media('<tvscreen'){
+			padding: 0;
+		}
+
+		li {
+			width: 25%;
+			border-radius: 4px;
+			padding: 0 10px;
+			margin: 0 0 10px;
+			@include align-reset(top, 14, 18);
+			overflow: hidden;
+			position: relative;
+			z-index: 1;
+
+			@include media('<widescreen'){
+				width: 33.33%;
+				@include align-reset(top, 12, 16);
+			}
+
+			@include media('<desktop'){
+				width: 50%;
+			}
+
+			@include media('<tablet'){
+				width: 100%;
+			}
+
+			&:after {
+				position: absolute;
+				right: 10px;
+				left: 10px;
+				bottom: -99999px;
+				top: -9999px;
+				z-index: -1;
+				pointer-events: none;
+				background: $light-gray;
+				content: '';
+			}
+
+			span {
+				background: $light-gray;
+				width: 75%;
+				padding: 10px;
+
+				@include media('<tvscreen'){
+					padding: 5px;
+				}
+
+				&.last-child{
+					width: 25%;
+					text-align: center;
+					color: $green;
+					font-weight: 600;
+					position: relative;
+
+					&:before{
+						position: absolute;
+						top: 0;
+						left: 0;
+						bottom: -99999px;
+						background: darken($light-gray, 10%);
+						width: 1px;
+						content: '';
+					}
+				}
+			}
+		}
 	}
 }

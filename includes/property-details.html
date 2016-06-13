@@ -65,7 +65,24 @@
                     </div>
                 </div>
                 <ul class="contact-links">
-                    <li><a href="mailto:&#119;&#97;&#113;&#97;&#115;&#64;&#119;&#97;&#113;&#97;&#115;&#46;&#99;&#111;&#109;"><span class="icon-envelope"></span>Send Email</a></li>
+                    <li class="popup-holder">
+                        <a class="popup-opener"><span class="icon-envelope"></span>Send Email</a>
+                        <div class="popup">
+                            <form class="email-popup">
+                                <strong class="form-heading">Send Email</strong>
+                                <div class="input-field">
+                                    <label for="from">From:</label>
+                                    <div class="input-holder"><input type="text" id="from"></div>
+                                </div>
+                                <div class="input-field">
+                                    <label for="msg">Message:</label>
+                                    <div class="input-holder"><textarea id="msg"></textarea></div>
+                                </div>
+                                <div class="input-field"><input type="submit" value="Send"></div>
+                            </form>
+                            <a class="popup-close"><span class="icon-cross"></span></a>
+                        </div>
+                    </li>
                     <li><a href="tel:03374887421"><span class="icon-phone_iphone"></span>03374887421</a></li>
                 </ul>
                 <strong class="summary">Summary:</strong>
@@ -98,10 +115,66 @@
     </div>
     <ul class="property-qucikLinks">
         <li><a onclick="window.print()"><span class="icon-printer"></span>Print this Ad</a></li>
-        <li><a href="#"><span class="icon-envelope"></span> Email to friend</a></li>
+        <li class="popup-holder">
+            <a class="popup-opener"><span class="icon-envelope"></span>Email to friend</a>
+            <div class="popup">
+                <form class="email-popup">
+                    <strong class="form-heading">Send Email</strong>
+                    <div class="input-field">
+                        <label for="from1">From:</label>
+                        <div class="input-holder"><input type="text" id="from1"></div>
+                    </div>
+                    <div class="input-field">
+                        <label for="msg1">Message:</label>
+                        <div class="input-holder"><textarea id="msg1"></textarea></div>
+                    </div>
+                    <div class="input-field"><input type="submit" value="Send"></div>
+                </form>
+                <a class="popup-close"><span class="icon-cross"></span></a>
+            </div>
+        </li>
         <li><a href="#"><span class="icon-favourites-filled-star-symbol"></span> Add to favorites</a></li>
     </ul>
     <div class="extraFeature-block">
         <h1>Property Features</h1>
+        <h2>Main features</h2>
+        <ul class="feature-list">
+            <li>
+                <span>Built In Year</span>
+                <span class="last-child">2015</span>
+            </li>
+            <li>
+                <span>Central Air Conditioning</span>
+                <span class="last-child">yes</span>
+            </li>
+            <li>
+                <span>Central Heating</span>
+                <span class="last-child">yes</span>
+            </li>
+            <li>
+                <span>Double Glazed Windows</span>
+                <span class="last-child">yes</span>
+            </li>
+            <li>
+                <span>Electricity Backup</span>
+                <span class="last-child">yes</span>
+            </li>
+            <li>
+                <span>Flooring</span>
+                <span class="last-child">yes</span>
+            </li>
+            <li>
+                <span>Parking Spaces</span>
+                <span class="last-child">yes</span>
+            </li>
+            <li>
+                <span>Total Number Of Floors</span>
+                <span class="last-child">yes</span>
+            </li>
+            <li>
+                <span>Waste Disposal</span>
+                <span class="last-child">yes</span>
+            </li>
+        </ul>
     </div>
 </div>

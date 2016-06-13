@@ -61,6 +61,14 @@ $(document).on('click', '.btn-showMore', function(){
 	
 });
 
+$(document).on('click', '.popup-opener', function(){
+	$(this).closest('.popup-holder').addClass('active');
+});
+
+
+$(document).on('click', '.popup-close', function(){
+	$(this).closest('.popup-holder').removeClass('active');
+});
 
 // content tabs init
 function initTabs() {
