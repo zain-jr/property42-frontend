@@ -238,12 +238,8 @@
 						}
 					}
 				}
-				address {
-					position: relative;
-					font-style: normal;
-					margin: 0;
-					padding: 0 0 15px;
-					display: block;
+				p {
+					margin: 0 0 15px;
 					@include font(14,17);
 					
 					@include media('<widescreen'){

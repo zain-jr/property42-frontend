@@ -6,15 +6,15 @@
 	}
 	
 	.propertyImage-slider {
-		min-width: 880px;
-		max-width: 880px;
+		min-width: 850px;
+		max-width: 850px;
 		float: left;
 		position: relative;
 		margin: 0 0 10px;
 		
 		@include media('<1855px') {
-			min-width: 680px;
-			max-width: 680px;
+			min-width: 660px;
+			max-width: 660px;
 		}
 
 		@include media('<tvscreen') {
@@ -65,8 +65,8 @@
 				
 				img{
 					@include img-res;
-					max-height: 590px;
-					min-height: 590px;
+					max-height: 500px;
+					min-height: 500px;
 
 					@include media('<1855px') {	
 						max-height: 490px;
@@ -81,8 +81,8 @@
 						min-height: 327px;
 					}
 					@include media('<widescreen') {
-						max-height: 350px;
-						min-height: 350px;
+						max-height: 340px;
+						min-height: 340px;
 					}
 					@include media('<tablet') {
 						max-height: 270px;
@@ -204,8 +204,8 @@
 	.propertyOwnerInfo {
 		overflow: hidden;
 		border-radius: 4px;
-		max-width: 405px;
-		min-width: 405px;
+		max-width: 440px;
+		min-width: 440px;
 		float: right;
 		
 		@include media('<tvscreen') {
@@ -249,14 +249,15 @@
 		
 		.description {
 			background: $index-white;
-			padding: 10px;
+			padding: 30px 10px 15px;
 			
+			@include media('<tvscreen') {
+				padding: 10px;
+			}
+
 			.holder{
 				overflow: hidden;
-
-				@include media('<widescreen') {
-					padding: 0 10px 0 0;
-				}
+				padding: 0 10px 0 0;
 			}
 			
 			.agency-name,
@@ -264,8 +265,12 @@
 			.name {
 				position: relative;
 				display: block;
-				@include font(14,18);
-				padding: 0 0 5px;
+				@include font(18,22);
+				padding: 0 0 15px;
+
+				@include media('<tvscreen') {
+					@include font(14,18);
+				}
 			}
 			
 			.name {
@@ -311,13 +316,17 @@
 				@extend %listreset;
 				@include align-reset(top,16,20);
 				text-align: center;
-				padding: 10px 0 0;
+				padding: 20px 0;
 				margin: 0 -5px;
 				
+				@include media('<tvscreen'){
+					padding: 10px 0;
+				}
+
 				@include media('<widescreen'){
 					@include align-reset(top,14,18);
+					padding: 10px 0 0;
 				}
-				
 				
 				li {
 					width: 50%;
@@ -363,26 +372,28 @@
 				margin: 0;
 				display: block;
 				overflow: hidden;
-				@include font(13,16);
+				@include font(16,20);
 				padding: 10px 0 0;
+				width: 100%;
+				overflow: hidden;
+
+				@include media('<tvscreen') {
+					@include font(14,18);
+				}
 				
 				dt {
 					float: left;
-					width: 25%;
+					width: 50%;
 					font-weight: 600;
-					
-					@include media('<widescreen'){
-						width: 35%;
-					}
 				}
 				dd{
 					overflow: hidden;
 					margin: 0;
-					width: 75%;
-					padding: 0 0 3px;
-					
-					@include media('<widescreen'){
-						width: 65%;
+					width: 50%;
+					padding: 0 0 8px;
+
+					@include media('<tvscreen') {
+						padding: 0 0 7px;
 					}
 				}
 			}
@@ -441,7 +452,7 @@
 	.property-qucikLinks {
 		@extend %listreset;
 		@include align-reset(top, 15,18);
-		margin: 0 -5px;
+		margin: 0 -5px 20px;
 		
 		li {
 			padding: 5px;

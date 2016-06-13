@@ -644,14 +644,14 @@ th {
 }
 
 .public-propertyListing .holder .sortBy, .public-propertyListing .property-posts .post .caption .quick-links,
-.public-propertyListing .property-posts .post .caption .property-details, .propertyDetails-page .propertyOwnerInfo .description .contact-links, .propertyDetails-page .property-qucikLinks, .agentListing-page .property-posts .post .caption .quick-links,
-.agentListing-page .property-posts .post .caption .property-details, .agentProfile-page .contact-links, .agentProfile-page .cols-holder .col .enquiry-form ul, #nav .main-navigation, #nav .main-navigation li .dropDown, .main-visual .property-search-holder .tabset, .main-visual .property-search-holder .tab-content form ul, #content .left-content .company-logo, #content .right-content .posters, .pager, #footer .cols-holder .col ul {
+.public-propertyListing .property-posts .post .caption .property-details, .propertyDetails-page .propertyOwnerInfo .description .contact-links, .propertyDetails-page .property-qucikLinks, .agentListing-page .property-posts .post-holder .caption .quick-links,
+.agentListing-page .property-posts .post-holder .caption .property-details, .agentProfile-page .contact-links, .agentProfile-page .cols-holder .col .enquiry-form ul, #nav .main-navigation, #nav .main-navigation li .dropDown, .main-visual .property-search-holder .tabset, .main-visual .property-search-holder .tab-content form ul, #content .left-content .company-logo, #content .right-content .posters, .pager, #footer .cols-holder .col ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.clearfix:after, .public-propertyListing .property-posts .post:after, .agentListing-page .property-posts .post:after, #header:after, #header .layout:after, #content .center-content .page-holder:after {
+.clearfix:after, .public-propertyListing .property-posts .post:after, .agentListing-page .property-posts .post-holder:after, #header:after, #header .layout:after, #content .center-content .page-holder:after {
   content: '';
   display: block;
   clear: both;
@@ -1252,6 +1252,7 @@ input[type='submit'] {
 .fancybox-lock {
   overflow: hidden !important;
   width: auto;
+  height: auto;
 }
 
 .fancybox-lock body {
@@ -1692,25 +1693,21 @@ input[type='submit'] {
   }
 }
 
-.public-propertyListing .property-posts .post .caption address {
-  position: relative;
-  font-style: normal;
-  margin: 0;
-  padding: 0 0 15px;
-  display: block;
+.public-propertyListing .property-posts .post .caption p {
+  margin: 0 0 15px;
   font-size: 14px;
   line-height: 17px;
 }
 
 @media (max-width: 1199px) {
-  .public-propertyListing .property-posts .post .caption address {
+  .public-propertyListing .property-posts .post .caption p {
     font-size: 13px;
     line-height: 17px;
   }
 }
 
 @media (max-width: 767px) {
-  .public-propertyListing .property-posts .post .caption address {
+  .public-propertyListing .property-posts .post .caption p {
     font-size: 12px;
     line-height: 16px;
   }
@@ -1890,8 +1887,8 @@ input[type='submit'] {
 }
 
 .propertyDetails-page .propertyImage-slider {
-  min-width: 880px;
-  max-width: 880px;
+  min-width: 850px;
+  max-width: 850px;
   float: left;
   position: relative;
   margin: 0 0 10px;
@@ -1899,8 +1896,8 @@ input[type='submit'] {
 
 @media (max-width: 1854px) {
   .propertyDetails-page .propertyImage-slider {
-    min-width: 680px;
-    max-width: 680px;
+    min-width: 660px;
+    max-width: 660px;
   }
 }
 
@@ -1966,8 +1963,8 @@ input[type='submit'] {
   width: 100%;
   height: auto;
   display: block;
-  max-height: 590px;
-  min-height: 590px;
+  max-height: 500px;
+  min-height: 500px;
 }
 
 @media (max-width: 1854px) {
@@ -1997,8 +1994,8 @@ input[type='submit'] {
 @media (max-width: 1199px) {
   .propertyDetails-page .propertyImage-slider .propertyImage-slide a img,
   .propertyDetails-page .propertyImage-slider .slide a img {
-    max-height: 350px;
-    min-height: 350px;
+    max-height: 340px;
+    min-height: 340px;
   }
 }
 
@@ -2144,8 +2141,8 @@ input[type='submit'] {
 .propertyDetails-page .propertyOwnerInfo {
   overflow: hidden;
   border-radius: 4px;
-  max-width: 405px;
-  min-width: 405px;
+  max-width: 440px;
+  min-width: 440px;
   float: right;
 }
 
@@ -2201,17 +2198,18 @@ input[type='submit'] {
 
 .propertyDetails-page .propertyOwnerInfo .description {
   background: #edf1f4;
-  padding: 10px;
+  padding: 30px 10px 15px;
+}
+
+@media (max-width: 1599px) {
+  .propertyDetails-page .propertyOwnerInfo .description {
+    padding: 10px;
+  }
 }
 
 .propertyDetails-page .propertyOwnerInfo .description .holder {
   overflow: hidden;
-}
-
-@media (max-width: 1199px) {
-  .propertyDetails-page .propertyOwnerInfo .description .holder {
-    padding: 0 10px 0 0;
-  }
+  padding: 0 10px 0 0;
 }
 
 .propertyDetails-page .propertyOwnerInfo .description .agency-name,
@@ -2219,9 +2217,18 @@ input[type='submit'] {
 .propertyDetails-page .propertyOwnerInfo .description .name {
   position: relative;
   display: block;
-  font-size: 14px;
-  line-height: 18px;
-  padding: 0 0 5px;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 0 0 15px;
+}
+
+@media (max-width: 1599px) {
+  .propertyDetails-page .propertyOwnerInfo .description .agency-name,
+  .propertyDetails-page .propertyOwnerInfo .description .agency-profile,
+  .propertyDetails-page .propertyOwnerInfo .description .name {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 .propertyDetails-page .propertyOwnerInfo .description .name {
@@ -2275,7 +2282,7 @@ input[type='submit'] {
   line-height: 0;
   letter-spacing: -4px;
   text-align: center;
-  padding: 10px 0 0;
+  padding: 20px 0;
   margin: 0 -5px;
 }
 
@@ -2287,11 +2294,18 @@ input[type='submit'] {
   letter-spacing: 0;
 }
 
+@media (max-width: 1599px) {
+  .propertyDetails-page .propertyOwnerInfo .description .contact-links {
+    padding: 10px 0;
+  }
+}
+
 @media (max-width: 1199px) {
   .propertyDetails-page .propertyOwnerInfo .description .contact-links {
     font-size: 0;
     line-height: 0;
     letter-spacing: -4px;
+    padding: 10px 0 0;
   }
   .propertyDetails-page .propertyOwnerInfo .description .contact-links > * {
     display: inline-block;
@@ -2349,33 +2363,36 @@ input[type='submit'] {
   margin: 0;
   display: block;
   overflow: hidden;
-  font-size: 13px;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 20px;
   padding: 10px 0 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 1599px) {
+  .propertyDetails-page .propertyOwnerInfo .description dl {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 .propertyDetails-page .propertyOwnerInfo .description dl dt {
   float: left;
-  width: 25%;
+  width: 50%;
   font-weight: 600;
-}
-
-@media (max-width: 1199px) {
-  .propertyDetails-page .propertyOwnerInfo .description dl dt {
-    width: 35%;
-  }
 }
 
 .propertyDetails-page .propertyOwnerInfo .description dl dd {
   overflow: hidden;
   margin: 0;
-  width: 75%;
-  padding: 0 0 3px;
+  width: 50%;
+  padding: 0 0 8px;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1599px) {
   .propertyDetails-page .propertyOwnerInfo .description dl dd {
-    width: 65%;
+    padding: 0 0 7px;
   }
 }
 
@@ -2437,7 +2454,7 @@ input[type='submit'] {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
-  margin: 0 -5px;
+  margin: 0 -5px 20px;
 }
 
 .propertyDetails-page .property-qucikLinks > * {
@@ -2471,55 +2488,57 @@ input[type='submit'] {
   overflow: hidden;
 }
 
-.agentListing-page p {
-  font-size: 14px;
-  line-height: 17px;
-  margin: 0 0 10px;
-}
-
 .agentListing-page .holder {
   overflow: hidden;
   padding: 0 0 10px;
 }
 
 .agentListing-page .holder .search-agent {
-  float: left;
-  width: 450px;
+  overflow: hidden;
   position: relative;
-  padding: 0 111px 0 0;
-}
-
-@media (max-width: 1199px) {
-  .agentListing-page .holder .search-agent {
-    width: 380px;
-  }
+  padding: 0 145px 0 0;
+  margin: 0 -5px;
 }
 
 @media (max-width: 1023px) {
   .agentListing-page .holder .search-agent {
-    width: 270px;
-    padding: 0 81px 0 0;
+    padding: 0 125px 0 0;
   }
 }
 
 @media (max-width: 767px) {
   .agentListing-page .holder .search-agent {
-    margin: 0 auto 10px;
-    float: none;
-    display: block;
+    padding: 0;
   }
 }
 
+.agentListing-page .holder .search-agent .input-holder {
+  width: 50%;
+  float: left;
+  padding: 0 5px;
+}
+
+@media (max-width: 767px) {
+  .agentListing-page .holder .search-agent .input-holder {
+    width: 100%;
+    float: none;
+    display: block;
+    padding: 0 5px 5px;
+  }
+}
+
+.agentListing-page .holder .search-agent select,
 .agentListing-page .holder .search-agent input[type="text"], .agentListing-page .holder .search-agent input[type="search"] {
   width: 100%;
   display: block;
-  height: 35px;
-  padding: 7px;
+  height: 40px;
+  padding: 8px;
   font-size: 14px;
   line-height: 17px;
 }
 
 @media (max-width: 1023px) {
+  .agentListing-page .holder .search-agent select,
   .agentListing-page .holder .search-agent input[type="text"], .agentListing-page .holder .search-agent input[type="search"] {
     font-size: 12px;
     line-height: 17px;
@@ -2533,7 +2552,8 @@ input[type='submit'] {
   bottom: 0;
   border: 0;
   color: #fff;
-  background: #58a36f;
+  background: #489ddd;
+  padding: 0 22px;
 }
 
 @media (max-width: 1023px) {
@@ -2543,47 +2563,48 @@ input[type='submit'] {
   }
 }
 
-.agentListing-page .holder .search-agent input[type="submit"]:hover {
-  background: #468258;
-}
-
-.agentListing-page .holder .searchResult-counter {
-  float: right;
-  max-width: 500px;
-}
-
-@media (max-width: 1023px) {
-  .agentListing-page .holder .searchResult-counter {
-    font-size: 13px;
-    line-height: 16px;
-    padding: 10px 0 0;
-  }
-}
-
 @media (max-width: 767px) {
-  .agentListing-page .holder .searchResult-counter {
-    float: none;
+  .agentListing-page .holder .search-agent input[type="submit"] {
+    position: static;
     display: block;
     width: 100%;
-    text-align: center;
-    padding: 0 0 10px;
-    max-width: inherit;
+    padding: 10px;
   }
+}
+
+.agentListing-page .holder .search-agent input[type="submit"]:hover {
+  background: #2685cc;
 }
 
 .agentListing-page .property-posts {
   overflow: hidden;
+  margin: 0 -10px;
 }
 
 .agentListing-page .property-posts .post {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+  margin: 0 0 30px;
+}
+
+@media (max-width: 1023px) {
+  .agentListing-page .property-posts .post {
+    float: none;
+    width: 100%;
+    display: block;
+  }
+}
+
+.agentListing-page .property-posts .post-holder {
   background: #edf1f4;
+  border-top: 2px solid #133783;
   border-bottom: 2px solid #ef9521;
   padding: 15px;
-  margin: 0 0 30px;
   position: relative;
 }
 
-.agentListing-page .property-posts .post:before {
+.agentListing-page .property-posts .post-holder:before {
   position: absolute;
   bottom: -2px;
   left: 0;
@@ -2595,36 +2616,47 @@ input[type='submit'] {
   z-index: -1;
 }
 
-.agentListing-page .property-posts .post .img-holder {
+.agentListing-page .property-posts .post-holder .img-holder {
   float: left;
   width: 200px;
 }
 
-@media (max-width: 1023px) {
-  .agentListing-page .property-posts .post .img-holder {
+@media (max-width: 1599px) {
+  .agentListing-page .property-posts .post-holder .img-holder {
     width: 150px;
-    margin: 50px 0 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .agentListing-page .property-posts .post-holder .img-holder {
+    width: 130px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .agentListing-page .property-posts .post-holder .img-holder {
+    width: 150px;
   }
 }
 
 @media (max-width: 767px) {
-  .agentListing-page .property-posts .post .img-holder {
+  .agentListing-page .property-posts .post-holder .img-holder {
     float: none;
     overflow: hidden;
     margin: 0 auto 10px;
   }
 }
 
-.agentListing-page .property-posts .post .img-holder a {
+.agentListing-page .property-posts .post-holder .img-holder a {
   display: block;
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-.agentListing-page .property-posts .post .img-holder a:hover {
+.agentListing-page .property-posts .post-holder .img-holder a:hover {
   opacity: 0.8;
 }
 
-.agentListing-page .property-posts .post .img-holder img {
+.agentListing-page .property-posts .post-holder .img-holder img {
   width: 100%;
   height: auto;
   display: block;
@@ -2632,45 +2664,52 @@ input[type='submit'] {
   min-height: 180px;
 }
 
+@media (max-width: 1599px) {
+  .agentListing-page .property-posts .post-holder .img-holder img {
+    max-height: 150px;
+    min-height: 150px;
+  }
+}
+
 @media (max-width: 1199px) {
-  .agentListing-page .property-posts .post .img-holder img {
-    max-height: 170px;
-    min-height: 170px;
+  .agentListing-page .property-posts .post-holder .img-holder img {
+    max-height: 130px;
+    min-height: 130px;
   }
 }
 
 @media (max-width: 1023px) {
-  .agentListing-page .property-posts .post .img-holder img {
+  .agentListing-page .property-posts .post-holder .img-holder img {
     max-height: 140px;
     min-height: 140px;
   }
 }
 
 @media (max-width: 767px) {
-  .agentListing-page .property-posts .post .img-holder img {
+  .agentListing-page .property-posts .post-holder .img-holder img {
     max-height: 130px;
     min-height: 130px;
   }
 }
 
-.agentListing-page .property-posts .post .caption {
+.agentListing-page .property-posts .post-holder .caption {
   overflow: hidden;
   padding: 0 0 0 20px;
 }
 
 @media (max-width: 1199px) {
-  .agentListing-page .property-posts .post .caption {
+  .agentListing-page .property-posts .post-holder .caption {
     padding: 0 0 0 15px;
   }
 }
 
 @media (max-width: 767px) {
-  .agentListing-page .property-posts .post .caption {
+  .agentListing-page .property-posts .post-holder .caption {
     padding: 0;
   }
 }
 
-.agentListing-page .property-posts .post .caption .post-heading {
+.agentListing-page .property-posts .post-holder .caption .post-heading {
   font-size: 20px;
   line-height: 22px;
   color: #133783;
@@ -2680,62 +2719,62 @@ input[type='submit'] {
 }
 
 @media (max-width: 1599px) {
-  .agentListing-page .property-posts .post .caption .post-heading {
+  .agentListing-page .property-posts .post-holder .caption .post-heading {
     font-size: 18px;
     line-height: 22px;
   }
 }
 
 @media (max-width: 1199px) {
-  .agentListing-page .property-posts .post .caption .post-heading {
+  .agentListing-page .property-posts .post-holder .caption .post-heading {
     font-size: 16px;
     line-height: 20px;
   }
 }
 
 @media (max-width: 1199px) {
-  .agentListing-page .property-posts .post .caption .post-heading {
+  .agentListing-page .property-posts .post-holder .caption .post-heading {
     font-size: 14px;
     line-height: 18px;
   }
 }
 
 @media (max-width: 767px) {
-  .agentListing-page .property-posts .post .caption .post-heading {
+  .agentListing-page .property-posts .post-holder .caption .post-heading {
     font-size: 13px;
     line-height: 16px;
   }
 }
 
 @media (max-width: 1599px) {
-  .agentListing-page .property-posts .post .caption .post-heading {
+  .agentListing-page .property-posts .post-holder .caption .post-heading {
     font-size: 18px;
     line-height: 22px;
   }
 }
 
 @media (max-width: 1199px) {
-  .agentListing-page .property-posts .post .caption .post-heading {
+  .agentListing-page .property-posts .post-holder .caption .post-heading {
     font-size: 16px;
     line-height: 20px;
   }
 }
 
 @media (max-width: 1199px) {
-  .agentListing-page .property-posts .post .caption .post-heading {
+  .agentListing-page .property-posts .post-holder .caption .post-heading {
     font-size: 14px;
     line-height: 18px;
   }
 }
 
 @media (max-width: 767px) {
-  .agentListing-page .property-posts .post .caption .post-heading {
+  .agentListing-page .property-posts .post-holder .caption .post-heading {
     font-size: 13px;
     line-height: 16px;
   }
 }
 
-.agentListing-page .property-posts .post .caption .post-heading a {
+.agentListing-page .property-posts .post-holder .caption .post-heading a {
   display: inline-block;
   vertical-align: top;
   color: #133783;
@@ -2748,25 +2787,25 @@ input[type='submit'] {
 }
 
 @media (max-width: 1299px) {
-  .agentListing-page .property-posts .post .caption .post-heading a {
+  .agentListing-page .property-posts .post-holder .caption .post-heading a {
     max-width: 400px;
   }
 }
 
 @media (max-width: 1199px) {
-  .agentListing-page .property-posts .post .caption .post-heading a {
+  .agentListing-page .property-posts .post-holder .caption .post-heading a {
     max-width: 320px;
   }
 }
 
 @media (max-width: 1023px) {
-  .agentListing-page .property-posts .post .caption .post-heading a {
+  .agentListing-page .property-posts .post-holder .caption .post-heading a {
     max-width: 215px;
   }
 }
 
 @media (max-width: 767px) {
-  .agentListing-page .property-posts .post .caption .post-heading a {
+  .agentListing-page .property-posts .post-holder .caption .post-heading a {
     max-width: inherit;
     display: block;
     float: none;
@@ -2774,59 +2813,58 @@ input[type='submit'] {
   }
 }
 
-.agentListing-page .property-posts .post .caption .post-heading a:hover {
+.agentListing-page .property-posts .post-holder .caption .post-heading a:hover {
   color: #58a36f;
 }
 
-.agentListing-page .property-posts .post .caption address {
-  position: relative;
-  font-style: normal;
-  margin: 0;
-  padding: 0 0 10px;
-  display: block;
+.agentListing-page .property-posts .post-holder .caption p {
+  margin: 0 0 10px;
   font-size: 14px;
   line-height: 17px;
+  max-height: 51px;
+  overflow: hidden;
 }
 
 @media (max-width: 1199px) {
-  .agentListing-page .property-posts .post .caption address {
+  .agentListing-page .property-posts .post-holder .caption p {
     font-size: 13px;
     line-height: 17px;
   }
 }
 
 @media (max-width: 767px) {
-  .agentListing-page .property-posts .post .caption address {
+  .agentListing-page .property-posts .post-holder .caption p {
     font-size: 12px;
     line-height: 16px;
+    max-height: inherit;
   }
 }
 
-.agentListing-page .property-posts .post .caption .holder {
+.agentListing-page .property-posts .post-holder .caption .holder {
   overflow: hidden;
 }
 
-.agentListing-page .property-posts .post .caption .quick-links,
-.agentListing-page .property-posts .post .caption .property-details {
+.agentListing-page .property-posts .post-holder .caption .quick-links,
+.agentListing-page .property-posts .post-holder .caption .property-details {
   font-size: 12px;
   line-height: 15px;
   text-transform: capitalize;
   margin: 0 0 20px;
 }
 
-.agentListing-page .property-posts .post .caption .quick-links li,
-.agentListing-page .property-posts .post .caption .property-details li {
+.agentListing-page .property-posts .post-holder .caption .quick-links li,
+.agentListing-page .property-posts .post-holder .caption .property-details li {
   margin: 0 0 10px;
 }
 
 @media (max-width: 1023px) {
-  .agentListing-page .property-posts .post .caption .quick-links li,
-  .agentListing-page .property-posts .post .caption .property-details li {
+  .agentListing-page .property-posts .post-holder .caption .quick-links li,
+  .agentListing-page .property-posts .post-holder .caption .property-details li {
     margin: 0 0 5px;
   }
 }
 
-.agentListing-page .property-posts .post .caption .quick-links {
+.agentListing-page .property-posts .post-holder .caption .quick-links {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
@@ -2834,7 +2872,7 @@ input[type='submit'] {
   float: left;
 }
 
-.agentListing-page .property-posts .post .caption .quick-links > * {
+.agentListing-page .property-posts .post-holder .caption .quick-links > * {
   display: inline-block;
   vertical-align: top;
   font-size: 14px;
@@ -2843,7 +2881,7 @@ input[type='submit'] {
 }
 
 @media (max-width: 1199px) {
-  .agentListing-page .property-posts .post .caption .quick-links {
+  .agentListing-page .property-posts .post-holder .caption .quick-links {
     margin: 0 -5px;
     font-size: 0;
     line-height: 0;
@@ -2852,7 +2890,7 @@ input[type='submit'] {
     width: 100%;
     overflow: hidden;
   }
-  .agentListing-page .property-posts .post .caption .quick-links > * {
+  .agentListing-page .property-posts .post-holder .caption .quick-links > * {
     display: inline-block;
     vertical-align: top;
     font-size: 13px;
@@ -2862,19 +2900,19 @@ input[type='submit'] {
 }
 
 @media (max-width: 1023px) {
-  .agentListing-page .property-posts .post .caption .quick-links {
+  .agentListing-page .property-posts .post-holder .caption .quick-links {
     text-align: center;
   }
 }
 
 @media (max-width: 767px) {
-  .agentListing-page .property-posts .post .caption .quick-links {
+  .agentListing-page .property-posts .post-holder .caption .quick-links {
     font-size: 0;
     line-height: 0;
     letter-spacing: -4px;
     margin: 0 -3px;
   }
-  .agentListing-page .property-posts .post .caption .quick-links > * {
+  .agentListing-page .property-posts .post-holder .caption .quick-links > * {
     display: inline-block;
     vertical-align: top;
     font-size: 12px;
@@ -2883,23 +2921,23 @@ input[type='submit'] {
   }
 }
 
-.agentListing-page .property-posts .post .caption .quick-links li {
+.agentListing-page .property-posts .post-holder .caption .quick-links li {
   padding: 0 10px;
 }
 
 @media (max-width: 1199px) {
-  .agentListing-page .property-posts .post .caption .quick-links li {
+  .agentListing-page .property-posts .post-holder .caption .quick-links li {
     padding: 0 5px;
   }
 }
 
 @media (max-width: 767px) {
-  .agentListing-page .property-posts .post .caption .quick-links li {
+  .agentListing-page .property-posts .post-holder .caption .quick-links li {
     padding: 0 3px;
   }
 }
 
-.agentListing-page .property-posts .post .caption .quick-links li a {
+.agentListing-page .property-posts .post-holder .caption .quick-links li a {
   display: block;
   text-decoration: none;
   color: #2e2e2e;
@@ -2913,24 +2951,24 @@ input[type='submit'] {
 }
 
 @media (max-width: 1199px) {
-  .agentListing-page .property-posts .post .caption .quick-links li a {
+  .agentListing-page .property-posts .post-holder .caption .quick-links li a {
     padding: 10px 10px 10px 25px;
   }
 }
 
 @media (min-width: 768px) {
-  .agentListing-page .property-posts .post .caption .quick-links li a .show-xs {
+  .agentListing-page .property-posts .post-holder .caption .quick-links li a .show-xs {
     display: none;
   }
 }
 
-.agentListing-page .property-posts .post .caption .quick-links li a:hover {
+.agentListing-page .property-posts .post-holder .caption .quick-links li a:hover {
   color: #fff;
   border-color: #fff;
   background: #58a36f;
 }
 
-.agentListing-page .property-posts .post .caption .quick-links li [class^="icon-"], .agentListing-page .property-posts .post .caption .quick-links li [class*=" icon-"] {
+.agentListing-page .property-posts .post-holder .caption .quick-links li [class^="icon-"], .agentListing-page .property-posts .post-holder .caption .quick-links li [class*=" icon-"] {
   position: absolute;
   top: 50%;
   left: 7px;
@@ -4572,7 +4610,7 @@ h1 {
 
 #content {
   overflow: hidden;
-  padding: 85px 10px 0;
+  padding: 90px 10px 0;
 }
 
 @media (max-width: 767px) {
