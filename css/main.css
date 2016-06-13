@@ -2484,6 +2484,14 @@ input[type='submit'] {
   color: #b66c0d;
 }
 
+.propertyDetails-page h2 {
+  display: block;
+  font-size: 17px;
+  line-height: 19px;
+  margin: 0;
+  padding: 0 20px;
+}
+
 .agentListing-page {
   overflow: hidden;
 }
