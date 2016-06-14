@@ -649,7 +649,16 @@ h1 {
 						display: block;
 						overflow: hidden;
 						padding: 0 0 15px;
+						transition: opacity 0.5s ease, visibility 0.5s ease;
+						-webkit-transition: opacity 0.5s ease, visibility 0.5s ease;
+						-moz-transition: opacity 0.5s ease, visibility 0.5s ease;
+						-ms-transition: opacity 0.5s ease, visibility 0.5s ease;
 						
+						&.hide-bedrooms {
+							opacity: 0;
+							visibility: hidden;
+						}
+
 						@include media('<tablet'){
 							padding: 0 0 10px;
 						}
