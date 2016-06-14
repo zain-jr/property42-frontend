@@ -643,7 +643,7 @@ th {
   content: "\e911";
 }
 
-.public-propertyListing .holder .sortBy, .public-propertyListing .property-posts .post .caption .quick-links,
+.public-propertyListing .property-listingSearch ul, .public-propertyListing .holder .sortBy, .public-propertyListing .property-posts .post .caption .quick-links,
 .public-propertyListing .property-posts .post .caption .property-details, .propertyDetails-page .propertyOwnerInfo .description .contact-links, .propertyDetails-page .property-qucikLinks, .propertyDetails-page .feature-list, .agentListing-page .property-posts .post-holder .caption .quick-links,
 .agentListing-page .property-posts .post-holder .caption .property-details, .agentProfile-page .contact-links, .agentProfile-page .cols-holder .col .enquiry-form ul, #nav .main-navigation, #nav .main-navigation li .dropDown, .main-visual .property-search-holder .tabset, .main-visual .property-search-holder .tab-content form ul, #content .left-content .company-logo, #content .right-content .posters, .pager, #footer .cols-holder .col ul {
   margin: 0;
@@ -1359,6 +1359,57 @@ input[type='submit'] {
 
 .public-propertyListing {
   overflow: hidden;
+}
+
+.public-propertyListing .property-listingSearch {
+  overflow: hidden;
+  background: #89c0e9;
+  border-radius: 4px;
+}
+
+.public-propertyListing .property-listingSearch ul {
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  text-align: center;
+}
+
+.public-propertyListing .property-listingSearch ul > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+.public-propertyListing .property-listingSearch ul li {
+  text-align: left;
+  width: 25%;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+}
+
+.public-propertyListing .property-listingSearch ul li > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+.public-propertyListing .property-listingSearch ul li label {
+  float: left;
+  width: 25%;
+}
+
+.public-propertyListing .property-listingSearch ul li .input-holder {
+  width: 75%;
+  float: left;
+}
+
+.public-propertyListing .property-listingSearch ul li .input-holder.add {
+  width: 50%;
 }
 
 .public-propertyListing .holder {

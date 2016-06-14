@@ -1,6 +1,37 @@
 .public-propertyListing {
 	overflow: hidden;
 	
+	.property-listingSearch {
+		overflow: hidden;
+		background: lighten($mix-blue, 15%);
+		border-radius: 4px;
+
+		ul{
+			@extend %listreset;
+			@include align-reset(top, 14,18);
+			text-align: center;
+
+			li {
+				text-align: left;
+				width: 25%;
+				@include align-reset(top,14,18);
+
+				label {
+					float: left;
+					width: 25%;
+				}
+				.input-holder {
+					width:  75%;
+					float: left;
+
+					&.add {
+						width:  50%;
+					}
+				}
+			}
+		}
+	}
+
 	.holder {
 		overflow: hidden;
 		padding: 0 0 10px;
