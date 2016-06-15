@@ -76,6 +76,13 @@ $(document).ready(function(){
 	}
 });
 
+$(document).on('keyup',function(evt) {
+    if (evt.keyCode == 27) {
+		$('.popup-holder').removeClass('active');
+    }
+});
+
+
 // content tabs init
 function initTabs() {
 	jQuery('.tabset').contentTabs({

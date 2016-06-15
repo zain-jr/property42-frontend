@@ -17,7 +17,7 @@
                 </div>
             </li>
             <li>
-                <label>Select Property Type</label>
+                <label>Select Block</label>
                 <div class="input-holder">
                     <select>
                         <option selected disabled>Select one</option>
@@ -32,7 +32,7 @@
                 </div>
             </li>
             <li>
-                <label>Select Block</label>
+                <label>Select Property Type</label>
                 <div class="input-holder">
                     <select>
                         <option selected disabled>Select one</option>
@@ -61,15 +61,24 @@
                     </select>
                 </div>
             </li>
-            <li><span>Price</span></li>
-            <li>
-                <div class="input-holder add"><input type="text"></div>
-                <div class="input-holder add"><input type="text"></div>
+            <li class="half-width">
+                <label>Price</label>
+                <div class="input-holder add">
+                    <input type="number">
+                    <span class="tag">to</span>
+                    <input type="number">
+                </div>
             </li>
-            <li><span>Land Area</span></li>
-            <li>
-                <div class="input-holder add"><input type="text"></div>
-                <div class="input-holder add"><input type="text"></div>
+            <li class="half-width"> 
+                <label>Land Area</label>
+                <div class="input-holder add">
+                    <input type="number">
+                    <span class="tag">to</span>
+                    <input type="number">
+                </div>
+            </li>
+            <li class="half-width">
+                <button type="submit"><span class="icon-search"></span>Search</button>
             </li>
         </ul>
     </form>

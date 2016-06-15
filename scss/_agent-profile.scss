@@ -101,7 +101,8 @@
                 padding: 5px;
             }
 
-            a {
+            > a {
+                cursor: pointer;
                 text-decoration: none;
                 @include align(middle);
                 color: $defualt-blue;

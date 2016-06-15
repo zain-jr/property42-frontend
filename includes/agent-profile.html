@@ -9,7 +9,24 @@
             </div>
         </div>
         <ul class="contact-links">
-            <li><a href="mailto:&#108;&#111;&#108;&#064;&#108;&#111;&#108;&#115;&#105;&#097;&#110;&#046;&#099;&#111;&#109;"><span class="icon-envelope"></span>&#108;&#111;&#108;&#064;&#108;&#111;&#108;&#115;&#105;&#097;&#110;&#046;&#099;&#111;&#109;</a></li>
+            <li class="popup-holder">
+                <a class="popup-opener"><span class="icon-envelope"></span>Send Email</a>
+                <div class="popup">
+                    <form class="email-popup">
+                        <strong class="form-heading">Send Email</strong>
+                        <div class="input-field">
+                            <label>From:</label>
+                            <div class="input-holder"><input type="text"></div>
+                        </div>
+                        <div class="input-field">
+                            <label>Message:</label>
+                            <div class="input-holder"><textarea></textarea></div>
+                        </div>
+                        <div class="input-field"><input type="submit" value="Send"></div>
+                    </form>
+                    <a class="popup-close"><span class="icon-cross"></span></a>
+                </div>
+            </li>
             <li><a href="tel:0321987654"><span class="icon-phone_iphone"></span><span class="hidden-xs">0321987654</span><span class="show-xs">Call Now</span></a></li>
         </ul>
     </div>
