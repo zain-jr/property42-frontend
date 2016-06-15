@@ -218,7 +218,8 @@
 		}
 		
 		@include media('<widescreen') {
-			min-width: inherit;
+			max-width: 270px;
+			min-width: 270px;
 		}
 
 		@include media('<desktop') {
@@ -382,9 +383,9 @@
 				width: 100%;
 
 				@include media('<tvscreen') {
-					@include font(14,18);
+					@include align-reset(middle,14,17);
 				}
-				
+
 				dt {
 					width: 50%;
 					font-weight: 600;
@@ -469,12 +470,16 @@
 				display: block;
 			}
 
-			a{
+			> a{
 				text-decoration: none;
 				color: $orange;
 				display: block;
 				cursor: pointer;
 				
+				&.added-to-favs{
+					color: $green;
+				}
+
 				@include media('<tablet'){
 					@include align(top);
 				}

@@ -2359,7 +2359,8 @@ input[type='submit'] {
 
 @media (max-width: 1199px) {
   .propertyDetails-page .propertyOwnerInfo {
-    min-width: inherit;
+    max-width: 270px;
+    min-width: 270px;
   }
 }
 
@@ -2585,8 +2586,16 @@ input[type='submit'] {
 
 @media (max-width: 1599px) {
   .propertyDetails-page .propertyOwnerInfo .description dl {
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: -4px;
+  }
+  .propertyDetails-page .propertyOwnerInfo .description dl > * {
+    display: inline-block;
+    vertical-align: middle;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 17px;
+    letter-spacing: 0;
   }
 }
 
@@ -2694,25 +2703,29 @@ input[type='submit'] {
   }
 }
 
-.propertyDetails-page .property-qucikLinks li a {
+.propertyDetails-page .property-qucikLinks li > a {
   text-decoration: none;
   color: #ef9521;
   display: block;
   cursor: pointer;
 }
 
+.propertyDetails-page .property-qucikLinks li > a.added-to-favs {
+  color: #58a36f;
+}
+
 @media (max-width: 767px) {
-  .propertyDetails-page .property-qucikLinks li a {
+  .propertyDetails-page .property-qucikLinks li > a {
     display: inline-block;
     vertical-align: top;
   }
 }
 
-.propertyDetails-page .property-qucikLinks li a span {
+.propertyDetails-page .property-qucikLinks li > a span {
   padding: 0 5px 0 0;
 }
 
-.propertyDetails-page .property-qucikLinks li a:hover {
+.propertyDetails-page .property-qucikLinks li > a:hover {
   color: #b66c0d;
 }
 
@@ -4796,12 +4809,6 @@ h1 {
   width: 50px;
 }
 
-@media (max-width: 1023px) {
-  .main-visual .property-search-holder .tab-content form ul.inline li label, .main-visual .property-search-holder .tab-content form ul.inline li span {
-    width: 100px;
-  }
-}
-
 @media (max-width: 767px) {
   .main-visual .property-search-holder .tab-content form ul.inline li label, .main-visual .property-search-holder .tab-content form ul.inline li span {
     width: 50px;
@@ -5802,6 +5809,10 @@ h1 {
   display: block;
 }
 
+.popup .loginToContinue {
+  margin: 70px 0 0;
+}
+
 .popup .popup-close {
   cursor: pointer;
   color: #e14646 !important;
@@ -5823,6 +5834,65 @@ h1 {
   background: rgba(0, 0, 0, 0.7);
   content: '';
   z-index: -1;
+}
+
+.loginToContinue {
+  border: 2px solid #ef9521;
+  background: #fff;
+  font-size: 20px;
+  line-height: 25px;
+  padding: 45px 25px;
+  position: relative;
+}
+
+.alert-success {
+  font-size: 16px;
+  line-height: 20px;
+  display: block;
+  width: 400px;
+  text-align: center;
+  margin: 0 auto 20px;
+  position: relative;
+  border: 2px solid #4a895d;
+  border-radius: 4px;
+  background: rgba(88, 163, 111, 0.7);
+  color: #fff;
+  overflow: hidden;
+  padding: 10px 5px 10px 37px;
+}
+
+@media (max-width: 767px) {
+  .alert-success {
+    font-size: 12px;
+    line-height: 17px;
+    width: 300px;
+    padding: 7px 5px 7px 30px;
+  }
+}
+
+.alert-success span[class^="icon-"], .alert-success span[class*="icon-"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 14px 10px;
+  color: #4a895d;
+}
+
+@media (max-width: 767px) {
+  .alert-success span[class^="icon-"], .alert-success span[class*="icon-"] {
+    padding: 11px 8px;
+  }
+}
+
+.alert-success span[class^="icon-"]:after, .alert-success span[class*="icon-"]:after {
+  position: absolute;
+  top: -9999px;
+  right: 0;
+  bottom: -9999px;
+  background: #4a895d;
+  width: 2px;
+  content: '';
 }
 
 @media print {

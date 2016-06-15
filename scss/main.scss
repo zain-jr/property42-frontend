@@ -635,9 +635,6 @@ h1 {
 							label , span {
 								width: 50px;
 								
-								@include media('<desktop'){
-									width: 100px;
-								}
 								@include media('<tablet'){
 									width: 50px;
 								}
@@ -1410,6 +1407,10 @@ h1 {
 		display: block;
 	}
 
+	.loginToContinue {
+		margin:70px 0 0;
+	}
+
 	.popup-close {
 		cursor: pointer;
 		color: $red !important;
@@ -1430,6 +1431,56 @@ h1 {
 			background: rgba($black, 0.7);
 			content: '';
 			z-index: -1;
+		}
+	}
+}
+.loginToContinue {
+	border: 2px solid $orange;
+	background: $white;
+	@include font(20, 25);
+	padding: 45px 25px;
+	position: relative;
+}
+.alert-success {
+	@include font(16,20);
+	display: block;
+	width: 400px;
+	text-align: center;
+	margin: 0 auto 20px;
+	position: relative;
+	border: 2px solid darken($green, 8%);
+	border-radius: 4px;
+	background: rgba($green, 0.7);
+	color: $white;
+	overflow: hidden;
+	padding: 10px 5px 10px 37px;
+
+	@include media('<tablet'){
+		@include font(12,17);
+		width: 300px;
+		padding: 7px 5px 7px 30px;
+	}
+
+	span[class^="icon-"],span[class*="icon-"] {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		padding: 14px 10px;
+		color: darken($green, 8%);
+
+		@include media('<tablet'){
+			padding: 11px 8px;
+		}
+
+		&:after {
+			position: absolute;
+			top: -9999px;
+			right: 0;
+			bottom: -9999px;
+			background: darken($green, 8%);
+			width: 2px;
+			content: '';
 		}
 	}
 }
