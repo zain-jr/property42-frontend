@@ -51,6 +51,66 @@ html, body {
 	width: 100%;
 	height: 100%;
 }
+body {
+	width: 100%;
+	height: 100%;
+	
+	&:after{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		content: '';
+		transition: opacity 0.5s linear, visibility 0.5s linear, z-index 0.5s linear, background 0.5s linear;
+		-webkit-transition: opacity 0.5s linear, visibility 0.5s linear, z-index 0.5s linear, background 0.5s linear;
+		-moz-transition: opacity 0.5s linear, visibility 0.5s linear, z-index 0.5s linear, background 0.5s linear;
+		opacity: 0;
+		visibility: hidden;
+		background: transparent;
+	}
+	&.loading-resources {
+		height: 100vh;
+		overflow: hidden;
+		
+		.lodaing-page{ display: block !important;}
+		
+		&:after{
+			z-index: 99999;
+			opacity: 1;
+			visibility: visible;
+			background: $defualt-blue;
+		}
+	}
+}
+
+.lodaing-page {
+	display: none !important;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 999991;
+	color: $white;
+	@include font(60,65);
+	margin: -115px 0 0 -220px;
+	font-weight: bold;
+	font-style: italic;
+	
+	@include media('<tablet') {
+		@include font(40,45);
+		margin: -110px 0 0 -140px;
+	}
+	
+	&:before{
+		display: block;
+		background: url(../images/ring.gif);
+		width: 72px;
+		height: 72px;
+		content: '';
+		margin: 0 auto;
+	}
+}
 .container { @include container;}
 .layout{ overflow: hidden;}
 .hidden-xs {
@@ -428,7 +488,7 @@ h1 {
 			width: 100%;
 		}
 		
-		.tabset {
+		.main-links {
 			@include container;
 			max-width: 800px;
 			@extend %listreset;
@@ -451,20 +511,9 @@ h1 {
 				@include media('<tablet'){
 					width: 50%;
 				}
-				
-				&.active {
-					a{
-						background: $mix-blue;
-						color: $white;
-						
-						&:after{
-							opacity: 1;
-						}
-					}
-				}
-				
-				a{
-					text-decoration: none;
+			
+				.fake-label{
+					cursor: pointer;
 					color: $black;
 					background: rgba($white, 0.7);
 					display: block;
@@ -500,10 +549,21 @@ h1 {
 				}
 				
 				input[type="radio"]{
-					opacity: 0;
 					position: fixed;
-					left: -999px;
-					top: -999px;
+					top: -9999px;
+					left: -9999px;
+					opacity: 0;
+
+					&:checked ~ {
+						.fake-label {
+							background: $mix-blue;
+							color: $white;
+							
+							&:after{
+								opacity: 1;
+							}
+						}
+					}
 				}
 			}
 		}

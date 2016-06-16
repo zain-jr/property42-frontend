@@ -31,6 +31,12 @@ $(document).on('click', '.propertyImage-slider-btn-next, .propertyImage-slider-b
 });
 
 $(document).ready(function(){
+	setTimeout(function(){
+ 		jQuery('body').removeClass('loading-resources');
+	},1000);
+});
+
+$(document).ready(function(){
 	$('.alert-success').find('.close').on('click', function(){
 		$('.alert-success').hide();
 	});
