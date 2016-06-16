@@ -31,6 +31,15 @@ $(document).on('click', '.propertyImage-slider-btn-next, .propertyImage-slider-b
 });
 
 $(document).ready(function(){
+	$('.alert-success').find('.close').on('click', function(){
+		$('.alert-success').hide();
+	});
+	setTimeout(function(){
+		$('.alert-success').hide();
+	},10000);
+});
+
+$(document).ready(function(){
 	var paraentHeight = $('.overviewText-holder').height();
 	var childHeight = $('.overviewText').height();
 	

@@ -645,7 +645,7 @@ th {
 
 .public-propertyListing .property-listingSearch ul, .public-propertyListing .holder .sortBy, .public-propertyListing .property-posts .post .caption .quick-links,
 .public-propertyListing .property-posts .post .caption .property-details, .propertyDetails-page .propertyOwnerInfo .description .contact-links, .propertyDetails-page .property-qucikLinks, .propertyDetails-page .feature-list, .agentListing-page .property-posts .post-holder .caption .quick-links,
-.agentListing-page .property-posts .post-holder .caption .property-details, .agentProfile-page .contact-links, .agentProfile-page .cols-holder .col .enquiry-form ul, #nav .main-navigation, #nav .main-navigation li .dropDown, .main-visual .property-search-holder .tabset, .main-visual .property-search-holder .tab-content form ul, #content .left-content .company-logo, #content .right-content .posters, .pager, #footer .cols-holder .col ul {
+.agentListing-page .property-posts .post-holder .caption .property-details, .agentProfile-page .contact-links, .agentProfile-page .cols-holder .col .caption ul, #nav .main-navigation, #nav .main-navigation li .dropDown, .main-visual .property-search-holder .tabset, .main-visual .property-search-holder .tab-content form ul, #content .left-content .company-logo, #content .right-content .posters, .pager, #footer .cols-holder .col ul, .enquiry-form ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -3609,7 +3609,7 @@ input[type='submit'] {
 }
 
 .agentProfile-page .cols-holder .col .caption {
-  padding: 15px 0 0;
+  padding: 15px 0;
   overflow: hidden;
   font-size: 13px;
   line-height: 20px;
@@ -3683,281 +3683,60 @@ input[type='submit'] {
   margin: 0;
 }
 
-.agentProfile-page .cols-holder .col .enquiry-form {
-  overflow: hidden;
+.agentProfile-page .cols-holder .col .caption ul {
+  font-size: 14px;
+  line-height: 19px;
+  margin: 0 0 10px;
 }
 
-.agentProfile-page .cols-holder .col .enquiry-form ul li {
-  display: block;
+.agentProfile-page .cols-holder .col .caption ul li {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
-  padding: 0 0 7px;
+  display: block;
+  padding: 6px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.agentProfile-page .cols-holder .col .enquiry-form ul li > * {
+.agentProfile-page .cols-holder .col .caption ul li > * {
   display: inline-block;
   vertical-align: top;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 19px;
   letter-spacing: 0;
 }
 
-@media (max-width: 1599px) {
-  .agentProfile-page .cols-holder .col .enquiry-form ul li {
-    font-size: 0;
-    line-height: 0;
-    letter-spacing: -4px;
-  }
-  .agentProfile-page .cols-holder .col .enquiry-form ul li > * {
-    display: inline-block;
-    vertical-align: top;
-    font-size: 13px;
-    line-height: 18px;
-    letter-spacing: 0;
-  }
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form ul li label {
-  width: 120px;
-  position: relative;
-  padding: 10px 3px 3px;
-}
-
-@media (max-width: 1599px) {
-  .agentProfile-page .cols-holder .col .enquiry-form ul li label {
-    width: 70px;
-  }
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form ul li label:after {
-  display: inline-block;
-  vertical-align: top;
-  content: '\2217';
-  color: #e14646;
-  padding: 0 2px;
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder {
-  overflow: hidden;
-  width: calc(100% - 120px);
-  padding: 3px;
-  position: relative;
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error .error-text {
-  display: block;
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error textarea,
-.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="text"], .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="email"], .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="tel"] {
-  border-color: #e14646;
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error textarea::-webkit-input-placeholder,
-.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="text"]::-webkit-input-placeholder, .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="email"]::-webkit-input-placeholder, .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="tel"]::-webkit-input-placeholder {
-  color: #e14646;
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error textarea::-moz-placeholder,
-.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="text"]::-moz-placeholder, .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="email"]::-moz-placeholder, .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="tel"]::-moz-placeholder {
-  opacity: 1;
-  color: #e14646;
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error textarea:-moz-placeholder,
-.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="text"]:-moz-placeholder, .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="email"]:-moz-placeholder, .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="tel"]:-moz-placeholder {
-  color: #e14646;
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error textarea:-ms-input-placeholder,
-.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="text"]:-ms-input-placeholder, .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="email"]:-ms-input-placeholder, .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="tel"]:-ms-input-placeholder {
-  color: #e14646;
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error textarea.placeholder,
-.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="text"].placeholder, .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="email"].placeholder, .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.error input[type="tel"].placeholder {
-  color: #e14646;
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder .error-text {
-  color: #e14646;
-  font-size: 12px;
-  line-height: 15px;
-  font-weight: 600;
-  padding: 3px;
-  display: none;
-}
-
-@media (max-width: 1599px) {
-  .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder {
-    width: calc(100% - 70px);
-  }
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.add {
-  padding: 3px 140px 3px 3px;
-}
-
-@media (max-width: 1599px) {
-  .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder.add {
-    padding: 3px 105px 3px 3px;
-  }
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder .captcha {
-  width: 130px;
-  height: 40px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: block;
-  border: 1px solid #000;
-}
-
-@media (max-width: 1599px) {
-  .agentProfile-page .cols-holder .col .enquiry-form ul li .input-holder .captcha {
-    width: 100px;
-    height: 35px;
-    top: 3px;
-  }
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form textarea,
-.agentProfile-page .cols-holder .col .enquiry-form input[type="text"], .agentProfile-page .cols-holder .col .enquiry-form input[type="email"], .agentProfile-page .cols-holder .col .enquiry-form input[type="tel"] {
-  width: 100%;
-  height: 35px;
-  display: block;
-  padding: 7px;
-  font-size: 14px;
-  line-height: 18px;
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form textarea:focus,
-.agentProfile-page .cols-holder .col .enquiry-form input[type="text"]:focus, .agentProfile-page .cols-holder .col .enquiry-form input[type="email"]:focus, .agentProfile-page .cols-holder .col .enquiry-form input[type="tel"]:focus {
-  border-color: #133783;
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form textarea:focus::-webkit-input-placeholder,
-.agentProfile-page .cols-holder .col .enquiry-form input[type="text"]:focus::-webkit-input-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="email"]:focus::-webkit-input-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="tel"]:focus::-webkit-input-placeholder {
-  color: #133783;
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form textarea:focus::-moz-placeholder,
-.agentProfile-page .cols-holder .col .enquiry-form input[type="text"]:focus::-moz-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="email"]:focus::-moz-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="tel"]:focus::-moz-placeholder {
-  opacity: 1;
-  color: #133783;
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form textarea:focus:-moz-placeholder,
-.agentProfile-page .cols-holder .col .enquiry-form input[type="text"]:focus:-moz-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="email"]:focus:-moz-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="tel"]:focus:-moz-placeholder {
-  color: #133783;
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form textarea:focus:-ms-input-placeholder,
-.agentProfile-page .cols-holder .col .enquiry-form input[type="text"]:focus:-ms-input-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="email"]:focus:-ms-input-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="tel"]:focus:-ms-input-placeholder {
-  color: #133783;
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form textarea:focus.placeholder,
-.agentProfile-page .cols-holder .col .enquiry-form input[type="text"]:focus.placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="email"]:focus.placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="tel"]:focus.placeholder {
-  color: #133783;
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form textarea::-webkit-input-placeholder,
-.agentProfile-page .cols-holder .col .enquiry-form input[type="text"]::-webkit-input-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="email"]::-webkit-input-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="tel"]::-webkit-input-placeholder {
-  opacity: 1;
-}
-
-@media (max-width: 1599px) {
-  .agentProfile-page .cols-holder .col .enquiry-form textarea::-webkit-input-placeholder,
-  .agentProfile-page .cols-holder .col .enquiry-form input[type="text"]::-webkit-input-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="email"]::-webkit-input-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="tel"]::-webkit-input-placeholder {
-    font-size: 12px;
-    line-height: 18px;
-  }
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form textarea::-moz-placeholder,
-.agentProfile-page .cols-holder .col .enquiry-form input[type="text"]::-moz-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="email"]::-moz-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="tel"]::-moz-placeholder {
-  opacity: 1;
-  opacity: 1;
-}
-
-@media (max-width: 1599px) {
-  .agentProfile-page .cols-holder .col .enquiry-form textarea::-moz-placeholder,
-  .agentProfile-page .cols-holder .col .enquiry-form input[type="text"]::-moz-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="email"]::-moz-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="tel"]::-moz-placeholder {
-    font-size: 12px;
-    line-height: 18px;
-  }
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form textarea:-moz-placeholder,
-.agentProfile-page .cols-holder .col .enquiry-form input[type="text"]:-moz-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="email"]:-moz-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="tel"]:-moz-placeholder {
-  opacity: 1;
-}
-
-@media (max-width: 1599px) {
-  .agentProfile-page .cols-holder .col .enquiry-form textarea:-moz-placeholder,
-  .agentProfile-page .cols-holder .col .enquiry-form input[type="text"]:-moz-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="email"]:-moz-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="tel"]:-moz-placeholder {
-    font-size: 12px;
-    line-height: 18px;
-  }
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form textarea:-ms-input-placeholder,
-.agentProfile-page .cols-holder .col .enquiry-form input[type="text"]:-ms-input-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="email"]:-ms-input-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="tel"]:-ms-input-placeholder {
-  opacity: 1;
-}
-
-@media (max-width: 1599px) {
-  .agentProfile-page .cols-holder .col .enquiry-form textarea:-ms-input-placeholder,
-  .agentProfile-page .cols-holder .col .enquiry-form input[type="text"]:-ms-input-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="email"]:-ms-input-placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="tel"]:-ms-input-placeholder {
-    font-size: 12px;
-    line-height: 18px;
-  }
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form textarea.placeholder,
-.agentProfile-page .cols-holder .col .enquiry-form input[type="text"].placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="email"].placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="tel"].placeholder {
-  opacity: 1;
-}
-
-@media (max-width: 1599px) {
-  .agentProfile-page .cols-holder .col .enquiry-form textarea.placeholder,
-  .agentProfile-page .cols-holder .col .enquiry-form input[type="text"].placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="email"].placeholder, .agentProfile-page .cols-holder .col .enquiry-form input[type="tel"].placeholder {
-    font-size: 12px;
-    line-height: 18px;
-  }
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form textarea {
-  resize: none;
-  height: 100px;
-  overflow: auto;
-}
-
-.agentProfile-page .cols-holder .col .enquiry-form button[type="submit"] {
-  display: block;
-  width: 100%;
+.agentProfile-page .cols-holder .col .caption ul li:last-child {
   border: 0;
-  padding: 10px 35px 10px 36px;
-  border-radius: 2px;
-  font-size: 18px;
-  line-height: 22px;
-  position: relative;
-  color: #fff;
-  background: #58a36f;
 }
 
-.agentProfile-page .cols-holder .col .enquiry-form button[type="submit"] span[class^="icon-"], .agentProfile-page .cols-holder .col .enquiry-form button[type="submit"] span[class*="icon-"] {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  margin: -10px 0 0;
+.agentProfile-page .cols-holder .col .caption ul li span {
+  width: 35%;
+  text-align: right;
 }
 
-.agentProfile-page .cols-holder .col .enquiry-form button[type="submit"]:hover {
+.agentProfile-page .cols-holder .col .caption ul li span:first-child {
+  width: 65%;
+  text-align: left;
+  font-weight: 600;
+}
+
+.agentProfile-page .cols-holder .col .caption .view-all {
+  font-size: 14px;
+  line-height: 19px;
+  text-decoration: none;
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
   background: #489ddd;
+  color: #fff;
+  border: 1px solid #2685cc;
+  padding: 5px;
+}
+
+.agentProfile-page .cols-holder .col .caption .view-all:hover {
+  background: #2685cc;
 }
 
 html, body {
@@ -5798,6 +5577,10 @@ h1 {
   display: none;
 }
 
+.popup.less-indent {
+  margin: -300px 0 0 -250px;
+}
+
 @media (max-width: 767px) {
   .popup {
     width: 300px;
@@ -5836,6 +5619,310 @@ h1 {
   z-index: -1;
 }
 
+.popup-holder {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+}
+
+.enquiry-form {
+  overflow: hidden;
+}
+
+.enquiry-form ul li {
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: -4px;
+  padding: 0 0 7px;
+}
+
+.enquiry-form ul li > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+@media (max-width: 1599px) {
+  .enquiry-form ul li {
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: -4px;
+  }
+  .enquiry-form ul li > * {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0;
+  }
+}
+
+.enquiry-form ul li label {
+  width: 120px;
+  position: relative;
+  padding: 10px 3px 3px;
+}
+
+@media (max-width: 1599px) {
+  .enquiry-form ul li label {
+    width: 70px;
+  }
+}
+
+.enquiry-form ul li label:after {
+  display: inline-block;
+  vertical-align: top;
+  content: '\2217';
+  color: #e14646;
+  padding: 0 2px;
+}
+
+.enquiry-form ul li .input-holder {
+  overflow: hidden;
+  width: calc(100% - 120px);
+  padding: 3px;
+  position: relative;
+}
+
+.enquiry-form ul li .input-holder.error .error-text {
+  display: block;
+}
+
+.enquiry-form ul li .input-holder.error textarea,
+.enquiry-form ul li .input-holder.error input[type="text"], .enquiry-form ul li .input-holder.error input[type="email"], .enquiry-form ul li .input-holder.error input[type="tel"] {
+  border-color: #e14646;
+}
+
+.enquiry-form ul li .input-holder.error textarea::-webkit-input-placeholder,
+.enquiry-form ul li .input-holder.error input[type="text"]::-webkit-input-placeholder, .enquiry-form ul li .input-holder.error input[type="email"]::-webkit-input-placeholder, .enquiry-form ul li .input-holder.error input[type="tel"]::-webkit-input-placeholder {
+  color: #e14646;
+}
+
+.enquiry-form ul li .input-holder.error textarea::-moz-placeholder,
+.enquiry-form ul li .input-holder.error input[type="text"]::-moz-placeholder, .enquiry-form ul li .input-holder.error input[type="email"]::-moz-placeholder, .enquiry-form ul li .input-holder.error input[type="tel"]::-moz-placeholder {
+  opacity: 1;
+  color: #e14646;
+}
+
+.enquiry-form ul li .input-holder.error textarea:-moz-placeholder,
+.enquiry-form ul li .input-holder.error input[type="text"]:-moz-placeholder, .enquiry-form ul li .input-holder.error input[type="email"]:-moz-placeholder, .enquiry-form ul li .input-holder.error input[type="tel"]:-moz-placeholder {
+  color: #e14646;
+}
+
+.enquiry-form ul li .input-holder.error textarea:-ms-input-placeholder,
+.enquiry-form ul li .input-holder.error input[type="text"]:-ms-input-placeholder, .enquiry-form ul li .input-holder.error input[type="email"]:-ms-input-placeholder, .enquiry-form ul li .input-holder.error input[type="tel"]:-ms-input-placeholder {
+  color: #e14646;
+}
+
+.enquiry-form ul li .input-holder.error textarea.placeholder,
+.enquiry-form ul li .input-holder.error input[type="text"].placeholder, .enquiry-form ul li .input-holder.error input[type="email"].placeholder, .enquiry-form ul li .input-holder.error input[type="tel"].placeholder {
+  color: #e14646;
+}
+
+.enquiry-form ul li .input-holder .error-text {
+  color: #e14646;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 600;
+  padding: 3px;
+  display: none;
+}
+
+@media (max-width: 1599px) {
+  .enquiry-form ul li .input-holder {
+    width: calc(100% - 70px);
+  }
+}
+
+.enquiry-form ul li .input-holder.add {
+  padding: 3px 140px 3px 3px;
+}
+
+@media (max-width: 1599px) {
+  .enquiry-form ul li .input-holder.add {
+    padding: 3px 105px 3px 3px;
+  }
+}
+
+.enquiry-form ul li .input-holder .captcha {
+  width: 130px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  border: 1px solid #000;
+}
+
+@media (max-width: 1599px) {
+  .enquiry-form ul li .input-holder .captcha {
+    width: 100px;
+    height: 35px;
+    top: 3px;
+  }
+}
+
+.enquiry-form textarea,
+.enquiry-form input[type="text"], .enquiry-form input[type="email"], .enquiry-form input[type="tel"] {
+  width: 100%;
+  height: 35px;
+  display: block;
+  padding: 7px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.enquiry-form textarea:focus,
+.enquiry-form input[type="text"]:focus, .enquiry-form input[type="email"]:focus, .enquiry-form input[type="tel"]:focus {
+  border-color: #133783;
+}
+
+.enquiry-form textarea:focus::-webkit-input-placeholder,
+.enquiry-form input[type="text"]:focus::-webkit-input-placeholder, .enquiry-form input[type="email"]:focus::-webkit-input-placeholder, .enquiry-form input[type="tel"]:focus::-webkit-input-placeholder {
+  color: #133783;
+}
+
+.enquiry-form textarea:focus::-moz-placeholder,
+.enquiry-form input[type="text"]:focus::-moz-placeholder, .enquiry-form input[type="email"]:focus::-moz-placeholder, .enquiry-form input[type="tel"]:focus::-moz-placeholder {
+  opacity: 1;
+  color: #133783;
+}
+
+.enquiry-form textarea:focus:-moz-placeholder,
+.enquiry-form input[type="text"]:focus:-moz-placeholder, .enquiry-form input[type="email"]:focus:-moz-placeholder, .enquiry-form input[type="tel"]:focus:-moz-placeholder {
+  color: #133783;
+}
+
+.enquiry-form textarea:focus:-ms-input-placeholder,
+.enquiry-form input[type="text"]:focus:-ms-input-placeholder, .enquiry-form input[type="email"]:focus:-ms-input-placeholder, .enquiry-form input[type="tel"]:focus:-ms-input-placeholder {
+  color: #133783;
+}
+
+.enquiry-form textarea:focus.placeholder,
+.enquiry-form input[type="text"]:focus.placeholder, .enquiry-form input[type="email"]:focus.placeholder, .enquiry-form input[type="tel"]:focus.placeholder {
+  color: #133783;
+}
+
+.enquiry-form textarea::-webkit-input-placeholder,
+.enquiry-form input[type="text"]::-webkit-input-placeholder, .enquiry-form input[type="email"]::-webkit-input-placeholder, .enquiry-form input[type="tel"]::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+@media (max-width: 1599px) {
+  .enquiry-form textarea::-webkit-input-placeholder,
+  .enquiry-form input[type="text"]::-webkit-input-placeholder, .enquiry-form input[type="email"]::-webkit-input-placeholder, .enquiry-form input[type="tel"]::-webkit-input-placeholder {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.enquiry-form textarea::-moz-placeholder,
+.enquiry-form input[type="text"]::-moz-placeholder, .enquiry-form input[type="email"]::-moz-placeholder, .enquiry-form input[type="tel"]::-moz-placeholder {
+  opacity: 1;
+  opacity: 1;
+}
+
+@media (max-width: 1599px) {
+  .enquiry-form textarea::-moz-placeholder,
+  .enquiry-form input[type="text"]::-moz-placeholder, .enquiry-form input[type="email"]::-moz-placeholder, .enquiry-form input[type="tel"]::-moz-placeholder {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.enquiry-form textarea:-moz-placeholder,
+.enquiry-form input[type="text"]:-moz-placeholder, .enquiry-form input[type="email"]:-moz-placeholder, .enquiry-form input[type="tel"]:-moz-placeholder {
+  opacity: 1;
+}
+
+@media (max-width: 1599px) {
+  .enquiry-form textarea:-moz-placeholder,
+  .enquiry-form input[type="text"]:-moz-placeholder, .enquiry-form input[type="email"]:-moz-placeholder, .enquiry-form input[type="tel"]:-moz-placeholder {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.enquiry-form textarea:-ms-input-placeholder,
+.enquiry-form input[type="text"]:-ms-input-placeholder, .enquiry-form input[type="email"]:-ms-input-placeholder, .enquiry-form input[type="tel"]:-ms-input-placeholder {
+  opacity: 1;
+}
+
+@media (max-width: 1599px) {
+  .enquiry-form textarea:-ms-input-placeholder,
+  .enquiry-form input[type="text"]:-ms-input-placeholder, .enquiry-form input[type="email"]:-ms-input-placeholder, .enquiry-form input[type="tel"]:-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.enquiry-form textarea.placeholder,
+.enquiry-form input[type="text"].placeholder, .enquiry-form input[type="email"].placeholder, .enquiry-form input[type="tel"].placeholder {
+  opacity: 1;
+}
+
+@media (max-width: 1599px) {
+  .enquiry-form textarea.placeholder,
+  .enquiry-form input[type="text"].placeholder, .enquiry-form input[type="email"].placeholder, .enquiry-form input[type="tel"].placeholder {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.enquiry-form textarea {
+  resize: none;
+  height: 100px;
+  overflow: auto;
+}
+
+.enquiry-form button[type="submit"] {
+  display: block;
+  width: 100%;
+  border: 0;
+  padding: 10px 35px 10px 36px;
+  border-radius: 2px;
+  font-size: 18px;
+  line-height: 22px;
+  position: relative;
+  color: #fff;
+  background: #58a36f;
+}
+
+.enquiry-form button[type="submit"] span[class^="icon-"], .enquiry-form button[type="submit"] span[class*="icon-"] {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  margin: -10px 0 0;
+}
+
+.enquiry-form button[type="submit"]:hover {
+  background: #489ddd;
+}
+
+.fancybox-skin {
+  padding: 8px !important;
+}
+
+.lightbox {
+  padding: 5px;
+  width: 100%;
+  max-width: 500px;
+  display: none;
+}
+
+.lightbox .form-heading {
+  display: block;
+  width: 100%;
+  color: #000;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 600;
+  padding: 0 0 10px;
+}
+
 .loginToContinue {
   border: 2px solid #ef9521;
   background: #fff;
@@ -5868,6 +5955,16 @@ h1 {
     width: 300px;
     padding: 7px 5px 7px 30px;
   }
+}
+
+.alert-success .close {
+  color: #4a895d;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 13px;
+  line-height: 16px;
 }
 
 .alert-success span[class^="icon-"], .alert-success span[class*="icon-"] {
