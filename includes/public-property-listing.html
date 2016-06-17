@@ -1,87 +1,5 @@
 <div class="public-propertyListing">
-    <form class="property-listingSearch">
-        <ul>
-            <li>
-                <label>Select Society</label>
-                <div class="input-holder">
-                    <select>
-                        <option selected disabled>Select one</option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
-                    </select>
-                </div>
-            </li>
-            <li>
-                <label>Select Block</label>
-                <div class="input-holder">
-                    <select>
-                        <option selected disabled>Select one</option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
-                    </select>
-                </div>
-            </li>
-            <li>
-                <label>Select Property Type</label>
-                <div class="input-holder">
-                    <select>
-                        <option selected disabled>Select one</option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
-                    </select>
-                </div>
-            </li>
-            <li>
-                <label>Select Bedrooms</label>
-                <div class="input-holder">
-                    <select>
-                        <option selected disabled>Select one</option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
-                        <option>1</option>
-                    </select>
-                </div>
-            </li>
-            <li class="half-width">
-                <label>Price</label>
-                <div class="input-holder add">
-                    <input type="number">
-                    <span class="tag">to</span>
-                    <input type="number">
-                </div>
-            </li>
-            <li class="half-width"> 
-                <label>Land Area</label>
-                <div class="input-holder add">
-                    <input type="number">
-                    <span class="tag">to</span>
-                    <input type="number">
-                </div>
-            </li>
-            <li class="half-width">
-                <button type="submit"><span class="icon-search"></span>Search</button>
-            </li>
-        </ul>
-    </form>
+    <a href="#SearchPublic-Property" class="mySearch lightbox">Search My Property<span class="icon-search"></span></a>
     <div class="holder">
         <span class="searchResult-counter">Showing <b>1</b> to <b>20</b> of <b>24,303</b> properties</span>
         <ul class="sortBy">
@@ -391,4 +309,103 @@
         <li><a href="#">10</a></li>
         <li><a href="#" class="next"><span class="icon-chevron-thin-right"></span></a></li>
     </ul>
+    <div class="lightbox" id="SearchPublic-Property">
+        <div class="mySearch-Form">
+            <form>
+                <ul class="propertyPurpose">
+                    <li>
+                        <label for="buy-1">
+                            <input type="radio" name="mySearch" id="buy-1" checked>
+                            <span class="fake-label">Buy</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="rent-1">
+                            <input type="radio" name="mySearch" id="rent-1">
+                            <span class="fake-label">Rent</span>
+                        </label>
+                    </li>
+                </ul>
+                <ul class="propertyType">
+                    <li>
+                        <label for="allTypes">
+                            <input type="radio" id="allTypes" name="typeOfProperty" checked>
+                            <span class="fake-label">All Types</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="Homes">
+                            <input type="radio" id="Homes" name="typeOfProperty">
+                            <span class="fake-label">Homes</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="Plots">
+                            <input type="radio" id="Plots" name="typeOfProperty">
+                            <span class="fake-label">Plots</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label for="Commerical">
+                            <input type="radio" id="Commerical" name="typeOfProperty">
+                            <span class="fake-label">Commerical</span>
+                        </label>
+                    </li>
+                </ul>
+                <ul class="fields">
+                    <li>
+                        <label>Select Sub Type:</label>
+                        <select>
+                            <option>1</option>
+                            <option>1</option>
+                            <option>1</option>
+                            <option>1</option>
+                            <option>1</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label>Select Society:</label>
+                        <select>
+                            <option>1</option>
+                            <option>1</option>
+                            <option>1</option>
+                            <option>1</option>
+                            <option>1</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label>Select Block:</label>
+                        <select>
+                            <option>1</option>
+                            <option>1</option>
+                            <option>1</option>
+                            <option>1</option>
+                            <option>1</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label>Select Bedrooms:</label>
+                        <select>
+                            <option>1</option>
+                            <option>1</option>
+                            <option>1</option>
+                            <option>1</option>
+                            <option>1</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label>Price Range (Rs):</label>
+                        <div class="input-holder"><input type="number" placeholder="From"></div>
+                        <div class="input-holder"><input type="number" placeholder="To"></div>
+                    </li>
+                    <li>
+                        <label>Land Area:</label>
+                        <div class="input-holder"><input type="number" placeholder="From"></div>
+                        <div class="input-holder"><input type="number" placeholder="To"></div>
+                    </li>
+                </ul>
+                <button type="submit"><span class="icon-search"></span>Search my property</button>
+            </form>
+        </div>
+    </div>
 </div>

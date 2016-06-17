@@ -1,140 +1,45 @@
 .public-propertyListing {
 	overflow: hidden;
 	
-	.property-listingSearch {
-		overflow: hidden;
-		background: $light-gray;
-		border-radius: 4px;
-		color: $black;
-		margin: 0 0 20px;
+	.mySearch {
+		display: block;
+		color: $white;
+		background: lighten($green, 10%);
+		border-radius: 2px;
+		max-width: 300px;
+		margin: 0 auto 10px;
+		text-align: center;
+		font-weight: 600;
+		@include font(18,22);
+		position: relative;
+		text-decoration: none;
+		padding: 10px;
+		transition: background 0.4s ease;
+		-webkit-transition: background 0.4s ease;
+		-moz-transition: background 0.4s ease;
+		-ms-transition: background 0.4s ease;
 
-		ul{
-			@extend %listreset;
-			@include align-reset(top, 14,18);
-			text-align: center;
-			margin: 0 -5px;
-			padding: 20px 20px 10px;
+		@include media('<tablet'){
+			@include font(14,17);
+			max-width: 200px;	
+			padding: 7px;
+		}
 
-			li {
-				text-align: left;
-				width: 25%;
-				@include align-reset(top,14,18);
-				padding: 0 5px;
-				margin: 0 0 10px;
-				
-				@include media('<widescreen'){
-					width: 50%;
-				}
-				@include media('<tablet'){
-					width: 100%;
-					display: block;
-					overflow: hidden;
-				}
+		span[class^="icon-"], span[class*="icon-"]{
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			margin: -8px 0 0;
 
-				&.half-width {
-					width: 33.33%;
-					
-					@include media('<widescreen'){
-						width: 50%;
-					}
-
-					@include media('<tablet'){
-						width: 100%;
-					}
-
-					label {
-						width: 15%;
-						
-						@include media('<widescreen'){
-							width: 35%;
-						}
-					}
-					.input-holder {
-						width: 85%;
-						
-						@include media('<widescreen'){
-							width: 65%;
-						}
-					}
-				}
-
-				label {
-					float: left;
-					width: 25%;
-					@include font(13,17);
-
-					@include media('<tvscreen'){
-						width: 35%;
-					}
-				}
-				.tag {
-					padding:8px 5px;
-					@include font(13,17);
-				}
-				.input-holder {
-					width:  75%;
-					float: left;
-
-					@include media('<tvscreen'){
-						width: 65%;
-					}
-
-					&.add {
-						overflow: hidden;
-						@include align-reset(top,14,18);
-						
-						select,
-						input[type="number"],
-						input[type="text"]{
-							width: 40%;
-
-							@include media('<desktop'){
-								width: 42%;
-							}
-						}
-					}
-				}
+			@include media('<tablet'){
+				right: 8px;
+				margin: -5px 00 ;
+				@include font(12,12);
 			}
 		}
-		select,
-		input[type="number"],
-		input[type="text"]{
-			padding: 6px 10px;
-			@include squar(100%, 35px);
-			background: transparent;
-			color: $black;
-			border: 2px solid $black;
-			display: block;
 
-			&:focus, &:active{
-				background: $dove-black;
-				color: $white;
-			}
-		}
-		button[type="submit"]{
-			padding: 5px 60px;
-			border: 0;
-			color: $white;
+		&:hover {
 			background: $mix-blue;
-			@include font(20,24);
-			position: relative;
-			display: block;
-
-			&:hover {
-				background: darken($mix-blue, 10%);
-			}
-
-			@include media('<widescreen'){
-				margin: 0 auto;
-				width: 200px;
-			}
-
-			span[class^="icon-"], span[class*="icon-"]{
-				position: absolute;
-				top: 50%;
-				left: 15px;
-				margin: -8px 0 0;
-			}
 		}
 	}
 

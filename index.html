@@ -15,7 +15,7 @@
 	 <span class="lodaing-page">Property42.pk</span>
 	<!-- main container of all the page elements -->
 	<div id="wrapper">
-		<header id="header" class="home-header">
+		<header id="header">
 			<div class="layout">
 				<div class="logo"><a href="#"><img src="images/logo.png" width="695" height="301" alt="Property42"></a></div>
 				<nav id="nav">
@@ -48,22 +48,22 @@
 			<div class="main-visual">
 				<div class="property-search-holder">
 					<div class="tabs-holder">
-						<ul class="main-links">
-							<li>
-								<label for="buy1">
-									<input type="radio" name="propertyPurpose" id="buy1" checked>
-									<span class="fake-label">Buy</span>
-								</label>
-							</li>
-							<li>
-								<label for="rent1">
-									<input type="radio" name="propertyPurpose" id="rent1">
-									<span class="fake-label">Rent</span>
-								</label>
-							</li>
-						</ul>
-						<div class="tab-content">
-							<form>
+						<form>
+							<ul class="main-links">
+								<li>
+									<label for="buy1">
+										<input type="radio" name="propertyPurpose" id="buy1" checked>
+										<span class="fake-label">Buy</span>
+									</label>
+								</li>
+								<li>
+									<label for="rent1">
+										<input type="radio" name="propertyPurpose" id="rent1">
+										<span class="fake-label">Rent</span>
+									</label>
+								</li>
+							</ul>
+							<div class="tab-content">
 								<ul class="propertyType-buttons">
 									<li>
 										<label for="anyPro">
@@ -147,7 +147,7 @@
 											</span>
 										</div>
 									</li>
-									<li class="hide-bedrooms">
+									<li>
 										<label>Select Bedrooms:</label>
 										<div class="input-holder">
 											<span class="fake-select">
@@ -179,7 +179,18 @@
 									</li>
 								</ul>
 								<ul class="inline">
-									<li class="full">Land Area</li>
+									<li class="full">
+										<label>Land Area</label>
+										<div class="fake-select">
+											<select>
+												<option disabled selected>Select Land Area</option>
+												<option>Marla</option>
+												<option>Kanal</option>
+												<option>Squar feet</option>
+												<option>Squar yard</option>
+											</select>
+										</div>
+									</li>
 									<li>
 										<span>From:</span>
 										<div class="input-holder"><input type="number"></div>
@@ -192,8 +203,8 @@
 								<div class="btn-holder">
 									<button type="submit">Find Property<span class="icon-search"></span></button>
 								</div>
-							</form>
-						</div>
+							</div>
+						</form>
 					</div>
 				</div>
 				<a href="#content" class="smooth-scroll down-scroll"><span class="icon-angle-down"></span></a>
@@ -238,131 +249,414 @@
 				<div class="center-content">
 					<div class="page-holder">
 						<span class="alert-success"><span class="icon-checkmark"></span>Your message has been sent successfully !<a class="close icon-cross"></a></span>
-						<div class="agentProfile-page">
-							<div class="layout">
-								<div class="main-infoHolder">
-									<div class="img-holder"><img src="images/agent5.png" width="300" height="300" alt="image description"></div>
-									<div class="cap-name">
-										<strong class="name">Malik State</strong>
-										<p>Our mission is to provide investors with superior returns through an investment in real estate business. Real estate investing can be very profitable, but at the same time it can also be very risky.</p>
-										<p>To overcome such risks and make your life easy, please contact us with your needs. We deal in all kinds of commercial and residential properties in lahore.</p>
-									</div>
-								</div>
-								<ul class="contact-links">
+						<div class="public-propertyListing">
+							<a href="#SearchPublic-Property" class="mySearch lightbox">Search My Property<span class="icon-search"></span></a>
+							<div class="holder">
+								<span class="searchResult-counter">Showing <b>1</b> to <b>20</b> of <b>24,303</b> properties</span>
+								<ul class="sortBy">
+									<li>Sorty By</li>
 									<li>
-										<a class="lightbox" href="#send-emailForm"><span class="icon-envelope"></span>Send Email</a>
-										<div class="popup-holder">
-											<div class="lightbox" id="send-emailForm">
-												<strong class="form-heading">Send Email</strong>
-												<form class="enquiry-form">
-													<ul>
-														<li>
-															<label for="subject">Subject</label>
-															<div class="input-holder error">
-																<input type="text" id="subject" placeholder="Please Enter Your Subject">
-																<span class="error-text">This is error</span>
-															</div>
-														</li>
-														<li>
-															<label for="name">Name</label>
-															<div class="input-holder">
-																<input type="text" id="name" placeholder="Please enter your Name">
-																<span class="error-text">This is error</span>
-															</div>
-														</li>
-														<li>
-															<label for="email">Email</label>
-															<div class="input-holder">
-																<input type="text" id="email" placeholder="Please enter your Email">
-																<span class="error-text">This is error</span>
-															</div>
-														</li>
-														<li>
-															<label for="phone">Phone</label>
-															<div class="input-holder error">
-																<input type="text" id="phone" placeholder="Please enter your Phone">
-																<span class="error-text">This is error</span>
-															</div>
-														</li>
-														<li>
-															<label for="cell">Cell</label>
-															<div class="input-holder">
-																<input type="tel" id="cell" placeholder="Please enter your Cell">
-																<span class="error-text">This is error</span>
-															</div>
-														</li>
-														<li>
-															<label for="msg">Message</label>
-															<div class="input-holder">
-																<textarea id="msg" placeholder="Please enter your Message"></textarea>
-																<span class="error-text">This is error</span>
-															</div>
-														</li>
-														<li>
-															<label for="captcha">Security code</label>
-															<div class="input-holder add error">
-																<input type="text" id="captcha">
-																<span class="error-text">This is error</span>
-																<img src="images/captcha.jpg" width="130" height="40" alt="captcha" class="captcha">
-															</div>
-														</li>
-														<li><span>Before submiting this form i agree the <a href="#">Terms and condition</a></span></li>
-													</ul>
-													<button type="submit"><span class="icon-envelope"></span>Send email</button>
-												</form>
-											</div>
-										</div>
+										<select>
+											<option>Default Order</option>
+											<option>Price low to high</option>
+											<option>Price high to low</option>
+											<option>Beds low to high</option>
+											<option>Bed high to low</option>
+											<option>Area low to high</option>
+											<option>Area high to low</option>
+											<option>Date new to old</option>
+											<option>Date old to new</option>
+											<option>Verified only</option>
+											<option>Hot only</option>
+											<option>With videos</option>
+											<option>With photos</option>
+										</select>
 									</li>
-									<li><a href="tel:0321987654"><span class="icon-phone_iphone"></span><span class="hidden-xs">0321987654</span><span class="show-xs">Call Now</span></a></li>
 								</ul>
 							</div>
-							<div class="cols-holder">
-								<div class="col">
-									<header>Agent Information</header>
+							<section class="property-posts">
+								<article class="post">
+									<div class="img-holder"><a href="#"><img src="images/img01.jpg" width="600" height="450" alt="image description"></a></div>
 									<div class="caption">
-										<div class="profile-pic"><img src="images/profile-pic.png" width="183" height="183" alt="image description"></div>
-										<strong class="name">Muneer Ahmad Bhatti</strong>
-										<span class="post">Director Marketing</span>
-										<p>We are there with you at the start of the process and stay with you until the closing table and beyond. Our company has been selling real estate since 1990. Our journey as Shah Estate Corp in the Rawalpindi / Islamabad real estate market has been a long and exciting one. We have participated in twin city’s modernization and rebuilding process since the 1990's. Throughout our many years of real estate experience we were able to establish ourselves as one of the leading and most respected players in the market. We differentiated ourselves by being able to identify unique market opportunities and transform them into successful investments. Shah Estate Corp will continue to grow its real estate investment and development platform. Our relationship with our investors is based upon trust, transparency and profitability, and will continue to benefit both parties over the long term. That is why we focus heavily on aligning our interests with those of our investors. We are incredibly excited for this journey and truly believe that the best is yet to come for Karachi, Pakistan. We welcome you to M/s Shah Estate Corporation and M/s Shah Builders where “dreams come true”.</p>
-									</div>
-								</div>
-								<div class="col">
-									<header>Contact Details</header>
-									<div class="caption">
-										<strong class="name">Muneer Ahmad Bhatti</strong>
-										<span class="agency-name">Shah Estate Corporation</span>
-										<span class="contact-num"><a href="tel:92515400336-39"><span class="icon-phone"></span>+92-51-5400336-39</a></span>
-										<span class="contact-num"><a href="tel:923018501111"><span class="icon-phone_iphone"></span>+92-3018501111</a></span>
-										<address>Office No 74, Sardar Arcade, Spring North Commercial, Bahria Expressway, Phase 7, Bahria Town, Islamabad</address>
-									</div>
-								</div>
-								<div class="col">
-									<header> Properties For Sale</header>
-									<div class="caption">
-										<ul>
-											<li><span>Houses</span><span>2</span></li>
-											<li><span>Residential Plots</span><span>370</span></li>
-											<li><span>Flats</span><span>56</span></li>
-											<li><span>Commercial Plots</span><span>18</span></li>
-											<li><span>Industrial Land</span><span>1</span></li>
-											<li><span>Buildings</span><span>5</span></li>
-											<li><span>Plot Files</span><span>8</span></li>
+										<strong class="post-heading">
+											<a href="#">1400 Sq Ft Apartment, Platinum Capital Square, Block B, Sector B-17 Islamabad For Sale</a>
+											<span class="price">Rs 1.2 Crore</span>
+											<span class="subTitle">This is my Property</span>
+										</strong>
+										<p>1400 Sq Ft apartment is available for sale. It is located in Platinum Capital Square, Block B, Sector B-17 Islamabad. </p>
+										<ul class="property-details">
+											<li>4 Bedrooms</li>
+											<li>4 Baths</li>
+											<li>4 Rooms (total)</li>
 										</ul>
-										<a href="#" class="view-all">View All</a>
+										<div class="holder">
+											<ul class="quick-links">
+												<li><a href="#"><span class="icon-pencil"></span>More Details</a></li>
+												<li><a href="tel:0321456789">
+													<span class="icon-phone_iphone"></span>
+													<span class="hidden-xs">0321456789</span>
+													<span class="show-xs">Call now</span></a>
+												</li>
+												<li class="popup-holder">
+													<a class="popup-opener"><span class="icon-envelope"></span>Send Email</a>
+													<div class="popup">
+														<form class="email-popup">
+															<strong class="form-heading">Send Email</strong>
+															<div class="input-field">
+																<label>From:</label>
+																<div class="input-holder"><input type="text"></div>
+															</div>
+															<div class="input-field">
+																<label>Message:</label>
+																<div class="input-holder"><textarea></textarea></div>
+															</div>
+															<div class="input-field"><input type="submit" value="Send"></div>
+														</form>
+														<a class="popup-close"><span class="icon-cross"></span></a>
+													</div>
+												</li>
+											</ul>
+											<div class="state-logo"><a href="#"><img src="images/state-logo.jpg" width="300" height="300" alt="zameen state"></a></div>
+										</div>
 									</div>
-									<header> Properties For Rent</header>
+								</article>
+								<article class="post">
+									<div class="img-holder"><a href="#"><img src="images/img01.jpg" width="600" height="450" alt="image description"></a></div>
 									<div class="caption">
-										<ul>
-											<li><span>Houses</span><span>2</span></li>
-											<li><span>Residential Plots</span><span>370</span></li>
-											<li><span>Flats</span><span>56</span></li>
-											<li><span>Commercial Plots</span><span>18</span></li>
-											<li><span>Industrial Land</span><span>1</span></li>
-											<li><span>Buildings</span><span>5</span></li>
-											<li><span>Plot Files</span><span>8</span></li>
+										<strong class="post-heading">
+											<a href="#">1400 Sq Ft Apartment, Platinum Capital Square, Block B, Sector B-17 Islamabad For Sale</a>
+											<span class="price">Rs 1.2 Crore</span>
+											<span class="subTitle">This is my Property</span>
+										</strong>
+										<p>1400 Sq Ft apartment is available for sale. It is located in Platinum Capital Square, Block B, Sector B-17 Islamabad. </p>
+										<ul class="property-details">
+											<li>4 Bedrooms</li>
+											<li>4 Baths</li>
+											<li>4 Rooms (total)</li>
 										</ul>
-										<a href="#" class="view-all">View All</a>
+										<div class="holder">
+											<ul class="quick-links">
+												<li><a href="#"><span class="icon-pencil"></span>More Details</a></li>
+												<li><a href="tel:0321456789">
+													<span class="icon-phone_iphone"></span>
+													<span class="hidden-xs">0321456789</span>
+													<span class="show-xs">Call now</span></a>
+												</li>
+												<li class="popup-holder">
+													<a class="popup-opener"><span class="icon-envelope"></span>Send Email</a>
+													<div class="popup">
+														<form class="email-popup">
+															<strong class="form-heading">Send Email</strong>
+															<div class="input-field">
+																<label>From:</label>
+																<div class="input-holder"><input type="text"></div>
+															</div>
+															<div class="input-field">
+																<label>Message:</label>
+																<div class="input-holder"><textarea></textarea></div>
+															</div>
+															<div class="input-field"><input type="submit" value="Send"></div>
+														</form>
+														<a class="popup-close"><span class="icon-cross"></span></a>
+													</div>
+												</li>
+											</ul>
+											<div class="state-logo"><a href="#"><img src="images/state-logo.jpg" width="300" height="300" alt="zameen state"></a></div>
+										</div>
 									</div>
+								</article>
+								<article class="post">
+									<div class="img-holder"><a href="#"><img src="images/img01.jpg" width="600" height="450" alt="image description"></a></div>
+									<div class="caption">
+										<strong class="post-heading">
+											<a href="#">1400 Sq Ft Apartment, Platinum Capital Square, Block B, Sector B-17 Islamabad For Sale</a>
+											<span class="price">Rs 1.2 Crore</span>
+											<span class="subTitle">This is my Property</span>
+										</strong>
+										<p>1400 Sq Ft apartment is available for sale. It is located in Platinum Capital Square, Block B, Sector B-17 Islamabad. </p>
+										<ul class="property-details">
+											<li>4 Bedrooms</li>
+											<li>4 Baths</li>
+											<li>4 Rooms (total)</li>
+										</ul>
+										<div class="holder">
+											<ul class="quick-links">
+												<li><a href="#"><span class="icon-pencil"></span>More Details</a></li>
+												<li><a href="tel:0321456789">
+													<span class="icon-phone_iphone"></span>
+													<span class="hidden-xs">0321456789</span>
+													<span class="show-xs">Call now</span></a>
+												</li>
+												<li class="popup-holder">
+													<a class="popup-opener"><span class="icon-envelope"></span>Send Email</a>
+													<div class="popup">
+														<form class="email-popup">
+															<strong class="form-heading">Send Email</strong>
+															<div class="input-field">
+																<label>From:</label>
+																<div class="input-holder"><input type="text"></div>
+															</div>
+															<div class="input-field">
+																<label>Message:</label>
+																<div class="input-holder"><textarea></textarea></div>
+															</div>
+															<div class="input-field"><input type="submit" value="Send"></div>
+														</form>
+														<a class="popup-close"><span class="icon-cross"></span></a>
+													</div>
+												</li>
+											</ul>
+											<div class="state-logo"><a href="#"><img src="images/state-logo.jpg" width="300" height="300" alt="zameen state"></a></div>
+										</div>
+									</div>
+								</article>
+								<article class="post">
+									<div class="img-holder"><a href="#"><img src="images/img01.jpg" width="600" height="450" alt="image description"></a></div>
+									<div class="caption">
+										<strong class="post-heading">
+											<a href="#">1400 Sq Ft Apartment, Platinum Capital Square, Block B, Sector B-17 Islamabad For Sale</a>
+											<span class="price">Rs 1.2 Crore</span>
+											<span class="subTitle">This is my Property</span>
+										</strong>
+										<p>1400 Sq Ft apartment is available for sale. It is located in Platinum Capital Square, Block B, Sector B-17 Islamabad. </p>
+										<ul class="property-details">
+											<li>4 Bedrooms</li>
+											<li>4 Baths</li>
+											<li>4 Rooms (total)</li>
+										</ul>
+										<div class="holder">
+											<ul class="quick-links">
+												<li><a href="#"><span class="icon-pencil"></span>More Details</a></li>
+												<li><a href="tel:0321456789">
+													<span class="icon-phone_iphone"></span>
+													<span class="hidden-xs">0321456789</span>
+													<span class="show-xs">Call now</span></a>
+												</li>
+												<li class="popup-holder">
+													<a class="popup-opener"><span class="icon-envelope"></span>Send Email</a>
+													<div class="popup">
+														<form class="email-popup">
+															<strong class="form-heading">Send Email</strong>
+															<div class="input-field">
+																<label>From:</label>
+																<div class="input-holder"><input type="text"></div>
+															</div>
+															<div class="input-field">
+																<label>Message:</label>
+																<div class="input-holder"><textarea></textarea></div>
+															</div>
+															<div class="input-field"><input type="submit" value="Send"></div>
+														</form>
+														<a class="popup-close"><span class="icon-cross"></span></a>
+													</div>
+												</li>
+											</ul>
+											<div class="state-logo"><a href="#"><img src="images/state-logo.jpg" width="300" height="300" alt="zameen state"></a></div>
+										</div>
+									</div>
+								</article>
+								<article class="post">
+									<div class="img-holder"><a href="#"><img src="images/img01.jpg" width="600" height="450" alt="image description"></a></div>
+									<div class="caption">
+										<strong class="post-heading">
+											<a href="#">1400 Sq Ft Apartment, Platinum Capital Square, Block B, Sector B-17 Islamabad For Sale</a>
+											<span class="price">Rs 1.2 Crore</span>
+											<span class="subTitle">This is my Property</span>
+										</strong>
+										<p>1400 Sq Ft apartment is available for sale. It is located in Platinum Capital Square, Block B, Sector B-17 Islamabad. </p>
+										<ul class="property-details">
+											<li>4 Bedrooms</li>
+											<li>4 Baths</li>
+											<li>4 Rooms (total)</li>
+										</ul>
+										<div class="holder">
+											<ul class="quick-links">
+												<li><a href="#"><span class="icon-pencil"></span>More Details</a></li>
+												<li><a href="tel:0321456789">
+													<span class="icon-phone_iphone"></span>
+													<span class="hidden-xs">0321456789</span>
+													<span class="show-xs">Call now</span></a>
+												</li>
+												<li class="popup-holder">
+													<a class="popup-opener"><span class="icon-envelope"></span>Send Email</a>
+													<div class="popup">
+														<form class="email-popup">
+															<strong class="form-heading">Send Email</strong>
+															<div class="input-field">
+																<label>From:</label>
+																<div class="input-holder"><input type="text"></div>
+															</div>
+															<div class="input-field">
+																<label>Message:</label>
+																<div class="input-holder"><textarea></textarea></div>
+															</div>
+															<div class="input-field"><input type="submit" value="Send"></div>
+														</form>
+														<a class="popup-close"><span class="icon-cross"></span></a>
+													</div>
+												</li>
+											</ul>
+											<div class="state-logo"><a href="#"><img src="images/state-logo.jpg" width="300" height="300" alt="zameen state"></a></div>
+										</div>
+									</div>
+								</article>
+								<article class="post">
+									<div class="img-holder"><a href="#"><img src="images/img01.jpg" width="600" height="450" alt="image description"></a></div>
+									<div class="caption">
+										<strong class="post-heading">
+											<a href="#">1400 Sq Ft Apartment, Platinum Capital Square, Block B, Sector B-17 Islamabad For Sale</a>
+											<span class="price">Rs 1.2 Crore</span>
+											<span class="subTitle">This is my Property</span>
+										</strong>
+										<p>1400 Sq Ft apartment is available for sale. It is located in Platinum Capital Square, Block B, Sector B-17 Islamabad. </p>
+										<ul class="property-details">
+											<li>4 Bedrooms</li>
+											<li>4 Baths</li>
+											<li>4 Rooms (total)</li>
+										</ul>
+										<div class="holder">
+											<ul class="quick-links">
+												<li><a href="#"><span class="icon-pencil"></span>More Details</a></li>
+												<li><a href="tel:0321456789">
+													<span class="icon-phone_iphone"></span>
+													<span class="hidden-xs">0321456789</span>
+													<span class="show-xs">Call now</span></a>
+												</li>
+												<li class="popup-holder">
+													<a class="popup-opener"><span class="icon-envelope"></span>Send Email</a>
+													<div class="popup">
+														<form class="email-popup">
+															<strong class="form-heading">Send Email</strong>
+															<div class="input-field">
+																<label>From:</label>
+																<div class="input-holder"><input type="text"></div>
+															</div>
+															<div class="input-field">
+																<label>Message:</label>
+																<div class="input-holder"><textarea></textarea></div>
+															</div>
+															<div class="input-field"><input type="submit" value="Send"></div>
+														</form>
+														<a class="popup-close"><span class="icon-cross"></span></a>
+													</div>
+												</li>
+											</ul>
+											<div class="state-logo"><a href="#"><img src="images/state-logo.jpg" width="300" height="300" alt="zameen state"></a></div>
+										</div>
+									</div>
+								</article>
+							</section>
+							<ul class="pager">
+								<li><a href="#" class="previous"><span class="icon-chevron-thin-left"></span></a></li>
+								<li class="active"><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+								<li><a href="#">6</a></li>
+								<li><a href="#">7</a></li>
+								<li><a href="#">8</a></li>
+								<li><a href="#">9</a></li>
+								<li><a href="#">10</a></li>
+								<li><a href="#" class="next"><span class="icon-chevron-thin-right"></span></a></li>
+							</ul>
+							<div class="lightbox" id="SearchPublic-Property">
+								<div class="mySearch-Form">
+									<form>
+										<ul class="propertyPurpose">
+											<li>
+												<label for="buy-1">
+													<input type="radio" name="mySearch" id="buy-1" checked>
+													<span class="fake-label">Buy</span>
+												</label>
+											</li>
+											<li>
+												<label for="rent-1">
+													<input type="radio" name="mySearch" id="rent-1">
+													<span class="fake-label">Rent</span>
+												</label>
+											</li>
+										</ul>
+										<ul class="propertyType">
+											<li>
+												<label for="allTypes">
+													<input type="radio" id="allTypes" name="typeOfProperty" checked>
+													<span class="fake-label">All Types</span>
+												</label>
+											</li>
+											<li>
+												<label for="Homes">
+													<input type="radio" id="Homes" name="typeOfProperty">
+													<span class="fake-label">Homes</span>
+												</label>
+											</li>
+											<li>
+												<label for="Plots">
+													<input type="radio" id="Plots" name="typeOfProperty">
+													<span class="fake-label">Plots</span>
+												</label>
+											</li>
+											<li>
+												<label for="Commerical">
+													<input type="radio" id="Commerical" name="typeOfProperty">
+													<span class="fake-label">Commerical</span>
+												</label>
+											</li>
+										</ul>
+										<ul class="fields">
+											<li>
+												<label>Select Sub Type:</label>
+												<select>
+													<option>1</option>
+													<option>1</option>
+													<option>1</option>
+													<option>1</option>
+													<option>1</option>
+												</select>
+											</li>
+											<li>
+												<label>Select Society:</label>
+												<select>
+													<option>1</option>
+													<option>1</option>
+													<option>1</option>
+													<option>1</option>
+													<option>1</option>
+												</select>
+											</li>
+											<li>
+												<label>Select Block:</label>
+												<select>
+													<option>1</option>
+													<option>1</option>
+													<option>1</option>
+													<option>1</option>
+													<option>1</option>
+												</select>
+											</li>
+											<li>
+												<label>Select Bedrooms:</label>
+												<select>
+													<option>1</option>
+													<option>1</option>
+													<option>1</option>
+													<option>1</option>
+													<option>1</option>
+												</select>
+											</li>
+											<li>
+												<label>Price Range (Rs):</label>
+												<div class="input-holder"><input type="number" placeholder="From"></div>
+												<div class="input-holder"><input type="number" placeholder="To"></div>
+											</li>
+											<li>
+												<label>Land Area:</label>
+												<div class="input-holder"><input type="number" placeholder="From"></div>
+												<div class="input-holder"><input type="number" placeholder="To"></div>
+											</li>
+										</ul>
+										<button type="submit"><span class="icon-search"></span>Search my property</button>
+									</form>
 								</div>
 							</div>
 						</div>

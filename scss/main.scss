@@ -170,19 +170,14 @@ h1 {
 }
 #header {
 	width: 100%;
+	top: 0;
+	left: 0;
 	display: block;
-	position: relative;
+	position: fixed;
+	z-index: 999;
 	background: $defualt-blue;
 	@extend %clearfix;
-	
-	&.home-header{
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 99;
-	}
-	
+
 	.layout {
 		padding: 10px 10px 0;
 		overflow: visible;
@@ -383,7 +378,7 @@ h1 {
 				width: 200px;
 				z-index: -1;
 				visibility: hidden;
-				background: rgba($white, 0.8);
+				background: rgba($white, 0.95);
 				border-bottom: 4px solid $green;
 				opacity: 0;
 				transition: top 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
@@ -495,6 +490,7 @@ h1 {
 			@include align-reset(top,30,33);
 			text-transform: capitalize;
 			text-align: center;
+			display: block;
 			
 			@include media('<desktop'){
 				@include align-reset(top,25,30);
@@ -504,6 +500,7 @@ h1 {
 				margin: 0 0 20px;
 				width: 33.33%;
 				padding: 0 5px;
+				overflow: visible;
 				
 				@include media('<desktop'){
 					margin: 0 0 15px;
@@ -512,6 +509,11 @@ h1 {
 					width: 50%;
 				}
 			
+				label, span{
+					float: none;
+					width: 100%;
+				}
+
 				.fake-label{
 					cursor: pointer;
 					color: $black;
@@ -574,307 +576,329 @@ h1 {
 			padding: 20px 10px;
 			max-width: 1040px;
 			border-bottom: 4px solid $mix-blue;
+			@include align-reset(top,16,19);
+			display: block;
+
+			@include media('<tablet'){
+				@include align-reset(top,12,16);
+			}
+		}
+		
+		form{
+			overflow: hidden;
 			
-			form{
-				overflow: hidden;
-				@include align-reset(top,16,19);
-				
-				@include media('<desktop'){
-					@include align-reset(top,14,17);
-				}
+			@include media('<desktop'){
+				@include align-reset(top,14,17);
+			}
+			
+			@include media('<tablet'){
+				@include align-reset(top,12,15);
+			}
+			
+			ul{
+				text-transform: capitalize;
+				@extend %listreset;
+				width: 50%;
+				color: $black;
+				padding:10px 20px;
 				
 				@include media('<tablet'){
-					@include align-reset(top,12,15);
+					width: 100%;
+					display: block !important;
+					padding: 5px;
 				}
 				
-				ul{
-					text-transform: capitalize;
-					@extend %listreset;
-					width: 50%;
-					color: $black;
-					padding:10px 20px;
+				&.propertyType-buttons{
+					width: 100%;
+					display: block;
+					margin: 0 auto 10px;
+					padding: 0;
+					@include align-reset(top,14,17);
+					text-align: center;
 					
+					@include media('<desktop'){
+						@include align-reset(top,12,15);
+					}
 					@include media('<tablet'){
-						width: 100%;
-						display: block !important;
-						padding: 5px;
-					}
-					
-					&.propertyType-buttons{
-						width: 100%;
-						display: block;
-						margin: 0 auto 10px;
-						padding: 0;
-						@include align-reset(top,14,17);
-						text-align: center;
-						
-						@include media('<desktop'){
-							@include align-reset(top,12,15);
-						}
-						@include media('<tablet'){
-							@include align-reset(top,11,14);
-						}
-						
-						li{
-							min-width: 125px;
-							border-left: 1px solid $white;
-							padding: 0;
-							margin: 0 0 10px;
-							
-							@include media('<tablet'){
-								min-width: 73px;
-							}
-
-							&:first-child{ border: 0;}
-							
-							span,
-							label{
-								display: block;
-								float: none;
-								width: auto;
-								cursor: pointer;
-							}
-							
-							.fake-label{
-								padding: 10px 3px;
-								color: $black;
-								background: $light-gray;
-								transition: color 0.4s ease, background 0.4s ease;
-								-webkit-transition: color 0.4s ease, background 0.4s ease;
-								-ms-transition: color 0.4s ease, background 0.4s ease;
-								-moz-transition: color 0.4s ease, background 0.4s ease;
-							}
-							
-							input[type="radio"]{
-								opacity: 0;
-								position: fixed;
-								top: -9999px;
-								left: -9999px;
-								
-								&:checked ~{
-									.fake-label{
-										background: $defualt-blue;
-										color: $white;
-									}
-								}
-							}
-						}
-					}
-					
-					&.inline {
-						@include align-reset(top,16,19);
-						
-						@include media('<desktop'){
-							@include align-reset(top,14,17);	
-						}
-						
-						
-						li{
-							width: 50%;
-							padding: 0 10px 15px;
-							
-							@include media('<tablet'){
-								padding: 0 10px 10px;
-							}
-							
-							&.full{
-								width: 100%;
-								display: block;
-								font-weight: 600;
-								text-align: center;
-								@include font(20,22);
-								
-								@include media('<desktop'){
-									@include font(16,20);
-								}
-								@include media('<tablet'){
-									@include font(14,18);
-									padding: 5px;
-								}
-							}
-							label , span {
-								width: 50px;
-								
-								@include media('<tablet'){
-									width: 50px;
-								}
-							}
-						}
+						@include align-reset(top,11,14);
 					}
 					
 					li{
-						display: block;
-						overflow: hidden;
-						padding: 0 0 15px;
-						transition: opacity 0.5s ease, visibility 0.5s ease;
-						-webkit-transition: opacity 0.5s ease, visibility 0.5s ease;
-						-moz-transition: opacity 0.5s ease, visibility 0.5s ease;
-						-ms-transition: opacity 0.5s ease, visibility 0.5s ease;
+						min-width: 125px;
+						border-left: 1px solid $white;
+						padding: 0;
+						margin: 0 0 10px;
 						
-						&.hide-bedrooms {
-							opacity: 0;
-							visibility: hidden;
-						}
-
 						@include media('<tablet'){
-							padding: 0 0 10px;
+							min-width: 73px;
 						}
+
+						&:first-child{ border: 0;}
 						
-						select{
-							@include media('<desktop'){
-								@include font(13,17);
-							}
-						}
-						
-						label , span {
+						span,
+						label{
 							display: block;
-							width: 180px;
-							float: left;
-							
-							@include media('<desktop'){
-								width: 125px;
-							}
-							@include media('<tablet'){
-								width: 110px;
-							}
-						}
-						
-						.input-holder{
-							overflow: hidden;
-						}
-						.fake-select{
-							width: 100%;
 							float: none;
-							overflow: hidden;
-							border-right: 1px solid rgba($black, 0.6);
-							position: relative;
+							width: auto;
 							cursor: pointer;
-							
-							&.loading {
-								.load {
-									&:after, &:before {
-										display: block;
-									}
-								}
-							}
-
-							&:after{
-								position: absolute;
-								top: 50%;
-								right: 10px;
-								content: "\e92c";
-								font-family: 'icomoon';
-								@include font(22,22);
-								margin: -12px 0 0;
-							}
-
-							&:active,
-							&:focus,
-							&:hover{
-								border-right-color: $black;
-								&:after{
-									border-top-color: $black;		
-								}
-							}
-
-							.load {
-								display: block;
-								float: none;
-								width: 100%;
-								position: relative;
-
-								&:after{
-									position: absolute;
-									top: 1px;
-									left: 1px;
-									right: 0;
-									bottom: 1px;
-									background: rgba($white, 0.8);
-									content: '';
-									z-index: 9;
-									display: none;
-								}
-								&:before {
-									position: absolute;
-									top: 50%;
-									left: 50%;
-									background: url('../images/loading.gif') no-repeat;
-									background-size: 100% 100%;
-									@include squar(40px, 40px);
-									content: '';
-									z-index: 91;
-									margin: -20px 0 0 -20px;
-									display: none;
-								}
-							}
 						}
-						input[type="text"], input[type="number"],
-						select{
-							display: block;
-							width: 110%;
-							border: 1px solid rgba($black, 0.6);
-							color: rgba($black, 0.6);
-							height: 35px;
-							background: transparent;
-							
-							@include media('<desktop'){
-								height: 30px;
-							}
-							
-							&:focus,
-							&:hover{
-								color: $black;
-								border-color: $black;
-							}
+						
+						.fake-label{
+							padding: 10px 3px;
+							color: $black;
+							background: $light-gray;
+							transition: color 0.4s ease, background 0.4s ease;
+							-webkit-transition: color 0.4s ease, background 0.4s ease;
+							-ms-transition: color 0.4s ease, background 0.4s ease;
+							-moz-transition: color 0.4s ease, background 0.4s ease;
 						}
-						input[type="text"], input[type="number"]{
-							width: 100%;
+						
+						input[type="radio"]{
+							opacity: 0;
+							position: fixed;
+							top: -9999px;
+							left: -9999px;
 							
-							@include media('<desktop'){
-								@include font(13,16);
-								padding: 5px;
+							&:checked ~{
+								.fake-label{
+									background: $defualt-blue;
+									color: $white;
+								}
 							}
 						}
 					}
 				}
-				.btn-holder{
-					overflow: hidden;
-					display: block;
+				
+				&.inline {
+					@include align-reset(top,16,19);
 					
-					button[type="submit"]{
-						display: block;
-						color: $white;
-						font-weight: 600;
-						@include font(16,18);
-						width: 250px;
-						border-radius: 4px;
-						background: $green;
-						border: 0;
-						margin: 0 auto;
-						padding: 15px 50px;
-						position: relative;
-						border-bottom: 4px solid darken($green, 10%);
-						
-						@include media('<desktop'){
-							@include font(14,16);
-							width: 200px;
-							padding: 10px;
-						}
+					@include media('<desktop'){
+						@include align-reset(top,14,17);	
+					}
+					
+					
+					li{
+						width: 50%;
+						padding: 0 10px 15px;
 						
 						@include media('<tablet'){
-							width: 190px;
+							padding: 0 10px 10px;
 						}
 						
-						[class^="icon-"],[class*="icon-"]{
+						&.full{
+							width: 100%;
+							display: block;
+							font-weight: 600;
+							text-align: center;
+							@include font(20,22);
+							
+							@include media('<desktop'){
+								@include font(16,20);
+							}
+							@include media('<tablet'){
+								@include font(14,18);
+								padding: 5px;
+							}
+							.fake-select,
+							label , span {
+								width: 50%;
+								
+							}
+							.fake-select {
+								font-weight: normal;
+								
+								@include media('<tablet'){
+									max-width: 129px;
+									margin: 0 auto 10px;
+
+									&:after{
+										display: none;
+									}
+								}
+							}
+						}
+						label , span {
+							width: 50px;
+							
+							@include media('<tablet'){
+								width: 50px;
+							}
+						}
+					}
+				}
+				
+				li{
+					display: block;
+					overflow: hidden;
+					padding: 0 0 15px;
+					transition: opacity 0.5s ease, visibility 0.5s ease;
+					-webkit-transition: opacity 0.5s ease, visibility 0.5s ease;
+					-moz-transition: opacity 0.5s ease, visibility 0.5s ease;
+					-ms-transition: opacity 0.5s ease, visibility 0.5s ease;
+					
+					&.hide-bedrooms {
+						opacity: 0;
+						visibility: hidden;
+					}
+
+					@include media('<tablet'){
+						padding: 0 0 10px;
+					}
+					
+					select{
+						@include media('<desktop'){
+							@include font(13,17);
+						}
+					}
+					
+					label , span {
+						display: block;
+						width: 180px;
+						float: left;
+						
+						@include media('<desktop'){
+							width: 125px;
+						}
+						@include media('<tablet'){
+							width: 110px;
+						}
+					}
+					
+					.input-holder{
+						overflow: hidden;
+					}
+					.fake-select{
+						width: 100%;
+						float: none;
+						overflow: hidden;
+						border-right: 1px solid rgba($black, 0.6);
+						position: relative;
+						cursor: pointer;
+						
+						&.loading {
+							.load {
+								&:after, &:before {
+									display: block;
+								}
+							}
+						}
+
+						&:after{
 							position: absolute;
 							top: 50%;
-							right: 20px;
-							margin: -5px 0 0;
-							padding: 0 5px;
+							right: 10px;
+							content: "\e92c";
+							font-family: 'icomoon';
+							@include font(22,22);
+							margin: -12px 0 0;
 						}
+
+						&:active,
+						&:focus,
 						&:hover{
-							background: darken($green, 5%);
+							border-right-color: $black;
+							&:after{
+								border-top-color: $black;		
+							}
 						}
+
+						.load {
+							display: block;
+							float: none;
+							width: 100%;
+							position: relative;
+
+							&:after{
+								position: absolute;
+								top: 1px;
+								left: 1px;
+								right: 0;
+								bottom: 1px;
+								background: rgba($white, 0.8);
+								content: '';
+								z-index: 9;
+								display: none;
+							}
+							&:before {
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								background: url('../images/loading.gif') no-repeat;
+								background-size: 100% 100%;
+								@include squar(40px, 40px);
+								content: '';
+								z-index: 91;
+								margin: -20px 0 0 -20px;
+								display: none;
+							}
+						}
+					}
+					input[type="text"], input[type="number"],
+					select{
+						display: block;
+						width: 110%;
+						border: 1px solid rgba($black, 0.6);
+						color: rgba($black, 0.6);
+						height: 35px;
+						background: transparent;
+						
+						@include media('<desktop'){
+							height: 30px;
+						}
+						
+						&:focus,
+						&:hover{
+							color: $black;
+							border-color: $black;
+						}
+					}
+					input[type="text"], input[type="number"]{
+						width: 100%;
+						
+						@include media('<desktop'){
+							@include font(13,16);
+							padding: 5px;
+						}
+					}
+				}
+			}
+			.btn-holder{
+				overflow: hidden;
+				display: block;
+				
+				button[type="submit"]{
+					display: block;
+					color: $white;
+					font-weight: 600;
+					@include font(16,18);
+					width: 250px;
+					border-radius: 4px;
+					background: $green;
+					border: 0;
+					margin: 0 auto;
+					padding: 15px 50px;
+					position: relative;
+					border-bottom: 4px solid darken($green, 10%);
+					
+					@include media('<desktop'){
+						@include font(14,16);
+						width: 200px;
+						padding: 10px;
+					}
+					
+					@include media('<tablet'){
+						width: 190px;
+					}
+					
+					[class^="icon-"],[class*="icon-"]{
+						position: absolute;
+						top: 50%;
+						right: 20px;
+						margin: -5px 0 0;
+						padding: 0 5px;
+					}
+					&:hover{
+						background: darken($green, 5%);
 					}
 				}
 			}
@@ -892,6 +916,7 @@ h1 {
 }
 #content{
 	overflow: hidden;
+	position: relative;
 	padding: 90px 10px 0;
 	
 	@include media('<tablet'){
@@ -1636,7 +1661,7 @@ h1 {
 	}
 }
 .fancybox-skin {
-	padding: 8px !important;
+	padding: 5px !important;
 }
 .lightbox {
 	padding: 5px;
@@ -1711,6 +1736,110 @@ h1 {
 			content: '';
 		}
 	}
+}
+.mySearch-Form {
+	width: 100%;
+	overflow: hidden;
+
+	ul {
+		@extend %listreset;
+		@include align-reset(top,15,18);
+
+		@include media('<tablet'){
+			@include align-reset(top,12,15);
+		}
+
+		li {
+			margin: 0 0 10px;
+		}
+
+		&.propertyPurpose {
+			@include align-reset(top,20,24);
+			text-align: center;
+
+			li {
+				width: 50%;
+			}
+		}
+		&.propertyType {
+			text-align: center;
+
+			@include media('<tablet'){
+				@include align-reset(top,10,14);
+			}
+
+			 li{
+				 width: 25%;
+			 }
+			 .fake-label{
+				 padding: 5px;
+			 }
+		}
+		&.fields {
+			li {
+				display: block;
+				overflow: hidden;
+
+				label{
+					padding: 0 0 10px;
+				}
+				.input-holder{
+					padding: 3px;
+					float: left;
+					width: 50%;
+				}
+			}
+		}
+	}
+	label{
+		display: block;
+	}
+	.fake-label{
+		cursor: pointer;
+		display: block;
+		background: $index-white;
+		color: $dove-black;
+		padding: 10px;
+	}
+	select,
+	input[type="text"],
+	input[type="number"] {
+		display: block;
+		width: 100%;
+	}
+	input[type="radio"]{
+		position: fixed;
+		top: -9999px;
+		left: -9999px;
+		opacity: 0;
+
+		&:checked{
+			~ .fake-label{
+				background: lighten($green, 10%);
+				color: $white;
+			}
+		}
+	}
+	 button[type="submit"]{
+		 width: 100%;
+		 display: block;
+		 border: 2px solid darken($mix-blue, 10%);
+		 color: $white;
+		 background: lighten($mix-blue, 5%);
+		 @include font(16,19);
+		 position: relative;
+		 padding: 8px 20px;
+
+		 span[class^="icon-"], span[class*="icon-"]{
+			 position: absolute;
+			 top: 50%;
+			 left: 10px;
+			 margin: -6px 0 0;
+		 }
+		 &:hover {
+			 background: darken($mix-blue, 10%);
+		 }
+	 }
 }
 @media print {
 	* {
