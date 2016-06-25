@@ -403,8 +403,8 @@ th {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?xfjomq");
-  src: url("../fonts/icomoon.eot?xfjomq#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?xfjomq") format("truetype"), url("../fonts/icomoon.woff?xfjomq") format("woff"), url("../fonts/icomoon.svg?xfjomq#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?5lf323");
+  src: url("../fonts/icomoon.eot?5lf323#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?5lf323") format("truetype"), url("../fonts/icomoon.woff?5lf323") format("woff"), url("../fonts/icomoon.svg?5lf323#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -421,6 +421,14 @@ th {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-warning:before {
+  content: "\e931";
+}
+
+.icon-refresh-arrow:before {
+  content: "\e930";
 }
 
 .icon-logout:before {
@@ -645,7 +653,7 @@ th {
 
 .public-propertyListing .holder .sortBy, .public-propertyListing .property-posts .post .caption .quick-links,
 .public-propertyListing .property-posts .post .caption .property-details, .propertyDetails-page .propertyOwnerInfo .description .contact-links, .propertyDetails-page .property-qucikLinks, .propertyDetails-page .feature-list, .agentListing-page .property-posts .post-holder .caption .quick-links,
-.agentListing-page .property-posts .post-holder .caption .property-details, .agentProfile-page .contact-links, .agentProfile-page .cols-holder .col .caption ul, #nav .main-navigation, #nav .main-navigation li .dropDown, .main-visual .property-search-holder .main-links, .main-visual .property-search-holder form ul, #content .left-content .company-logo, #content .right-content .posters, .pager, #footer .cols-holder .col ul, .enquiry-form ul, .mySearch-Form ul {
+.agentListing-page .property-posts .post-holder .caption .property-details, .agentProfile-page .contact-links, .agentProfile-page .cols-holder .col .caption ul, #header .btn-header .LoggedIn-links, #nav .main-navigation, #nav .main-navigation li .dropDown, .main-visual .property-search-holder .main-links, .main-visual .property-search-holder form ul, #content .left-content .company-logo, #content .right-content .posters, .pager, #footer .cols-holder .col ul, .enquiry-form ul, .mySearch-Form ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -857,6 +865,9 @@ select {
   border: 1px solid #999;
   outline: none !important;
   padding: 0.4em 0.7em;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   font-size: 14px;
   line-height: 18px;
 }
@@ -2003,6 +2014,7 @@ input[type='submit'] {
 .propertyDetails-page .propertyImage-slider .propertyImage-slide a,
 .propertyDetails-page .propertyImage-slider .slide a {
   display: block;
+  max-width: inherit;
 }
 
 .propertyDetails-page .propertyImage-slider .propertyImage-slide a img,
@@ -2371,6 +2383,7 @@ input[type='submit'] {
 .propertyDetails-page .propertyOwnerInfo .description .contact-links li {
   width: 50%;
   padding: 0 5px;
+  height: auto;
   margin: 0 0 10px;
 }
 
@@ -2541,6 +2554,7 @@ input[type='submit'] {
 
 .propertyDetails-page .property-qucikLinks li {
   padding: 5px;
+  height: auto;
 }
 
 @media (max-width: 767px) {
@@ -3086,7 +3100,7 @@ input[type='submit'] {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
-  margin: 0 -10px;
+  margin: 0 -5px;
   float: left;
 }
 
@@ -3098,9 +3112,32 @@ input[type='submit'] {
   letter-spacing: 0;
 }
 
+@media (max-width: 1599px) {
+  .agentListing-page .property-posts .post-holder .caption .quick-links {
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: -4px;
+  }
+  .agentListing-page .property-posts .post-holder .caption .quick-links > * {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 13px;
+    line-height: 17px;
+    letter-spacing: 0;
+  }
+}
+
+@media (max-width: 1343px) {
+  .agentListing-page .property-posts .post-holder .caption .quick-links {
+    float: none;
+    overflow: hidden;
+    max-width: 155px;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 1199px) {
   .agentListing-page .property-posts .post-holder .caption .quick-links {
-    margin: 0 -5px;
     font-size: 0;
     line-height: 0;
     letter-spacing: -4px;
@@ -3128,7 +3165,6 @@ input[type='submit'] {
     font-size: 0;
     line-height: 0;
     letter-spacing: -4px;
-    margin: 0 -3px;
   }
   .agentListing-page .property-posts .post-holder .caption .quick-links > * {
     display: inline-block;
@@ -3140,12 +3176,13 @@ input[type='submit'] {
 }
 
 .agentListing-page .property-posts .post-holder .caption .quick-links li {
-  padding: 0 10px;
+  padding: 0 5px;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1343px) {
   .agentListing-page .property-posts .post-holder .caption .quick-links li {
-    padding: 0 5px;
+    display: block;
+    text-align: center;
   }
 }
 
@@ -3166,6 +3203,12 @@ input[type='submit'] {
   -webkit-transition: color 0.4s ease, border 0.4s ease, background 0.4s ease;
   -moz-transition: color 0.4s ease, border 0.4s ease, background 0.4s ease;
   -ms-transition: color 0.4s ease, border 0.4s ease, background 0.4s ease;
+}
+
+@media (max-width: 1599px) {
+  .agentListing-page .property-posts .post-holder .caption .quick-links li a {
+    padding: 10px 20px 10px 22px;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -3821,22 +3864,132 @@ h1 {
   }
 }
 
-#header .btn-header.loginRegister {
+#header .btn-header.loggedIn, #header .btn-header.loginRegister {
   border-radius: 0;
   background: transparent;
   border: 1px solid #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+#header .btn-header.loggedIn p, #header .btn-header.loginRegister p {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 220px;
+}
+
+@media (max-width: 1023px) {
+  #header .btn-header.loggedIn p, #header .btn-header.loginRegister p {
+    max-width: 150px;
+  }
 }
 
 @media (max-width: 767px) {
-  #header .btn-header.loginRegister {
+  #header .btn-header.loggedIn, #header .btn-header.loginRegister {
     padding: 5px;
     margin: 10px auto 0;
   }
 }
 
-#header .btn-header.loginRegister:hover {
+#header .btn-header.loggedIn:hover, #header .btn-header.loginRegister:hover {
   border-color: #000;
   background: #000;
+}
+
+#header .btn-header.loggedIn {
+  min-width: 180px;
+  text-align: center;
+  padding: 10px 20px 10px 30px;
+}
+
+@media (max-width: 767px) {
+  #header .btn-header.loggedIn {
+    padding: 10px 20px 10px 23px;
+    min-width: 100px;
+  }
+}
+
+#header .btn-header.loggedIn span[class^="icon-"], #header .btn-header.loggedIn span[class*="icon-"] {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  font-size: 14px;
+  line-height: 14px;
+  margin: -7px 0 0;
+}
+
+@media (max-width: 767px) {
+  #header .btn-header.loggedIn span[class^="icon-"], #header .btn-header.loggedIn span[class*="icon-"] {
+    font-size: 12px;
+    line-height: 12px;
+    margin: -6px 0 0;
+  }
+}
+
+#header .btn-header.loggedIn:hover .LoggedIn-links {
+  display: block;
+}
+
+#header .btn-header .LoggedIn-links {
+  position: absolute;
+  top: 100%;
+  min-width: 180px;
+  left: 0;
+  right: 0;
+  display: none;
+  background: #edf1f4;
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  #header .btn-header .LoggedIn-links {
+    min-width: 100px;
+  }
+}
+
+#header .btn-header .LoggedIn-links li {
+  display: block;
+}
+
+#header .btn-header .LoggedIn-links li:first-child a {
+  border: 0;
+}
+
+#header .btn-header .LoggedIn-links a {
+  padding: 5px 10px 5px 30px;
+  display: block;
+  color: #2e2e2e;
+  position: relative;
+  text-decoration: none;
+  border-top: 1px solid #2e2e2e;
+  transition: color 0.4s ease, background 0.4s ease, border 0.4s ease;
+  -webkit-transition: color 0.4s ease, background 0.4s ease, border 0.4s ease;
+  -mos-transition: color 0.4s ease, background 0.4s ease, border 0.4s ease;
+}
+
+#header .btn-header .LoggedIn-links a span[class^="icon-"], #header .btn-header .LoggedIn-links a span[class*="icon-"] {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  font-size: 15px;
+  line-height: 15px;
+  color: #58a36f;
+  margin: -7px 0 0;
+  transition: color 0.4s ease;
+  -webkit-transition: color 0.4s ease;
+  -mos-transition: color 0.4s ease;
+}
+
+#header .btn-header .LoggedIn-links a:hover {
+  background: #58a36f;
+  color: #fff;
+  border-color: #58a36f;
+}
+
+#header .btn-header .LoggedIn-links a:hover span[class^="icon-"], #header .btn-header .LoggedIn-links a:hover span[class*="icon-"] {
+  color: #fff;
 }
 
 #header .btn-header:hover {

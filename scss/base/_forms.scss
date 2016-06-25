@@ -34,6 +34,9 @@ select{
   border: 1px solid $form-element-border-color;
   outline: none !important;
   padding: $form-element-padding;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   @include font(14,18);
 }
 input[type=number]::-webkit-outer-spin-button,

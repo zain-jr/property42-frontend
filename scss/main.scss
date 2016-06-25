@@ -217,11 +217,26 @@ h1 {
 			left: 32px;
 		}
 		
+		&.loggedIn,
 		&.loginRegister {
 			border-radius: 0;
 			background: transparent;
 			border: 1px solid $white;
+			cursor: pointer;
+			position: relative;
 			
+			p{
+				margin: 0;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				max-width: 220px;
+
+				@include media('<desktop'){
+					max-width: 150px;
+				}
+			}
+
 			@include media('<tablet'){
 				padding: 5px;
 				margin: 10px auto 0;
@@ -233,7 +248,88 @@ h1 {
 			}
 		}
 		
-		
+		&.loggedIn{
+			min-width: 180px;
+			text-align: center;
+			padding: 10px 20px 10px 30px;
+			
+			@include media('<tablet'){
+				padding: 10px 20px 10px 23px;
+				min-width: 100px;
+			}
+
+			span[class^="icon-"],span[class*="icon-"]{
+				position: absolute;
+				top: 50%;
+				left: 5px;
+				@include font(14,14);
+				margin: -7px 0 0;
+
+				@include media('<tablet'){
+					@include font(12,12);
+					margin: -6px 0 0;
+				}
+			}
+			
+			&:hover{
+				.LoggedIn-links { display: block;}		
+			}
+		}
+
+		.LoggedIn-links {
+			@extend %listreset;
+			position: absolute;
+			top: 100%;
+			min-width: 180px;
+			left: 0;
+			right: 0;
+			display: none;
+			background: $index-white;
+			text-align: left;
+
+			@include media('<tablet'){
+				min-width: 100px;
+			}
+
+			li {
+				display: block;
+
+				&:first-child{
+					a{border: 0;}
+				}
+			}
+			a {
+				padding: 5px 10px 5px 30px;
+				display: block;
+				color:$mix-black;
+				position: relative;
+				text-decoration: none;
+				border-top: 1px solid $mix-black;
+				transition: color 0.4s ease, background 0.4s ease, border 0.4s ease;
+				-webkit-transition: color 0.4s ease, background 0.4s ease, border 0.4s ease;
+				-mos-transition: color 0.4s ease, background 0.4s ease, border 0.4s ease;
+
+				span[class^="icon-"],span[class*="icon-"]{
+					position: absolute;
+					top: 50%;
+					left: 5px;
+					@include font(15,15);
+					color: $green;
+					margin: -7px 0 0;
+					transition: color 0.4s ease;
+					-webkit-transition: color 0.4s ease;
+					-mos-transition: color 0.4s ease;
+				}
+
+				&:hover {
+					background:  $green;
+					color: $white;
+					border-color: $green;
+					span[class^="icon-"],span[class*="icon-"]{ color: $white;}
+				}
+			}
+		}
+
 		&:hover{ background: $orange; }
 		span[class^="icon-"], span[class*="icon-"] {
 			@include align(top);
