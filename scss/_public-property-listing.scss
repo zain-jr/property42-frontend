@@ -89,7 +89,6 @@
 	}
 	.property-posts {
 		overflow: hidden;
-		@include align-reset(top,14,18);
 		
 		.post {
 			@extend %clearfix;
@@ -97,8 +96,7 @@
 			border-bottom: 2px solid $orange;
 			padding:15px;
 			margin: 0 0 30px;
-			position: relative;
-			width: 50%;
+			position: relative;	
 			
 			&:before {
 				position: absolute;
@@ -250,7 +248,7 @@
 						overflow: hidden;
 						white-space: nowrap;
 						text-overflow: ellipsis;
-						color: lighten($red, 20%);
+						color: darken($green, 10%);
 						
 						@include media('<tablet'){
 							max-width: inherit;

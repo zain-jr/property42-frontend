@@ -1500,17 +1500,6 @@ input[type='submit'] {
 
 .public-propertyListing .property-posts {
   overflow: hidden;
-  font-size: 0;
-  line-height: 0;
-  letter-spacing: -4px;
-}
-
-.public-propertyListing .property-posts > * {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 0;
 }
 
 .public-propertyListing .property-posts .post {
@@ -1519,7 +1508,6 @@ input[type='submit'] {
   padding: 15px;
   margin: 0 0 30px;
   position: relative;
-  width: 50%;
 }
 
 .public-propertyListing .property-posts .post:before {
@@ -1726,7 +1714,7 @@ input[type='submit'] {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  color: #ef9e9e;
+  color: #468258;
 }
 
 @media (max-width: 767px) {
