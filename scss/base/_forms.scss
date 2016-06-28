@@ -39,6 +39,9 @@ select{
   -moz-appearance: none;
   @include font(14,18);
 }
+select::-ms-expand {
+    display: none;
+}
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;

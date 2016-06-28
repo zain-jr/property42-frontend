@@ -95,8 +95,21 @@
 		.propertyImage-slide {
 			a{
 				img {
-					max-height: inherit;
-					min-height: inherit;
+					max-height: 48px;
+					min-height: 48px;
+
+					@include media('<widescreen') {
+						max-height: 35px;
+						min-height: 35px;
+					}
+					@include media('<desktop') {
+						max-height: 45px;
+						min-height: 45px;
+					}
+					@include media('<tablet') {
+						max-height: 30px;
+						min-height: 30px;
+					}
 				}
 			}
 		}

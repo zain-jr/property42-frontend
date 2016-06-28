@@ -46,6 +46,7 @@ $media-expressions: (
 @import 'property-details';
 @import 'agent-listing-page';
 @import 'agent-profile';
+@import 'select2-min';
 
 html, body {
 	width: 100%;
@@ -860,74 +861,14 @@ h1 {
 						}
 					}
 					
+					.load,
+					.fake-select {
+						float: none;
+						width: 100%;
+					}
+
 					.input-holder{
 						overflow: hidden;
-					}
-					.fake-select{
-						width: 100%;
-						float: none;
-						overflow: hidden;
-						border-right: 1px solid rgba($black, 0.6);
-						position: relative;
-						cursor: pointer;
-						
-						&.loading {
-							.load {
-								&:after, &:before {
-									display: block;
-								}
-							}
-						}
-
-						&:after{
-							position: absolute;
-							top: 50%;
-							right: 10px;
-							content: "\e92c";
-							font-family: 'icomoon';
-							@include font(22,22);
-							margin: -12px 0 0;
-						}
-
-						&:active,
-						&:focus,
-						&:hover{
-							border-right-color: $black;
-							&:after{
-								border-top-color: $black;		
-							}
-						}
-
-						.load {
-							display: block;
-							float: none;
-							width: 100%;
-							position: relative;
-
-							&:after{
-								position: absolute;
-								top: 1px;
-								left: 1px;
-								right: 0;
-								bottom: 1px;
-								background: rgba($white, 0.8);
-								content: '';
-								z-index: 9;
-								display: none;
-							}
-							&:before {
-								position: absolute;
-								top: 50%;
-								left: 50%;
-								background: url('../images/loading.gif') no-repeat;
-								background-size: 100% 100%;
-								@include squar(40px, 40px);
-								content: '';
-								z-index: 91;
-								margin: -20px 0 0 -20px;
-								display: none;
-							}
-						}
 					}
 					input[type="text"], input[type="number"],
 					select{
@@ -1010,6 +951,73 @@ h1 {
 		animation: bounce 1.5s infinite;
 	}
 }
+.fake-select{
+	width: 100%;
+	float: none;
+	display: block;
+	overflow: hidden;
+	border-right: 1px solid rgba($black, 0.6);
+	position: relative;
+	cursor: pointer;
+	
+	&.loading {
+		.load {
+			&:after, &:before {
+				display: block;
+			}
+		}
+	}
+
+	&:after{
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		content: "\e92c";
+		font-family: 'icomoon';
+		@include font(22,22);
+		margin: -12px 0 0;
+	}
+
+	&:active,
+	&:focus,
+	&:hover{
+		border-right-color: $black;
+		&:after{
+			border-top-color: $black;		
+		}
+	}
+
+	.load {
+		display: block;
+		float: none;
+		width: 100%;
+		position: relative;
+
+		&:after{
+			position: absolute;
+			top: 1px;
+			left: 1px;
+			right: 0;
+			bottom: 1px;
+			background: rgba($white, 0.8);
+			content: '';
+			z-index: 9;
+			display: none;
+		}
+		&:before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			background: url('../images/loading.gif') no-repeat;
+			background-size: 100% 100%;
+			@include squar(40px, 40px);
+			content: '';
+			z-index: 91;
+			margin: -20px 0 0 -20px;
+			display: none;
+		}
+	}
+}
 #content{
 	overflow: hidden;
 	position: relative;
@@ -1021,198 +1029,6 @@ h1 {
 		width: 100%;
 		table-layout: fixed;
 		border-collapse: collapse;
-	}
-	
-	.left-content{
-		width: 8%;
-		float: left;
-		
-		@include media('<tvscreen'){
-			width: 10%;
-		}
-		
-		@include media('<widescreen'){
-			width: 15%;
-		}
-		
-		@include media('<tablet'){
-			width: 100%;
-			display: table-footer-group;
-			overflow: hidden;
-			float: none;
-		}
-		
-		.company-logos-sliders{
-			position: relative;
-			
-			.mask {
-				position: relative;
-				overflow: hidden;
-				width: 120px;
-				margin: 0 auto;
-				
-				@include media('<desktop'){
-					width: 100px;
-				}
-				@include media('<tablet'){
-					width: 300px;
-				}
-			}
-			.slideset {
-				width: 99999px;
-				float: left;
-				overflow: hidden;
-			}
-			.slide {
-				width: 120px;
-				float: left;
-				
-				@include media('<desktop'){
-					width: 100px;
-				}
-				@include media('<tablet'){
-					width: 300px;
-				}
-				
-			}
-		}
-		
-		.company-logo{
-			@extend %listreset;
-			width: 100%;
-			
-			@include media('<tablet'){
-				@include align-reset(top,12,15);
-				text-align: center;
-			}
-			
-			li{
-				display: block;
-				margin: 0 0 10px;
-				padding: 0 5px;
-				
-				@include media('<tablet'){
-					@include align(top);
-					width: 33.33%;
-				}
-				
-				a{
-					outline: none;
-					border: 1px solid rgba($black, 0.5);
-					display: block;
-					height: 120px;
-					white-space: nowrap;
-					text-align: center;
-					
-					@include media('<desktop'){
-						height: 100px;
-					}
-					
-					@include media('<tablet'){
-						height: 80px;
-					}
-					
-					&:after{
-						width: 1px;
-						margin: 0 0 0 -5px;
-						overflow: hidden;
-						@include align(middle);
-						content: '';
-						height: 120px;
-						
-						@include media('<desktop'){
-							height: 100px;
-						}
-						@include media('<tablet'){
-							height: 80px;
-						}
-					}
-					img{
-						@include align(middle);
-						white-space: normal;
-						width: 100%;
-						max-width: 90px;
-						
-						@include media('<desktop'){
-							max-width: 60px;
-						}
-					}
-				}
-			}
-		}
-	}
-	.center-content{
-		width: 77%;
-		float: left;
-		padding: 0 50px;
-		
-		@include media('<tvscreen'){
-			width: 75%;
-			padding: 0 20px;
-		}
-		@include media('<widescreen'){
-			width: 70%;
-			padding: 0 10px;
-		}
-		
-		@include media('<tablet'){
-			width: 100%;
-			display: block;
-			overflow: hidden;
-			float: none;
-			padding: 70px 10px 0;
-		}
-		
-		.page-holder {
-			@extend %clearfix;
-		}
-	}
-	.right-content{
-		width: 15%;
-		float: right;
-		
-		@include media('<tablet'){
-			width: 100%;
-			display: block;
-			max-width: 200px;
-			margin: 0 auto;
-			float: none;
-			overflow: hidden;
-		}
-		
-		.posters{
-			@extend %listreset;
-			
-			li{
-				padding: 0 5px 10px;
-				
-				a{
-					display: block;
-					border: 1px solid $black;
-					
-					&:hover{ opacity: 0.8;}
-				}
-				img{
-					@include img-res;
-					height: 100%;
-					min-height: 250px;
-					max-height: 250px;
-					
-					@include media('<widescreen'){
-						min-height: 200px;
-						max-height: 200px;
-					}
-					@include media('<desktop'){
-						min-height: 140px;
-						max-height: 140px;
-					}
-					@include media('<tablet'){
-						min-height: 200px;
-						max-height: 200px;
-					}
-				}
-			}
-		}
 	}
 }
 
@@ -1359,7 +1175,6 @@ h1 {
 					transition: background 0.4s ease;
 					
 					&:focus {
-						background: lighten($defualt-blue, 40%);
 						color: $white;
 						
 						@include placeholder{
@@ -1392,6 +1207,7 @@ h1 {
 					padding: 5px;
 					border-radius: 2px;
 					transition: background 0.4s ease;
+
 					&:hover {
 						background: darken($light-blue, 10%);
 					}
@@ -1903,6 +1719,9 @@ h1 {
 		display: block;
 		width: 100%;
 	}
+	select {
+		width: 110%;
+	}
 	input[type="radio"]{
 		position: fixed;
 		top: -9999px;
@@ -1921,8 +1740,8 @@ h1 {
 		 display: block;
 		 border: 2px solid darken($mix-blue, 10%);
 		 color: $white;
-		 background: lighten($mix-blue, 5%);
 		 @include font(16,19);
+		 background: lighten($mix-blue, 5%);
 		 position: relative;
 		 padding: 8px 20px;
 
@@ -1978,8 +1797,8 @@ h1 {
 		width: 100 !important;
 	}
 	.propertyDetails-page .propertyOwnerInfo header, .propertyDetails-page .propertyOwnerInfo .description .name:before,
-	.main-visual, #content .left-content, .propertyDetails-page .propertyOwnerInfo .description .agency-profile, .propertyDetails-page .propertyOwnerInfo .description .contact-links li:first-child,
-	btn-header loginRegister, #content .right-content, .propertyDetails-page .propertyImage-slider,
+	.main-visual, .propertyDetails-page .propertyOwnerInfo .description .agency-profile, .propertyDetails-page .propertyOwnerInfo .description .contact-links li:first-child,
+	btn-header loginRegister, .propertyDetails-page .propertyImage-slider,
 	#header .btn-header, .main-visual .property-search-holder, .main-visual .down-scroll, #footer, .propertyDetails-page .property-qucikLinks, .propertyDetails-page .overviewText-holder .btn-showMore,
 	#nav { display: none !important;}
 	.layout {
@@ -1987,12 +1806,6 @@ h1 {
 		 clear: both !important;
 		 width: 100% !important;
 		 display: block !important;
-	}
-	#content .center-content {
-		padding: 0 !important;
-		width: 100% !important;
-		float: none !important;
-		clear: both !important;
 	}
 	.propertyDetails-page .propertyOwnerInfo{
 		float: none !important;
@@ -2128,4 +1941,17 @@ h1 {
 	-webkit-transition: none !important;
 	-moz-transition: none !important;
 	-ms-transition: none !important;
+}
+.select2-container--default .select2-selection--single {
+	border-radius: 0;
+}
+.select2-container .select2-selection--single {
+	height: 40px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+	line-height: 40px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+	height: auto;
+	bottom: 1px;
 }

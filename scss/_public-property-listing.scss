@@ -6,14 +6,14 @@
 		color: $white;
 		background: lighten($green, 10%);
 		border-radius: 2px;
-		max-width: 300px;
+		max-width: 200px;
 		margin: 0 auto 10px;
 		text-align: center;
 		font-weight: 600;
 		@include font(18,22);
 		position: relative;
 		text-decoration: none;
-		padding: 10px;
+		padding: 5px;
 		transition: background 0.4s ease;
 		-webkit-transition: background 0.4s ease;
 		-moz-transition: background 0.4s ease;
@@ -28,7 +28,7 @@
 		span[class^="icon-"], span[class*="icon-"]{
 			position: absolute;
 			top: 50%;
-			right: 15px;
+			right: 10px;
 			margin: -8px 0 0;
 
 			@include media('<tablet'){
@@ -48,6 +48,7 @@
 		padding: 0 0 10px;
 		
 		.searchResult-counter {
+			padding: 5px 0 0;
 			float: left;
 			max-width: 500px;
 			
@@ -88,6 +89,7 @@
 	}
 	.property-posts {
 		overflow: hidden;
+		@include align-reset(top,14,18);
 		
 		.post {
 			@extend %clearfix;
@@ -95,7 +97,8 @@
 			border-bottom: 2px solid $orange;
 			padding:15px;
 			margin: 0 0 30px;
-			position: relative;	
+			position: relative;
+			width: 50%;
 			
 			&:before {
 				position: absolute;
