@@ -5791,6 +5791,7 @@ h1 {
 #footer .cols-holder .col .contact textarea:focus,
 #footer .cols-holder .col .contact input[type="text"]:focus, #footer .cols-holder .col .contact input[type="email"]:focus {
   color: #fff;
+  border-color: #fff;
 }
 
 #footer .cols-holder .col .contact textarea:focus::-webkit-input-placeholder,
