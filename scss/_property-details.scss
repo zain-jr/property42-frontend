@@ -494,10 +494,17 @@
 				
 				&.added-to-favs{
 					color: $green;
+
+					.addedToFavs{ display: block;}
+					.addTo { display: none;}
 				}
 
 				@include media('<tablet'){
 					@include align(top);
+				}
+
+				.addedToFavs{
+					display: none;
 				}
 
 				span {

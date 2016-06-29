@@ -56,6 +56,9 @@ input[type=number] {
 
 select {
   -webkit-border-radius: 0;
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 textarea {
