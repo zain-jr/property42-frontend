@@ -283,6 +283,7 @@
 					@include align-reset(top,14,18);
 					margin: 0 -5px;
 					float: left;
+					white-space: nowrap;
 					
 					@include media('<tvscreen'){
 						@include align-reset(top,13,17);
@@ -293,6 +294,7 @@
 						overflow: hidden;
 						max-width: 155px;
 						margin: 0 auto;
+						white-space: normal;
 					}
 
 					@include media('<widescreen'){

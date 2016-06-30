@@ -178,6 +178,7 @@ h1 {
 	z-index: 999;
 	background: $defualt-blue;
 	@extend %clearfix;
+	min-width: 320px;
 
 	.layout {
 		padding: 10px 10px 0;
@@ -241,7 +242,6 @@ h1 {
 			@include media('<tablet'){
 				padding: 5px;
 				margin: 10px auto 0;
-				left: 0;
 			}
 			
 			&:hover{
@@ -548,7 +548,7 @@ h1 {
 	background-attachment: fixed;
 	background-size: cover;
 	
-	@include media('<tablet'){
+	@include media('<desktop'){
 		height: 850px;
 	}
 	
@@ -1030,6 +1030,11 @@ h1 {
 		width: 100%;
 		table-layout: fixed;
 		border-collapse: collapse;
+	}
+	.container {
+		@include media('<tablet'){
+			padding: 80px 10px 0;
+		}	
 	}
 }
 
