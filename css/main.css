@@ -1680,21 +1680,9 @@ input[type='submit'] {
   float: left;
 }
 
-@media (max-width: 1599px) {
-  .public-propertyListing .property-posts .post .caption .post-heading a {
-    max-width: 400px;
-  }
-}
-
-@media (max-width: 1199px) {
-  .public-propertyListing .property-posts .post .caption .post-heading a {
-    max-width: 320px;
-  }
-}
-
 @media (max-width: 1023px) {
   .public-propertyListing .property-posts .post .caption .post-heading a {
-    max-width: 215px;
+    max-width: 445px;
   }
 }
 
@@ -3531,6 +3519,12 @@ input[type='submit'] {
   letter-spacing: 0;
 }
 
+@media (max-width: 767px) {
+  .agentProfile-page .cols-holder {
+    margin: 0;
+  }
+}
+
 .agentProfile-page .cols-holder .col {
   text-align: left;
   width: 33.33%;
@@ -4980,7 +4974,13 @@ h1 {
   background-size: cover;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 982px) and (orientation: landscape) {
+  .main-visual {
+    height: 850px;
+  }
+}
+
+@media (max-width: 767px) {
   .main-visual {
     height: 850px;
   }

@@ -148,6 +148,10 @@
         padding: 20px 0 0;
         margin: 0 -10px;
 
+        @include media('<tablet'){
+            margin: 0;
+        }
+
         .col {
             text-align: left;
             width: 33.33%;

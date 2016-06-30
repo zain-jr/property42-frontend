@@ -91,7 +91,9 @@ $(document).on('keyup',function(evt) {
 		$('.popup-holder').removeClass('active');
     }
 });
-
+$(window).on(load, function(){
+	alert();
+});
 
 // content tabs init
 function initTabs() {

@@ -548,7 +548,10 @@ h1 {
 	background-attachment: fixed;
 	background-size: cover;
 	
-	@include media('<desktop'){
+	@media (max-width: 982px) and (orientation: landscape) {
+		height: 850px;
+	}
+	@include media('<tablet'){
 		height: 850px;
 	}
 	

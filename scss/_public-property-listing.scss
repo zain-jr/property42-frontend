@@ -217,18 +217,8 @@
 						max-width: 700px;
 						float: left;
 						
-
-
-						@include media('<tvscreen'){
-							max-width: 400px;
-						}
-						
-						@include media('<widescreen'){
-							max-width: 320px;
-						}
-						
 						@include media('<desktop'){
-							max-width: 215px;
+							max-width: 445px;
 						}
 						
 						@include media('<tablet'){
