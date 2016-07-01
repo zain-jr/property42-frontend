@@ -659,7 +659,7 @@ th {
   list-style: none;
 }
 
-.clearfix:after, .public-propertyListing .property-posts .post:after, .agentListing-page .property-posts .post-holder:after, #header:after, #header .layout:after {
+.clearfix:after, .public-propertyListing .property-posts .post:after, .agentListing-page .property-posts .post-holder:after, #header:after, #header .layout:after, .mySearch-Form ul.fields li:after {
   content: '';
   display: block;
   clear: both;
@@ -1699,6 +1699,10 @@ input[type='submit'] {
   color: #58a36f;
 }
 
+.public-propertyListing .property-posts .post .caption .post-heading a .landUnit {
+  color: #ef9521;
+}
+
 .public-propertyListing .property-posts .post .caption .post-heading .price {
   float: right;
   max-width: 300px;
@@ -1971,31 +1975,15 @@ input[type='submit'] {
 }
 
 .propertyDetails-page .propertyImage-slider {
-  min-width: 850px;
-  max-width: 850px;
+  width: 55%;
   float: left;
   position: relative;
   margin: 0 0 10px;
 }
 
-@media (max-width: 1854px) {
-  .propertyDetails-page .propertyImage-slider {
-    min-width: 660px;
-    max-width: 660px;
-  }
-}
-
-@media (max-width: 1599px) {
-  .propertyDetails-page .propertyImage-slider {
-    max-width: 500px;
-    min-width: 500px;
-  }
-}
-
 @media (max-width: 1199px) {
   .propertyDetails-page .propertyImage-slider {
-    max-width: 400px;
-    min-width: inherit;
+    width: 62%;
   }
 }
 
@@ -2099,13 +2087,6 @@ input[type='submit'] {
 
 @media (max-width: 1199px) {
   .propertyDetails-page .propertyImage-slider .propertyImage-slide a img {
-    max-height: 35px;
-    min-height: 35px;
-  }
-}
-
-@media (max-width: 1023px) {
-  .propertyDetails-page .propertyImage-slider .propertyImage-slide a img {
     max-height: 45px;
     min-height: 45px;
   }
@@ -2128,31 +2109,19 @@ input[type='submit'] {
 }
 
 .propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-mask {
-  max-width: 800px;
+  max-width: 630px;
   margin: 0 auto;
-}
-
-@media (max-width: 1854px) {
-  .propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-mask {
-    max-width: 600px;
-  }
 }
 
 @media (max-width: 1599px) {
   .propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-mask {
-    max-width: 450px;
+    max-width: 550px;
   }
 }
 
 @media (max-width: 1199px) {
   .propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-mask {
-    max-width: 350px;
-  }
-}
-
-@media (max-width: 1023px) {
-  .propertyDetails-page .propertyImage-slider .propertyImage-pagination .propertyImage-mask {
-    max-width: 450px;
+    max-width: 500px;
   }
 }
 
@@ -2251,29 +2220,14 @@ input[type='submit'] {
 .propertyDetails-page .propertyOwnerInfo {
   overflow: hidden;
   border-radius: 4px;
-  max-width: 440px;
-  min-width: 440px;
+  width: 35%;
   float: right;
-}
-
-@media (max-width: 1599px) {
-  .propertyDetails-page .propertyOwnerInfo {
-    max-width: 325px;
-    min-width: 325px;
-  }
-}
-
-@media (max-width: 1199px) {
-  .propertyDetails-page .propertyOwnerInfo {
-    max-width: 270px;
-    min-width: 270px;
-  }
 }
 
 @media (max-width: 1023px) {
   .propertyDetails-page .propertyOwnerInfo {
     margin: 0 0 20px;
-    max-width: inherit;
+    width: 100%;
     float: none;
   }
 }
@@ -2763,6 +2717,8 @@ input[type='submit'] {
   color: #58a36f;
   font-weight: 600;
   position: relative;
+  max-height: 85px;
+  overflow: hidden;
 }
 
 .propertyDetails-page .feature-list li span.last-child:before {
@@ -4405,7 +4361,7 @@ body.loading-resources:after {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 10px;
   clear: both;
@@ -4513,9 +4469,13 @@ h1 {
   left: 0;
   display: block;
   position: fixed;
-  z-index: 999;
+  z-index: 9992;
   background: #133783;
   min-width: 320px;
+}
+
+.fancybox-lock #header {
+  z-index: 99;
 }
 
 #header .layout {
@@ -4974,6 +4934,14 @@ h1 {
   background-size: cover;
 }
 
+.main-visual .select2-container--default .select2-selection--single {
+  border-color: rgba(0, 0, 0, 0.6);
+}
+
+.main-visual .select2-container--default .select2-selection--single:hover {
+  border-color: #000;
+}
+
 @media (max-width: 982px) and (orientation: landscape) {
   .main-visual {
     height: 850px;
@@ -5019,7 +4987,7 @@ h1 {
 }
 
 .main-visual .property-search-holder .main-links {
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 10px;
   clear: both;
@@ -5134,7 +5102,7 @@ h1 {
 .main-visual .property-search-holder .tab-content {
   overflow: hidden;
   background: rgba(255, 255, 255, 0.9);
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 10px;
   clear: both;
@@ -5398,12 +5366,25 @@ h1 {
   }
 }
 
-.main-visual .property-search-holder form ul.inline li label, .main-visual .property-search-holder form ul.inline li span {
+.main-visual .property-search-holder form ul.inline li.priceArea {
+  padding: 13px 10px 15px;
+  margin: 0 0 -35px;
+  overflow: visible;
+}
+
+.main-visual .property-search-holder form ul.inline li.priceArea .input-holder {
+  padding: 0 0 35px;
+  overflow: visible;
+  width: calc(100% - 50px);
+  float: left;
+}
+
+.main-visual .property-search-holder form ul.inline li > label, .main-visual .property-search-holder form ul.inline li > span {
   width: 50px;
 }
 
 @media (max-width: 767px) {
-  .main-visual .property-search-holder form ul.inline li label, .main-visual .property-search-holder form ul.inline li span {
+  .main-visual .property-search-holder form ul.inline li > label, .main-visual .property-search-holder form ul.inline li > span {
     width: 50px;
   }
 }
@@ -5436,20 +5417,20 @@ h1 {
   }
 }
 
-.main-visual .property-search-holder form ul li label, .main-visual .property-search-holder form ul li span {
+.main-visual .property-search-holder form ul li > label, .main-visual .property-search-holder form ul li > span {
   display: block;
   width: 180px;
   float: left;
 }
 
 @media (max-width: 1023px) {
-  .main-visual .property-search-holder form ul li label, .main-visual .property-search-holder form ul li span {
+  .main-visual .property-search-holder form ul li > label, .main-visual .property-search-holder form ul li > span {
     width: 125px;
   }
 }
 
 @media (max-width: 767px) {
-  .main-visual .property-search-holder form ul li label, .main-visual .property-search-holder form ul li span {
+  .main-visual .property-search-holder form ul li > label, .main-visual .property-search-holder form ul li > span {
     width: 110px;
   }
 }
@@ -5461,13 +5442,14 @@ h1 {
 }
 
 .main-visual .property-search-holder form ul li .input-holder {
+  position: relative;
   overflow: hidden;
 }
 
 .main-visual .property-search-holder form ul li input[type="text"], .main-visual .property-search-holder form ul li input[type="number"],
 .main-visual .property-search-holder form ul li select {
   display: block;
-  width: 110%;
+  width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.6);
   color: rgba(0, 0, 0, 0.6);
   height: 35px;
@@ -5503,6 +5485,7 @@ h1 {
 .main-visual .property-search-holder form .btn-holder {
   overflow: hidden;
   display: block;
+  padding: 13px 0 0;
 }
 
 .main-visual .property-search-holder form .btn-holder button[type="submit"] {
@@ -5559,14 +5542,32 @@ h1 {
   animation: bounce 1.5s infinite;
 }
 
+@media (max-width: 767px) {
+  .main-visual .down-scroll {
+    display: none;
+  }
+}
+
 .fake-select {
   width: 100%;
   float: none;
   display: block;
   overflow: hidden;
-  border-right: 1px solid rgba(0, 0, 0, 0.6);
   position: relative;
   cursor: pointer;
+}
+
+.fake-select .select2-container--default .select2-selection--single .select2-selection__arrow {
+  display: none !important;
+}
+
+.fake-select .select2-container .select2-selection--single {
+  height: 35px;
+}
+
+.fake-select .select2-container--default .select2-selection--single .select2-selection__rendered {
+  font-size: 14px;
+  line-height: 35px;
 }
 
 .fake-select.loading .load:after, .fake-select.loading .load:before {
@@ -6586,7 +6587,7 @@ h1 {
 }
 
 .mySearch-Form ul.propertyType li {
-  width: 25%;
+  width: 33.33%;
 }
 
 .mySearch-Form ul.propertyType .fake-label {
@@ -6595,7 +6596,6 @@ h1 {
 
 .mySearch-Form ul.fields li {
   display: block;
-  overflow: hidden;
 }
 
 .mySearch-Form ul.fields li label {
@@ -6606,6 +6606,24 @@ h1 {
   padding: 3px;
   float: left;
   width: 50%;
+  position: relative;
+}
+
+.mySearch-Form ul.fields li .input-holder .price-Range {
+  background: #133783;
+  bottom: -50px;
+  white-space: normal;
+}
+
+@media (max-width: 767px) {
+  .mySearch-Form ul.fields li .input-holder .price-Range {
+    bottom: -67px;
+    max-width: 156px;
+  }
+}
+
+.mySearch-Form ul.fields li .input-holder .price-Range:after {
+  border-bottom-color: #133783;
 }
 
 .mySearch-Form label {
@@ -6625,10 +6643,6 @@ h1 {
 .mySearch-Form input[type="number"] {
   display: block;
   width: 100%;
-}
-
-.mySearch-Form select {
-  width: 110%;
 }
 
 .mySearch-Form input[type="radio"] {
@@ -6933,4 +6947,69 @@ h1 {
   position: relative;
   overflow: hidden;
   height: 0;
+}
+
+.select2-container--default .select2-selection--single {
+  background: transparent;
+}
+
+.select2-container {
+  width: 100% !important;
+}
+
+.select2-dropdown {
+  z-index: 9991;
+}
+
+.price-Range {
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 17px;
+  display: block;
+  width: auto !important;
+  position: relative;
+  background: rgba(19, 55, 131, 0.5);
+  color: #fff;
+  border-radius: 4px;
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transition: opacity 0.4s ease, visibility 0.4s ease, z-index 0.4s ease;
+  -webkit-transition: opacity 0.4s ease, visibility 0.4s ease, z-index 0.4s ease;
+  -moz-transition: opacity 0.4s ease, visibility 0.4s ease, z-index 0.4s ease;
+  -ms-transition: opacity 0.4s ease, visibility 0.4s ease, z-index 0.4s ease;
+}
+
+@media (max-width: 767px) {
+  .price-Range {
+    white-space: normal;
+    max-width: 100px;
+    bottom: -71px;
+    background: #133783;
+  }
+}
+
+.priceShow .price-Range {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+.price-Range:after {
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  border: 5px solid transparent;
+  border-bottom: 5px solid rgba(19, 55, 131, 0.5);
+  content: '';
+}
+
+@media (max-width: 767px) {
+  .price-Range:after {
+    border-bottom-color: #133783;
+  }
 }

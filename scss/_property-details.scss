@@ -6,27 +6,15 @@
 	}
 	
 	.propertyImage-slider {
-		min-width: 850px;
-		max-width: 850px;
+		width: 55%;
 		float: left;
 		position: relative;
 		margin: 0 0 10px;
 		
-		@include media('<1855px') {
-			min-width: 660px;
-			max-width: 660px;
+		@include media('<widescreen'){
+			width: 62%;
 		}
 
-		@include media('<tvscreen') {
-			max-width: 500px;
-			min-width: 500px;
-		}
-		
-		@include media('<widescreen') {
-			max-width: 400px;
-			min-width: inherit;
-		}
-		
 		@include media('<desktop') {
 			max-width: inherit;
 			float: none;
@@ -99,10 +87,6 @@
 					min-height: 48px;
 
 					@include media('<widescreen') {
-						max-height: 35px;
-						min-height: 35px;
-					}
-					@include media('<desktop') {
 						max-height: 45px;
 						min-height: 45px;
 					}
@@ -120,23 +104,15 @@
 			overflow: hidden;
 			
 			.propertyImage-mask {
-				max-width: 800px;
+				max-width: 630px;
 				margin: 0 auto;
 				
-				@include media('<1855px') {
-					max-width: 600px;
-				}	
-
 				@include media('<tvscreen'){
-					max-width: 450px;
+					max-width: 550px;
 				}
 				
 				@include media('<widescreen'){
-					max-width: 350px;
-				}
-				
-				@include media('<desktop') {
-					max-width: 450px;
+					max-width: 500px;
 				}
 				
 				@include media('<tablet') {
@@ -222,23 +198,12 @@
 	.propertyOwnerInfo {
 		overflow: hidden;
 		border-radius: 4px;
-		max-width: 440px;
-		min-width: 440px;
+		width: 35%;
 		float: right;
 		
-		@include media('<tvscreen') {
-			max-width: 325px;
-			min-width: 325px;
-		}
-		
-		@include media('<widescreen') {
-			max-width: 270px;
-			min-width: 270px;
-		}
-
 		@include media('<desktop') {
 			margin: 0 0 20px;
-			max-width: inherit;
+			width: 100%;
 			float: none;
 		}
 		
@@ -586,6 +551,8 @@
 					color: $green;
 					font-weight: 600;
 					position: relative;
+					max-height: 85px;
+					overflow: hidden;
 
 					&:before{
 						position: absolute;

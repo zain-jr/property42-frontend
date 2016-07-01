@@ -73,6 +73,14 @@ $(document).on('click', '.btn-showMore', function(){
 	
 });
 
+$(document).on('focusin', '.PriceField', function(){
+	$('.priceArea').removeClass('priceShow');
+	$(this).closest('.priceArea').addClass('priceShow');
+});
+$(document).on('focusout', '.PriceField', function(){
+	$('.priceArea').removeClass('priceShow');
+});
+
 $(document).ready(function(){
 	if($('.propertyImage-pagination').find('.propertyImage-slide').length <= 6){
 		$('.propertyImage-pagination').find('.propertyImage-slideset').addClass('no-indent')
