@@ -4925,6 +4925,19 @@ h1 {
   }
 }
 
+li {
+  transition: opacity 0.5s ease, visibility 0.5s ease, height 0.45s ease;
+  -webkit-transition: opacity 0.5s ease, visibility 0.5s ease, height 0.45s ease;
+  -moz-transition: opacity 0.5s ease, visibility 0.5s ease, height 0.45s ease;
+  -ms-transition: opacity 0.5s ease, visibility 0.5s ease, height 0.45s ease;
+}
+
+li.hide-bedrooms {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+
 .main-visual {
   position: relative;
   overflow: hidden;
@@ -5393,15 +5406,6 @@ h1 {
   display: block;
   overflow: hidden;
   padding: 0 0 15px;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-  -webkit-transition: opacity 0.5s ease, visibility 0.5s ease;
-  -moz-transition: opacity 0.5s ease, visibility 0.5s ease;
-  -ms-transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-
-.main-visual .property-search-holder form ul li.hide-bedrooms {
-  opacity: 0;
-  visibility: hidden;
 }
 
 @media (max-width: 767px) {
@@ -6609,6 +6613,10 @@ h1 {
   position: relative;
 }
 
+.mySearch-Form ul.fields li .input-holder.add {
+  width: 33.33%;
+}
+
 .mySearch-Form ul.fields li .input-holder .price-Range {
   background: #133783;
   bottom: -50px;
@@ -6643,6 +6651,15 @@ h1 {
 .mySearch-Form input[type="number"] {
   display: block;
   width: 100%;
+}
+
+@media (max-width: 767px) {
+  .mySearch-Form select,
+  .mySearch-Form input[type="text"],
+  .mySearch-Form input[type="number"] {
+    font-size: 12px;
+    line-height: 17px;
+  }
 }
 
 .mySearch-Form input[type="radio"] {
