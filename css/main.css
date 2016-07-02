@@ -6619,7 +6619,7 @@ li.hide-bedrooms {
 
 .mySearch-Form ul.fields li .input-holder .price-Range {
   background: #133783;
-  bottom: -50px;
+  bottom: -100%;
   white-space: normal;
 }
 

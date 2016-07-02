@@ -1703,7 +1703,7 @@ li{
 
 					.price-Range {
 						background: $defualt-blue;
-						bottom: -50px;
+						bottom: -100%;
 						white-space: normal;
 
 						@include media('<tablet'){
