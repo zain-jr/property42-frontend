@@ -5375,11 +5375,23 @@ li.hide-bedrooms {
   overflow: visible;
 }
 
+@media (max-width: 767px) {
+  .main-visual .property-search-holder form ul.inline li.priceArea {
+    margin: 0;
+  }
+}
+
 .main-visual .property-search-holder form ul.inline li.priceArea .input-holder {
   padding: 0 0 35px;
   overflow: visible;
   width: calc(100% - 50px);
   float: left;
+}
+
+@media (max-width: 767px) {
+  .main-visual .property-search-holder form ul.inline li.priceArea .input-holder {
+    padding: 0;
+  }
 }
 
 .main-visual .property-search-holder form ul.inline li > label, .main-visual .property-search-holder form ul.inline li > span {
@@ -6616,8 +6628,7 @@ li.hide-bedrooms {
 
 @media (max-width: 767px) {
   .mySearch-Form ul.fields li .input-holder .price-Range {
-    bottom: -67px;
-    max-width: 156px;
+    bottom: 0;
   }
 }
 
@@ -6995,8 +7006,12 @@ li.hide-bedrooms {
 @media (max-width: 767px) {
   .price-Range {
     white-space: normal;
-    max-width: 100px;
-    bottom: -71px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    z-index: 99;
     background: #133783;
   }
 }
@@ -7018,7 +7033,7 @@ li.hide-bedrooms {
 
 @media (max-width: 767px) {
   .price-Range:after {
-    border-bottom-color: #133783;
+    display: none;
   }
 }
 
@@ -7064,7 +7079,16 @@ li.hide-bedrooms {
 .weAreUpgrading .close-msgUpgrade {
   cursor: pointer;
   position: absolute;
-  top: 3px;
-  right: 3px;
+  top: 5px;
+  right: 5px;
   color: #ef9521;
+  z-index: 99;
+}
+
+@media (max-width: 767px) {
+  .weAreUpgrading .close-msgUpgrade {
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+  }
 }

@@ -845,12 +845,20 @@ li{
 							@extend %lcearfix;
 							overflow: visible;
 
+							@include media('<tablet'){
+								margin: 0;
+							}
+
 							.input-holder {
 								padding: 0 0 35px;
 								overflow: visible;
 								@extend %lcearfix;
 								width: calc(100% - 50px);
 								float: left;
+
+								@include media('<tablet'){
+									padding: 0;
+								}
 							}
 						}
 						> label , > span {
@@ -1706,10 +1714,9 @@ li{
 					.price-Range {
 						bottom: -100%;
 						white-space: normal;
-
+						
 						@include media('<tablet'){
-							bottom: -67px;
-							max-width: 156px;
+							bottom: 0;
 						}
 
 						&:after {
@@ -2060,8 +2067,12 @@ li{
 
 	@include media('<tablet'){
 		white-space: normal;
-		max-width: 100px;
-		bottom: -71px;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border-radius: 0;
+		z-index: 99;
 		background: $defualt-blue;
 	}
 
@@ -2080,7 +2091,7 @@ li{
 		content: '';
 
 		@include media('<tablet'){
-			border-bottom-color: $defualt-blue;
+			display: none;
 		}
 	}
 }
@@ -2121,8 +2132,15 @@ li{
 	.close-msgUpgrade {
 		cursor: pointer;
 		position: absolute;
-		top: 3px;
-		right: 3px;
+		top: 5px;
+		right: 5px;
 		color: $orange;
+		z-index: 99;
+
+		@include media('<tablet'){
+			top: 10px;
+			right: 10px;
+			font-size: 20px;
+		}
 	}
 }

@@ -82,6 +82,7 @@ $(document).on('click', '.btn-showMore', function(){
 $(document).on('focusin', '.PriceField', function(){
 	$('.priceArea').removeClass('priceShow');
 	$(this).closest('.priceArea').addClass('priceShow');
+	$('.weAreUpgrading').removeClass('show');
 });
 $(document).on('focusout', '.PriceField', function(){
 	$('.priceArea').removeClass('priceShow');
