@@ -1704,7 +1704,6 @@ li{
 					}
 
 					.price-Range {
-						background: $defualt-blue;
 						bottom: -100%;
 						white-space: normal;
 
@@ -2044,7 +2043,7 @@ li{
 	display: block;
 	width: auto !important;
 	position: relative;
-	background: rgba($defualt-blue, 0.5);
+	background: $defualt-blue;
 	color: $white;
 	border-radius: 4px;
 	padding: 5px;
@@ -2077,11 +2076,53 @@ li{
 		top: -10px;
 		left: 15px;
 		border: 5px solid transparent;
-		border-bottom: 5px solid rgba($defualt-blue, 0.5);
+		border-bottom: 5px solid $defualt-blue;
 		content: '';
 
 		@include media('<tablet'){
 			border-bottom-color: $defualt-blue;
 		}
+	}
+}
+.weAreUpgrading {
+	width: 350px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 99122;
+	background: lighten($defualt-blue, 10%);
+	@include font(14,18);
+	color: $white;
+	padding: 20px 30px 20px 35px;
+	box-shadow: 5px 5px 5px 10px rgba($black, 0.6);
+	margin: 0 0 -500px;
+	transition: margin 0.6s ease;
+	-webkit-transition: margin 0.6s ease;
+	-moz-transition: margin 0.6s ease;
+	-ms-transition: margin 0.6s ease;
+
+	@include media('<tablet'){
+		width: 100%;
+	}
+
+	&.show{
+		margin: 0;
+	}
+
+	&:after {
+		position: absolute;
+		top: 10px;
+		left: 5px;
+		content: "\e917";
+		font-family: 'icomoon';
+		@include font(22,22);
+	}
+
+	.close-msgUpgrade {
+		cursor: pointer;
+		position: absolute;
+		top: 3px;
+		right: 3px;
+		color: $orange;
 	}
 }

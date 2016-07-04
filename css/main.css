@@ -6610,7 +6610,6 @@ li.hide-bedrooms {
 }
 
 .mySearch-Form ul.fields li .input-holder .price-Range {
-  background: #133783;
   bottom: -100%;
   white-space: normal;
 }
@@ -6977,7 +6976,7 @@ li.hide-bedrooms {
   display: block;
   width: auto !important;
   position: relative;
-  background: rgba(19, 55, 131, 0.5);
+  background: #133783;
   color: #fff;
   border-radius: 4px;
   padding: 5px;
@@ -7013,7 +7012,7 @@ li.hide-bedrooms {
   top: -10px;
   left: 15px;
   border: 5px solid transparent;
-  border-bottom: 5px solid rgba(19, 55, 131, 0.5);
+  border-bottom: 5px solid #133783;
   content: '';
 }
 
@@ -7021,4 +7020,51 @@ li.hide-bedrooms {
   .price-Range:after {
     border-bottom-color: #133783;
   }
+}
+
+.weAreUpgrading {
+  width: 350px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 99122;
+  background: #194ab0;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  padding: 20px 30px 20px 35px;
+  box-shadow: 5px 5px 5px 10px rgba(0, 0, 0, 0.6);
+  margin: 0 0 -500px;
+  transition: margin 0.6s ease;
+  -webkit-transition: margin 0.6s ease;
+  -moz-transition: margin 0.6s ease;
+  -ms-transition: margin 0.6s ease;
+}
+
+@media (max-width: 767px) {
+  .weAreUpgrading {
+    width: 100%;
+  }
+}
+
+.weAreUpgrading.show {
+  margin: 0;
+}
+
+.weAreUpgrading:after {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  content: "\e917";
+  font-family: 'icomoon';
+  font-size: 22px;
+  line-height: 22px;
+}
+
+.weAreUpgrading .close-msgUpgrade {
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  color: #ef9521;
 }

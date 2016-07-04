@@ -40,6 +40,12 @@ $(document).ready(function(){
 		$('.alert-success').hide();
 	},10000);
 	$(".js-example-basic-single").select2();
+
+	$('.weAreUpgrading').addClass('show');
+});
+
+$(document).on('click', '.close-msgUpgrade', function(){
+	$('.weAreUpgrading').removeClass('show');
 });
 
 $(document).ready(function(){
@@ -99,9 +105,7 @@ $(document).on('keyup',function(evt) {
 		$('.popup-holder').removeClass('active');
     }
 });
-$(window).on(load, function(){
-	alert();
-});
+
 
 // content tabs init
 function initTabs() {
