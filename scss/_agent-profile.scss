@@ -49,15 +49,16 @@
         .cap-name {
             float: left;
             padding: 0 0 0 20px;
-            max-width: 550px;
+            max-width: 700px;
             @include font(14,20);
             
             @include media('<tvscreen'){
-                max-width: 340px;
+                max-width: 640px;
             }
             
             @include media('<widescreen'){
                 padding: 0 0 0 10px;
+                max-width: 600px;
             }
 
             .name {
@@ -75,7 +76,7 @@
         @extend %listreset;
         float: right;
         @include align-reset(top,16,20);
-        margin: 0 -5px;
+        padding: 0 20px 0 0;
 
         @include media('<tvscreen'){
             @include align-reset(top,13,18);
@@ -187,6 +188,11 @@
                 padding: 15px 0;
                 overflow: hidden;
                 @include font(13,20);
+                min-height: 300px;
+
+                @include media('<tablet'){
+                    min-height: inherit;
+                }
 
                 .profile-pic {
                     @include squar(150px,150px);
@@ -272,13 +278,13 @@
                     width: 200px;
                     margin: 0 auto;
                     text-align: center;
-                    background: $mix-blue;
+                    background: $green;
                     color: $white;
-                    border: 1px solid darken($mix-blue, 10%);
+                    border: 1px solid darken($green, 10%);
                     padding: 5px;
 
                     &:hover {
-                        background: darken($mix-blue, 10%);   
+                        background: darken($green, 10%);   
                     }
                 }
             }
