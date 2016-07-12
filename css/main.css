@@ -3340,7 +3340,7 @@ input[type='submit'] {
   font-size: 0;
   line-height: 0;
   letter-spacing: -4px;
-  padding: 0 20px 0 0;
+  padding: 50px 20px 0 0;
 }
 
 .agentProfile-page .contact-links > * {
@@ -6886,6 +6886,7 @@ li.hide-bedrooms {
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  z-index: 1;
 }
 
 .fake-select .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -6914,6 +6915,7 @@ li.hide-bedrooms {
   font-size: 22px;
   line-height: 22px;
   margin: -12px 0 0;
+  z-index: -1;
 }
 
 .fake-select:active, .fake-select:focus, .fake-select:hover {
@@ -7846,6 +7848,10 @@ li.hide-bedrooms {
 .mySearch-Form {
   width: 100%;
   overflow: hidden;
+}
+
+.mySearch-Form .select2-container {
+  width: 100% !important;
 }
 
 .mySearch-Form ul {

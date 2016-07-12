@@ -1003,7 +1003,8 @@ li{
 	overflow: hidden;
 	position: relative;
 	cursor: pointer;
-	
+	z-index: 1;
+
 	.select2-container--default .select2-selection--single .select2-selection__arrow {
 		display: none !important;
 	}
@@ -1030,6 +1031,7 @@ li{
 		font-family: 'icomoon';
 		@include font(22,22);
 		margin: -12px 0 0;
+		z-index: -1;
 	}
 
 	&:active,
@@ -1659,6 +1661,10 @@ li{
 .mySearch-Form {
 	width: 100%;
 	overflow: hidden;
+
+	.select2-container {
+		width:  100% !important;
+	}
 
 	ul {
 		@extend %listreset;

@@ -76,7 +76,7 @@
         @extend %listreset;
         float: right;
         @include align-reset(top,16,20);
-        padding: 0 20px 0 0;
+        padding: 50px 20px 0 0;
 
         @include media('<tvscreen'){
             @include align-reset(top,13,18);
