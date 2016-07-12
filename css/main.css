@@ -2077,6 +2077,8 @@ input[type='submit'] {
   .propertyDetails-page .propertyImage-slider .slide a img {
     max-height: 270px;
     min-height: 270px;
+    max-width: 300px;
+    margin: 0 auto;
   }
 }
 
@@ -5559,6 +5561,23 @@ input[type='submit'] {
   letter-spacing: 0;
 }
 
+@media (max-width: 767px) {
+  .addPropertyFormContainer .enterUserType {
+    max-width: 300px;
+    margin: 0 auto;
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: -4px;
+  }
+  .addPropertyFormContainer .enterUserType > * {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0;
+  }
+}
+
 .addPropertyFormContainer .enterUserType li {
   width: 50%;
   padding: 0 5px;
@@ -5569,6 +5588,12 @@ input[type='submit'] {
   margin: 0 0 0 -250px;
 }
 
+@media (max-width: 767px) {
+  .addPropertyFormContainer .enterUserType li:nth-child(2) .slide {
+    margin: 0 0 0 -150px;
+  }
+}
+
 .addPropertyFormContainer .enterUserType label {
   display: block;
   text-align: center;
@@ -5576,6 +5601,12 @@ input[type='submit'] {
   border: 2px solid #489ddd;
   color: #489ddd;
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .addPropertyFormContainer .enterUserType label {
+    padding: 5px 0;
+  }
 }
 
 .addPropertyFormContainer .enterUserType input[type="radio"] {
@@ -5600,6 +5631,12 @@ input[type='submit'] {
   text-align: left;
   padding: 10px;
   display: none;
+}
+
+@media (max-width: 767px) {
+  .addPropertyFormContainer .enterUserType .slide {
+    margin: 0 -150px 0 0;
+  }
 }
 
 html, body {
