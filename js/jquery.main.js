@@ -1,6 +1,5 @@
 // page init
 jQuery(function(){
-	initTabs();
 	initAnchors();
 	initCarousel();
 	initLightbox();
@@ -107,16 +106,6 @@ $(document).on('keyup',function(evt) {
     }
 });
 
-
-// content tabs init
-function initTabs() {
-	jQuery('.tabset').contentTabs({
-		tabLinks: 'a',
-		effect: 'fade',
-		animSpeed:200,
-		switchTime:1000
-	});
-}
 // smooth anchor links
 function initAnchors() {
 	/* global SmoothScroll */

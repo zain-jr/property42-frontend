@@ -47,6 +47,7 @@ $media-expressions: (
 @import 'agent-listing-page';
 @import 'agent-profile';
 @import 'select2-min';
+@import 'add-property-form';
 
 html, body {
 	width: 100%;
@@ -2037,9 +2038,6 @@ li{
 }
 .select2-container--default .select2-selection--single {
 	background: transparent;
-}
-.select2-container {
-	width: 100% !important;
 }
 .select2-dropdown{
 	z-index: 9991;
