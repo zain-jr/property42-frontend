@@ -28,3 +28,9 @@ $(document).on('focusin', '.PriceField', function(){
 $(document).on('focusout', '.PriceField', function(){
 	$('.calculatedPrice').removeClass('priceShow');
 });
+
+$(document).on('change', 'input[name="propertySubType"]', function(){
+	var targetFeaturesId = $(this).attr('data-features');
+	$('.feature-block').find('.holder').html($('#'+targetFeaturesId).find('.extra-features').html());
+	$('.priority-features-holder').html($('#'+targetFeaturesId).find('.priority-features').html());
+});
