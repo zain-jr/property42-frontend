@@ -4817,22 +4817,21 @@ input[type='submit'] {
   display: none;
 }
 
+.addPropertyFormContainer .property-add .radio-holder li.active a {
+  background: #489ddd;
+  color: #fff;
+  border-color: #489ddd;
+}
+
+.addPropertyFormContainer .property-add .radio-holder li.active a:before {
+  bottom: -10px;
+  opacity: 1;
+}
+
 .addPropertyFormContainer .property-add .radio-holder li label {
   display: inline-block;
   vertical-align: top;
   cursor: pointer;
-}
-
-.addPropertyFormContainer .property-add .radio-holder li label.hasChild .fake-label:before {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  border: 5px solid transparent;
-  border-top: 5px solid #489ddd;
-  content: '';
-  margin: 0 0 0 -5px;
-  transition: bottom 0.4s ease, opacity 0.4s ease;
-  opacity: 0;
 }
 
 .addPropertyFormContainer .property-add .radio-holder li label.withCheck .fake-radio {
@@ -4885,7 +4884,8 @@ input[type='submit'] {
   display: block;
 }
 
-.addPropertyFormContainer .property-add .radio-holder li label .fake-label {
+.addPropertyFormContainer .property-add .radio-holder li a,
+.addPropertyFormContainer .property-add .radio-holder li .fake-label {
   display: block;
   padding: 6px;
   min-width: 50px;
@@ -4898,16 +4898,19 @@ input[type='submit'] {
   transition: all 0.4s ease;
 }
 
-.addPropertyFormContainer .property-add .radio-holder li label .fake-label:hover {
+.addPropertyFormContainer .property-add .radio-holder li a:hover,
+.addPropertyFormContainer .property-add .radio-holder li .fake-label:hover {
   color: #fff;
 }
 
-.addPropertyFormContainer .property-add .radio-holder li label .fake-label:hover:before {
+.addPropertyFormContainer .property-add .radio-holder li a:hover:before,
+.addPropertyFormContainer .property-add .radio-holder li .fake-label:hover:before {
   bottom: -10px;
   opacity: 1;
 }
 
-.addPropertyFormContainer .property-add .radio-holder li label .fake-label:hover:after {
+.addPropertyFormContainer .property-add .radio-holder li a:hover:after,
+.addPropertyFormContainer .property-add .radio-holder li .fake-label:hover:after {
   opacity: 1;
   visibility: visible;
   top: 0;
@@ -4917,7 +4920,8 @@ input[type='submit'] {
   border-radius: 0;
 }
 
-.addPropertyFormContainer .property-add .radio-holder li label .fake-label:after {
+.addPropertyFormContainer .property-add .radio-holder li a:after,
+.addPropertyFormContainer .property-add .radio-holder li .fake-label:after {
   position: absolute;
   top: 50%;
   right: 50%;
@@ -4930,6 +4934,23 @@ input[type='submit'] {
   visibility: hidden;
   border-radius: 100%;
   transition: all 0.4s ease;
+}
+
+.addPropertyFormContainer .property-add .radio-holder li a {
+  position: relative;
+  z-index: 1;
+}
+
+.addPropertyFormContainer .property-add .radio-holder li a:before {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  border: 5px solid transparent;
+  border-top: 5px solid #489ddd;
+  content: '';
+  margin: 0 0 0 -5px;
+  transition: bottom 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
 }
 
 .addPropertyFormContainer .property-add .radio-holder li input[type="radio"] {

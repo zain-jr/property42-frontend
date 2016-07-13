@@ -3,6 +3,7 @@ jQuery(function(){
 	initAnchors();
 	initCarousel();
 	initLightbox();
+	initTabs();
 });
 
 $(document).on('click', '.propertyImage-slider-btn-next, .propertyImage-slider-btn-prev', function(){
@@ -190,5 +191,14 @@ function initCarousel() {
 		currentNumber: '.paginationCurrent-num-1',
 		totalNumber: '.total-num-1',
 		swipeGap: true
+	});
+}
+// content tabs init
+function initTabs() {
+	jQuery('.tabset').contentTabs({
+		autoHeight: true,
+		animSpeed: 300,
+		tabLinks: 'a',
+		event: 'click'
 	});
 }

@@ -430,26 +430,21 @@
 					width: auto !important;
 					display: none;
 				}
-				
+				&.active {
+					a {
+						background: $mix-blue;
+						color: $white;
+						border-color: $mix-blue;
+						&:before {
+							bottom: -10px;
+							opacity: 1;
+						}
+						
+					}
+				}
 				label{
 					@include align(top);
 					cursor: pointer;
-					
-					&.hasChild {
-						.fake-label {
-							&:before {
-								position: absolute;
-								bottom: 0;
-								left: 50%;
-								border: 5px solid transparent;
-								border-top: 5px solid $mix-blue;
-								content: '';
-								margin: 0 0 0 -5px;
-								transition: bottom 0.4s ease, opacity 0.4s ease;
-								opacity: 0;
-							}
-						}
-					}
 
 					&.withCheck {
 						
@@ -496,54 +491,68 @@
 							}
 						}
 					}
+				}
+				a,
+				.fake-label {
+					display: block;
+					padding: 6px;
+					min-width: 50px;
+					text-align: center;
+					color: $mix-grays;
+					font-weight: 600;
+					border: 1px solid $mix-blue;
+					position: relative;
+					z-index: 1;
+					transition: all 0.4s ease;
 
-					.fake-label {
-						display: block;
-						padding: 6px;
-						min-width: 50px;
-						text-align: center;
-						color: $mix-grays;
-						font-weight: 600;
-						border: 1px solid $mix-blue;
-						position: relative;
-						z-index: 1;
-						transition: all 0.4s ease;
-
-						&:hover{
-							color: $white;
-							&:before {
-								bottom: -10px;
-								opacity: 1;
-							}
-							&:after{
-								opacity: 1;
-								visibility: visible;
-								top: 0;
-								right: 0;
-								bottom: 0;
-								left: 0;
-								border-radius: 0;
-							}
+					&:hover{
+						color: $white;
+						&:before {
+							bottom: -10px;
+							opacity: 1;
 						}
-
 						&:after{
-							position: absolute;
-							top: 50%;
-							right: 50%;
-							left: 50%;
-							bottom: 50%;
-							background: $mix-blue;
-							content: '';
-							z-index: -1;
-							opacity: 0;
-							visibility: hidden;
-							border-radius: 100%;
-							transition: all 0.4s ease;
+							opacity: 1;
+							visibility: visible;
+							top: 0;
+							right: 0;
+							bottom: 0;
+							left: 0;
+							border-radius: 0;
 						}
-						
+					}
+
+					&:after{
+						position: absolute;
+						top: 50%;
+						right: 50%;
+						left: 50%;
+						bottom: 50%;
+						background: $mix-blue;
+						content: '';
+						z-index: -1;
+						opacity: 0;
+						visibility: hidden;
+						border-radius: 100%;
+						transition: all 0.4s ease;
+					}
+					
+				}
+				a{
+					position: relative;
+					z-index: 1;
+					&:before {
+						position: absolute;
+						bottom: 0;
+						left: 50%;
+						border: 5px solid transparent;
+						border-top: 5px solid $mix-blue;
+						content: '';
+						margin: 0 0 0 -5px;
+						transition: bottom 0.4s ease, opacity 0.4s ease;
+						opacity: 0;
 					}
 				}
-				
 				input[type="radio"]{
 					visibility: hidden;
 					opacity: 0;

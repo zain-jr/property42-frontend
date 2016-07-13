@@ -30,29 +30,72 @@
             <div class="layout">
                 <span class="title">Property Type:</span>
                 <div class="input-holder">
-                    <ul class="radio-holder">
+                    <ul class="radio-holder tabset">
                         <li>
-                            <label for="homes" class="hasChild">
-                                <input type="radio" name="propertyType" value="1" id="homes">
-                                <span class="fake-label">homes</span>
-                            </label>
+                            <a href="#tab1">home</a>
                         </li>
                         <li>
-                            <label for="plot" class="hasChild">
-                                <input type="radio" name="propertyType" value="1" id="plot">
-                                <span class="fake-label">plot</span>
-                            </label>
+                            <a href="#tab2">plots</a>
                         </li>
                         <li>
-                            <label for="commercial" class="hasChild">
-                                <input type="radio" name="propertyType" value="1" id="commercial">
-                                <span class="fake-label">commercial</span>
-                            </label>
+                            <a href="#tab3">commerical</a>
                         </li>
                         <li class="error-text">Oh ! this is error</li>
                     </ul>
                     <div class="tab-content">
                         <div id="tab1">
+                            <ul class="radio-holder">
+                                <li>
+                                    <label for="house" class="withCheck">
+                                        <input type="radio" name="propertySubType" ng-model="$parent.form.data.propertySubType" id="house" value="house">
+                                        <span class="fake-radio"></span>
+                                        <span class="fake-label">house</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="flat" class="withCheck">
+                                        <input type="radio" name="propertySubType" ng-model="$parent.form.data.propertySubType" id="flat" value="flat">
+                                        <span class="fake-radio"></span>
+                                        <span class="fake-label">flat</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="ploot" class="withCheck">
+                                        <input type="radio" name="propertySubType" ng-model="$parent.form.data.propertySubType" id="ploot" value="ploot">
+                                        <span class="fake-radio"></span>
+                                        <span class="fake-label">ploot</span>
+                                    </label>
+                                </li>
+                                <li class="error-text">Oh ! this is error</li>
+                            </ul>
+                        </div>
+                        <div id="tab2">
+                            <ul class="radio-holder">
+                                <li>
+                                    <label for="house" class="withCheck">
+                                        <input type="radio" name="propertySubType" ng-model="$parent.form.data.propertySubType" id="house" value="house">
+                                        <span class="fake-radio"></span>
+                                        <span class="fake-label">house</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="flat" class="withCheck">
+                                        <input type="radio" name="propertySubType" ng-model="$parent.form.data.propertySubType" id="flat" value="flat">
+                                        <span class="fake-radio"></span>
+                                        <span class="fake-label">flat</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="ploot" class="withCheck">
+                                        <input type="radio" name="propertySubType" ng-model="$parent.form.data.propertySubType" id="ploot" value="ploot">
+                                        <span class="fake-radio"></span>
+                                        <span class="fake-label">ploot</span>
+                                    </label>
+                                </li>
+                                <li class="error-text">Oh ! this is error</li>
+                            </ul>
+                        </div>
+                        <div id="tab3">
                             <ul class="radio-holder">
                                 <li>
                                     <label for="house" class="withCheck">
