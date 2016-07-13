@@ -4289,6 +4289,10 @@ input[type='submit'] {
   overflow: hidden;
 }
 
+.addPropertyFormContainer .extraFeatures-storage {
+  display: none !important;
+}
+
 .addPropertyFormContainer .select2-container .select2-selection--single {
   height: 30px;
 }

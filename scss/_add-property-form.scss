@@ -7,6 +7,8 @@
 	position: relative;
 	overflow: hidden;
 	
+	.extraFeatures-storage{ display: none !important;}
+
 	.select2-container .select2-selection--single {
 		height: 30px;
 	}
