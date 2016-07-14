@@ -57,6 +57,7 @@ body {
 	width: 100%;
 	height: 100%;
 	
+
 	&:after{
 		position: fixed;
 		top: 0;
@@ -190,7 +191,7 @@ h1 {
 		overflow: visible;
 		@extend %clearfix;
 		
-		@include media('<tablet'){
+		@include media('<desktop'){
 			padding: 10px;
 		}
 	}
@@ -208,11 +209,6 @@ h1 {
 		transition: background 0.4s ease;
 		
 		@include media('<desktop'){
-			@include font(13,17);
-			padding: 10px;
-		}
-		
-		@include media('<tablet'){
 			@include font(11,13);
 			padding:5px;
 			float: none;
@@ -224,6 +220,10 @@ h1 {
 			left: 32px;
 		}
 		
+		&.addPro {
+			@include media('<desktop'){ display: none;}
+		}
+
 		&.loggedIn,
 		&.loginRegister {
 			border-radius: 0;
@@ -239,15 +239,15 @@ h1 {
 				text-overflow: ellipsis;
 				max-width: 220px;
 
+				@include media('<widescreen'){
+					max-width: 160px;
+				}
+
 				@include media('<desktop'){
 					max-width: 150px;
 				}
 			}
 
-			@include media('<tablet'){
-				padding: 5px;
-				margin: 10px auto 0;
-			}
 			
 			&:hover{
 				border-color: $black;
@@ -260,7 +260,7 @@ h1 {
 			text-align: center;
 			padding: 10px 20px 10px 30px;
 			
-			@include media('<tablet'){
+			@include media('<desktop'){
 				padding: 10px 20px 10px 23px;
 				min-width: 100px;
 			}
@@ -354,7 +354,7 @@ h1 {
 	max-width: 1024px;
 	padding: 0 0 0 20px;
 	
-	@include media('<tablet'){
+	@include media('<desktop'){
 		float: none;
 		position: absolute;
 		top: 100%;
@@ -371,12 +371,14 @@ h1 {
 	}
 	
 	.main-navigation {
+		float: left;
 		@extend %listreset;
 		@include align-reset(top,20,24);
 		text-transform: capitalize;
 		
 		@include media('<desktop'){
 			@include align-reset(top,16,20);
+			float: none;
 		}
 		
 		li {
@@ -384,7 +386,7 @@ h1 {
 			margin: 0;
 			position: relative;
 			
-			@include media('<tablet'){
+			@include media('<desktop'){
 				display: block;
 				padding: 0;
 			}
@@ -396,7 +398,7 @@ h1 {
 					z-index: 9;
 					visibility: visible;
 					
-					@include media('<tablet'){ display: block;}
+					@include media('<desktop'){ display: block;}
 				}
 				> a{
 					@include media('<tablet'){
@@ -410,7 +412,7 @@ h1 {
 			}
 			
 			&.hidden-desktop{
-				@include media('>=tablet'){ display: none;}
+				@include media('>=desktop'){ display: none;}
 			}
 			
 			&.agent-link {
@@ -440,7 +442,7 @@ h1 {
 				position: relative;
 				padding: 18px 0;
 				
-				@include media('<tablet'){
+				@include media('<desktop'){
 					padding: 15px;
 				}
 				
@@ -457,11 +459,11 @@ h1 {
 					-moz-transition: opacity 0.4s ease, border 0.4s ease, top 0.4s ease;
 					-ms-transition: opacity 0.4s ease, border 0.4s ease, top 0.4s ease;
 					
-					@include media('<tablet'){ display: none;}
+					@include media('<desktop'){ display: none;}
 				}
 				
 				&:hover{
-					@include media('<tablet'){
+					@include media('<desktop'){
 						background: darken($defualt-blue, 10%);	
 					}
 					
@@ -485,13 +487,13 @@ h1 {
 				border-bottom: 4px solid $green;
 				opacity: 0;
 				transition: top 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
-				-webkkit-transition: top 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+				-webkit-transition: top 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
 				-moz-transition: top 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
 				-ms-transition: top 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
 				
-				@include media('<tablet'){
+				@include media('<desktop'){
 					width: 100%;
-					max-width: 700px;
+					max-width: 900px;
 					margin: 0 auto;
 					position: static;
 					display: none;
@@ -522,12 +524,52 @@ h1 {
 			}
 		}
 	}
+	.searchByID {
+		float: left;
+		position: relative;
+		padding: 3px;
+		width: 200px;
+		margin: 9px 0 0 20px;
+
+		@include media('<desktop'){
+			width: 100%;
+			float: none;
+			overflow: hidden;
+			margin: 0 0 10px;
+		}
+
+		input[type="number"]{
+			padding: 8px 30px 8px 10px;
+			@include squar(100%, 35px);
+			background: transparent;
+			border: 1px solid $white;
+			color: $white;
+			border-radius: 4px;
+			@include font(12,15);
+
+			@include placeholder{
+				color: $white;
+				opacity: 1;
+			}
+		}
+		button[type="submit"]{
+			border: 0;
+			padding: 0;
+			background: transparent;
+			color: $white;
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			@include font(14,14);
+			margin: -7px 0 0;
+		}
+	}
 }
 .logo {
 	float: left;
 	width: 140px;
 	
-	@include media('<tablet'){
+	@include media('<desktop'){
 		width: 100px;
 	}
 	
@@ -570,10 +612,7 @@ li{
 		&:hover {border-color: $black;}
 	}
 
-	@media (max-width: 982px) and (orientation: landscape) {
-		height: 850px;
-	}
-	@include media('<tablet'){
+	@include media('<widescreen', 'landscape'){
 		height: 850px;
 	}
 	
@@ -1010,9 +1049,17 @@ li{
 	}
 	.select2-container .select2-selection--single {
 		height: 35px;
+
+		@include media('<desktop'){
+			height: 30px;
+		}
 	}
 	.select2-container--default .select2-selection--single .select2-selection__rendered{
 		@include font(14,35);
+
+		@include media('<desktop'){
+			@include font(14,30);
+		}
 	}
 
 	&.loading {
@@ -1349,7 +1396,7 @@ li{
 	margin: 8px 0 0;
 	cursor: pointer;
 	
-	@include media('>=tablet') {
+	@include media('>=desktop') {
 		display: none;
 	}
 	
@@ -1830,9 +1877,9 @@ li{
 	}
 	.propertyDetails-page .propertyOwnerInfo header, .propertyDetails-page .propertyOwnerInfo .description .name:before,
 	.main-visual, .propertyDetails-page .propertyOwnerInfo .description .agency-profile, .propertyDetails-page .propertyOwnerInfo .description .contact-links li:first-child,
-	btn-header loginRegister, .propertyDetails-page .propertyImage-slider,
+	.btn-header.loginRegister, .propertyDetails-page .propertyImage-slider,
 	#header .btn-header, .main-visual .property-search-holder, .main-visual .down-scroll, #footer, .propertyDetails-page .property-qucikLinks, .propertyDetails-page .overviewText-holder .btn-showMore,
-	#nav { display: none !important;}
+	#nav, .weAreUpgrading, .alert-success { display: none !important;}
 	.layout {
 		 overflow: visible !important;
 		 clear: both !important;

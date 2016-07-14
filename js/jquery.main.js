@@ -42,6 +42,13 @@ $(document).ready(function(){
 	$(".js-example-basic-single").select2();
 
 	$('.weAreUpgrading').addClass('show');
+	
+	if(parseInt($('.propertyImage-slide').length) <= 1 ){
+		$('.propertyImage-slide').closest('.propertyImage-pagination').hide();
+	}
+	else if (parseInt($('.propertyImage-slide').length) <= 6 ){
+		$('.propertyImage-pagination').find('.propertyImage-pagination-btn-prev-1 , .propertyImage-pagination-btn-next-1').hide();
+	}
 });
 
 $(document).on('click', '.close-msgUpgrade', function(){
