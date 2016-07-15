@@ -4328,11 +4328,11 @@ input[type='submit'] {
   }
 }
 
-.please-wait .addPropertyFormContainer {
+.addPropertyFormContainer.please-wait {
   height: 100vh;
 }
 
-.please-wait .addPropertyFormContainer:after {
+.addPropertyFormContainer.please-wait:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -4347,7 +4347,7 @@ input[type='submit'] {
   -ms-transition: left 0.4s ease;
 }
 
-.please-wait .addPropertyFormContainer:before {
+.addPropertyFormContainer.please-wait:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -4367,13 +4367,13 @@ input[type='submit'] {
 }
 
 @media (max-width: 1424px) {
-  .please-wait .addPropertyFormContainer:before {
+  .addPropertyFormContainer.please-wait:before {
     margin: -150px 0 0 100px;
   }
 }
 
 @media (max-width: 1023px) {
-  .please-wait .addPropertyFormContainer:before {
+  .addPropertyFormContainer.please-wait:before {
     margin: -150px 0 0 -55px;
   }
 }
@@ -5662,6 +5662,114 @@ input[type='submit'] {
   .addPropertyFormContainer .enterUserType .slide {
     margin: 0 -150px 0 0;
   }
+}
+
+.addPropertyFormContainer .thankYou-message-submitPropperty {
+  overflow: hidden;
+  min-height: 100vh;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.addPropertyFormContainer .thankYou-message-submitPropperty:after {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1px;
+  content: '';
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 0 0 -5px;
+}
+
+.addPropertyFormContainer .thankYou-message-submitPropperty .messageThankyou-holder {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  white-space: normal;
+  text-align: center;
+  max-width: 600px;
+  position: relative;
+  left: 50%;
+  margin: 0 0 0 -300px;
+}
+
+@media (max-width: 767px) {
+  .addPropertyFormContainer .thankYou-message-submitPropperty .messageThankyou-holder {
+    max-width: 300px;
+    margin: 0 0 0 -150px;
+  }
+}
+
+.addPropertyFormContainer .thankYou-message-submitPropperty .ui-thankYou-submitProperty {
+  display: block;
+  color: #fff;
+  background: rgba(88, 163, 111, 0.7);
+  border: 1px solid #468258;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+
+@media (max-width: 767px) {
+  .addPropertyFormContainer .thankYou-message-submitPropperty .ui-thankYou-submitProperty {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.addPropertyFormContainer .thankYou-message-submitPropperty .add-anotherProperty {
+  display: inline-block;
+  vertical-align: top;
+  color: #fff;
+  background: #ef9521;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  padding: 10px 60px;
+  border-radius: 5px;
+  position: relative;
+  border: 2px solid #b66c0d;
+  transition: background 0.4s ease;
+  -webkit-transition: background 0.4s ease;
+  -moz-transition: background 0.4s ease;
+  -ms-transition: background 0.4s ease;
+}
+
+@media (max-width: 767px) {
+  .addPropertyFormContainer .thankYou-message-submitPropperty .add-anotherProperty {
+    font-size: 12px;
+    line-height: 16px;
+    padding: 5px 40px;
+  }
+}
+
+.addPropertyFormContainer .thankYou-message-submitPropperty .add-anotherProperty:after {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  content: "\e900";
+  color: #fff;
+  font-family: 'icomoon';
+  font-size: 30px;
+  line-height: 1;
+  margin: -15px 0 0;
+}
+
+@media (max-width: 767px) {
+  .addPropertyFormContainer .thankYou-message-submitPropperty .add-anotherProperty:after {
+    font-size: 16px;
+    margin: -8px 0 0;
+  }
+}
+
+.addPropertyFormContainer .thankYou-message-submitPropperty .add-anotherProperty:hover {
+  background: #58a36f;
+  border-color: #58a36f;
 }
 
 html, body {

@@ -38,7 +38,7 @@
 		}
 	}
 	
-	.please-wait & {
+	&.please-wait {
 		height: 100vh;
 		
 		&:after{
@@ -1121,6 +1121,95 @@
 
 			@include media('<tablet'){
 				margin: 0 -150px 0 0;
+			}
+		}
+	}
+	.thankYou-message-submitPropperty{
+		overflow: hidden;
+		min-height: 100vh;
+		white-space: nowrap;
+		width: 100%;
+
+		&:after {
+			@include align(middle);
+			width: 1px;
+			content: '';
+			height: 100vh;
+			width: 100%;
+			overflow: hidden;
+			margin: 0 0 0 -5px;
+		}
+		.messageThankyou-holder {
+			@include align(middle);
+			width: 100%;
+			white-space: normal;
+			text-align: center;
+			max-width: 600px;
+			position: relative;
+			left: 50%;
+			margin: 0 0 0 -300px;
+
+			@include media('<tablet'){
+				max-width: 300px;
+				margin: 0 0 0 -150px;
+			}
+		}
+		.ui-thankYou-submitProperty {
+			display: block;
+			color: $white;
+			background: rgba($green, 0.7);
+			border: 1px solid darken($green, 10%);
+			border-radius: 4px;
+			padding:10px;
+			@include font(22, 26);
+			font-weight: 400;
+			margin: 0 0 20px;
+
+			@include media('<tablet'){
+				@include font(12, 16);
+			}
+		}
+		.add-anotherProperty{
+			@include align(top);
+			color: $white;
+			background: $orange;
+			text-decoration: none;
+			font-weight: bold;
+			@include font(20,23);
+			padding: 10px 60px;
+			border-radius: 5px;
+			position: relative;
+			border: 2px solid darken($orange, 15%);
+			transition: background 0.4s ease;
+			-webkit-transition: background 0.4s ease;
+			-moz-transition: background 0.4s ease;
+			-ms-transition: background 0.4s ease;
+
+			@include media('<tablet'){
+				@include font(12, 16);
+				padding: 5px 40px;
+			}
+
+			&:after {
+				position: absolute;
+				top: 50%;
+				left: 10px;
+				content: "\e900";
+				color: $white;
+				font-family: 'icomoon';
+				font-size: 30px;
+				line-height: 1;
+				margin: -15px 0 0;
+
+				@include media('<tablet'){
+					font-size: 16px;
+					margin: -8px 0 0;
+				}
+			}
+
+			&:hover {
+				background: $green;
+				border-color: darken($green, 0%);
 			}
 		}
 	}
